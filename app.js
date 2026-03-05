@@ -1397,3 +1397,139 @@ function displayFinalResult() {
     feather.replace();
     showScreen('screen-result');
 }
+
+// Quiz Navigation Logic
+let currentCategory = '';
+let currentQuestionIndex = 0;
+let userAnswers = [];
+
+window.startQuiz = function (category) {
+    currentCategory = category;
+    currentQuestionIndex = 0;
+    userAnswers = [];
+    updateQuizUI();
+    showScreen('screen-quiz');
+};
+
+function updateQuizUI() {
+    const categoryData = quizData[currentCategory];
+    const totalQuestions = categoryData.questions.length;
+
+    document.getElementById('quiz-progress').innerText = `${currentQuestionIndex + 1} / ${totalQuestions}`;
+
+    const q = categoryData.questions[currentQuestionIndex];
+
+    // Add fade out/in effect
+    const container = document.querySelector('.ab-test-container');
+    container.style.opacity = '0.5';
+
+    setTimeout(() => {
+        document.getElementById('img-option-a').src = q.a;
+        document.getElementById('img-option-b').src = q.b;
+        container.style.opacity = '1';
+    }, 150);
+}
+
+window.selectOption = function (option) {
+    userAnswers.push(option);
+    const categoryData = quizData[currentCategory];
+
+    if (currentQuestionIndex < categoryData.questions.length - 1) {
+        currentQuestionIndex++;
+        updateQuizUI();
+    } else {
+        showResult();
+    }
+};
+
+window.showResult = function () {
+    // Go to Analyzing screen
+    showScreen('screen-analyzing');
+
+    const analyzeMsgs = {
+        ko: [
+            "선택하신 10가지 성향을 분석 중입니다...",
+            "디자인 요소를 추출하고 있습니다...",
+            "취향 큐레이션 알고리즘을 가동 중입니다...",
+            "결과를 생성했습니다."
+        ],
+        ja: [
+            "選択された10の傾向を分析中です...",
+            "デザイン要素を抽出しています...",
+            "好みのキュレーションアルゴリズムが稼働中です...",
+            "結果を生成しました。"
+        ]
+    };
+    let msgIndex = 0;
+    const msgEl = document.getElementById('t-analyze-msg');
+    if (msgEl) msgEl.innerText = analyzeMsgs[uiLang][0];
+
+    const interval = setInterval(() => {
+        msgIndex++;
+        if (msgIndex < analyzeMsgs[uiLang].length) {
+            if (msgEl) msgEl.innerText = analyzeMsgs[uiLang][msgIndex];
+        } else {
+            clearInterval(interval);
+            displayFinalResult();
+        }
+    }, 800);
+};
+
+function displayFinalResult() {
+    const categoryData = quizData[currentCategory];
+
+    // --- AI Tree Logic ---
+    // 10개의 문항을 크게 2가지 축(Dimension)으로 나눠 분석합니다.
+    // 축 1 (형태 및 텍스처 선호도: 1~5번 문항)
+    const attr1_A_count = userAnswers.slice(0, 5).filter(ans => ans === 'A').length;
+    // 축 2 (기능성 및 분위기 선호도: 6~10번 문항)
+    const attr2_A_count = userAnswers.slice(5, 10).filter(ans => ans === 'A').length;
+
+    const isA1 = attr1_A_count >= 3;
+    const isA2 = attr2_A_count >= 3;
+
+    // Tree Navigation: 총 4가지 형태의 조합 결과 도출 
+    let resultKey = "type_B_B";
+    if (isA1 && isA2) resultKey = "type_A_A";
+    else if (isA1 && !isA2) resultKey = "type_A_B";
+    else if (!isA1 && isA2) resultKey = "type_B_A";
+
+    const res = categoryData.results[resultKey][uiLang];
+
+    const productsHTML = res.products.map(p => `
+            <div class="product-card-vertical">
+                <img src="${p.productImg}" class="product-img" alt="${p.productName}">
+                <div class="product-card-info">
+                    <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+                        <div>
+                            <h3>${p.productName}</h3>
+                            <p class="desc">${p.productDesc}</p>
+                        </div>
+                        <span class="badge-black">MATCH ${p.match}</span>
+                    </div>
+                    <div class="price-row" style="display:flex; justify-content:space-between; align-items:center; margin-top:12px;">
+                        <span class="price">${p.price}</span>
+                        <a href="${p.buyLink}" target="_blank" class="btn-black-small" style="padding: 6px 14px; background-color: #000; color: #fff; font-size: 11px; text-decoration: none; border-radius: 4px; font-weight: 500; display: inline-block; white-space: nowrap;">
+                            ${uiTranslations['shop_now'][uiLang] || 'SHOP NOW'}
+                        </a>
+                    </div>
+                    <div style="margin-top: 8px; text-align: right;">
+                        <a href="https://shopping.yahoo.co.jp/search?p=${encodeURIComponent(res.title)}" target="_blank" style="font-size: 11px; color: #666; text-decoration: underline;">
+                            ${uiTranslations['find_alt'] ? uiTranslations['find_alt'][uiLang] : 'Find Alternatives'}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+
+    const resultContent = document.getElementById('result-content');
+    resultContent.innerHTML = `
+            <div class="buying-point-card">
+                <h3><i data-feather="check"></i> ${res.title}</h3>
+                <p>${res.desc}</p>
+            </div>
+            ${productsHTML}
+        `;
+    feather.replace();
+    showScreen('screen-result');
+}
