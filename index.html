@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>TASTE FINDER</title>
+    <!-- Pretendard Font -->
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+    <!-- Feather Icons for clean minimalistic SVG icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body>
+    <div class="mobile-container">
+        <!-- Status Bar -->
+        <div class="mock-status-bar">
+            <span class="time">9:41</span>
+            <div class="icons">
+                <i data-feather="bar-chart-2"></i>
+                <i data-feather="wifi"></i>
+                <i data-feather="battery"></i>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <header class="app-header">
+            <button class="icon-btn back-btn" onclick="goBack()">
+                <i data-feather="arrow-left"></i>
+            </button>
+            <div class="header-tools" style="display:flex; align-items:center; gap: 8px;">
+                <button class="icon-btn" onclick="toggleLanguage()" id="lang-btn"
+                    style="font-size: 14px; font-weight: bold; width: auto; padding: 0 8px;">KO</button>
+                <button class="icon-btn"><i data-feather="menu"></i></button>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="main-content" id="mainContent">
+            <!-- Screen 1: Home (Categories) -->
+            <div id="screen-home" class="screen active">
+                <div class="title-section">
+                    <h1>TASTE<br>FINDER</h1>
+                    <p id="t-subtitle">당신의 고유한 취향을 발견합니다.</p>
+                </div>
+
+                <div class="category-block">
+                    <div class="category-title">CATEGORY</div>
+                    <div class="pill-group">
+                        <button class="pill" onclick="startQuiz('sneakers')">
+                            <div class="pill-icon type-1"><i data-feather="box"></i></div> SNEAKERS
+                        </button>
+                        <button class="pill" onclick="startQuiz('appliances')">
+                            <div class="pill-icon type-2"><i data-feather="monitor"></i></div> APPLIANCES
+                        </button>
+                        <button class="pill" onclick="startQuiz('tableware')">
+                            <div class="pill-icon type-3"><i data-feather="coffee"></i></div> TABLEWARE
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Screen 2: Quiz (A/B Test) -->
+            <div id="screen-quiz" class="screen">
+                <div class="quiz-header">
+                    <span class="badge-black" id="quiz-progress" style="font-size: 11px; padding: 4px 10px;">1 /
+                        10</span>
+                    <h2 class="section-title" style="margin-top:16px; margin-bottom: 8px;">WHICH ONE?</h2>
+                    <p id="t-quiz-instruction" style="font-size: 12px; color: var(--text-sub);">직관적으로 끌리는 쪽을 선택하세요</p>
+                </div>
+
+                <div class="ab-test-container">
+                    <div class="ab-card" onclick="selectOption('A')">
+                        <img src="" id="img-option-a" alt="Option A">
+                    </div>
+                    <div class="vs-badge">VS</div>
+                    <div class="ab-card" onclick="selectOption('B')">
+                        <img src="" id="img-option-b" alt="Option B">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Screen 2.5: Analyzing -->
+            <div id="screen-analyzing" class="screen detail-screen">
+                <div class="title-section" style="text-align: center; margin-top: 100px;">
+                    <div class="spinner" style="margin: 0 auto 24px auto;"></div>
+                    <h1 style="font-size:20px; text-transform: uppercase;">ANALYZING...</h1>
+                    <p id="t-analyze-msg">선택하신 이미지를 AI가 분석 중입니다.</p>
+                </div>
+            </div>
+
+            <!-- Screen 3: Result -->
+            <div id="screen-result" class="screen detail-screen">
+                <div class="title-section">
+                    <h1 style="font-size:24px; text-transform: uppercase;">ANALYSIS<br>COMPLETE</h1>
+                    <p id="t-result-subtitle">당신의 취향을 반영한 큐레이션입니다.</p>
+                </div>
+
+                <div id="result-content"></div>
+
+                <button class="btn-full-gray" style="margin-top:40px;" onclick="showScreen('screen-home')">
+                    <i data-feather="rotate-ccw"></i> <span id="t-return-btn">RETURN HOME</span>
+                </button>
+                <div class="bottom-spacer"></div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+    <script>
+        // Initialize Feather Icons
+        feather.replace();
+    </script>
+</body>
+
+</html>
