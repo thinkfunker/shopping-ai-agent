@@ -113,7 +113,7 @@ brand: {
                         "b": "images/quiz_brand_q10_b.jpg"
                 }
         ],
-        "results": {"type_A_A": {"ko": {"title": "애티튜드 & 하이스트릿", "desc": "과감한 사이즈와 강렬한 브랜드 아이덴티티! 트렌디한 스트릿 감성의 하이엔드 브랜드를 사랑합니다.", "products": [{"productName": "발렌시아가", "productDesc": "전위적인 실루엣의 스트릿 하이엔드", "price": "-", "match": "99%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%90%E3%83%AC%E3%83%B3%E3%82%B7%E3%82%A2%E3%82%AC", "productImg": "images/brand_prod_발렌시아가.jpg"}, {"productName": "오프화이트", "productDesc": "스트릿과 럭셔리의 경계를 허무는 디자인", "price": "-", "match": "94%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%82%AA%E3%83%95%E3%83%9B%E3%83%AF%E3%82%A4%E3%83%88", "productImg": "images/brand_prod_오프화이트.jpg"}, {"productName": "구찌", "productDesc": "맥시멀리즘의 정수를 보여주는 아이코닉 스타일", "price": "-", "match": "89%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%82%B0%E3%83%83%E3%83%81", "productImg": "images/brand_prod_구찌.jpg"}, {"productName": "지방시", "productDesc": "다크하고 고딕한 무드의 하이엔드 스트릿", "price": "-", "match": "84%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%82%B8%E3%83%90%E3%83%B3%E3%82%B7%E3%82%A3", "productImg": "images/brand_prod_지방시.jpg"}, {"productName": "베트멍", "productDesc": "해체주의적이고 도발적인 실루엣", "price": "-", "match": "80%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%B4%E3%82%A7%E3%83%88%E3%83%A2%E3%83%B3", "productImg": "images/brand_prod_베트멍.jpg"}]}, "ja": {"title": "アティチュード＆ハイストリート", "desc": "大胆なサイズと強烈なブランドアイデンティティ！トレンディなストリート感性を持つハイエンドブランドを愛します。", "products": [{"productName": "バレンシアガ", "productDesc": "前衛的なシルエットのストリートハイエンド", "price": "-", "match": "99%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%90%E3%83%AC%E3%83%B3%E3%82%B7%E3%82%A2%E3%82%AC", "productImg": "images/brand_prod_발렌시아가.jpg"}, {"productName": "オフホワイト", "productDesc": "ストリートとラグジュアリーの境界を崩すデザイン", "price": "-", "match": "94%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%82%AA%E3%83%95%E3%83%9B%E3%83%AF%E3%82%A4%E3%83%88", "productImg": "images/brand_prod_오프화이트.jpg"}, {"productName": "グッチ", "productDesc": "マキシマリズムの真髄を見せるアイコニックスタイル", "price": "-", "match": "89%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%82%B0%E3%83%83%E3%83%81", "productImg": "images/brand_prod_구찌.jpg"}, {"productName": "ジバンシィ", "productDesc": "ダークでゴシックなムードのハイエンドストリート", "price": "-", "match": "84%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%82%B8%E3%83%90%E3%83%B3%E3%82%B7%E3%82%A3", "productImg": "images/brand_prod_지방시.jpg"}, {"productName": "ヴェトモン", "productDesc": "脱構築的で挑発的なシルエット", "price": "-", "match": "80%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%B4%E3%82%A7%E3%83%88%E3%83%A2%E3%83%B3", "productImg": "images/brand_prod_베트멍.jpg"}]}}, "type_A_B": {"ko": {"title": "럭셔리 & 글래머러스", "desc": "화려한 패턴과 황금빛 디테일. 시대를 초월하는 클래식한 럭셔리의 정수를 추구합니다.", "products": [{"productName": "베르사체", "productDesc": "화려한 메두사 로고와 관능적인 글래머", "price": "-", "match": "98%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%B4%E3%82%A7%E3%83%AB%E3%82%B5%E3%83%BC%E3%83%81%E3%82%A7", "productImg": "images/brand_prod_베르사체.jpg"}, {"productName": "돌체 앤 가바나", "productDesc": "이탈리안 럭셔리의 관능미와 화려함", "price": "-", "match": "93%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%89%E3%83%AB%E3%83%81%E3%82%A7%EF%BC%86%E3%82%AC%E3%83%83%E3%83%90%E3%83%BC%E3%83%8A", "productImg": "images/brand_prod_돌체_앤_가바나.jpg"}, {"productName": "루이비통", "productDesc": "시대를 초월하는 모노그램 클래식", "price": "-", "match": "88%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%AB%E3%82%A4%E3%83%BB%E3%83%B4%E3%82%A3%E3%83%88%E3%83%B3", "productImg": "images/brand_prod_루이비통.jpg"}, {"productName": "디올", "productDesc": "우아하고 섬세한 오뜨 꾸뛰르의 정수", "price": "-", "match": "85%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%87%E3%82%A3%E3%82%AA%E3%83%BC%E3%83%AB", "productImg": "images/brand_prod_디올.jpg"}, {"productName": "생 로랑", "productDesc": "파리지앵의 시크함과 관능적인 테일러링", "price": "-", "match": "81%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%82%B5%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%B3", "productImg": "images/brand_prod_생_로랑.jpg"}]}, "ja": {"title": "ラグジュアリー＆グラマラス", "desc": "華やかなパターンと黄金のディテール。時代を超えるクラシックなラグジュアリーのエッセンスを追求します。", "products": [{"productName": "ヴェルサーチェ", "productDesc": "華やかなメデューサロゴと官能的なグラマー", "price": "-", "match": "98%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%B4%E3%82%A7%E3%83%AB%E3%82%B5%E3%83%BC%E3%83%81%E3%82%A7", "productImg": "images/brand_prod_베르사체.jpg"}, {"productName": "ドルチェ＆ガッバーナ", "productDesc": "イタリアンラグジュアリーの官能美と華やかさ", "price": "-", "match": "93%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%89%E3%83%AB%E3%83%81%E3%82%A7%EF%BC%86%E3%82%AC%E3%83%83%E3%83%90%E3%83%BC%E3%83%8A", "productImg": "images/brand_prod_돌체_앤_가바나.jpg"}, {"productName": "ルイ・ヴィトン", "productDesc": "時代を超えるモノグラムクラシック", "price": "-", "match": "88%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%AB%E3%82%A4%E3%83%BB%E3%83%B4%E3%82%A3%E3%83%88%E3%83%B3", "productImg": "images/brand_prod_루이비통.jpg"}, {"productName": "ディオール", "productDesc": "優雅で繊細なオートクチュールの真髄", "price": "-", "match": "85%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%87%E3%82%A3%E3%82%AA%E3%83%BC%E3%83%AB", "productImg": "images/brand_prod_디올.jpg"}, {"productName": "サンローラン", "productDesc": "パリジャンのシックさと官能的なテーラリング", "price": "-", "match": "81%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%82%B5%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%B3", "productImg": "images/brand_prod_생_로랑.jpg"}]}}, "type_B_A": {"ko": {"title": "모던 아방가르드", "desc": "로고플레이 없이 구조적인 실루엣으로 승부. 당신은 차가운 미니멀리즘 브랜드를 선호합니다.", "products": [{"productName": "질 샌더", "productDesc": "순백의 간결함과 미니멀 럭셔리", "price": "-", "match": "97%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%82%B8%E3%83%AB%E3%83%BB%E3%82%B5%E3%83%B3%E3%83%80%E3%83%BC", "productImg": "images/brand_prod_질_샌더.jpg"}, {"productName": "르메르", "productDesc": "여유로운 핏감과 모던한 프렌치 시크", "price": "-", "match": "92%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%AB%E3%83%A1%E3%83%BC%E3%83%AB", "productImg": "images/brand_prod_르메르.jpg"}, {"productName": "아크네 스튜디오", "productDesc": "파스텔 톤과 북유럽의 차가운 미니멀리즘", "price": "-", "match": "87%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%82%A2%E3%82%AF%E3%83%8D%20%E3%82%B9%E3%83%88%E3%82%A5%E3%83%87%E3%82%A3%E3%82%AA%E3%82%BA", "productImg": "images/brand_prod_아크네_스튜디오.jpg"}, {"productName": "마르니", "productDesc": "실용주의와 모던 아트의 절묘한 만남", "price": "-", "match": "82%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%9E%E3%83%AB%E3%83%8B", "productImg": "images/brand_prod_마르니.jpg"}, {"productName": "요지 야마모토", "productDesc": "블랙과 아방가르드 구조미의 극치", "price": "-", "match": "78%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%A8%E3%82%A6%E3%82%B8%E3%83%A4%E3%83%9E%E3%83%A2%E3%83%88", "productImg": "images/brand_prod_요지_야마모토.jpg"}]}, "ja": {"title": "モダン・アバンギャルド", "desc": "ロゴプレイなしで構造的なシルエットで勝負。あなたは冷たいミニマリズムブランドを好みます。", "products": [{"productName": "ジル・サンダー", "productDesc": "純白の簡潔さとミニマルラグジュアリー", "price": "-", "match": "97%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%82%B8%E3%83%AB%E3%83%BB%E3%82%B5%E3%83%B3%E3%83%80%E3%83%BC", "productImg": "images/brand_prod_질_샌더.jpg"}, {"productName": "ルメール", "productDesc": "ゆったりとしたフィット感とモダンなフレンチシック", "price": "-", "match": "92%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%AB%E3%83%A1%E3%83%BC%E3%83%AB", "productImg": "images/brand_prod_르메르.jpg"}, {"productName": "アクネ ストゥディオズ", "productDesc": "パステルトーンと北欧の冷たいミニマリズム", "price": "-", "match": "87%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%82%A2%E3%82%AF%E3%83%8D%20%E3%82%B9%E3%83%88%E3%82%A5%E3%83%87%E3%82%A3%E3%82%AA%E3%82%BA", "productImg": "images/brand_prod_아크네_스튜디오.jpg"}, {"productName": "マルニ", "productDesc": "実用主義とモダンアートの絶妙な出会い", "price": "-", "match": "82%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%9E%E3%83%AB%E3%83%8B", "productImg": "images/brand_prod_마르니.jpg"}, {"productName": "ヨウジヤマモト", "productDesc": "ブラックとアバンギャルド構造美の極致", "price": "-", "match": "78%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%A8%E3%82%A6%E3%82%B8%E3%83%A4%E3%83%9E%E3%83%A2%E3%83%88", "productImg": "images/brand_prod_요지_야마모토.jpg"}]}}, "type_B_B": {"ko": {"title": "콰이어트 럭셔리", "desc": "최고급 소재와 우아한 테일러링. 은은하게 빛나는 '올드머니 룩' 브랜드를 추구합니다.", "products": [{"productName": "더 로우", "productDesc": "극강의 소재감, 궁극의 콰이어트 럭셔리", "price": "-", "match": "99%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%82%B6%E3%83%BB%E3%83%AD%E3%82%A6", "productImg": "images/brand_prod_더_로우.jpg"}, {"productName": "에르메스", "productDesc": "타협하지 않는 최고급 장인 정신의 상징", "price": "-", "match": "94%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%82%A8%E3%83%AB%E3%83%A1%E3%82%B9", "productImg": "images/brand_prod_에르메스.jpg"}, {"productName": "보테가 베네타", "productDesc": "로고가 필요 없는 인트레치아토 가죽 공예", "price": "-", "match": "90%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%9C%E3%83%83%E3%83%86%E3%82%AC%E3%83%BB%E3%83%B4%E3%82%A7%E3%83%8D%E3%82%BF", "productImg": "images/brand_prod_보테가_베네타.jpg"}, {"productName": "브루넬로 쿠치넬리", "productDesc": "최상급 캐시미어와 이탈리안 올드머니", "price": "-", "match": "85%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%96%E3%83%AB%E3%83%8D%E3%83%AD%20%E3%82%AF%E3%83%81%E3%83%8D%E3%83%AA", "productImg": "images/brand_prod_브루넬로_쿠치넬리.jpg"}, {"productName": "로로피아나", "productDesc": "자연을 담은 최상급 텍스타일 럭셔리", "price": "-", "match": "81%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%AD%E3%83%AD%E3%83%BB%E3%83%94%E3%82%A2%E3%83%BC%E3%83%8A", "productImg": "images/brand_prod_로로피아나.jpg"}]}, "ja": {"title": "クワイエット・ラグジュアリー", "desc": "最高級の素材と優雅なテーラリング。ほのかに輝くエフォートレスなオールドマネールックブランドを追求します。", "products": [{"productName": "ザ・ロウ", "productDesc": "究極の素材感、究極のクワイエットラグジュアリー", "price": "-", "match": "99%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%82%B6%E3%83%BB%E3%83%AD%E3%82%A6", "productImg": "images/brand_prod_더_로우.jpg"}, {"productName": "エルメス", "productDesc": "妥協しない最高級の職人精神の象徴", "price": "-", "match": "94%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%82%A8%E3%83%AB%E3%83%A1%E3%82%B9", "productImg": "images/brand_prod_에르메스.jpg"}, {"productName": "ボッテガ・ヴェネタ", "productDesc": "ロゴを必要としないイントレチャート革工芸", "price": "-", "match": "90%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%9C%E3%83%83%E3%83%86%E3%82%AC%E3%83%BB%E3%83%B4%E3%82%A7%E3%83%8D%E3%82%BF", "productImg": "images/brand_prod_보테가_베네타.jpg"}, {"productName": "ブルネロ クチネリ", "productDesc": "最上級のカシミヤとイタリアンオールドマネー", "price": "-", "match": "85%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%96%E3%83%AB%E3%83%8D%E3%83%AD%20%E3%82%AF%E3%83%81%E3%83%8D%E3%83%AA", "productImg": "images/brand_prod_브루넬로_쿠치넬리.jpg"}, {"productName": "ロロ・ピアーナ", "productDesc": "自然を込めた最上級テキスタイルラグジュアリー", "price": "-", "match": "81%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%AD%E3%83%AD%E3%83%BB%E3%83%94%E3%82%A2%E3%83%BC%E3%83%8A", "productImg": "images/brand_prod_로로피아나.jpg"}]}}}
+        "results": {"type_A_A": {"ko": {"title": "애티튜드 & 하이스트릿", "desc": "과감한 사이즈와 강렬한 브랜드 아이덴티티! 트렌디한 스트릿 감성의 하이엔드 브랜드를 사랑합니다.", "products": [{"productName": "발렌시아가", "productDesc": "전위적인 실루엣의 스트릿 하이엔드", "price": "-", "match": "99%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%90%E3%83%AC%E3%83%B3%E3%82%B7%E3%82%A2%E3%82%AC", "productImg": "images/img_99a37a74.jpg"}, {"productName": "오프화이트", "productDesc": "스트릿과 럭셔리의 경계를 허무는 디자인", "price": "-", "match": "94%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%82%AA%E3%83%95%E3%83%9B%E3%83%AF%E3%82%A4%E3%83%88", "productImg": "images/img_b10fd57f.jpg"}, {"productName": "구찌", "productDesc": "맥시멀리즘의 정수를 보여주는 아이코닉 스타일", "price": "-", "match": "89%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%82%B0%E3%83%83%E3%83%81", "productImg": "images/img_03595e2f.jpg"}, {"productName": "지방시", "productDesc": "다크하고 고딕한 무드의 하이엔드 스트릿", "price": "-", "match": "84%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%82%B8%E3%83%90%E3%83%B3%E3%82%B7%E3%82%A3", "productImg": "images/img_2a854e8c.jpg"}, {"productName": "베트멍", "productDesc": "해체주의적이고 도발적인 실루엣", "price": "-", "match": "80%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%B4%E3%82%A7%E3%83%88%E3%83%A2%E3%83%B3", "productImg": "images/img_0901f380.jpg"}]}, "ja": {"title": "アティチュード＆ハイストリート", "desc": "大胆なサイズと強烈なブランドアイデンティティ！トレンディなストリート感性を持つハイエンドブランドを愛します。", "products": [{"productName": "バレンシアガ", "productDesc": "前衛的なシルエットのストリートハイエンド", "price": "-", "match": "99%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%90%E3%83%AC%E3%83%B3%E3%82%B7%E3%82%A2%E3%82%AC", "productImg": "images/img_99a37a74.jpg"}, {"productName": "オフホワイト", "productDesc": "ストリートとラグジュアリーの境界を崩すデザイン", "price": "-", "match": "94%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%82%AA%E3%83%95%E3%83%9B%E3%83%AF%E3%82%A4%E3%83%88", "productImg": "images/img_b10fd57f.jpg"}, {"productName": "グッチ", "productDesc": "マキシマリズムの真髄を見せるアイコニックスタイル", "price": "-", "match": "89%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%82%B0%E3%83%83%E3%83%81", "productImg": "images/img_03595e2f.jpg"}, {"productName": "ジバンシィ", "productDesc": "ダークでゴシックなムードのハイエンドストリート", "price": "-", "match": "84%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%82%B8%E3%83%90%E3%83%B3%E3%82%B7%E3%82%A3", "productImg": "images/img_2a854e8c.jpg"}, {"productName": "ヴェトモン", "productDesc": "脱構築的で挑発的なシルエット", "price": "-", "match": "80%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%B4%E3%82%A7%E3%83%88%E3%83%A2%E3%83%B3", "productImg": "images/img_0901f380.jpg"}]}}, "type_A_B": {"ko": {"title": "럭셔리 & 글래머러스", "desc": "화려한 패턴과 황금빛 디테일. 시대를 초월하는 클래식한 럭셔리의 정수를 추구합니다.", "products": [{"productName": "베르사체", "productDesc": "화려한 메두사 로고와 관능적인 글래머", "price": "-", "match": "98%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%B4%E3%82%A7%E3%83%AB%E3%82%B5%E3%83%BC%E3%83%81%E3%82%A7", "productImg": "images/img_af1e9b61.jpg"}, {"productName": "돌체 앤 가바나", "productDesc": "이탈리안 럭셔리의 관능미와 화려함", "price": "-", "match": "93%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%89%E3%83%AB%E3%83%81%E3%82%A7%EF%BC%86%E3%82%AC%E3%83%83%E3%83%90%E3%83%BC%E3%83%8A", "productImg": "images/img_f68e2e1a.jpg"}, {"productName": "루이비통", "productDesc": "시대를 초월하는 모노그램 클래식", "price": "-", "match": "88%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%AB%E3%82%A4%E3%83%BB%E3%83%B4%E3%82%A3%E3%83%88%E3%83%B3", "productImg": "images/img_9e7fe3fe.jpg"}, {"productName": "디올", "productDesc": "우아하고 섬세한 오뜨 꾸뛰르의 정수", "price": "-", "match": "85%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%87%E3%82%A3%E3%82%AA%E3%83%BC%E3%83%AB", "productImg": "images/img_ef31ef38.jpg"}, {"productName": "생 로랑", "productDesc": "파리지앵의 시크함과 관능적인 테일러링", "price": "-", "match": "81%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%82%B5%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%B3", "productImg": "images/img_7d0e159c.jpg"}]}, "ja": {"title": "ラグジュアリー＆グラマラス", "desc": "華やかなパターンと黄金のディテール。時代を超えるクラシックなラグジュアリーのエッセンスを追求します。", "products": [{"productName": "ヴェルサーチェ", "productDesc": "華やかなメデューサロゴと官能的なグラマー", "price": "-", "match": "98%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%B4%E3%82%A7%E3%83%AB%E3%82%B5%E3%83%BC%E3%83%81%E3%82%A7", "productImg": "images/img_af1e9b61.jpg"}, {"productName": "ドルチェ＆ガッバーナ", "productDesc": "イタリアンラグジュアリーの官能美と華やかさ", "price": "-", "match": "93%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%89%E3%83%AB%E3%83%81%E3%82%A7%EF%BC%86%E3%82%AC%E3%83%83%E3%83%90%E3%83%BC%E3%83%8A", "productImg": "images/img_f68e2e1a.jpg"}, {"productName": "ルイ・ヴィトン", "productDesc": "時代を超えるモノグラムクラシック", "price": "-", "match": "88%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%AB%E3%82%A4%E3%83%BB%E3%83%B4%E3%82%A3%E3%83%88%E3%83%B3", "productImg": "images/img_9e7fe3fe.jpg"}, {"productName": "ディオール", "productDesc": "優雅で繊細なオートクチュールの真髄", "price": "-", "match": "85%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%87%E3%82%A3%E3%82%AA%E3%83%BC%E3%83%AB", "productImg": "images/img_ef31ef38.jpg"}, {"productName": "サンローラン", "productDesc": "パリジャンのシックさと官能的なテーラリング", "price": "-", "match": "81%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%82%B5%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%B3", "productImg": "images/img_7d0e159c.jpg"}]}}, "type_B_A": {"ko": {"title": "모던 아방가르드", "desc": "로고플레이 없이 구조적인 실루엣으로 승부. 당신은 차가운 미니멀리즘 브랜드를 선호합니다.", "products": [{"productName": "질 샌더", "productDesc": "순백의 간결함과 미니멀 럭셔리", "price": "-", "match": "97%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%82%B8%E3%83%AB%E3%83%BB%E3%82%B5%E3%83%B3%E3%83%80%E3%83%BC", "productImg": "images/brand_prod_질_샌더.jpg"}, {"productName": "르메르", "productDesc": "여유로운 핏감과 모던한 프렌치 시크", "price": "-", "match": "92%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%AB%E3%83%A1%E3%83%BC%E3%83%AB", "productImg": "images/img_6f03ebac.jpg"}, {"productName": "아크네 스튜디오", "productDesc": "파스텔 톤과 북유럽의 차가운 미니멀리즘", "price": "-", "match": "87%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%82%A2%E3%82%AF%E3%83%8D%20%E3%82%B9%E3%83%88%E3%82%A5%E3%83%87%E3%82%A3%E3%82%AA%E3%82%BA", "productImg": "images/img_b4b05ab3.jpg"}, {"productName": "마르니", "productDesc": "실용주의와 모던 아트의 절묘한 만남", "price": "-", "match": "82%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%9E%E3%83%AB%E3%83%8B", "productImg": "images/img_a5ef6467.jpg"}, {"productName": "요지 야마모토", "productDesc": "블랙과 아방가르드 구조미의 극치", "price": "-", "match": "78%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%A8%E3%82%A6%E3%82%B8%E3%83%A4%E3%83%9E%E3%83%A2%E3%83%88", "productImg": "images/img_eaac6cf1.jpg"}]}, "ja": {"title": "モダン・アバンギャルド", "desc": "ロゴプレイなしで構造的なシルエットで勝負。あなたは冷たいミニマリズムブランドを好みます。", "products": [{"productName": "ジル・サンダー", "productDesc": "純白の簡潔さとミニマルラグジュアリー", "price": "-", "match": "97%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%82%B8%E3%83%AB%E3%83%BB%E3%82%B5%E3%83%B3%E3%83%80%E3%83%BC", "productImg": "images/brand_prod_질_샌더.jpg"}, {"productName": "ルメール", "productDesc": "ゆったりとしたフィット感とモダンなフレンチシック", "price": "-", "match": "92%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%AB%E3%83%A1%E3%83%BC%E3%83%AB", "productImg": "images/img_6f03ebac.jpg"}, {"productName": "アクネ ストゥディオズ", "productDesc": "パステルトーンと北欧の冷たいミニマリズム", "price": "-", "match": "87%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%82%A2%E3%82%AF%E3%83%8D%20%E3%82%B9%E3%83%88%E3%82%A5%E3%83%87%E3%82%A3%E3%82%AA%E3%82%BA", "productImg": "images/img_b4b05ab3.jpg"}, {"productName": "マルニ", "productDesc": "実用主義とモダンアートの絶妙な出会い", "price": "-", "match": "82%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%9E%E3%83%AB%E3%83%8B", "productImg": "images/img_a5ef6467.jpg"}, {"productName": "ヨウジヤマモト", "productDesc": "ブラックとアバンギャルド構造美の極致", "price": "-", "match": "78%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%A8%E3%82%A6%E3%82%B8%E3%83%A4%E3%83%9E%E3%83%A2%E3%83%88", "productImg": "images/img_eaac6cf1.jpg"}]}}, "type_B_B": {"ko": {"title": "콰이어트 럭셔리", "desc": "최고급 소재와 우아한 테일러링. 은은하게 빛나는 '올드머니 룩' 브랜드를 추구합니다.", "products": [{"productName": "더 로우", "productDesc": "극강의 소재감, 궁극의 콰이어트 럭셔리", "price": "-", "match": "99%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%82%B6%E3%83%BB%E3%83%AD%E3%82%A6", "productImg": "images/img_8dc77401.jpg"}, {"productName": "에르메스", "productDesc": "타협하지 않는 최고급 장인 정신의 상징", "price": "-", "match": "94%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%82%A8%E3%83%AB%E3%83%A1%E3%82%B9", "productImg": "images/img_aeb7e99e.jpg"}, {"productName": "보테가 베네타", "productDesc": "로고가 필요 없는 인트레치아토 가죽 공예", "price": "-", "match": "90%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%9C%E3%83%83%E3%83%86%E3%82%AC%E3%83%BB%E3%83%B4%E3%82%A7%E3%83%8D%E3%82%BF", "productImg": "images/img_31bcd1c1.jpg"}, {"productName": "브루넬로 쿠치넬리", "productDesc": "최상급 캐시미어와 이탈리안 올드머니", "price": "-", "match": "85%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%96%E3%83%AB%E3%83%8D%E3%83%AD%20%E3%82%AF%E3%83%81%E3%83%8D%E3%83%AA", "productImg": "images/img_244f701e.jpg"}, {"productName": "로로피아나", "productDesc": "자연을 담은 최상급 텍스타일 럭셔리", "price": "-", "match": "81%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%AD%E3%83%AD%E3%83%BB%E3%83%94%E3%82%A2%E3%83%BC%E3%83%8A", "productImg": "images/img_4d69f33e.jpg"}]}, "ja": {"title": "クワイエット・ラグジュアリー", "desc": "最高級の素材と優雅なテーラリング。ほのかに輝くエフォートレスなオールドマネールックブランドを追求します。", "products": [{"productName": "ザ・ロウ", "productDesc": "究極の素材感、究極のクワイエットラグジュアリー", "price": "-", "match": "99%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%82%B6%E3%83%BB%E3%83%AD%E3%82%A6", "productImg": "images/img_8dc77401.jpg"}, {"productName": "エルメス", "productDesc": "妥協しない最高級の職人精神の象徴", "price": "-", "match": "94%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%82%A8%E3%83%AB%E3%83%A1%E3%82%B9", "productImg": "images/img_aeb7e99e.jpg"}, {"productName": "ボッテガ・ヴェネタ", "productDesc": "ロゴを必要としないイントレチャート革工芸", "price": "-", "match": "90%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%9C%E3%83%83%E3%83%86%E3%82%AC%E3%83%BB%E3%83%B4%E3%82%A7%E3%83%8D%E3%82%BF", "productImg": "images/img_31bcd1c1.jpg"}, {"productName": "ブルネロ クチネリ", "productDesc": "最上級のカシミヤとイタリアンオールドマネー", "price": "-", "match": "85%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%96%E3%83%AB%E3%83%8D%E3%83%AD%20%E3%82%AF%E3%83%81%E3%83%8D%E3%83%AA", "productImg": "images/img_244f701e.jpg"}, {"productName": "ロロ・ピアーナ", "productDesc": "自然を込めた最上級テキスタイルラグジュアリー", "price": "-", "match": "81%", "buyLink": "https://shopping.yahoo.co.jp/search?p=%E3%83%AD%E3%83%AD%E3%83%BB%E3%83%94%E3%82%A2%E3%83%BC%E3%83%8A", "productImg": "images/img_4d69f33e.jpg"}]}}}
 },
 
     sneakers: {
@@ -215,7 +215,7 @@ brand_golf: {
                                                         "productDesc": "최고의 퍼포먼스를 위한 정통 골프 브랜드",
                                                         "price": "-",
                                                         "match": "99%",
-                                                        "productImg": "images/prod_brand_golf_타이틀리스트.jpg",
+                                                        "productImg": "images/img_52c18bfd.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%ED%83%80%EC%9D%B4%ED%8B%80%EB%A6%AC%EC%8A%A4%ED%8A%B8"
                                                 },
                                                 {
@@ -231,7 +231,7 @@ brand_golf: {
                                                         "productDesc": "혁신적인 기술력의 글로벌 리더",
                                                         "price": "-",
                                                         "match": "91%",
-                                                        "productImg": "images/prod_brand_golf_테일러메이드.jpg",
+                                                        "productImg": "images/img_92f5a296.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%ED%85%8C%EC%9D%BC%EB%9F%AC%EB%A9%94%EC%9D%B4%EB%93%9C"
                                                 },
                                                 {
@@ -239,7 +239,7 @@ brand_golf: {
                                                         "productDesc": "프로들이 선택하는 압도적 관용성",
                                                         "price": "-",
                                                         "match": "86%",
-                                                        "productImg": "images/prod_brand_golf_캘러웨이.jpg",
+                                                        "productImg": "images/img_8596f9ce.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EC%BA%98%EB%9F%AC%EC%9B%A8%EC%9D%B4"
                                                 },
                                                 {
@@ -247,7 +247,7 @@ brand_golf: {
                                                         "productDesc": "인체공학적 핏과 스포티 무드",
                                                         "price": "-",
                                                         "match": "82%",
-                                                        "productImg": "images/prod_brand_golf_데상트_골프.jpg",
+                                                        "productImg": "images/img_9819c1a0.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%8D%B0%EC%83%81%ED%8A%B8%20%EA%B3%A8%ED%94%84"
                                                 }
                                         ]
@@ -261,7 +261,7 @@ brand_golf: {
                                                         "productDesc": "최고의 퍼포먼스를 위한 정통 골프 브랜드",
                                                         "price": "-",
                                                         "match": "99%",
-                                                        "productImg": "images/prod_brand_golf_타이틀리스트.jpg",
+                                                        "productImg": "images/img_52c18bfd.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%ED%83%80%EC%9D%B4%ED%8B%80%EB%A6%AC%EC%8A%A4%ED%8A%B8"
                                                 },
                                                 {
@@ -277,7 +277,7 @@ brand_golf: {
                                                         "productDesc": "혁신적인 기술력의 글로벌 리더",
                                                         "price": "-",
                                                         "match": "91%",
-                                                        "productImg": "images/prod_brand_golf_테일러메이드.jpg",
+                                                        "productImg": "images/img_92f5a296.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%ED%85%8C%EC%9D%BC%EB%9F%AC%EB%A9%94%EC%9D%B4%EB%93%9C"
                                                 },
                                                 {
@@ -285,7 +285,7 @@ brand_golf: {
                                                         "productDesc": "프로들이 선택하는 압도적 관용성",
                                                         "price": "-",
                                                         "match": "86%",
-                                                        "productImg": "images/prod_brand_golf_캘러웨이.jpg",
+                                                        "productImg": "images/img_8596f9ce.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EC%BA%98%EB%9F%AC%EC%9B%A8%EC%9D%B4"
                                                 },
                                                 {
@@ -293,7 +293,7 @@ brand_golf: {
                                                         "productDesc": "인체공학적 핏과 스포티 무드",
                                                         "price": "-",
                                                         "match": "82%",
-                                                        "productImg": "images/prod_brand_golf_데상트_골프.jpg",
+                                                        "productImg": "images/img_9819c1a0.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%8D%B0%EC%83%81%ED%8A%B8%20%EA%B3%A8%ED%94%84"
                                                 }
                                         ]
@@ -309,7 +309,7 @@ brand_golf: {
                                                         "productDesc": "럭셔리와 스트릿이 결합된 하이엔드 골프웨어",
                                                         "price": "-",
                                                         "match": "99%",
-                                                        "productImg": "images/prod_brand_golf_마크앤로나.jpg",
+                                                        "productImg": "images/img_19543180.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%A7%88%ED%81%AC%EC%95%A4%EB%A1%9C%EB%82%98"
                                                 },
                                                 {
@@ -317,7 +317,7 @@ brand_golf: {
                                                         "productDesc": "파격적인 컬러와 아이코닉한 디자인",
                                                         "price": "-",
                                                         "match": "94%",
-                                                        "productImg": "images/prod_brand_golf_지포어.jpg",
+                                                        "productImg": "images/img_9c82e751.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EC%A7%80%ED%8F%AC%EC%96%B4"
                                                 },
                                                 {
@@ -325,7 +325,7 @@ brand_golf: {
                                                         "productDesc": "북유럽 감성의 세련된 실루엣",
                                                         "price": "-",
                                                         "match": "89%",
-                                                        "productImg": "images/prod_brand_golf_제이린드버그.jpg",
+                                                        "productImg": "images/img_6ef230c3.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EC%A0%9C%EC%9D%B4%EB%A6%B0%EB%93%9C%EB%B2%84%EA%B7%B8"
                                                 },
                                                 {
@@ -333,7 +333,7 @@ brand_golf: {
                                                         "productDesc": "럭셔리하고 유니크한 팝 감성",
                                                         "price": "-",
                                                         "match": "84%",
-                                                        "productImg": "images/prod_brand_golf_파리게이츠.jpg",
+                                                        "productImg": "images/img_42a97f71.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%ED%8C%8C%EB%A6%AC%EA%B2%8C%EC%9D%B4%EC%B8%A0"
                                                 },
                                                 {
@@ -341,7 +341,7 @@ brand_golf: {
                                                         "productDesc": "하이엔드 리조트 감성의 우아함",
                                                         "price": "-",
                                                         "match": "79%",
-                                                        "productImg": "images/prod_brand_golf_사우스케이프.jpg",
+                                                        "productImg": "images/img_eec8dd35.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EC%82%AC%EC%9A%B0%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%94%84"
                                                 }
                                         ]
@@ -355,7 +355,7 @@ brand_golf: {
                                                         "productDesc": "럭셔리와 스트릿이 결합된 하이엔드 골프웨어",
                                                         "price": "-",
                                                         "match": "99%",
-                                                        "productImg": "images/prod_brand_golf_마크앤로나.jpg",
+                                                        "productImg": "images/img_19543180.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%A7%88%ED%81%AC%EC%95%A4%EB%A1%9C%EB%82%98"
                                                 },
                                                 {
@@ -363,7 +363,7 @@ brand_golf: {
                                                         "productDesc": "파격적인 컬러와 아이코닉한 디자인",
                                                         "price": "-",
                                                         "match": "94%",
-                                                        "productImg": "images/prod_brand_golf_지포어.jpg",
+                                                        "productImg": "images/img_9c82e751.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EC%A7%80%ED%8F%AC%EC%96%B4"
                                                 },
                                                 {
@@ -371,7 +371,7 @@ brand_golf: {
                                                         "productDesc": "북유럽 감성의 세련된 실루엣",
                                                         "price": "-",
                                                         "match": "89%",
-                                                        "productImg": "images/prod_brand_golf_제이린드버그.jpg",
+                                                        "productImg": "images/img_6ef230c3.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EC%A0%9C%EC%9D%B4%EB%A6%B0%EB%93%9C%EB%B2%84%EA%B7%B8"
                                                 },
                                                 {
@@ -379,7 +379,7 @@ brand_golf: {
                                                         "productDesc": "럭셔리하고 유니크한 팝 감성",
                                                         "price": "-",
                                                         "match": "84%",
-                                                        "productImg": "images/prod_brand_golf_파리게이츠.jpg",
+                                                        "productImg": "images/img_42a97f71.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%ED%8C%8C%EB%A6%AC%EA%B2%8C%EC%9D%B4%EC%B8%A0"
                                                 },
                                                 {
@@ -387,7 +387,7 @@ brand_golf: {
                                                         "productDesc": "하이엔드 리조트 감성의 우아함",
                                                         "price": "-",
                                                         "match": "79%",
-                                                        "productImg": "images/prod_brand_golf_사우스케이프.jpg",
+                                                        "productImg": "images/img_eec8dd35.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EC%82%AC%EC%9A%B0%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%94%84"
                                                 }
                                         ]
@@ -403,7 +403,7 @@ brand_golf: {
                                                         "productDesc": "골프와 스트릿 컬처의 트렌디한 만남",
                                                         "price": "-",
                                                         "match": "98%",
-                                                        "productImg": "images/prod_brand_golf_말본_골프.jpg",
+                                                        "productImg": "images/img_51bf90b6.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%A7%90%EB%B3%B8%20%EA%B3%A8%ED%94%84"
                                                 },
                                                 {
@@ -411,7 +411,7 @@ brand_golf: {
                                                         "productDesc": "스포티함과 스트릿 감성의 조화",
                                                         "price": "-",
                                                         "match": "94%",
-                                                        "productImg": "images/prod_brand_golf_나이키_골프.jpg",
+                                                        "productImg": "images/img_16250caa.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%82%98%EC%9D%B4%ED%82%A4%20%EA%B3%A8%ED%94%84"
                                                 },
                                                 {
@@ -419,7 +419,7 @@ brand_golf: {
                                                         "productDesc": "레트로하고 힙한 스타일의 골프웨어",
                                                         "price": "-",
                                                         "match": "89%",
-                                                        "productImg": "images/prod_brand_golf_보기보이즈.jpg",
+                                                        "productImg": "images/img_1e4d00ec.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%B3%B4%EA%B8%B0%EB%B3%B4%EC%9D%B4%EC%A6%88"
                                                 },
                                                 {
@@ -427,7 +427,7 @@ brand_golf: {
                                                         "productDesc": "클래식과 스트릿을 오가는 올드스쿨 매력",
                                                         "price": "-",
                                                         "match": "85%",
-                                                        "productImg": "images/prod_brand_golf_존스_골프.jpg",
+                                                        "productImg": "images/img_b70b5f69.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EC%A1%B4%EC%8A%A4%20%EA%B3%A8%ED%94%84"
                                                 },
                                                 {
@@ -435,7 +435,7 @@ brand_golf: {
                                                         "productDesc": "위트 있는 언더그라운드 골프 씬",
                                                         "price": "-",
                                                         "match": "80%",
-                                                        "productImg": "images/prod_brand_golf_클럽하우스.jpg",
+                                                        "productImg": "images/img_5456e034.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%ED%81%B4%EB%9F%BD%ED%95%98%EC%9A%B0%EC%8A%A4"
                                                 }
                                         ]
@@ -449,7 +449,7 @@ brand_golf: {
                                                         "productDesc": "골프와 스트릿 컬처의 트렌디한 만남",
                                                         "price": "-",
                                                         "match": "98%",
-                                                        "productImg": "images/prod_brand_golf_말본_골프.jpg",
+                                                        "productImg": "images/img_51bf90b6.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%A7%90%EB%B3%B8%20%EA%B3%A8%ED%94%84"
                                                 },
                                                 {
@@ -457,7 +457,7 @@ brand_golf: {
                                                         "productDesc": "스포티함과 스트릿 감성의 조화",
                                                         "price": "-",
                                                         "match": "94%",
-                                                        "productImg": "images/prod_brand_golf_나이키_골프.jpg",
+                                                        "productImg": "images/img_16250caa.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%82%98%EC%9D%B4%ED%82%A4%20%EA%B3%A8%ED%94%84"
                                                 },
                                                 {
@@ -465,7 +465,7 @@ brand_golf: {
                                                         "productDesc": "레트로하고 힙한 스타일의 골프웨어",
                                                         "price": "-",
                                                         "match": "89%",
-                                                        "productImg": "images/prod_brand_golf_보기보이즈.jpg",
+                                                        "productImg": "images/img_1e4d00ec.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%B3%B4%EA%B8%B0%EB%B3%B4%EC%9D%B4%EC%A6%88"
                                                 },
                                                 {
@@ -473,7 +473,7 @@ brand_golf: {
                                                         "productDesc": "클래식과 스트릿을 오가는 올드스쿨 매력",
                                                         "price": "-",
                                                         "match": "85%",
-                                                        "productImg": "images/prod_brand_golf_존스_골프.jpg",
+                                                        "productImg": "images/img_b70b5f69.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EC%A1%B4%EC%8A%A4%20%EA%B3%A8%ED%94%84"
                                                 },
                                                 {
@@ -481,7 +481,7 @@ brand_golf: {
                                                         "productDesc": "위트 있는 언더그라운드 골프 씬",
                                                         "price": "-",
                                                         "match": "80%",
-                                                        "productImg": "images/prod_brand_golf_클럽하우스.jpg",
+                                                        "productImg": "images/img_5456e034.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%ED%81%B4%EB%9F%BD%ED%95%98%EC%9A%B0%EC%8A%A4"
                                                 }
                                         ]
@@ -497,7 +497,7 @@ brand_golf: {
                                                         "productDesc": "전통과 헤리티지를 자랑하는 골프화의 명가",
                                                         "price": "-",
                                                         "match": "97%",
-                                                        "productImg": "images/prod_brand_golf_풋조이.jpg",
+                                                        "productImg": "images/img_69e18fc2.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%ED%92%8B%EC%A1%B0%EC%9D%B4"
                                                 },
                                                 {
@@ -505,7 +505,7 @@ brand_golf: {
                                                         "productDesc": "아메리칸 트래디셔널 프레피 룩",
                                                         "price": "-",
                                                         "match": "93%",
-                                                        "productImg": "images/prod_brand_golf_폴로_골프.jpg",
+                                                        "productImg": "images/img_6dd68eff.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%ED%8F%B4%EB%A1%9C%20%EA%B3%A8%ED%94%84"
                                                 },
                                                 {
@@ -513,7 +513,7 @@ brand_golf: {
                                                         "productDesc": "고급스럽고 클래식한 컨템포러리 감성",
                                                         "price": "-",
                                                         "match": "88%",
-                                                        "productImg": "images/prod_brand_golf_피터_밀러.jpg",
+                                                        "productImg": "images/img_87e8c3aa.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%ED%94%BC%ED%84%B0%20%EB%B0%80%EB%9F%AC"
                                                 },
                                                 {
@@ -521,7 +521,7 @@ brand_golf: {
                                                         "productDesc": "클래식 로고라인 고기능성 웨어",
                                                         "price": "-",
                                                         "match": "84%",
-                                                        "productImg": "images/prod_brand_golf_RLX_랄프로렌.jpg",
+                                                        "productImg": "images/img_18e6116c.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=RLX%20%EB%9E%84%ED%94%84%EB%A1%9C%EB%A0%8C"
                                                 },
                                                 {
@@ -529,7 +529,7 @@ brand_golf: {
                                                         "productDesc": "장인정신이 깃든 콰이어트 명품 라인",
                                                         "price": "-",
                                                         "match": "80%",
-                                                        "productImg": "images/prod_brand_golf_스카티_카메론.jpg",
+                                                        "productImg": "images/img_5d71bfd6.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EC%8A%A4%EC%B9%B4%ED%8B%B0%20%EC%B9%B4%EB%A9%94%EB%A1%A0"
                                                 }
                                         ]
@@ -543,7 +543,7 @@ brand_golf: {
                                                         "productDesc": "전통과 헤리티지를 자랑하는 골프화의 명가",
                                                         "price": "-",
                                                         "match": "97%",
-                                                        "productImg": "images/prod_brand_golf_풋조이.jpg",
+                                                        "productImg": "images/img_69e18fc2.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%ED%92%8B%EC%A1%B0%EC%9D%B4"
                                                 },
                                                 {
@@ -551,7 +551,7 @@ brand_golf: {
                                                         "productDesc": "아메리칸 트래디셔널 프레피 룩",
                                                         "price": "-",
                                                         "match": "93%",
-                                                        "productImg": "images/prod_brand_golf_폴로_골프.jpg",
+                                                        "productImg": "images/img_6dd68eff.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%ED%8F%B4%EB%A1%9C%20%EA%B3%A8%ED%94%84"
                                                 },
                                                 {
@@ -559,7 +559,7 @@ brand_golf: {
                                                         "productDesc": "고급스럽고 클래식한 컨템포러리 감성",
                                                         "price": "-",
                                                         "match": "88%",
-                                                        "productImg": "images/prod_brand_golf_피터_밀러.jpg",
+                                                        "productImg": "images/img_87e8c3aa.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%ED%94%BC%ED%84%B0%20%EB%B0%80%EB%9F%AC"
                                                 },
                                                 {
@@ -567,7 +567,7 @@ brand_golf: {
                                                         "productDesc": "클래식 로고라인 고기능성 웨어",
                                                         "price": "-",
                                                         "match": "84%",
-                                                        "productImg": "images/prod_brand_golf_RLX_랄프로렌.jpg",
+                                                        "productImg": "images/img_18e6116c.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=RLX%20%EB%9E%84%ED%94%84%EB%A1%9C%EB%A0%8C"
                                                 },
                                                 {
@@ -575,7 +575,7 @@ brand_golf: {
                                                         "productDesc": "장인정신이 깃든 콰이어트 명품 라인",
                                                         "price": "-",
                                                         "match": "80%",
-                                                        "productImg": "images/prod_brand_golf_스카티_카메론.jpg",
+                                                        "productImg": "images/img_5d71bfd6.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EC%8A%A4%EC%B9%B4%ED%8B%B0%20%EC%B9%B4%EB%A9%94%EB%A1%A0"
                                                 }
                                         ]
@@ -637,7 +637,7 @@ brand_golf: {
                                                         "productDesc": "성공과 품격의 상징적인 타임피스",
                                                         "price": "-",
                                                         "match": "99%",
-                                                        "productImg": "images/prod_brand_acc_롤렉스.jpg",
+                                                        "productImg": "images/img_32bd8467.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%A1%A4%EB%A0%89%EC%8A%A4"
                                                 },
                                                 {
@@ -645,7 +645,7 @@ brand_golf: {
                                                         "productDesc": "우아한 디자인과 불멸의 헤리티지",
                                                         "price": "-",
                                                         "match": "94%",
-                                                        "productImg": "images/prod_brand_acc_까르띠에.jpg",
+                                                        "productImg": "images/img_2c797e48.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EA%B9%8C%EB%A5%B4%EB%9D%A0%EC%97%90"
                                                 },
                                                 {
@@ -653,7 +653,7 @@ brand_golf: {
                                                         "productDesc": "이탈리안 럭셔리의 관능적인 아름다움",
                                                         "price": "-",
                                                         "match": "89%",
-                                                        "productImg": "images/prod_brand_acc_불가리.jpg",
+                                                        "productImg": "images/img_1ee2a50c.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%B6%88%EA%B0%80%EB%A6%AC"
                                                 },
                                                 {
@@ -661,7 +661,7 @@ brand_golf: {
                                                         "productDesc": "시대를 초월하는 아메리칸 하이주얼리",
                                                         "price": "-",
                                                         "match": "85%",
-                                                        "productImg": "images/prod_brand_acc_티파니앤코.jpg",
+                                                        "productImg": "images/img_0849cc1a.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%ED%8B%B0%ED%8C%8C%EB%8B%88%EC%95%A4%EC%BD%94"
                                                 },
                                                 {
@@ -669,7 +669,7 @@ brand_golf: {
                                                         "productDesc": "동화처럼 아름다운 곡선과 세공력",
                                                         "price": "-",
                                                         "match": "80%",
-                                                        "productImg": "images/prod_brand_acc_반클리프_아펠.jpg",
+                                                        "productImg": "images/img_8f569f4d.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%B0%98%ED%81%B4%EB%A6%AC%ED%94%84%20%EC%95%84%ED%8E%A0"
                                                 }
                                         ]
@@ -683,7 +683,7 @@ brand_golf: {
                                                         "productDesc": "성공과 품격의 상징적인 타임피스",
                                                         "price": "-",
                                                         "match": "99%",
-                                                        "productImg": "images/prod_brand_acc_롤렉스.jpg",
+                                                        "productImg": "images/img_32bd8467.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%A1%A4%EB%A0%89%EC%8A%A4"
                                                 },
                                                 {
@@ -691,7 +691,7 @@ brand_golf: {
                                                         "productDesc": "우아한 디자인과 불멸의 헤리티지",
                                                         "price": "-",
                                                         "match": "94%",
-                                                        "productImg": "images/prod_brand_acc_까르띠에.jpg",
+                                                        "productImg": "images/img_2c797e48.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EA%B9%8C%EB%A5%B4%EB%9D%A0%EC%97%90"
                                                 },
                                                 {
@@ -699,7 +699,7 @@ brand_golf: {
                                                         "productDesc": "이탈리안 럭셔리의 관능적인 아름다움",
                                                         "price": "-",
                                                         "match": "89%",
-                                                        "productImg": "images/prod_brand_acc_불가리.jpg",
+                                                        "productImg": "images/img_1ee2a50c.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%B6%88%EA%B0%80%EB%A6%AC"
                                                 },
                                                 {
@@ -707,7 +707,7 @@ brand_golf: {
                                                         "productDesc": "시대를 초월하는 아메리칸 하이주얼리",
                                                         "price": "-",
                                                         "match": "85%",
-                                                        "productImg": "images/prod_brand_acc_티파니앤코.jpg",
+                                                        "productImg": "images/img_0849cc1a.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%ED%8B%B0%ED%8C%8C%EB%8B%88%EC%95%A4%EC%BD%94"
                                                 },
                                                 {
@@ -715,7 +715,7 @@ brand_golf: {
                                                         "productDesc": "동화처럼 아름다운 곡선과 세공력",
                                                         "price": "-",
                                                         "match": "80%",
-                                                        "productImg": "images/prod_brand_acc_반클리프_아펠.jpg",
+                                                        "productImg": "images/img_8f569f4d.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%B0%98%ED%81%B4%EB%A6%AC%ED%94%84%20%EC%95%84%ED%8E%A0"
                                                 }
                                         ]
@@ -731,7 +731,7 @@ brand_golf: {
                                                         "productDesc": "퓨처리스틱하고 아방가르드한 아이웨어",
                                                         "price": "-",
                                                         "match": "98%",
-                                                        "productImg": "images/prod_brand_acc_젠틀몬스터.jpg",
+                                                        "productImg": "images/img_380da4a0.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EC%A0%A0%ED%8B%80%EB%AA%AC%EC%8A%A4%ED%84%B0"
                                                 },
                                                 {
@@ -739,7 +739,7 @@ brand_golf: {
                                                         "productDesc": "강렬하고 반항적인 하이엔드 실버 주얼리",
                                                         "price": "-",
                                                         "match": "94%",
-                                                        "productImg": "images/prod_brand_acc_크롬하츠.jpg",
+                                                        "productImg": "images/img_52102886.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%ED%81%AC%EB%A1%AC%ED%95%98%EC%B8%A0"
                                                 },
                                                 {
@@ -747,7 +747,7 @@ brand_golf: {
                                                         "productDesc": "펑크와 로맨틱 요소가 결합된 아이코닉 디자인",
                                                         "price": "-",
                                                         "match": "89%",
-                                                        "productImg": "images/prod_brand_acc_비비안_웨스트우드.jpg",
+                                                        "productImg": "images/img_6db5103e.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%B9%84%EB%B9%84%EC%95%88%20%EC%9B%A8%EC%8A%A4%ED%8A%B8%EC%9A%B0%EB%93%9C"
                                                 },
                                                 {
@@ -755,7 +755,7 @@ brand_golf: {
                                                         "productDesc": "로고를 지운 인트레치아토 가죽의 세련됨",
                                                         "price": "-",
                                                         "match": "84%",
-                                                        "productImg": "images/prod_brand_acc_보테가_베네타.jpg",
+                                                        "productImg": "images/img_8e3d75ca.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%B3%B4%ED%85%8C%EA%B0%80%20%EB%B2%A0%EB%84%A4%ED%83%80"
                                                 },
                                                 {
@@ -763,7 +763,7 @@ brand_golf: {
                                                         "productDesc": "스티치 디테일과 해체주의적 감성",
                                                         "price": "-",
                                                         "match": "79%",
-                                                        "productImg": "images/prod_brand_acc_마르지엘라.jpg",
+                                                        "productImg": "images/img_120da426.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%A7%88%EB%A5%B4%EC%A7%80%EC%97%98%EB%9D%BC"
                                                 }
                                         ]
@@ -777,7 +777,7 @@ brand_golf: {
                                                         "productDesc": "퓨처리스틱하고 아방가르드한 아이웨어",
                                                         "price": "-",
                                                         "match": "98%",
-                                                        "productImg": "images/prod_brand_acc_젠틀몬스터.jpg",
+                                                        "productImg": "images/img_380da4a0.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EC%A0%A0%ED%8B%80%EB%AA%AC%EC%8A%A4%ED%84%B0"
                                                 },
                                                 {
@@ -785,7 +785,7 @@ brand_golf: {
                                                         "productDesc": "강렬하고 반항적인 하이엔드 실버 주얼리",
                                                         "price": "-",
                                                         "match": "94%",
-                                                        "productImg": "images/prod_brand_acc_크롬하츠.jpg",
+                                                        "productImg": "images/img_52102886.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%ED%81%AC%EB%A1%AC%ED%95%98%EC%B8%A0"
                                                 },
                                                 {
@@ -793,7 +793,7 @@ brand_golf: {
                                                         "productDesc": "펑크와 로맨틱 요소가 결합된 아이코닉 디자인",
                                                         "price": "-",
                                                         "match": "89%",
-                                                        "productImg": "images/prod_brand_acc_비비안_웨스트우드.jpg",
+                                                        "productImg": "images/img_6db5103e.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%B9%84%EB%B9%84%EC%95%88%20%EC%9B%A8%EC%8A%A4%ED%8A%B8%EC%9A%B0%EB%93%9C"
                                                 },
                                                 {
@@ -801,7 +801,7 @@ brand_golf: {
                                                         "productDesc": "로고를 지운 인트레치아토 가죽의 세련됨",
                                                         "price": "-",
                                                         "match": "84%",
-                                                        "productImg": "images/prod_brand_acc_보테가_베네타.jpg",
+                                                        "productImg": "images/img_8e3d75ca.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%B3%B4%ED%85%8C%EA%B0%80%20%EB%B2%A0%EB%84%A4%ED%83%80"
                                                 },
                                                 {
@@ -809,7 +809,7 @@ brand_golf: {
                                                         "productDesc": "스티치 디테일과 해체주의적 감성",
                                                         "price": "-",
                                                         "match": "79%",
-                                                        "productImg": "images/prod_brand_acc_마르지엘라.jpg",
+                                                        "productImg": "images/img_120da426.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%A7%88%EB%A5%B4%EC%A7%80%EC%97%98%EB%9D%BC"
                                                 }
                                         ]
@@ -825,7 +825,7 @@ brand_golf: {
                                                         "productDesc": "압도적 내구성과 완벽한 비즈니스 스펙",
                                                         "price": "-",
                                                         "match": "97%",
-                                                        "productImg": "images/prod_brand_acc_투미.jpg",
+                                                        "productImg": "images/img_6afee91b.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%ED%88%AC%EB%AF%B8"
                                                 },
                                                 {
@@ -833,7 +833,7 @@ brand_golf: {
                                                         "productDesc": "안정적이고 실용적인 여행의 동반자",
                                                         "price": "-",
                                                         "match": "93%",
-                                                        "productImg": "images/prod_brand_acc_샘소나이트.jpg",
+                                                        "productImg": "images/img_71e5a3d0.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EC%83%98%EC%86%8C%EB%82%98%EC%9D%B4%ED%8A%B8"
                                                 },
                                                 {
@@ -841,7 +841,7 @@ brand_golf: {
                                                         "productDesc": "장인정신과 군사적 실용성, 캐주얼 나일론",
                                                         "price": "-",
                                                         "match": "88%",
-                                                        "productImg": "images/prod_brand_acc_포터.jpg",
+                                                        "productImg": "images/img_a87f970b.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%ED%8F%AC%ED%84%B0"
                                                 },
                                                 {
@@ -849,7 +849,7 @@ brand_golf: {
                                                         "productDesc": "브리티시 클래식 방수/방풍의 미학",
                                                         "price": "-",
                                                         "match": "84%",
-                                                        "productImg": "images/prod_brand_acc_매킨토시.jpg",
+                                                        "productImg": "images/img_42d75434.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%A7%A4%ED%82%A8%ED%86%A0%EC%8B%9C"
                                                 },
                                                 {
@@ -857,7 +857,7 @@ brand_golf: {
                                                         "productDesc": "절제된 디자인과 극강의 고프코어 테크",
                                                         "price": "-",
                                                         "match": "80%",
-                                                        "productImg": "images/prod_brand_acc_아크테릭스.jpg",
+                                                        "productImg": "images/img_4b226abd.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EC%95%84%ED%81%AC%ED%85%8C%EB%A6%AD%EC%8A%A4"
                                                 }
                                         ]
@@ -871,7 +871,7 @@ brand_golf: {
                                                         "productDesc": "압도적 내구성과 완벽한 비즈니스 스펙",
                                                         "price": "-",
                                                         "match": "97%",
-                                                        "productImg": "images/prod_brand_acc_투미.jpg",
+                                                        "productImg": "images/img_6afee91b.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%ED%88%AC%EB%AF%B8"
                                                 },
                                                 {
@@ -879,7 +879,7 @@ brand_golf: {
                                                         "productDesc": "안정적이고 실용적인 여행의 동반자",
                                                         "price": "-",
                                                         "match": "93%",
-                                                        "productImg": "images/prod_brand_acc_샘소나이트.jpg",
+                                                        "productImg": "images/img_71e5a3d0.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EC%83%98%EC%86%8C%EB%82%98%EC%9D%B4%ED%8A%B8"
                                                 },
                                                 {
@@ -887,7 +887,7 @@ brand_golf: {
                                                         "productDesc": "장인정신과 군사적 실용성, 캐주얼 나일론",
                                                         "price": "-",
                                                         "match": "88%",
-                                                        "productImg": "images/prod_brand_acc_포터.jpg",
+                                                        "productImg": "images/img_a87f970b.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%ED%8F%AC%ED%84%B0"
                                                 },
                                                 {
@@ -895,7 +895,7 @@ brand_golf: {
                                                         "productDesc": "브리티시 클래식 방수/방풍의 미학",
                                                         "price": "-",
                                                         "match": "84%",
-                                                        "productImg": "images/prod_brand_acc_매킨토시.jpg",
+                                                        "productImg": "images/img_42d75434.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%A7%A4%ED%82%A8%ED%86%A0%EC%8B%9C"
                                                 },
                                                 {
@@ -903,7 +903,7 @@ brand_golf: {
                                                         "productDesc": "절제된 디자인과 극강의 고프코어 테크",
                                                         "price": "-",
                                                         "match": "80%",
-                                                        "productImg": "images/prod_brand_acc_아크테릭스.jpg",
+                                                        "productImg": "images/img_4b226abd.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EC%95%84%ED%81%AC%ED%85%8C%EB%A6%AD%EC%8A%A4"
                                                 }
                                         ]
@@ -919,7 +919,7 @@ brand_golf: {
                                                         "productDesc": "재활용 방수천으로 만든 세상에 하나뿐인 가방",
                                                         "price": "-",
                                                         "match": "98%",
-                                                        "productImg": "images/prod_brand_acc_프라이탁.jpg",
+                                                        "productImg": "images/img_53e86347.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%ED%94%84%EB%9D%BC%EC%9D%B4%ED%83%81"
                                                 },
                                                 {
@@ -927,7 +927,7 @@ brand_golf: {
                                                         "productDesc": "스트릿 컬쳐를 상징하는 강력한 박스로고",
                                                         "price": "-",
                                                         "match": "93%",
-                                                        "productImg": "images/prod_brand_acc_슈프림.jpg",
+                                                        "productImg": "images/img_7dd02633.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EC%8A%88%ED%94%84%EB%A6%BC"
                                                 },
                                                 {
@@ -935,7 +935,7 @@ brand_golf: {
                                                         "productDesc": "자연을 사랑하는 오가닉 라이프스타일",
                                                         "price": "-",
                                                         "match": "89%",
-                                                        "productImg": "images/prod_brand_acc_파타고니아.jpg",
+                                                        "productImg": "images/img_e0954bd6.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%ED%8C%8C%ED%83%80%EA%B3%A0%EB%8B%88%EC%95%84"
                                                 },
                                                 {
@@ -943,7 +943,7 @@ brand_golf: {
                                                         "productDesc": "파리지앵 무드의 여유로운 캔버스 백",
                                                         "price": "-",
                                                         "match": "84%",
-                                                        "productImg": "images/prod_brand_acc_메종_키츠네.jpg",
+                                                        "productImg": "images/img_25966f20.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%A9%94%EC%A2%85%20%ED%82%A4%EC%B8%A0%EB%84%A4"
                                                 },
                                                 {
@@ -951,7 +951,7 @@ brand_golf: {
                                                         "productDesc": "지속가능성과 트렌드를 모두 잡은 텀블러",
                                                         "price": "-",
                                                         "match": "80%",
-                                                        "productImg": "images/prod_brand_acc_스탠리.jpg",
+                                                        "productImg": "images/img_f48df792.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EC%8A%A4%ED%83%A0%EB%A6%AC"
                                                 }
                                         ]
@@ -965,7 +965,7 @@ brand_golf: {
                                                         "productDesc": "재활용 방수천으로 만든 세상에 하나뿐인 가방",
                                                         "price": "-",
                                                         "match": "98%",
-                                                        "productImg": "images/prod_brand_acc_프라이탁.jpg",
+                                                        "productImg": "images/img_53e86347.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%ED%94%84%EB%9D%BC%EC%9D%B4%ED%83%81"
                                                 },
                                                 {
@@ -973,7 +973,7 @@ brand_golf: {
                                                         "productDesc": "스트릿 컬쳐를 상징하는 강력한 박스로고",
                                                         "price": "-",
                                                         "match": "93%",
-                                                        "productImg": "images/prod_brand_acc_슈프림.jpg",
+                                                        "productImg": "images/img_7dd02633.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EC%8A%88%ED%94%84%EB%A6%BC"
                                                 },
                                                 {
@@ -981,7 +981,7 @@ brand_golf: {
                                                         "productDesc": "자연을 사랑하는 오가닉 라이프스타일",
                                                         "price": "-",
                                                         "match": "89%",
-                                                        "productImg": "images/prod_brand_acc_파타고니아.jpg",
+                                                        "productImg": "images/img_e0954bd6.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%ED%8C%8C%ED%83%80%EA%B3%A0%EB%8B%88%EC%95%84"
                                                 },
                                                 {
@@ -989,7 +989,7 @@ brand_golf: {
                                                         "productDesc": "파리지앵 무드의 여유로운 캔버스 백",
                                                         "price": "-",
                                                         "match": "84%",
-                                                        "productImg": "images/prod_brand_acc_메종_키츠네.jpg",
+                                                        "productImg": "images/img_25966f20.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%A9%94%EC%A2%85%20%ED%82%A4%EC%B8%A0%EB%84%A4"
                                                 },
                                                 {
@@ -997,7 +997,7 @@ brand_golf: {
                                                         "productDesc": "지속가능성과 트렌드를 모두 잡은 텀블러",
                                                         "price": "-",
                                                         "match": "80%",
-                                                        "productImg": "images/prod_brand_acc_스탠리.jpg",
+                                                        "productImg": "images/img_f48df792.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EC%8A%A4%ED%83%A0%EB%A6%AC"
                                                 }
                                         ]
@@ -1059,7 +1059,7 @@ brand_golf: {
                                                         "productDesc": "스케이트보드와 서퍼가 낳은 스트릿 제왕",
                                                         "price": "-",
                                                         "match": "99%",
-                                                        "productImg": "images/prod_brand_casual_스투시.jpg",
+                                                        "productImg": "images/img_de08b440.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EC%8A%A4%ED%88%AC%EC%8B%9C"
                                                 },
                                                 {
@@ -1075,7 +1075,7 @@ brand_golf: {
                                                         "productDesc": "영국판 슈프림, 자유롭고 위트 넘치는 스트릿",
                                                         "price": "-",
                                                         "match": "90%",
-                                                        "productImg": "images/prod_brand_casual_팔라스.jpg",
+                                                        "productImg": "images/img_7464089d.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%ED%8C%94%EB%9D%BC%EC%8A%A4"
                                                 },
                                                 {
@@ -1083,7 +1083,7 @@ brand_golf: {
                                                         "productDesc": "워크웨어 기반의 견고한 빈티지 스트릿",
                                                         "price": "-",
                                                         "match": "86%",
-                                                        "productImg": "images/prod_brand_casual_칼하트_WIP.jpg",
+                                                        "productImg": "images/img_04cc3777.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EC%B9%BC%ED%95%98%ED%8A%B8%20WIP"
                                                 },
                                                 {
@@ -1091,7 +1091,7 @@ brand_golf: {
                                                         "productDesc": "화려한 카모플라쥬와 일본 우라하라 감성",
                                                         "price": "-",
                                                         "match": "81%",
-                                                        "productImg": "images/prod_brand_casual_베이프.jpg",
+                                                        "productImg": "images/img_33937ec2.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%B2%A0%EC%9D%B4%ED%94%84"
                                                 }
                                         ]
@@ -1105,7 +1105,7 @@ brand_golf: {
                                                         "productDesc": "스케이트보드와 서퍼가 낳은 스트릿 제왕",
                                                         "price": "-",
                                                         "match": "99%",
-                                                        "productImg": "images/prod_brand_casual_스투시.jpg",
+                                                        "productImg": "images/img_de08b440.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EC%8A%A4%ED%88%AC%EC%8B%9C"
                                                 },
                                                 {
@@ -1121,7 +1121,7 @@ brand_golf: {
                                                         "productDesc": "영국판 슈프림, 자유롭고 위트 넘치는 스트릿",
                                                         "price": "-",
                                                         "match": "90%",
-                                                        "productImg": "images/prod_brand_casual_팔라스.jpg",
+                                                        "productImg": "images/img_7464089d.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%ED%8C%94%EB%9D%BC%EC%8A%A4"
                                                 },
                                                 {
@@ -1129,7 +1129,7 @@ brand_golf: {
                                                         "productDesc": "워크웨어 기반의 견고한 빈티지 스트릿",
                                                         "price": "-",
                                                         "match": "86%",
-                                                        "productImg": "images/prod_brand_casual_칼하트_WIP.jpg",
+                                                        "productImg": "images/img_04cc3777.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EC%B9%BC%ED%95%98%ED%8A%B8%20WIP"
                                                 },
                                                 {
@@ -1137,7 +1137,7 @@ brand_golf: {
                                                         "productDesc": "화려한 카모플라쥬와 일본 우라하라 감성",
                                                         "price": "-",
                                                         "match": "81%",
-                                                        "productImg": "images/prod_brand_casual_베이프.jpg",
+                                                        "productImg": "images/img_33937ec2.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%B2%A0%EC%9D%B4%ED%94%84"
                                                 }
                                         ]
@@ -1153,7 +1153,7 @@ brand_golf: {
                                                         "productDesc": "스포츠를 넘어선 일상의 강력한 존재감",
                                                         "price": "-",
                                                         "match": "98%",
-                                                        "productImg": "images/prod_brand_casual_나이키.jpg",
+                                                        "productImg": "images/img_a2d6ccd9.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%82%98%EC%9D%B4%ED%82%A4"
                                                 },
                                                 {
@@ -1161,7 +1161,7 @@ brand_golf: {
                                                         "productDesc": "오리지널 트레포일 로고의 레트로 매력",
                                                         "price": "-",
                                                         "match": "94%",
-                                                        "productImg": "images/prod_brand_casual_아디다스.jpg",
+                                                        "productImg": "images/img_4d98a8d6.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EC%95%84%EB%94%94%EB%8B%A4%EC%8A%A4"
                                                 },
                                                 {
@@ -1169,7 +1169,7 @@ brand_golf: {
                                                         "productDesc": "편안한 착용감의 미니멀 데일리 애슬레저",
                                                         "price": "-",
                                                         "match": "89%",
-                                                        "productImg": "images/prod_brand_casual_뉴발란스.jpg",
+                                                        "productImg": "images/img_63f6c299.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%89%B4%EB%B0%9C%EB%9E%80%EC%8A%A4"
                                                 },
                                                 {
@@ -1177,7 +1177,7 @@ brand_golf: {
                                                         "productDesc": "몸을 감싸는 프리미엄 애슬레저 룩",
                                                         "price": "-",
                                                         "match": "85%",
-                                                        "productImg": "images/prod_brand_casual_룰루레몬.jpg",
+                                                        "productImg": "images/img_6d90e3a1.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%A3%B0%EB%A3%A8%EB%A0%88%EB%AA%AC"
                                                 },
                                                 {
@@ -1185,7 +1185,7 @@ brand_golf: {
                                                         "productDesc": "원조 스웻셔츠가 주는 묵직한 오리지널리티",
                                                         "price": "-",
                                                         "match": "80%",
-                                                        "productImg": "images/prod_brand_casual_챔피온.jpg",
+                                                        "productImg": "images/img_b67ac1ed.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EC%B1%94%ED%94%BC%EC%98%A8"
                                                 }
                                         ]
@@ -1199,7 +1199,7 @@ brand_golf: {
                                                         "productDesc": "스포츠를 넘어선 일상의 강력한 존재감",
                                                         "price": "-",
                                                         "match": "98%",
-                                                        "productImg": "images/prod_brand_casual_나이키.jpg",
+                                                        "productImg": "images/img_a2d6ccd9.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%82%98%EC%9D%B4%ED%82%A4"
                                                 },
                                                 {
@@ -1207,7 +1207,7 @@ brand_golf: {
                                                         "productDesc": "오리지널 트레포일 로고의 레트로 매력",
                                                         "price": "-",
                                                         "match": "94%",
-                                                        "productImg": "images/prod_brand_casual_아디다스.jpg",
+                                                        "productImg": "images/img_4d98a8d6.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EC%95%84%EB%94%94%EB%8B%A4%EC%8A%A4"
                                                 },
                                                 {
@@ -1215,7 +1215,7 @@ brand_golf: {
                                                         "productDesc": "편안한 착용감의 미니멀 데일리 애슬레저",
                                                         "price": "-",
                                                         "match": "89%",
-                                                        "productImg": "images/prod_brand_casual_뉴발란스.jpg",
+                                                        "productImg": "images/img_63f6c299.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%89%B4%EB%B0%9C%EB%9E%80%EC%8A%A4"
                                                 },
                                                 {
@@ -1223,7 +1223,7 @@ brand_golf: {
                                                         "productDesc": "몸을 감싸는 프리미엄 애슬레저 룩",
                                                         "price": "-",
                                                         "match": "85%",
-                                                        "productImg": "images/prod_brand_casual_룰루레몬.jpg",
+                                                        "productImg": "images/img_6d90e3a1.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%A3%B0%EB%A3%A8%EB%A0%88%EB%AA%AC"
                                                 },
                                                 {
@@ -1231,7 +1231,7 @@ brand_golf: {
                                                         "productDesc": "원조 스웻셔츠가 주는 묵직한 오리지널리티",
                                                         "price": "-",
                                                         "match": "80%",
-                                                        "productImg": "images/prod_brand_casual_챔피온.jpg",
+                                                        "productImg": "images/img_b67ac1ed.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EC%B1%94%ED%94%BC%EC%98%A8"
                                                 }
                                         ]
@@ -1247,7 +1247,7 @@ brand_golf: {
                                                         "productDesc": "영원한 아메리칸 클래식 프레피의 정석",
                                                         "price": "-",
                                                         "match": "99%",
-                                                        "productImg": "images/prod_brand_casual_폴로_랄프_로렌.jpg",
+                                                        "productImg": "images/img_16d1e1ef.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%ED%8F%B4%EB%A1%9C%20%EB%9E%84%ED%94%84%20%EB%A1%9C%EB%A0%8C"
                                                 },
                                                 {
@@ -1255,7 +1255,7 @@ brand_golf: {
                                                         "productDesc": "밝고 쿨한 아메리칸 캐주얼 라이프",
                                                         "price": "-",
                                                         "match": "94%",
-                                                        "productImg": "images/prod_brand_casual_타미_힐피거.jpg",
+                                                        "productImg": "images/img_d145041d.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%ED%83%80%EB%AF%B8%20%ED%9E%90%ED%94%BC%EA%B1%B0"
                                                 },
                                                 {
@@ -1263,7 +1263,7 @@ brand_golf: {
                                                         "productDesc": "우아하고 깨끗한 핏의 프렌치 스포티 캐주얼",
                                                         "price": "-",
                                                         "match": "89%",
-                                                        "productImg": "images/prod_brand_casual_라코스테.jpg",
+                                                        "productImg": "images/img_cc4d076d.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%9D%BC%EC%BD%94%EC%8A%A4%ED%85%8C"
                                                 },
                                                 {
@@ -1271,7 +1271,7 @@ brand_golf: {
                                                         "productDesc": "전통과 포멀함을 유지하는 단정한 옷장",
                                                         "price": "-",
                                                         "match": "84%",
-                                                        "productImg": "images/prod_brand_casual_브룩스_브라더스.jpg",
+                                                        "productImg": "images/img_144d122f.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%B8%8C%EB%A3%A9%EC%8A%A4%20%EB%B8%8C%EB%9D%BC%EB%8D%94%EC%8A%A4"
                                                 },
                                                 {
@@ -1279,7 +1279,7 @@ brand_golf: {
                                                         "productDesc": "여우 로고로 완성하는 깔끔한 프렌치 데일리",
                                                         "price": "-",
                                                         "match": "80%",
-                                                        "productImg": "images/prod_brand_casual_메종_키츠네.jpg",
+                                                        "productImg": "images/img_7b431abc.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%A9%94%EC%A2%85%20%ED%82%A4%EC%B8%A0%EB%84%A4"
                                                 }
                                         ]
@@ -1293,7 +1293,7 @@ brand_golf: {
                                                         "productDesc": "영원한 아메리칸 클래식 프레피의 정석",
                                                         "price": "-",
                                                         "match": "99%",
-                                                        "productImg": "images/prod_brand_casual_폴로_랄프_로렌.jpg",
+                                                        "productImg": "images/img_16d1e1ef.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%ED%8F%B4%EB%A1%9C%20%EB%9E%84%ED%94%84%20%EB%A1%9C%EB%A0%8C"
                                                 },
                                                 {
@@ -1301,7 +1301,7 @@ brand_golf: {
                                                         "productDesc": "밝고 쿨한 아메리칸 캐주얼 라이프",
                                                         "price": "-",
                                                         "match": "94%",
-                                                        "productImg": "images/prod_brand_casual_타미_힐피거.jpg",
+                                                        "productImg": "images/img_d145041d.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%ED%83%80%EB%AF%B8%20%ED%9E%90%ED%94%BC%EA%B1%B0"
                                                 },
                                                 {
@@ -1309,7 +1309,7 @@ brand_golf: {
                                                         "productDesc": "우아하고 깨끗한 핏의 프렌치 스포티 캐주얼",
                                                         "price": "-",
                                                         "match": "89%",
-                                                        "productImg": "images/prod_brand_casual_라코스테.jpg",
+                                                        "productImg": "images/img_cc4d076d.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%9D%BC%EC%BD%94%EC%8A%A4%ED%85%8C"
                                                 },
                                                 {
@@ -1317,7 +1317,7 @@ brand_golf: {
                                                         "productDesc": "전통과 포멀함을 유지하는 단정한 옷장",
                                                         "price": "-",
                                                         "match": "84%",
-                                                        "productImg": "images/prod_brand_casual_브룩스_브라더스.jpg",
+                                                        "productImg": "images/img_144d122f.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%B8%8C%EB%A3%A9%EC%8A%A4%20%EB%B8%8C%EB%9D%BC%EB%8D%94%EC%8A%A4"
                                                 },
                                                 {
@@ -1325,7 +1325,7 @@ brand_golf: {
                                                         "productDesc": "여우 로고로 완성하는 깔끔한 프렌치 데일리",
                                                         "price": "-",
                                                         "match": "80%",
-                                                        "productImg": "images/prod_brand_casual_메종_키츠네.jpg",
+                                                        "productImg": "images/img_7b431abc.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%A9%94%EC%A2%85%20%ED%82%A4%EC%B8%A0%EB%84%A4"
                                                 }
                                         ]
@@ -1341,7 +1341,7 @@ brand_golf: {
                                                         "productDesc": "지구를 구하기 위해 옷을 만드는 브랜드",
                                                         "price": "-",
                                                         "match": "98%",
-                                                        "productImg": "images/prod_brand_casual_파타고니아.jpg",
+                                                        "productImg": "images/img_aa6055a3.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%ED%8C%8C%ED%83%80%EA%B3%A0%EB%8B%88%EC%95%84"
                                                 },
                                                 {
@@ -1349,7 +1349,7 @@ brand_golf: {
                                                         "productDesc": "도시와 산을 모두 덮은 강력한 방한복",
                                                         "price": "-",
                                                         "match": "94%",
-                                                        "productImg": "images/prod_brand_casual_노스페이스.jpg",
+                                                        "productImg": "images/img_6644a7b0.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%85%B8%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4"
                                                 },
                                                 {
@@ -1357,7 +1357,7 @@ brand_golf: {
                                                         "productDesc": "극한 성능과 도심형 고프코어의 최정점",
                                                         "price": "-",
                                                         "match": "90%",
-                                                        "productImg": "images/prod_brand_casual_아크테릭스.jpg",
+                                                        "productImg": "images/img_b5756a06.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EC%95%84%ED%81%AC%ED%85%8C%EB%A6%AD%EC%8A%A4"
                                                 },
                                                 {
@@ -1365,7 +1365,7 @@ brand_golf: {
                                                         "productDesc": "캠핑의 안락함을 옷으로 구현한 어패럴",
                                                         "price": "-",
                                                         "match": "85%",
-                                                        "productImg": "images/prod_brand_casual_스노우피크.jpg",
+                                                        "productImg": "images/img_02e75917.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EC%8A%A4%EB%85%B8%EC%9A%B0%ED%94%BC%ED%81%AC"
                                                 },
                                                 {
@@ -1373,7 +1373,7 @@ brand_golf: {
                                                         "productDesc": "트레일 러닝 기술을 이식한 고프코어 필수품",
                                                         "price": "-",
                                                         "match": "81%",
-                                                        "productImg": "images/prod_brand_casual_살로몬.jpg",
+                                                        "productImg": "images/img_760f0bb3.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EC%82%B4%EB%A1%9C%EB%AA%AC"
                                                 }
                                         ]
@@ -1387,7 +1387,7 @@ brand_golf: {
                                                         "productDesc": "지구를 구하기 위해 옷을 만드는 브랜드",
                                                         "price": "-",
                                                         "match": "98%",
-                                                        "productImg": "images/prod_brand_casual_파타고니아.jpg",
+                                                        "productImg": "images/img_aa6055a3.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%ED%8C%8C%ED%83%80%EA%B3%A0%EB%8B%88%EC%95%84"
                                                 },
                                                 {
@@ -1395,7 +1395,7 @@ brand_golf: {
                                                         "productDesc": "도시와 산을 모두 덮은 강력한 방한복",
                                                         "price": "-",
                                                         "match": "94%",
-                                                        "productImg": "images/prod_brand_casual_노스페이스.jpg",
+                                                        "productImg": "images/img_6644a7b0.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EB%85%B8%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4"
                                                 },
                                                 {
@@ -1403,7 +1403,7 @@ brand_golf: {
                                                         "productDesc": "극한 성능과 도심형 고프코어의 최정점",
                                                         "price": "-",
                                                         "match": "90%",
-                                                        "productImg": "images/prod_brand_casual_아크테릭스.jpg",
+                                                        "productImg": "images/img_b5756a06.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EC%95%84%ED%81%AC%ED%85%8C%EB%A6%AD%EC%8A%A4"
                                                 },
                                                 {
@@ -1411,7 +1411,7 @@ brand_golf: {
                                                         "productDesc": "캠핑의 안락함을 옷으로 구현한 어패럴",
                                                         "price": "-",
                                                         "match": "85%",
-                                                        "productImg": "images/prod_brand_casual_스노우피크.jpg",
+                                                        "productImg": "images/img_02e75917.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EC%8A%A4%EB%85%B8%EC%9A%B0%ED%94%BC%ED%81%AC"
                                                 },
                                                 {
@@ -1419,7 +1419,7 @@ brand_golf: {
                                                         "productDesc": "트레일 러닝 기술을 이식한 고프코어 필수품",
                                                         "price": "-",
                                                         "match": "81%",
-                                                        "productImg": "images/prod_brand_casual_살로몬.jpg",
+                                                        "productImg": "images/img_760f0bb3.jpg",
                                                         "buyLink": "https://shopping.yahoo.co.jp/search?p=%EC%82%B4%EB%A1%9C%EB%AA%AC"
                                                 }
                                         ]
