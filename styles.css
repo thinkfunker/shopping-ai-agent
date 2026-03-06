@@ -109,14 +109,16 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 20px 8px 20px;
+    padding: 12px 16px 8px 16px;
+    height: 52px;
 }
 
 .home-logo {
-    font-size: 22px;
-    font-weight: 700;
-    color: var(--text-main);
-    letter-spacing: -0.5px;
+    font-family: 'Roboto', 'Noto Sans JP', sans-serif;
+    font-size: 17px;
+    font-weight: 800;
+    color: #000000;
+    letter-spacing: -0.3px;
 }
 
 .home-header-tools {
@@ -133,24 +135,29 @@ body {
     align-items: center;
     justify-content: center;
     color: var(--text-main);
-    padding: 6px;
+    padding: 4px;
 }
 
 .icon-btn i {
-    width: 22px;
-    height: 22px;
-    stroke-width: 1.8;
+    width: 24px;
+    height: 24px;
+    stroke-width: 2;
 }
 
 .avatar-circle {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background: #F0F0F0;
+    background: #E8E8E8;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    flex-shrink: 0;
+}
+
+.avatar-photo {
+    background: linear-gradient(135deg, #D4A574 0%, #C4956A 50%, #8B7355 100%);
 }
 
 .avatar-circle i {
@@ -297,8 +304,10 @@ body {
 .quiz-top-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 8px 20px;
+    justify-content: center;
+    padding: 8px 16px;
+    height: 52px;
+    position: relative;
     flex-shrink: 0;
 }
 
@@ -307,20 +316,22 @@ body {
     border: none;
     cursor: pointer;
     padding: 4px;
-    color: var(--text-main);
+    color: #17181A;
+    position: absolute;
+    left: 16px;
 }
 
 .quiz-back-btn i {
-    width: 28px;
-    height: 28px;
-    stroke-width: 2;
+    width: 24px;
+    height: 24px;
+    stroke-width: 2.5;
 }
 
 .quiz-step-indicator {
     font-size: 16px;
-    font-weight: 600;
-    color: var(--text-main);
-    letter-spacing: 0.5px;
+    font-weight: 700;
+    color: #17181A;
+    letter-spacing: 0;
 }
 
 .quiz-spacer {
@@ -329,8 +340,8 @@ body {
 
 /* Progress Bar */
 .quiz-progress-bar-track {
-    height: 3px;
-    background: #E8E8E8;
+    height: 4px;
+    background: #F4F4F4;
     margin: 0;
     flex-shrink: 0;
 }
@@ -511,7 +522,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 20px 8px 20px;
+    padding: 12px 16px 8px 16px;
+    height: 52px;
 }
 
 .detail-screen {
