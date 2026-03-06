@@ -4,113 +4,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>TASTE FINDER</title>
-    <!-- Pretendard Font -->
-    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css"
-        rel="stylesheet" />
+    <title>Shopping Ai - Taste Finder</title>
+    <!-- Noto Sans JP (Figma primary font) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <!-- Feather Icons for clean minimalistic SVG icons -->
+    <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
 </head>
 
 <body>
     <div class="mobile-container">
-        <!-- Status Bar -->
-        <div class="mock-status-bar">
-            <span class="time">9:41</span>
-            <div class="icons">
-                <i data-feather="bar-chart-2"></i>
-                <i data-feather="wifi"></i>
-                <i data-feather="battery"></i>
-            </div>
-        </div>
-
-        <!-- Header -->
-        <header class="app-header">
-            <button class="icon-btn back-btn" onclick="goBack()">
-                <i data-feather="arrow-left"></i>
-            </button>
-            <div class="header-tools" style="display:flex; align-items:center; gap: 8px;">
-                <button class="icon-btn" onclick="toggleLanguage()" id="lang-btn"
-                    style="font-size: 14px; font-weight: bold; width: auto; padding: 0 8px;">KO</button>
-                <button class="icon-btn"><i data-feather="menu"></i></button>
-            </div>
-        </header>
-
         <!-- Main Content Area -->
         <main class="main-content" id="mainContent">
             <!-- Screen 1: Home (Categories) -->
             <div id="screen-home" class="screen active">
-                <div class="title-section">
-                    <h1>TASTE<br>FINDER</h1>
-                    <p id="t-subtitle">당신의 고유한 취향을 발견합니다.</p>
-                </div>
-
-                <div class="category-block">
-                    <div class="category-title">CATEGORY</div>
-                    <div class="pill-group">
-                        <button class="pill" onclick="startQuiz('sneakers')">
-                            <div class="pill-icon type-1"><i data-feather="box"></i></div> SNEAKERS
-                        </button>
-                        <button class="pill" onclick="startQuiz('appliances')">
-                            <div class="pill-icon type-2"><i data-feather="monitor"></i></div> APPLIANCES
-                        </button>
-                        <button class="pill" onclick="startQuiz('tableware')">
-                            <div class="pill-icon type-3"><i data-feather="coffee"></i></div> TABLEWARE
-                        </button>
-                        <button class="pill" onclick="startQuiz('brand_golf')">
-                            <div class="pill-icon type-1"><i data-feather="target"></i></div> GOLF
-                        </button>
-                        <button class="pill" onclick="startQuiz('brand_acc')">
-                            <div class="pill-icon type-2"><i data-feather="briefcase"></i></div> ACCESSORIES
-                        </button>
-                        <button class="pill" onclick="startQuiz('brand_casual')">
-                            <div class="pill-icon type-3"><i data-feather="smile"></i></div> CASUAL
-                        </button>
+                <!-- Status Bar -->
+                <div class="mock-status-bar">
+                    <span class="time">9:41</span>
+                    <div class="icons">
+                        <i data-feather="bar-chart-2"></i>
+                        <i data-feather="wifi"></i>
+                        <i data-feather="battery"></i>
                     </div>
                 </div>
+
+                <!-- Home Header -->
+                <header class="home-header">
+                    <h1 class="home-logo">Shopping Ai</h1>
+                    <div class="home-header-tools">
+                        <button class="icon-btn" onclick="toggleLanguage()" id="lang-btn">
+                            <i data-feather="sliders"></i>
+                        </button>
+                        <div class="avatar-circle">
+                            <i data-feather="user"></i>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- AI Message Bubble -->
+                <div class="ai-message-bubble">
+                    <span class="ai-icon">🤖</span>
+                    <span id="t-ai-greeting">あなたの好みを診断して最適なアイテムをご提案します</span>
+                </div>
+
+                <!-- Category Chips -->
+                <div class="category-chips-scroll">
+                    <div class="category-chips">
+                        <button class="chip chip-active" onclick="filterCategory('all')">
+                            <i data-feather="zap" style="width:14px;height:14px;"></i> AI Pick
+                        </button>
+                        <button class="chip" onclick="filterCategory('sports')">🎾 スポーツ</button>
+                        <button class="chip" onclick="filterCategory('fashion')">👔 ファッション</button>
+                        <button class="chip" onclick="filterCategory('golf')">⛳ ゴルフ</button>
+                    </div>
+                </div>
+
+                <!-- Content Cards Grid -->
+                <div class="content-grid">
+                    <div class="content-card card-tall" onclick="startQuiz('sneakers')">
+                        <img src="images/result_sneakers_type_A_A_p1.jpg" alt="Sneakers">
+                        <div class="card-overlay">
+                            <span class="card-tag">SNEAKERS</span>
+                            <p class="card-label" id="t-cat-sneakers">スニーカー<br>診断を始めよう</p>
+                        </div>
+                    </div>
+                    <div class="content-card" onclick="startQuiz('appliances')">
+                        <img src="images/result_tableware_type_A_A_p1.jpg" alt="Appliances">
+                        <div class="card-overlay">
+                            <span class="card-tag">APPLIANCES</span>
+                            <p class="card-label" id="t-cat-appliances">空間家電<br>お好みの診断</p>
+                        </div>
+                    </div>
+                    <div class="content-card" onclick="startQuiz('tableware')">
+                        <img src="images/result_tableware_type_B_A_p1.jpg" alt="Tableware">
+                        <div class="card-overlay">
+                            <span class="card-tag">TABLEWARE</span>
+                            <p class="card-label" id="t-cat-tableware">テーブルウェア<br>特集</p>
+                        </div>
+                    </div>
+                    <div class="content-card card-wide" onclick="startQuiz('brand_golf')">
+                        <img src="images/quiz_brand_golf_q1_a.jpg" alt="Golf">
+                        <div class="card-overlay">
+                            <span class="card-tag">GOLF</span>
+                            <p class="card-label" id="t-cat-golf">ゴルフブランド<br>スタイル診断</p>
+                        </div>
+                    </div>
+                    <div class="content-card" onclick="startQuiz('brand_acc')">
+                        <img src="images/quiz_brand_acc_q1_a.jpg" alt="Accessories">
+                        <div class="card-overlay">
+                            <span class="card-tag">ACCESSORIES</span>
+                            <p class="card-label" id="t-cat-acc">アクセサリー<br>ブランド診断</p>
+                        </div>
+                    </div>
+                    <div class="content-card" onclick="startQuiz('brand_casual')">
+                        <img src="images/quiz_brand_casual_q1_a.jpg" alt="Casual">
+                        <div class="card-overlay">
+                            <span class="card-tag">CASUAL</span>
+                            <p class="card-label" id="t-cat-casual">カジュアル<br>スタイル診断</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-spacer"></div>
             </div>
 
-            <!-- Screen 2: Quiz (A/B Test) -->
+            <!-- Screen 2: Quiz (A/B Test) - Figma Design -->
             <div id="screen-quiz" class="screen">
-                <div class="quiz-header">
-                    <span class="badge-black" id="quiz-progress" style="font-size: 11px; padding: 4px 10px;">1 /
-                        10</span>
-                    <h2 class="section-title" style="margin-top:16px; margin-bottom: 8px;">WHICH ONE?</h2>
-                    <p id="t-quiz-instruction" style="font-size: 12px; color: var(--text-sub);">직관적으로 끌리는 쪽을 선택하세요</p>
+                <!-- Quiz Status Bar -->
+                <div class="mock-status-bar">
+                    <span class="time">9:41</span>
+                    <div class="icons">
+                        <i data-feather="bar-chart-2"></i>
+                        <i data-feather="wifi"></i>
+                        <i data-feather="battery"></i>
+                    </div>
                 </div>
 
-                <div class="ab-test-container">
-                    <div class="ab-card" onclick="selectOption('A')">
+                <!-- Quiz Top Navigation (Figma style) -->
+                <div class="quiz-top-nav">
+                    <button class="quiz-back-btn" onclick="goBack()">
+                        <i data-feather="chevron-left"></i>
+                    </button>
+                    <span class="quiz-step-indicator" id="quiz-progress">1/10</span>
+                    <div class="quiz-spacer"></div>
+                </div>
+                <!-- Progress Bar -->
+                <div class="quiz-progress-bar-track">
+                    <div class="quiz-progress-bar-fill" id="quiz-progress-bar" style="width: 10%"></div>
+                </div>
+
+                <!-- Quiz Question -->
+                <div class="quiz-question-area">
+                    <h2 class="quiz-main-question" id="t-quiz-title">さらに好まれるスポーツは？</h2>
+                    <p class="quiz-sub-question" id="t-quiz-instruction">直感的に惹かれる方を選んでください</p>
+                </div>
+
+                <!-- AB Image Cards -->
+                <div class="quiz-cards-container">
+                    <div class="quiz-image-card" onclick="selectOption('A')">
                         <img src="" id="img-option-a" alt="Option A">
+                        <div class="quiz-card-overlay">
+                            <span class="quiz-card-title" id="quiz-label-a"></span>
+                            <span class="quiz-card-desc" id="quiz-desc-a"></span>
+                        </div>
                     </div>
-                    <div class="vs-badge">VS</div>
-                    <div class="ab-card" onclick="selectOption('B')">
+                    <div class="quiz-image-card" onclick="selectOption('B')">
                         <img src="" id="img-option-b" alt="Option B">
+                        <div class="quiz-card-overlay">
+                            <span class="quiz-card-title" id="quiz-label-b"></span>
+                            <span class="quiz-card-desc" id="quiz-desc-b"></span>
+                        </div>
                     </div>
+                </div>
+
+                <!-- iOS Home Indicator -->
+                <div class="ios-home-indicator">
+                    <div class="home-indicator-bar"></div>
                 </div>
             </div>
 
             <!-- Screen 2.5: Analyzing -->
             <div id="screen-analyzing" class="screen detail-screen">
-                <div class="title-section" style="text-align: center; margin-top: 100px;">
-                    <div class="spinner" style="margin: 0 auto 24px auto;"></div>
-                    <h1 style="font-size:20px; text-transform: uppercase;">ANALYZING...</h1>
-                    <p id="t-analyze-msg">선택하신 이미지를 AI가 분석 중입니다.</p>
+                <div class="mock-status-bar">
+                    <span class="time">9:41</span>
+                    <div class="icons">
+                        <i data-feather="bar-chart-2"></i>
+                        <i data-feather="wifi"></i>
+                        <i data-feather="battery"></i>
+                    </div>
+                </div>
+                <div class="analyzing-container">
+                    <div class="analyzing-pulse"></div>
+                    <div class="analyzing-spinner"></div>
+                    <h2 class="analyzing-title">ANALYZING...</h2>
+                    <p class="analyzing-msg" id="t-analyze-msg">選択された傾向を分析中です...</p>
                 </div>
             </div>
 
-            <!-- Screen 3: Result -->
+            <!-- Screen 3: Result (Figma Shopping Style) -->
             <div id="screen-result" class="screen detail-screen">
-                <div class="title-section">
-                    <h1 style="font-size:24px; text-transform: uppercase;">ANALYSIS<br>COMPLETE</h1>
-                    <p id="t-result-subtitle">당신의 취향을 반영한 큐레이션입니다.</p>
+                <div class="mock-status-bar">
+                    <span class="time">9:41</span>
+                    <div class="icons">
+                        <i data-feather="bar-chart-2"></i>
+                        <i data-feather="wifi"></i>
+                        <i data-feather="battery"></i>
+                    </div>
+                </div>
+
+                <!-- Result Header -->
+                <header class="result-header">
+                    <h1 class="home-logo">Shopping Ai</h1>
+                    <div class="home-header-tools">
+                        <button class="icon-btn">
+                            <i data-feather="sliders"></i>
+                        </button>
+                        <div class="avatar-circle">
+                            <i data-feather="user"></i>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- AI Result Bubble -->
+                <div class="ai-message-bubble">
+                    <span class="ai-icon">🤖</span>
+                    <span id="t-result-ai-msg">分析結果を基にあなたにぴったりのアイテムをご提案します</span>
                 </div>
 
                 <div id="result-content"></div>
 
-                <button class="btn-full-gray" style="margin-top:40px;" onclick="showScreen('screen-home')">
-                    <i data-feather="rotate-ccw"></i> <span id="t-return-btn">RETURN HOME</span>
+                <button class="btn-return-home" onclick="showScreen('screen-home')">
+                    <i data-feather="rotate-ccw" style="width:16px;height:16px;"></i>
+                    <span id="t-return-btn">ホームに戻る</span>
                 </button>
                 <div class="bottom-spacer"></div>
             </div>
@@ -121,7 +228,6 @@
     <!-- Scripts -->
     <script src="app.js"></script>
     <script>
-        // Initialize Feather Icons
         feather.replace();
     </script>
 </body>
