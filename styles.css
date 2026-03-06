@@ -49,14 +49,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 14px 24px 10px 24px;
+    padding: 14px 28px 12px 28px;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 16px;
     background: var(--bg-color);
     color: #000;
     z-index: 10;
     flex-shrink: 0;
-    border-bottom: 0.5px solid #E5E5E5;
 }
 
 .mock-status-bar .icons {
@@ -91,6 +90,13 @@ body {
 
 .screen.active {
     display: block;
+}
+
+/* Quiz screen needs flex column to fill height */
+#screen-quiz.active {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 @keyframes fadeIn {
@@ -306,11 +312,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 12px 16px;
-    height: 48px;
+    padding: 14px 20px;
+    height: 44px;
     position: relative;
     flex-shrink: 0;
-    border-bottom: 0.5px solid #E5E5E5;
+    background: #FFF;
 }
 
 .quiz-back-btn {
@@ -318,9 +324,12 @@ body {
     border: none;
     cursor: pointer;
     padding: 4px;
-    color: #8E8E93;
+    color: #C7C7CC;
     position: absolute;
-    left: 16px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .quiz-back-btn i {
@@ -330,10 +339,10 @@ body {
 }
 
 .quiz-step-indicator {
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 700;
-    color: #17181A;
-    letter-spacing: 0;
+    color: #000000;
+    letter-spacing: 0.3px;
 }
 
 .quiz-spacer {
@@ -342,61 +351,64 @@ body {
 
 /* Progress Bar */
 .quiz-progress-bar-track {
-    height: 4px;
-    background: #F4F4F4;
+    height: 3px;
+    background: #F2F2F7;
     margin: 0;
     flex-shrink: 0;
 }
 
 .quiz-progress-bar-fill {
     height: 100%;
-    background: var(--accent-blue);
-    border-radius: 0 2px 2px 0;
+    background: #4A7BF7;
+    border-radius: 0;
     transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Quiz Question */
 .quiz-question-area {
-    padding: 28px 24px 16px 24px;
+    padding: 32px 24px 20px 24px;
     text-align: center;
+    flex-shrink: 0;
 }
 
 .quiz-main-question {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 700;
-    color: var(--text-main);
+    color: #000000;
     line-height: 1.5;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     letter-spacing: -0.3px;
 }
 
 .quiz-sub-question {
     font-size: 14px;
-    color: var(--text-sub);
+    color: #8E8E93;
     font-weight: 400;
+    line-height: 1.5;
 }
 
 /* Quiz Image Cards (Figma Rounded + Overlay) */
 .quiz-cards-container {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    padding: 0 20px;
+    gap: 10px;
+    padding: 0 16px;
     flex: 1;
+    min-height: 0;
 }
 
 .quiz-image-card {
     position: relative;
-    border-radius: 16px;
+    border-radius: 12px;
     overflow: hidden;
     cursor: pointer;
     flex: 1;
-    min-height: 180px;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    min-height: 0;
+    transition: transform 0.15s ease;
 }
 
 .quiz-image-card:hover {
-    transform: scale(1.01);
+    transform: scale(1.005);
 }
 
 .quiz-image-card:active {
@@ -415,35 +427,38 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 20px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+    padding: 24px 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.15) 50%, rgba(0, 0, 0, 0) 100%);
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: flex-end;
 }
 
 .quiz-card-title {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 700;
     color: #FFF;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
     margin-bottom: 4px;
-    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
 }
 
 .quiz-card-desc {
     font-size: 13px;
     font-weight: 400;
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.9);
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
 }
 
 /* iOS Home Indicator */
 .ios-home-indicator {
     display: flex;
     justify-content: center;
-    padding: 16px 0 8px 0;
+    padding: 12px 0 8px 0;
     flex-shrink: 0;
+    background: #FFF;
 }
 
 .home-indicator-bar {
@@ -451,7 +466,7 @@ body {
     height: 5px;
     background: #000;
     border-radius: 100px;
-    opacity: 0.18;
+    opacity: 0.2;
 }
 
 /* ===== Analyzing Screen ===== */
