@@ -1,11 +1,12 @@
 :root {
     --bg-color: #FFFFFF;
-    --text-main: #000000;
+    --text-main: #17181A;
     --text-sub: #666666;
     --text-mini: #999999;
-    --border-color: #EEEEEE;
-    --accent-blue: #4A7BF7;
-    --accent-gradient: linear-gradient(135deg, #4A7BF7 0%, #6C63FF 100%);
+    --text-tertiary: rgba(0, 0, 0, 0.56);
+    --border-color: #F4F4F4;
+    --accent-blue: #5D5FEF;
+    --accent-gradient: linear-gradient(90deg, #5D5FEF 0%, #8385FF 100%);
 }
 
 * {
@@ -44,16 +45,17 @@ body {
     }
 }
 
-/* ===== Mock iOS Status Bar ===== */
+/* ===== Mock iOS Status Bar (Figma: SF Pro 17px/590) ===== */
 .mock-status-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 14px 28px 12px 28px;
-    font-weight: 600;
-    font-size: 16px;
+    padding: 14px 28px 0 28px;
+    height: 54px;
+    font-weight: 590;
+    font-size: 17px;
     background: var(--bg-color);
-    color: #000;
+    color: var(--text-main);
     z-index: 10;
     flex-shrink: 0;
 }
@@ -111,21 +113,22 @@ body {
     }
 }
 
-/* ===== Home Screen ===== */
+/* ===== Home Screen (Figma: Inter 20px/600) ===== */
 .home-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 16px 8px 16px;
+    padding: 12px 20px 8px 20px;
     height: 52px;
 }
 
 .home-logo {
-    font-family: 'Roboto', 'Noto Sans JP', sans-serif;
-    font-size: 17px;
-    font-weight: 800;
-    color: #000000;
-    letter-spacing: -0.3px;
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #111111;
+    letter-spacing: -0.4px;
+    line-height: 24px;
 }
 
 .home-header-tools {
@@ -174,19 +177,19 @@ body {
     stroke-width: 2;
 }
 
-/* ===== AI Message Bubble ===== */
+/* ===== AI Message Bubble (Figma: #F2F7FF, 16px radius, 14px text) ===== */
 .ai-message-bubble {
     margin: 8px 20px 16px 20px;
     padding: 12px 16px;
-    background: linear-gradient(135deg, #E8F5E9 0%, #F1F8E9 100%);
-    border-radius: 16px;
+    background: #F2F7FF;
+    border-radius: 16px 16px 16px 4px;
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 400;
-    color: #333;
-    line-height: 1.5;
+    color: #111111;
+    line-height: 20px;
 }
 
 .ai-icon {
@@ -214,13 +217,14 @@ body {
 }
 
 .chip {
-    padding: 8px 16px;
-    border-radius: 20px;
-    border: 1px solid #E0E0E0;
-    background: #FFF;
-    font-size: 13px;
+    padding: 0 16px;
+    height: 36px;
+    border-radius: 100px;
+    border: none;
+    background: #F5F5F5;
+    font-size: 14px;
     font-weight: 500;
-    color: var(--text-main);
+    color: #666666;
     cursor: pointer;
     transition: all 0.2s ease;
     display: flex;
@@ -230,13 +234,12 @@ body {
 }
 
 .chip:hover {
-    border-color: #999;
+    background: #EBEBEB;
 }
 
 .chip-active {
-    background: #111;
-    color: #FFF;
-    border-color: #111;
+    background: #111111;
+    color: #FFFFFF;
 }
 
 .chip-active i {
@@ -307,16 +310,16 @@ body {
     aspect-ratio: 2 / 1;
 }
 
-/* ===== Quiz Screen (Figma Design) ===== */
+/* ===== Quiz Screen (Figma: 390x106 header, Noto Sans JP) ===== */
 .quiz-top-nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 14px 20px;
+    padding: 14px 16px;
     height: 44px;
     position: relative;
     flex-shrink: 0;
-    background: #FFF;
+    background: #FFFFFF;
 }
 
 .quiz-back-btn {
@@ -324,9 +327,9 @@ body {
     border: none;
     cursor: pointer;
     padding: 4px;
-    color: #C7C7CC;
+    color: #A3A3A3;
     position: absolute;
-    left: 20px;
+    left: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -339,59 +342,62 @@ body {
 }
 
 .quiz-step-indicator {
-    font-size: 17px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
     font-weight: 700;
-    color: #000000;
-    letter-spacing: 0.3px;
+    color: #17181A;
+    line-height: 22px;
 }
 
 .quiz-spacer {
     width: 28px;
 }
 
-/* Progress Bar */
+/* Progress Bar (Figma: 4px, gradient #5D5FEF→#8385FF) */
 .quiz-progress-bar-track {
-    height: 3px;
-    background: #F2F2F7;
+    height: 4px;
+    background: #F4F4F4;
     margin: 0;
     flex-shrink: 0;
 }
 
 .quiz-progress-bar-fill {
     height: 100%;
-    background: #4A7BF7;
+    background: linear-gradient(90deg, #5D5FEF 0%, #8385FF 100%);
     border-radius: 0;
     transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Quiz Question */
+/* Quiz Question (Figma: 20px/700, sub 14px/400 tertiary) */
 .quiz-question-area {
-    padding: 32px 24px 20px 24px;
+    padding: 28px 24px 16px 24px;
     text-align: center;
     flex-shrink: 0;
 }
 
 .quiz-main-question {
-    font-size: 22px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 20px;
     font-weight: 700;
-    color: #000000;
-    line-height: 1.5;
-    margin-bottom: 10px;
+    color: #17181A;
+    line-height: 26px;
+    margin-bottom: 8px;
     letter-spacing: -0.3px;
 }
 
 .quiz-sub-question {
+    font-family: 'Noto Sans JP', sans-serif;
     font-size: 14px;
-    color: #8E8E93;
+    color: var(--text-tertiary);
     font-weight: 400;
-    line-height: 1.5;
+    line-height: 17px;
 }
 
-/* Quiz Image Cards (Figma Rounded + Overlay) */
+/* Quiz Image Cards (Figma: 358x239, 16px radius, 87px overlay, 40px gap) */
 .quiz-cards-container {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
     padding: 0 16px;
     flex: 1;
     min-height: 0;
@@ -399,7 +405,7 @@ body {
 
 .quiz-image-card {
     position: relative;
-    border-radius: 12px;
+    border-radius: 16px;
     overflow: hidden;
     cursor: pointer;
     flex: 1;
@@ -427,8 +433,10 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 24px 20px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.15) 50%, rgba(0, 0, 0, 0) 100%);
+    height: 87px;
+    padding: 0 20px 16px 20px;
+    background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+    opacity: 0.6;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -436,19 +444,21 @@ body {
 }
 
 .quiz-card-title {
-    font-size: 20px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 18px;
     font-weight: 700;
-    color: #FFF;
-    letter-spacing: 1px;
-    margin-bottom: 4px;
-    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+    color: #FFFFFF;
+    line-height: 26px;
+    margin-bottom: 2px;
+    text-align: center;
 }
 
 .quiz-card-desc {
-    font-size: 13px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 14px;
     font-weight: 400;
-    color: rgba(255, 255, 255, 0.9);
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    color: #FFFFFF;
+    line-height: 22px;
     text-align: center;
 }
 
