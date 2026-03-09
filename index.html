@@ -1,129 +1,577 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>TASTE FINDER</title>
-    <!-- Noto Sans JP + Pretendard Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css"
-        rel="stylesheet" />
+    <title>Shopping Preference Test</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Feather Icons for clean minimalistic SVG icons -->
-    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- Removed generic icons library as native SVGs are used directly -->
 </head>
 
 <body>
     <div class="mobile-container">
-        <!-- Status Bar -->
+        <!-- Mock Status Bar -->
         <div class="mock-status-bar">
             <span class="time">9:41</span>
-            <div class="icons">
-                <i data-feather="bar-chart-2"></i>
-                <i data-feather="wifi"></i>
-                <i data-feather="battery"></i>
+            <div class="icons" style="display: flex; gap: 8px; align-items: center;">
+                <svg width="19" height="13" viewBox="0 0 19.2 12.2264" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M19.2 1.14623C19.2 0.513183 18.7224 0 18.1333 0H17.0667C16.4776 0 16 0.513183 16 1.14623V11.0802C16 11.7132 16.4776 12.2264 17.0667 12.2264H18.1333C18.7224 12.2264 19.2 11.7132 19.2 11.0802V1.14623ZM11.7659 2.44528H12.8326C13.4217 2.44528 13.8992 2.97078 13.8992 3.61902V11.0527C13.8992 11.7009 13.4217 12.2264 12.8326 12.2264H11.7659C11.1768 12.2264 10.6992 11.7009 10.6992 11.0527V3.61902C10.6992 2.97078 11.1768 2.44528 11.7659 2.44528ZM7.43411 5.09433H6.36745C5.77834 5.09433 5.30078 5.62652 5.30078 6.28301V11.0377C5.30078 11.6942 5.77834 12.2264 6.36745 12.2264H7.43411C8.02322 12.2264 8.50078 11.6942 8.50078 11.0377V6.28301C8.50078 5.62652 8.02322 5.09433 7.43411 5.09433ZM2.13333 7.53962H1.06667C0.477563 7.53962 0 8.06421 0 8.71132V11.0547C0 11.7018 0.477563 12.2264 1.06667 12.2264H2.13333C2.72244 12.2264 3.2 11.7018 3.2 11.0547V8.71132C3.2 8.06421 2.72244 7.53962 2.13333 7.53962Z"
+                        fill="#17181A" />
+                </svg>
+                <svg width="17" height="13" viewBox="0 0 17.1417 12.3283" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M8.5713 2.46628C11.0584 2.46639 13.4504 3.38847 15.2529 5.04195C15.3887 5.1696 15.6056 5.16799 15.7393 5.03834L17.0368 3.77487C17.1045 3.70911 17.1422 3.62004 17.1417 3.52735C17.1411 3.43467 17.1023 3.34603 17.0338 3.28104C12.3028 -1.09368 4.83907 -1.09368 0.108056 3.28104C0.039524 3.34598 0.000639766 3.4346 7.82398e-06 3.52728C-0.000624118 3.61996 0.0370483 3.70906 0.104689 3.77487L1.40255 5.03834C1.53615 5.16819 1.75327 5.1698 1.88893 5.04195C3.69167 3.38836 6.08395 2.46628 8.5713 2.46628ZM8.56795 6.68656C9.92527 6.68647 11.2341 7.19821 12.2403 8.12234C12.3763 8.2535 12.5907 8.25065 12.7234 8.11593L14.0106 6.79663C14.0784 6.72742 14.1161 6.63355 14.1151 6.53599C14.1141 6.43844 14.0746 6.34536 14.0054 6.27757C10.9416 3.38672 6.19688 3.38672 3.13305 6.27757C3.06384 6.34536 3.02435 6.43849 3.02345 6.53607C3.02254 6.63365 3.06028 6.72752 3.12822 6.79663L4.41513 8.11593C4.54778 8.25065 4.76215 8.2535 4.89823 8.12234C5.90368 7.19882 7.21152 6.68713 8.56795 6.68656ZM11.0924 9.48011C11.0943 9.58546 11.0572 9.68703 10.9899 9.76084L8.81327 12.2156C8.74946 12.2877 8.66247 12.3283 8.5717 12.3283C8.48093 12.3283 8.39394 12.2877 8.33013 12.2156L6.1531 9.76084C6.08585 9.68697 6.04886 9.58537 6.05085 9.48002C6.05284 9.37467 6.09365 9.27491 6.16364 9.20429C7.55374 7.8904 9.58966 7.8904 10.9798 9.20429C11.0497 9.27497 11.0904 9.37476 11.0924 9.48011Z"
+                        fill="#17181A" />
+                </svg>
+                <div style="display: flex; align-items: center; gap: 1.5px;">
+                    <div
+                        style="width: 25px; height: 12.5px; border: 1px solid rgba(23, 24, 26, 0.35); border-radius: 4.3px; padding: 1.5px; display: flex; align-items: center;">
+                        <div style="background: #17181A; width: 21px; height: 7px; border-radius: 2.5px;"></div>
+                    </div>
+                    <svg width="2" height="5" viewBox="0 0 1.32804 4.07547" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M0 0V4.07547C0.804731 3.7303 1.32804 2.92734 1.32804 2.03774C1.32804 1.14813 0.804731 0.345169 0 0"
+                            fill="#17181A" fill-opacity="0.4" />
+                    </svg>
+                </div>
             </div>
         </div>
 
         <!-- Header -->
         <header class="app-header">
-            <button class="icon-btn back-btn" onclick="goBack()">
-                <i data-feather="chevron-left"></i>
-            </button>
-            <div class="header-tools" style="display:flex; align-items:center; gap: 8px;">
-                <button class="icon-btn" onclick="toggleLanguage()" id="lang-btn"
-                    style="font-size: 14px; font-weight: bold; width: auto; padding: 0 8px;">KO</button>
-                <button class="icon-btn"><i data-feather="menu"></i></button>
+            <div class="header-left">
+                <button class="icon-btn back-btn" onclick="goBack()" id="back-button">
+                    <svg width="10" height="17" viewBox="0 0 9.37886 16.9192" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.45962 0L9.37886 0.919239L1.83824 8.45962L9.37886 16L8.45962 16.9192L0 8.45962L8.45962 0Z"
+                            fill="#17181A" />
+                    </svg>
+                </button>
+            </div>
+            <div class="header-title" id="topic-indicator">
+                ショッピング
+            </div>
+            <div class="header-right" id="step-indicator">
+                1/10
             </div>
         </header>
 
+        <!-- Progress Bar Indicator -->
+        <div class="progress-bar-container">
+            <div class="progress-bar-fill" id="progress-bar"></div>
+        </div>
+
         <!-- Main Content Area -->
-        <main class="main-content" id="mainContent">
-            <!-- Screen 1: Home (Categories) -->
-            <div id="screen-home" class="screen active">
-                <div class="title-section">
-                    <h1>TASTE<br>FINDER</h1>
-                    <p id="t-subtitle">당신의 고유한 취향을 발견합니다.</p>
-                </div>
-
-                <div class="category-block">
-                    <div class="category-title">CATEGORY</div>
-                    <div class="pill-group">
-                        <button class="pill" onclick="startQuiz('sneakers')">
-                            <div class="pill-icon type-1"><i data-feather="box"></i></div> SNEAKERS
-                        </button>
-                        <button class="pill" onclick="startQuiz('appliances')">
-                            <div class="pill-icon type-2"><i data-feather="monitor"></i></div> APPLIANCES
-                        </button>
-                        <button class="pill" onclick="startQuiz('tableware')">
-                            <div class="pill-icon type-3"><i data-feather="coffee"></i></div> TABLEWARE
-                        </button>
-                        <button class="pill" onclick="startQuiz('brand_golf')">
-                            <div class="pill-icon type-1"><i data-feather="target"></i></div> GOLF
-                        </button>
-                        <button class="pill" onclick="startQuiz('brand_acc')">
-                            <div class="pill-icon type-2"><i data-feather="briefcase"></i></div> ACCESSORIES
-                        </button>
-                        <button class="pill" onclick="startQuiz('brand_casual')">
-                            <div class="pill-icon type-3"><i data-feather="smile"></i></div> CASUAL
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Screen 2: Quiz (A/B Test) -->
-            <div id="screen-quiz" class="screen">
-                <div class="quiz-header">
-                    <span class="badge-black" id="quiz-progress" style="font-size: 11px; padding: 4px 10px;">1 /
-                        10</span>
-                    <h2 class="section-title" style="margin-top:16px; margin-bottom: 8px;">WHICH ONE?</h2>
-                    <p id="t-quiz-instruction" style="font-size: 12px; color: var(--text-sub);">직관적으로 끌리는 쪽을 선택하세요</p>
-                </div>
-
-                <div class="ab-test-container">
-                    <div class="ab-card" onclick="selectOption('A')">
-                        <img src="" id="img-option-a" alt="Option A">
-                    </div>
-                    <div class="vs-badge">VS</div>
-                    <div class="ab-card" onclick="selectOption('B')">
-                        <img src="" id="img-option-b" alt="Option B">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Screen 2.5: Analyzing -->
-            <div id="screen-analyzing" class="screen detail-screen">
-                <div class="title-section" style="text-align: center; margin-top: 100px;">
-                    <div class="spinner" style="margin: 0 auto 24px auto;"></div>
-                    <h1 style="font-size:20px; text-transform: uppercase;">ANALYZING...</h1>
-                    <p id="t-analyze-msg">선택하신 이미지를 AI가 분석 중입니다.</p>
-                </div>
-            </div>
-
-            <!-- Screen 3: Result -->
-            <div id="screen-result" class="screen detail-screen">
-                <div class="title-section">
-                    <h1 style="font-size:24px; text-transform: uppercase;">ANALYSIS<br>COMPLETE</h1>
-                    <p id="t-result-subtitle">당신의 취향을 반영한 큐레이션입니다.</p>
-                </div>
-
-                <div id="result-content"></div>
-
-                <button class="btn-full-gray" style="margin-top:40px;" onclick="showScreen('screen-home')">
-                    <i data-feather="rotate-ccw"></i> <span id="t-return-btn">RETURN HOME</span>
-                </button>
-                <div class="bottom-spacer"></div>
-            </div>
-
+        <main class="main-content scroll-hide" id="main-content">
+            <!-- Questions or Result will be injected here via JavaScript -->
         </main>
+
+        <!-- Home Indicator (Mock) -->
+        <div class="home-indicator"></div>
     </div>
 
-    <!-- Scripts -->
-    <script src="app.js"></script>
+    <!-- Script for interaction -->
     <script>
-        // Initialize Feather Icons
-        feather.replace();
+        const questions = [
+            {
+                topic: "プレイスタイル",
+                title: "どちらのスタイルをより好みますか？",
+                subtitle: "あなたの好みに近いほうを選んでください。",
+                options: [
+                    { id: 'top_spin', title: "トップスピンで巻き上げ", img: "images/e6bd620396c065e3ae103366b9ea27489d739d2e.png" },
+                    { id: 'flat_hit', title: "フラットで直線的な打撃", img: "images/fa706669c06c11d53b748af7b5b5562d3e17ffe1.png" }
+                ]
+            },
+            {
+                topic: "時計・小物",
+                title: "どちらのスタイルをより好みますか？",
+                subtitle: "あなたの好みに近いほうを選んでください。",
+                options: [
+                    { id: 'design_mood', title: "デザイン/ムード", img: "images/07582c46950206b52eb0c94859f17e5bb61cb4dc.png" },
+                    { id: 'function_practicality', title: "機能/実用性", img: "images/c1f63fbcc6ccf78848170a64cbad3cabef06f1fc.png" }
+                ]
+            },
+            {
+                topic: "ファッション",
+                title: "どちらのスタイルをより好みますか？",
+                subtitle: "あなたの好みに近いほうを選んでください。",
+                options: [
+                    { id: 'classic_formal', title: "クラシック/フォーマル", img: "images/3a59c7bfe9af23a4e91361dc43c16907853eed0c.png" },
+                    { id: 'casual_sports', title: "カジュアル/スポーツ", img: "images/ef8c28633ff25a0b3731d47f3f1de044a41dd423.png" }
+                ]
+            },
+            {
+                topic: "香り・風味",
+                title: "どちらのスタイルをより好みますか？",
+                subtitle: "あなたの好みに近いほうを選んでください。",
+                options: [
+                    { id: 'sweet_soft', title: "甘くて柔らかく", img: "images/f4f461752fc1854b840a8c78eee6ee41e9278079.png" },
+                    { id: 'smoky_heavy', title: "スモーキーで重厚に", img: "images/35638a03c7b7159397cf549600f09b36aee6f23b.png" }
+                ]
+            },
+            {
+                topic: "お酒の飲み方",
+                title: "どちらのスタイルをより好みますか？",
+                subtitle: "あなたの好みに近いほうを選んでください。",
+                options: [
+                    { id: 'highball_mix', title: "ハイボール/ミックス", img: "images/c96bd412b1a970a501fa0560f95160ae11b4012f.png" },
+                    { id: 'on_the_rocks', title: "オン・ザ・ロック／ストレート", img: "images/cd25a170d09bfc74827e35cbc8f25fcca05c6d6f.png" }
+                ]
+            }
+        ];
+
+        let currentStep = 0;
+        let selectedOptions = [];
+
+        function initApp() {
+            renderQuestion();
+        }
+
+        function renderQuestion() {
+            if (currentStep >= questions.length) {
+                showAnalyzing();
+                return;
+            }
+
+            const q = questions[currentStep];
+
+            // Update Headers
+            document.getElementById('step-indicator').innerText = `${currentStep + 1}/${questions.length}`;
+            document.getElementById('topic-indicator').innerText = q.topic;
+
+            const progressPercentage = ((currentStep + 1) / questions.length) * 100;
+            document.getElementById('progress-bar').style.width = `${progressPercentage}%`;
+
+            // Hide back button on first step
+            document.getElementById('back-button').style.visibility = currentStep === 0 ? 'hidden' : 'visible';
+
+            const main = document.getElementById('main-content');
+            main.className = 'main-content scroll-hide fade-in';
+
+            main.innerHTML = `
+                <div class="title-section">
+                    <div class="ai-icon-container">
+                        <video autoPlay loop muted playsInline class="ai-video-icon">
+                            <source src="images/ai_icon.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                    <h1>${q.title}</h1>
+                    <p>${q.subtitle}</p>
+                </div>
+                <div class="ab-test-container">
+                    <div class="ab-card top-card" onclick="selectOption('${q.options[0].id}', this)">
+                        <img src="${q.options[0].img}" alt="Option A" class="card-bg">
+                        <div class="card-gradient-top"></div>
+                        <h3 class="card-title title-top">${q.options[0].title}</h3>
+                    </div>
+                    
+                    <div class="vs-badge">VS</div>
+                    
+                    <div class="ab-card bottom-card" onclick="selectOption('${q.options[1].id}', this)">
+                        <img src="${q.options[1].img}" alt="Option B" class="card-bg">
+                        <div class="card-gradient-bottom"></div>
+                        <h3 class="card-title title-bottom">${q.options[1].title}</h3>
+                    </div>
+                </div>
+            `;
+        }
+
+        function selectOption(id, element) {
+            // Check if already animating to prevent double clicks
+            if (document.querySelector('.ab-card.selected')) return;
+
+            const cards = document.querySelectorAll('.ab-card');
+            cards.forEach(card => {
+                if (card !== element) {
+                    card.style.opacity = '0.3';
+                }
+            });
+            element.classList.add('selected');
+
+            // Store selection
+            selectedOptions[currentStep] = id;
+
+            setTimeout(() => {
+                currentStep++;
+                renderQuestion();
+            }, 600);
+        }
+
+        function goBack() {
+            if (currentStep > 0) {
+                currentStep--;
+                renderQuestion();
+            }
+        }
+
+        function showAnalyzing() {
+            document.getElementById('step-indicator').innerText = "";
+            document.getElementById('topic-indicator').innerText = "結果分析中";
+            document.getElementById('back-button').style.visibility = 'hidden';
+            // Start glowing animation for progress
+            document.getElementById('progress-bar').classList.add('analyzing-pulse');
+            document.getElementById('progress-bar').style.width = '100%';
+
+            const main = document.getElementById('main-content');
+            main.className = 'main-content scroll-hide analyzing-screen';
+            main.innerHTML = `
+                <div class="spinner-container">
+                    <div class="spinner"></div>
+                </div>
+                <h2>あなたのショッピングスタイルを<br>AIが分析しています。</h2>
+                <p>選択したデータをモデリング中...</p>
+                <div class="analyzing-skeleton-cards">
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                </div>
+            `;
+
+            // Wait 2.5 seconds to simulate analyzing
+            setTimeout(() => {
+                document.getElementById('progress-bar').classList.remove('analyzing-pulse');
+                showResult();
+            }, 2500);
+        }
+
+        
+        function getRecommendedCategory() {
+            const opts = selectedOptions.join(" ");
+            
+            // Analyze selected images logic:
+            if (opts.includes("top_spin") || opts.includes("casual_sports")) return "sports";
+            if (opts.includes("classic_formal") || opts.includes("design_mood")) return "fashion";
+            if (opts.includes("sweet_soft") || opts.includes("function_practicality")) return "kitchen";
+            return "game";
+        }
+
+        function showResult() {
+            const headerContainer = document.getElementById('header-container'); if(headerContainer) headerContainer.style.display = 'none';
+            const progressContainer = document.querySelector('.progress-bar-container');
+            progressContainer.style.display = 'none';
+
+            const main = document.getElementById('main-content');
+            main.className = 'main-content scroll-hide fade-in feed-mode';
+
+            const targetCategory = getRecommendedCategory();
+            let htmlContent = '';
+            
+            if (targetCategory === 'sports') {
+                htmlContent = `
+<div class="feed-header">
+    <h1>Shopping Ai</h1>
+    <div class="feed-actions">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C12.1102 18 14.0254 17.1831 15.4532 15.8674L20.2929 20.7071C20.6834 21.0976 21.3166 21.0976 21.7071 20.7071C22.0976 20.3166 22.0976 19.6834 21.7071 19.2929L16.8674 14.4532C18.1831 13.0254 19 11.1102 19 10C19 5.58172 15.4183 2 10 2ZM4 10C4 6.68629 6.68629 4 10 4C13.3137 4 16 6.68629 16 10C16 13.3137 13.3137 16 10 16C6.68629 16 4 13.3137 4 10Z" fill="#17181A"/>
+        </svg>
+        <img src="images/6cf779209837fe69c1fd4ccbb5d0abc91833f717.png" class="avatar" alt="Avatar"/>
+    </div>
+</div>
+<div class="chip-scroll">
+    <button class="feed-chip icon-chip">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.16669 8.33333C4.16669 8.33333 4.16668 8.33333 4.16667 8.33333C3.24619 8.33333 2.5 7.58714 2.5 6.66667C2.5 5.74619 3.24619 5 4.16667 5C5.08714 5 5.83333 5.74619 5.83333 6.66667C5.83333 7.58714 5.08714 8.33333 4.16667 8.33333ZM4.16669 8.33333H17.5M15.8333 15C15.8333 15 15.8333 15 15.8333 15C16.7538 15 17.5 14.2538 17.5 13.3333C17.5 12.4129 16.7538 11.6667 15.8333 11.6667C14.9129 11.6667 14.1667 12.4129 14.1667 13.3333C14.1667 14.2538 14.9129 15 15.8333 15ZM15.8333 15H2.5" stroke="#17181A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+    <button class="feed-chip">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+        AI Pick
+    </button>
+    <button class="feed-chip">게임</button>
+    <button class="feed-chip active">스포츠</button>
+    <button class="feed-chip">패션</button>
+    <button class="feed-chip">키친</button>
+    <button class="feed-chip">인테리어</button>
+</div>
+
+<div class="feed-masonry">
+    <div class="masonry-col">
+        <div class="feed-card" style="background:#222138; height:171px;">
+            <span class="badge">TENNIS</span>
+            <span class="close-x">&times;</span>
+            <img src="images/1b270d270fdb35cee2e2c97d12427e158ca2bc85.png" style="position:absolute; width:131px; height:142px; right:-20px; bottom:-10px; object-fit:cover;">
+            <p class="card-title">테니스<br>시작해볼까요</p>
+        </div>
+        <div class="feed-card" style="background:#97b9b8; height:171px;">
+            <span class="badge">RUNNING</span>
+            <span class="close-x">&times;</span>
+            <img src="images/3939934e844e19c0205dbacae2d94d4d564bfc52.png" style="position:absolute; width:200px; right:-50px; bottom:-10px; transform: scaleX(-1);">
+            <p class="card-title">2026년 목표를 향한<br>러닝화</p>
+        </div>
+        <div class="feed-card card-yt" style="background:#466136; height:91px;">
+            <img src="images/1b2d9139889a6fced8b130e89b1707ea16f75a80.png" style="position:absolute; width:147px; right:-20px; top:-20px; object-fit:cover;">
+            <p class="card-title yt-title" style="top:50%; transform:translateY(-50%); bottom:auto; line-height:1.2;">초보자에게 인기있는 <br>라켓 TOP5</p>
+        </div>
+    </div>
+    
+    <div class="masonry-col">
+        <div class="feed-card" style="background:#213828; height:171px;">
+            <span class="badge">GOLF</span>
+            <span class="close-x">&times;</span>
+            <img src="images/fe3e8dc892ca1b216b02fb2f38e33ebcb3e34789.png" style="position:absolute; width:163px; right:-20px; height: 100%; object-fit:cover;">
+            <p class="card-title" style="z-index:10;">비거리 200야드<br>신소재 드라이버</p>
+            <div class="bottom-grad" style="background: linear-gradient(to top, rgba(0,0,0,0.6), transparent); position:absolute; bottom:0; padding:40px; width:100%; height:80px; z-index:5;"></div>
+        </div>
+        <div class="feed-card card-yt" style="background:#010212; height:352px;">
+            <img src="images/397b8016f4fb3986abc42562d50bb175a946167a.png" style="position:absolute; width:357px; left:-68px; top:31px; object-fit:cover;">
+            <div class="yt-play" style="top:50%; left:50%; transform:translate(-50%,-50%); width:48px; height:48px; position:absolute; z-index:3;">
+                <svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <span class="yt-time" style="top:154px; right:10px;">01:30</span>
+            <p class="card-title yt-title" style="bottom: 30px;">Naomi Osaka식<br>강타의 비결</p>
+            <div class="bottom-grad" style="background: linear-gradient(to top, rgba(0,0,0,0.4), transparent); position:absolute; bottom:0; padding:40px; width:100%; height:80px; z-index:2;"></div>
+        </div>
+    </div>
+</div>
+
+<div class="t1-banner" style="background:#f49caa; height:171px; display:flex; align-items:center; justify-content:center; flex-direction:column; margin:16px; border-radius:16px;">
+    <span style="font-size:32px; font-weight:900; color:white;">20% OFF</span>
+    <span style="font-size:32px; font-weight:900; color:rgba(255,255,255,0.4); margin-top:-10px;">SPRING</span>
+</div>
+`;
+            } else if (targetCategory === 'fashion') {
+                htmlContent = `
+<div class="feed-header">
+    <h1>Shopping Ai</h1>
+    <div class="feed-actions">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C12.1102 18 14.0254 17.1831 15.4532 15.8674L20.2929 20.7071C20.6834 21.0976 21.3166 21.0976 21.7071 20.7071C22.0976 20.3166 22.0976 19.6834 21.7071 19.2929L16.8674 14.4532C18.1831 13.0254 19 11.1102 19 10C19 5.58172 15.4183 2 10 2ZM4 10C4 6.68629 6.68629 4 10 4C13.3137 4 16 6.68629 16 10C16 13.3137 13.3137 16 10 16C6.68629 16 4 13.3137 4 10Z" fill="#17181A"/>
+        </svg>
+        <img src="images/6cf779209837fe69c1fd4ccbb5d0abc91833f717.png" class="avatar" alt="Avatar"/>
+    </div>
+</div>
+<div class="chip-scroll">
+    <button class="feed-chip icon-chip">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.16669 8.33333C4.16669 8.33333 4.16668 8.33333 4.16667 8.33333C3.24619 8.33333 2.5 7.58714 2.5 6.66667C2.5 5.74619 3.24619 5 4.16667 5C5.08714 5 5.83333 5.74619 5.83333 6.66667C5.83333 7.58714 5.08714 8.33333 4.16667 8.33333ZM4.16669 8.33333H17.5M15.8333 15C15.8333 15 15.8333 15 15.8333 15C16.7538 15 17.5 14.2538 17.5 13.3333C17.5 12.4129 16.7538 11.6667 15.8333 11.6667C14.9129 11.6667 14.1667 12.4129 14.1667 13.3333C14.1667 14.2538 14.9129 15 15.8333 15ZM15.8333 15H2.5" stroke="#17181A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+    <button class="feed-chip">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+        AI Pick
+    </button>
+    <button class="feed-chip">게임</button>
+    <button class="feed-chip">스포츠</button>
+    <button class="feed-chip active">패션</button>
+    <button class="feed-chip">키친</button>
+    <button class="feed-chip">인테리어</button>
+</div>
+
+<div class="feed-masonry">
+    <div class="masonry-col">
+        <div class="feed-card" style="background:#eaeaea; height:352px;">
+            <span class="badge" style="color:black">가방</span>
+            <span class="close-x" style="color:black">&times;</span>
+            <img src="images/9172aea095e2f924a262a74a08f921811251b5ca.png" style="position:absolute; width:100%; height:100%; object-fit:cover; mix-blend-mode:multiply; right:-40px; transform: scaleX(-1);">
+            <img src="images/0a480fd69ed6b7d0470ca4942ba25022b6b4663e.png" style="position:absolute; width:100%; height:100%; object-fit:cover; z-index:1; opacity:0.15">
+            <p class="card-title" style="color:black; bottom: 30px; z-index:5;">포터 x 르메르<br>레더 컬렉션 공개</p>
+        </div>
+        <div class="feed-card" style="background:#bdbebf; height:171px;">
+            <span class="badge" style="color:black">Stüssy</span>
+            <span class="close-x" style="color:black">&times;</span>
+            <img src="images/4ee4d3be59f0a707ea21a5ab5c2cb0ccfb0ec86c.png" style="position:absolute; width:100%; height:100%; object-fit:cover;">
+            <p class="card-title" style="bottom: 10px;">2026 Spring</p>
+        </div>
+    </div>
+    
+    <div class="masonry-col">
+        <div class="feed-card" style="background:#000; height:171px;">
+            <span class="badge" style="color:white">BEAMS</span>
+            <span class="close-x">&times;</span>
+            <img src="images/b47e35420a10978c1b796b1cbccd74d623b5c0fc.png" style="position:absolute; width:100%; height:100%; object-fit:cover; opacity:0.8">
+            <p class="card-title" style="bottom:20px; z-index:5;">2026년 봄의<br>리바이스 x 빔스<br>협업 컬렉션 출시</p>
+             <div class="bottom-grad" style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); position:absolute; bottom:0; width:100%; height:80px; z-index:3;"></div>
+        </div>
+        <div class="feed-card" style="background:#000; height:171px;">
+            <span class="badge" style="color:white">악세사리</span>
+            <span class="close-x">&times;</span>
+            <img src="images/ba5cbf5b981ef84560b765b0de11fbafe00cb268.png" style="position:absolute; width:100%; height:100%; object-fit:cover; opacity:0.9">
+            <p class="card-title" style="bottom: 20px; z-index:5;">클래쉬 드 까르띠에<br>옐로 골드 공개</p>
+            <div class="bottom-grad" style="background: linear-gradient(to top, rgba(0,0,0,0.7), transparent); position:absolute; bottom:0; width:100%; height:80px; z-index:3;"></div>
+        </div>
+        <div class="feed-card" style="background:#25242c; height:171px; display:flex; align-items:center; justify-content:center; flex-direction:column;">
+            <span class="badge">COUPON</span>
+            <span class="close-x">&times;</span>
+            <span style="font-size:24px; font-weight:900; color:white;">30% OFF</span>
+        </div>
+    </div>
+</div>
+
+<div class="t1-banner" style="background:#b4b5a7; height:91px; margin:16px; border-radius:16px; overflow:hidden;">
+    <img src="images/60377435440851c08f633eba2e9569cb74fa0248.png" style="position:absolute; width:100%; height:100%; object-fit:cover; opacity:0.7">
+    <span style="font-size:11px; font-weight:bold; color:white; position:absolute; left:16px; top:16px;">#한정판</span>
+    <span style="font-size:14px; font-weight:bold; color:white; position:absolute; left:16px; top:36px;">프라그먼트 x 나이키 북 2 공개</span>
+</div>
+`;
+            } else if (targetCategory === 'kitchen') {
+                htmlContent = `
+<div class="feed-header">
+    <h1>Shopping Ai</h1>
+    <div class="feed-actions">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C12.1102 18 14.0254 17.1831 15.4532 15.8674L20.2929 20.7071C20.6834 21.0976 21.3166 21.0976 21.7071 20.7071C22.0976 20.3166 22.0976 19.6834 21.7071 19.2929L16.8674 14.4532C18.1831 13.0254 19 11.1102 19 10C19 5.58172 15.4183 2 10 2ZM4 10C4 6.68629 6.68629 4 10 4C13.3137 4 16 6.68629 16 10C16 13.3137 13.3137 16 10 16C6.68629 16 4 13.3137 4 10Z" fill="#17181A"/>
+        </svg>
+        <img src="images/6cf779209837fe69c1fd4ccbb5d0abc91833f717.png" class="avatar" alt="Avatar"/>
+    </div>
+</div>
+<div class="chip-scroll">
+    <button class="feed-chip icon-chip">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.16669 8.33333C4.16669 8.33333 4.16668 8.33333 4.16667 8.33333C3.24619 8.33333 2.5 7.58714 2.5 6.66667C2.5 5.74619 3.24619 5 4.16667 5C5.08714 5 5.83333 5.74619 5.83333 6.66667C5.83333 7.58714 5.08714 8.33333 4.16667 8.33333ZM4.16669 8.33333H17.5M15.8333 15C15.8333 15 15.8333 15 15.8333 15C16.7538 15 17.5 14.2538 17.5 13.3333C17.5 12.4129 16.7538 11.6667 15.8333 11.6667C14.9129 11.6667 14.1667 12.4129 14.1667 13.3333C14.1667 14.2538 14.9129 15 15.8333 15ZM15.8333 15H2.5" stroke="#17181A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+    <button class="feed-chip">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+        AI Pick
+    </button>
+    <button class="feed-chip">게임</button>
+    <button class="feed-chip">스포츠</button>
+    <button class="feed-chip">패션</button>
+    <button class="feed-chip active">키친</button>
+    <button class="feed-chip">인테리어</button>
+</div>
+
+<div class="feed-masonry">
+    <div class="masonry-col">
+        <div class="feed-card" style="background:#222138; height:171px;">
+            <span class="badge">냄비</span>
+            <span class="close-x">&times;</span>
+            <img src="images/1baeb382aafba0a98c721a8ed94425e35305704e.png" style="position:absolute; width:130px; right:10px; bottom:10px;">
+            <p class="card-title">2026 트렌드<br>키친웨어 모음</p>
+        </div>
+        <div class="feed-card" style="background:#97b9b8; height:171px;">
+            <span class="badge">멀티쿠커</span>
+            <span class="close-x">&times;</span>
+            <img src="images/3540db8dba331fe503fc44d0065db853f9283497.png" style="position:absolute; width:120px; right:-20px; bottom:-20px;">
+            <p class="card-title">퇴근 후<br>가장 빠른 미식(美食)</p>
+        </div>
+        
+        <div class="feed-card" style="background:#2a3235; height:171px; display:flex; align-items:center; justify-content:center; flex-direction:column;">
+            <span style="font-size:32px; font-weight:900; color:white;">20% OFF</span>
+            <span style="font-size:32px; font-weight:900; color:rgba(255,255,255,0.4); margin-top:-10px;">SPRING</span>
+        </div>
+    </div>
+    
+    <div class="masonry-col">
+        <div class="feed-card" style="background:#622121; height:171px;">
+            <span class="badge">후라이팬</span>
+            <span class="close-x">&times;</span>
+            <img src="images/a7f9f1718fc5ecf987d89908fdffebac9d6f5371.png" style="position:absolute; width:157px; right:-20px; bottom:20px;">
+            <p class="card-title">스테이크를 이븐하게<br>굽는 후라이팬</p>
+        </div>
+        <div class="feed-card card-yt" style="background: linear-gradient(#102131, #1f353f); height:352px;">
+            <img src="images/a958eefb1b6f856c272750b696159d3806e2096f.png" style="position:absolute; width:574px; left:-180px; top:30px; object-fit:cover;">
+            <div class="yt-play" style="top:50%; left:50%; transform:translate(-50%,-50%); width:48px; height:48px; position:absolute; z-index:3;">
+                <svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <p class="card-title" style="bottom: 30px; z-index:5;">그랑메종 도쿄의<br>화제가 된 주방 아이템</p>
+            <div class="bottom-grad" style="background: linear-gradient(to top, rgba(0,0,0,0.6), transparent); position:absolute; bottom:0; height: 120px; width:100%; z-index:3;"></div>
+        </div>
+    </div>
+</div>
+
+<div class="t1-banner" style="background:#0032be; height:91px; margin:16px; border-radius:16px; position:relative;">
+    <span style="font-size:14px; font-weight:bold; color:white; position:absolute; left:16px; top:50%; transform: translateY(-50%); z-index: 2;">58만 인플루언서<br>까사림 콜라보!</span>
+    <img src="images/fd795b966d00d7e719e8c157aec2458123b40761.png" style="position:absolute; width:108px; right:10px; top:10px; opacity:0.9">
+</div>
+`;
+            } else {
+                htmlContent = `
+<div class="feed-header">
+    <h1>Shopping Ai</h1>
+    <div class="feed-actions">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C12.1102 18 14.0254 17.1831 15.4532 15.8674L20.2929 20.7071C20.6834 21.0976 21.3166 21.0976 21.7071 20.7071C22.0976 20.3166 22.0976 19.6834 21.7071 19.2929L16.8674 14.4532C18.1831 13.0254 19 11.1102 19 10C19 5.58172 15.4183 2 10 2ZM4 10C4 6.68629 6.68629 4 10 4C13.3137 4 16 6.68629 16 10C16 13.3137 13.3137 16 10 16C6.68629 16 4 13.3137 4 10Z" fill="#17181A"/>
+        </svg>
+        <img src="images/6cf779209837fe69c1fd4ccbb5d0abc91833f717.png" class="avatar" alt="Avatar"/>
+    </div>
+</div>
+<div class="chip-scroll">
+    <button class="feed-chip icon-chip">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.16669 8.33333C4.16669 8.33333 4.16668 8.33333 4.16667 8.33333C3.24619 8.33333 2.5 7.58714 2.5 6.66667C2.5 5.74619 3.24619 5 4.16667 5C5.08714 5 5.83333 5.74619 5.83333 6.66667C5.83333 7.58714 5.08714 8.33333 4.16667 8.33333ZM4.16669 8.33333H17.5M15.8333 15C15.8333 15 15.8333 15 15.8333 15C16.7538 15 17.5 14.2538 17.5 13.3333C17.5 12.4129 16.7538 11.6667 15.8333 11.6667C14.9129 11.6667 14.1667 12.4129 14.1667 13.3333C14.1667 14.2538 14.9129 15 15.8333 15ZM15.8333 15H2.5" stroke="#17181A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+    <button class="feed-chip">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+        AI Pick
+    </button>
+    <button class="feed-chip active">게임</button>
+    <button class="feed-chip">스포츠</button>
+    <button class="feed-chip">패션</button>
+    <button class="feed-chip">키친</button>
+    <button class="feed-chip">인테리어</button>
+</div>
+
+<div class="feed-masonry">
+    <div class="masonry-col">
+        <div class="feed-card card-blue">
+            <span class="badge">PC게임</span>
+            <span class="close-x">&times;</span>
+            <img class="pc-img" src="images/3af11f3dcf672c9b4903491a082063fc3bbb9287.png" alt="PC" />
+            <p class="card-title">승률을 바꾸는<br>PC 세팅</p>
+        </div>
+        <div class="feed-card card-cyan">
+            <span class="badge">게이밍 기어</span>
+            <span class="close-x">&times;</span>
+            <img class="headset-img" src="images/bdfa442346e670eb4ac457ba91ff00e1eff7aab6.png" alt="Headset" />
+            <p class="card-title">사운드<br>플레이의 완성</p>
+            <div class="bottom-grad"></div>
+        </div>
+        <div class="feed-card card-black-friday">
+            <img src="images/8d084f9cd61b8af0d9ed50f73076279220ae3dc5.png" alt="Black Friday" />
+        </div>
+    </div>
+    
+    <div class="masonry-col">
+        <div class="feed-card card-red">
+            <span class="badge">휴대용 게임기</span>
+            <span class="close-x">&times;</span>
+            <img class="switch-img" src="images/f20f8ba4e4f9ffd597b8b791eaa4fafb3b651c75.png" alt="Switch" />
+            <p class="card-title">새롭게 출시된 <br>스위치 2지금이 기회</p>
+        </div>
+        <div class="feed-card card-yt">
+            <img class="yt-thumb" src="images/8a8f2c97240b2c25f73107ed67960f33515a8e46.png" alt="Faker" />
+            <div class="yt-play">
+                <svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <span class="yt-time">01:30</span>
+            <p class="card-title yt-title">페이커가 직접 꼽은<br>2026 T1 우승템</p>
+        </div>
+    </div>
+</div>
+
+<div class="t1-banner">
+    <span class="banner-text">프로게이머 장비 세팅전</span>
+    <img class="banner-logo" src="images/dc537cf7ec9578f6e9624ff599e91173d523c8a3.png" alt="T1" />
+</div>
+`;
+            }
+
+            main.innerHTML = htmlContent + `
+                <button class="floating-ai" onclick="location.reload()">
+                    <video autoPlay loop muted playsInline>
+                        <source src="images/ai_icon.mp4" type="video/mp4" />
+                    </video>
+                </button>
+            `;
+        }
+
+        // Init
+        document.addEventListener('DOMContentLoaded', initApp);
     </script>
 </body>
 

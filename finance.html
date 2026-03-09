@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Finance AI</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="finance.css">
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body>
+    <div class="mobile-container">
+        <!-- Status Bar -->
+        <div class="mock-status-bar">
+            <span class="time">9:41</span>
+            <div class="icons">
+                <i data-feather="bar-chart-2"></i>
+                <i data-feather="wifi"></i>
+                <i data-feather="battery"></i>
+            </div>
+        </div>
+
+        <!-- Top Navigation -->
+        <header class="top-nav">
+            <div class="app-title">Finance <span class="ai-text">AI</span></div>
+            <div class="header-actions">
+                <div class="prediction-mode">予測モード</div>
+                <div class="icon-btn"><img src="images/robot.svg" alt="Robot"></div>
+                <div class="icon-btn"><i data-feather="bell"></i></div>
+                <div class="icon-btn"><i data-feather="menu"></i></div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- Special Report Section -->
+            <section class="special-report">
+                <div class="report-badge">特集レポート</div>
+                <h2 class="report-title">トランプ再選シナリオと<br>米国株市場への影響</h2>
+            </section>
+
+            <!-- Tabs -->
+            <div class="tabs">
+                <div class="tab active">日本株</div>
+                <div class="tab">米国株</div>
+                <div class="tab">グローバル</div>
+            </div>
+
+            <!-- Market Indices Carousel -->
+            <div class="indices-carousel">
+                <div class="index-card">
+                    <div class="index-name">日経平均株価</div>
+                    <div class="index-value">57,296.82</div>
+                    <div class="index-change pos">+1.29%</div>
+                </div>
+                <div class="index-card">
+                    <div class="index-name">TOPIX</div>
+                    <div class="index-value">3,810.61</div>
+                    <div class="index-change neg">-1.30%</div>
+                </div>
+                <div class="index-card">
+                    <div class="index-name">ダウ平均</div>
+                    <div class="index-value">42,154.60</div>
+                    <div class="index-change neg">-0.32%</div>
+                </div>
+            </div>
+
+            <!-- News Summary -->
+            <section class="news-summary border-gradient">
+                <div class="section-header">
+                    <div class="header-left">
+                        <img src="images/robot.svg" class="ai-icon" alt="AI">
+                        <h3 class="section-title">国内主要ニュースサマリー</h3>
+                    </div>
+                    <i data-feather="chevron-right" class="arrow-icon"></i>
+                </div>
+                <ul class="news-bullets">
+                    <li>ハイテク銘柄、特にAI関連銘柄の好調な決算が市場を牽引中</li>
+                    <li>米国のインフレ懸念は依然として残り、ダウ平均は不安定な動き</li>
+                    <li>中東の地政学的緊張が原油価格に影響を与え監視が必要</li>
+                </ul>
+
+                <div class="related-news">
+                    <div class="related-title">関連ニュース</div>
+                    <div class="related-carousel">
+                        <div class="related-card">
+                            <p class="rc-title">日経平均、一時4万円回復 半導体株が牽引</p>
+                            <div class="rc-source">
+                                <div class="rc-source-icon img1"></div>日本経済新聞
+                            </div>
+                        </div>
+                        <div class="related-card">
+                            <p class="rc-title">米運輸省道路交通安全局NHTSAは、テスラの...</p>
+                            <div class="rc-source">
+                                <div class="rc-source-icon img2"></div>NHTSA
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="divider"></div>
+
+            <!-- Impact on your portfolio -->
+            <section class="portfolio-impact">
+                <h2 class="section-main-title">あなたのポートフォリオへの影響</h2>
+
+                <div class="ai-summary border-gradient">
+                    <div class="section-header">
+                        <div class="header-left">
+                            <img src="images/robot.svg" class="ai-icon" alt="AI">
+                            <h3 class="section-title">AIサマリー</h3>
+                        </div>
+                        <i data-feather="chevron-right" class="arrow-icon"></i>
+                    </div>
+                    <p class="summary-text">半導体セクターへの集中投資が奏功し、市場平均を上回るリターン。自動車セクターは微減となるも、全体への影響は限定的。</p>
+                </div>
+
+                <div class="portfolio-stocks">
+                    <div class="p-stock-col">
+                        <div class="p-stock-card">
+                            <div class="ps-name">アップル</div>
+                            <div class="ps-val">260.5</div>
+                            <div class="ps-change pos">+1.29%</div>
+                            <div class="ps-chart ch-up"></div>
+                        </div>
+                        <div class="p-stock-card">
+                            <div class="ps-name">東京電力ホールディングス</div>
+                            <div class="ps-val">701.0</div>
+                            <div class="ps-change neg">-0.41%</div>
+                            <div class="ps-chart ch-down"></div>
+                        </div>
+                    </div>
+                    <div class="p-stock-col">
+                        <div class="p-stock-card">
+                            <div class="ps-name">NTT</div>
+                            <div class="ps-val">701.0</div>
+                            <div class="ps-change pos">+0.92%</div>
+                            <div class="ps-chart ch-up2"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn-outline">ポートフォリオ詳細を見る</button>
+            </section>
+
+            <div class="divider"></div>
+
+            <!-- Market Ranking -->
+            <section class="market-ranking">
+                <h2 class="section-main-title">マーケットランキング</h2>
+
+                <div class="ranking-filters">
+                    <div class="filter-chip active">値上がり</div>
+                    <div class="filter-chip">割安 (PER)</div>
+                    <div class="filter-chip">高配当</div>
+                </div>
+
+                <div class="ranking-list">
+                    <!-- Item 1 -->
+                    <div class="rank-item">
+                        <div class="ri-left">
+                            <span class="ri-num">1</span>
+                            <div class="ri-icon p-icon-1">H</div>
+                            <span class="ri-name">日立製作所</span>
+                        </div>
+                        <div class="ri-right">
+                            <div class="ri-val">4,897.0</div>
+                            <div class="ri-change pos">+23.72%</div>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="rank-item">
+                        <div class="ri-left">
+                            <span class="ri-num">2</span>
+                            <div class="ri-icon p-icon-2">JX</div>
+                            <span class="ri-name">ＪＸ金属</span>
+                        </div>
+                        <div class="ri-right">
+                            <div class="ri-val">3,236.0</div>
+                            <div class="ri-change pos">+21.64%</div>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="rank-item">
+                        <div class="ri-left">
+                            <span class="ri-num">3</span>
+                            <div class="ri-icon p-icon-3">S</div>
+                            <span class="ri-name">サンリオ</span>
+                        </div>
+                        <div class="ri-right">
+                            <div class="ri-val">5,937.0</div>
+                            <div class="ri-change pos">+14.30%</div>
+                        </div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="rank-item">
+                        <div class="ri-left">
+                            <span class="ri-num">4</span>
+                            <div class="ri-icon p-icon-4">M</div>
+                            <span class="ri-name">三菱重工業</span>
+                        </div>
+                        <div class="ri-right">
+                            <div class="ri-val">4,820.0</div>
+                            <div class="ri-change pos">+12.82%</div>
+                        </div>
+                    </div>
+                    <!-- Item 5 -->
+                    <div class="rank-item">
+                        <div class="ri-left">
+                            <span class="ri-num">5</span>
+                            <div class="ri-icon p-icon-5">J</div>
+                            <span class="ri-name">地盤ネット</span>
+                        </div>
+                        <div class="ri-right">
+                            <div class="ri-val">1,340.0</div>
+                            <div class="ri-change pos">+11.86%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn-outline">もっと見る</button>
+            </section>
+
+            <div class="divider"></div>
+
+            <!-- Hot Sectors -->
+            <section class="hot-sectors">
+                <h2 class="section-main-title">ホットセクター</h2>
+
+                <!-- Expanded Sector -->
+                <div class="sector-card expanded">
+                    <div class="sc-header">
+                        <div class="sc-h-left">
+                            <div class="sc-icon bg-blue"><img src="images/robot.svg" alt=""></div>
+                            <div>
+                                <div class="sc-title">ロボティクス</div>
+                                <div class="sc-subtitle">製造業における自動化需要の増加</div>
+                            </div>
+                        </div>
+                        <i data-feather="chevron-up" class="arrow-icon"></i>
+                    </div>
+                    <div class="sc-desc gradient-text">
+                        人手不足が自動化への設備投資を加速させています。今後も関連銘柄の上昇が期待されています。
+                    </div>
+                    <div class="sc-companies">
+                        <div class="sc-company">
+                            <div class="scc-left">
+                                <span class="scc-icon i1">N</span> <span class="scc-name">ナブテスコ</span>
+                            </div>
+                            <div class="scc-change pos">+29.99%</div>
+                        </div>
+                        <div class="sc-company">
+                            <div class="scc-left">
+                                <span class="scc-icon i2">S</span> <span class="scc-name">SMC</span>
+                            </div>
+                            <div class="scc-change pos">+27.24%</div>
+                        </div>
+                        <div class="sc-company">
+                            <div class="scc-left">
+                                <span class="scc-icon i3">J</span> <span class="scc-name">ジェイテクト</span>
+                            </div>
+                            <div class="scc-change pos">+15.30%</div>
+                        </div>
+                    </div>
+                    <div class="related-news">
+                        <div class="related-title">関連ニュース</div>
+                        <div class="related-carousel">
+                            <div class="related-card">
+                                <p class="rc-title">日経平均、一時4万円回復 半導体株が牽引</p>
+                                <div class="rc-source">
+                                    <div class="rc-source-icon img1"></div>日本経済新聞
+                                </div>
+                            </div>
+                            <div class="related-card">
+                                <p class="rc-title">米運輸省道路交通安全局NHTSAは、テスラの...</p>
+                                <div class="rc-source">
+                                    <div class="rc-source-icon img2"></div>NHTSA
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Collapsed Sectors -->
+                <div class="sector-card collapsed">
+                    <div class="sc-header">
+                        <div class="sc-h-left">
+                            <div class="sc-icon bg-dark"><i data-feather="cpu"
+                                    style="color:white;width:16px;height:16px;"></i></div>
+                            <div>
+                                <div class="sc-title">半導体</div>
+                                <div class="sc-subtitle">世界的な需要の回復</div>
+                            </div>
+                        </div>
+                        <i data-feather="chevron-down" class="arrow-icon"></i>
+                    </div>
+                </div>
+
+                <div class="sector-card collapsed">
+                    <div class="sc-header">
+                        <div class="sc-h-left">
+                            <div class="sc-icon bg-gray"><i data-feather="shield"
+                                    style="color:red;width:16px;height:16px;"></i></div>
+                            <div>
+                                <div class="sc-title">防災・インフラ</div>
+                                <div class="sc-subtitle">インフラ更新への注目</div>
+                            </div>
+                        </div>
+                        <i data-feather="chevron-down" class="arrow-icon"></i>
+                    </div>
+                </div>
+            </section>
+
+            <div class="divider"></div>
+
+            <!-- Recommendations -->
+            <section class="recommendations">
+                <h2 class="section-main-title">あなたへのレコメンド</h2>
+
+                <div class="recommend-card">
+                    <div class="rcard-header">
+                        <div class="rcard-h-left">
+                            <div class="rcard-logo">H</div>
+                            <div>
+                                <div class="rcard-name">ホンダ</div>
+                                <div class="rcard-stats">153.1 <span class="pos">+0.71%</span></div>
+                            </div>
+                        </div>
+                        <i data-feather="heart" class="heart-icon"></i>
+                    </div>
+                    <div class="rcard-box border-gradient">
+                        <div class="rcb-header">
+                            <div class="rcb-h-left">
+                                <img src="images/robot.svg" class="ai-icon" alt="AI">
+                                <span class="rcb-title">マッチスコア</span>
+                            </div>
+                            <div class="rcb-score gradient-text-score">92%</div>
+                        </div>
+                        <div class="rcb-desc">
+                            ホンダは高配当（5%超）を提供し、<br>多角的な事業展開で安定した収益を確保しており、長期保有に適した選択肢です。
+                        </div>
+                        <div class="rcb-tags">
+                            <span class="rtag border-gradient-tag gradient-text-tag">長期保有</span>
+                            <span class="rtag border-gradient-tag gradient-text-tag">高配当性</span>
+                            <span class="rtag border-gradient-tag gradient-text-tag">安定</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="bottom-padding" style="height: 100px;"></div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        feather.replace();
+    </script>
+</body>
+
+</html>

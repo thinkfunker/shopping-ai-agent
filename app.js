@@ -1445,26 +1445,18 @@ function updateQuizUI() {
         const categoryData = quizData[currentCategory];
         const totalQuestions = categoryData.questions.length;
 
-        // Figma style: "1/10"
-        document.getElementById('quiz-progress').innerText = `${currentQuestionIndex + 1}/${totalQuestions}`;
-
-        // Update progress bar fill
-        const progressBar = document.getElementById('quiz-progress-bar');
-        if (progressBar) {
-                const percent = ((currentQuestionIndex + 1) / totalQuestions) * 100;
-                progressBar.style.width = percent + '%';
-        }
+        document.getElementById('quiz-progress').innerText = `${currentQuestionIndex + 1} / ${totalQuestions}`;
 
         const q = categoryData.questions[currentQuestionIndex];
 
         // Add fade out/in effect
-        const container = document.querySelector('.quiz-cards-container');
-        if (container) container.style.opacity = '0.5';
+        const container = document.querySelector('.ab-test-container');
+        container.style.opacity = '0.5';
 
         setTimeout(() => {
                 document.getElementById('img-option-a').src = q.a;
                 document.getElementById('img-option-b').src = q.b;
-                if (container) container.style.opacity = '1';
+                container.style.opacity = '1';
         }, 150);
 }
 
@@ -1547,12 +1539,12 @@ function displayFinalResult() {
                     </div>
                     <div class="price-row" style="display:flex; justify-content:space-between; align-items:center; margin-top:12px;">
                         <span class="price">${p.price}</span>
-                        <a href="${p.buyLink}" target="_blank" class="btn-black-small">
+                        <a href="${p.buyLink}" target="_blank" class="btn-black-small" style="padding: 6px 14px; background-color: #000; color: #fff; font-size: 11px; text-decoration: none; border-radius: 4px; font-weight: 500; display: inline-block; white-space: nowrap;">
                             ${uiTranslations['shop_now'][uiLang] || 'SHOP NOW'}
                         </a>
                     </div>
                     <div style="margin-top: 8px; text-align: right;">
-                        <a href="https://shopping.yahoo.co.jp/search?p=${encodeURIComponent(res.title)}" target="_blank" style="font-size: 11px; color: #999; text-decoration: underline;">
+                        <a href="https://shopping.yahoo.co.jp/search?p=${encodeURIComponent(res.title)}" target="_blank" style="font-size: 11px; color: #666; text-decoration: underline;">
                             ${uiTranslations['find_alt'] ? uiTranslations['find_alt'][uiLang] : 'Find Alternatives'}
                         </a>
                     </div>
@@ -1560,20 +1552,10 @@ function displayFinalResult() {
             </div>
         `).join('');
 
-        // Update AI result bubble
-        const aiMsg = document.getElementById('t-result-ai-msg');
-        if (aiMsg) {
-                const aiMsgs = {
-                        ko: `분석 결과: ${res.title} 스타일을 추천합니다`,
-                        ja: `分析結果: ${res.title} スタイルをおすすめします`
-                };
-                aiMsg.innerText = aiMsgs[uiLang];
-        }
-
         const resultContent = document.getElementById('result-content');
         resultContent.innerHTML = `
             <div class="buying-point-card">
-                <h3><i data-feather="check-circle"></i> ${res.title}</h3>
+                <h3><i data-feather="check"></i> ${res.title}</h3>
                 <p>${res.desc}</p>
             </div>
             ${productsHTML}
