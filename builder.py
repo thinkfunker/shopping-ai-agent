@@ -42,7 +42,7 @@ def card_html(x, y, w, h, bg, badge, text, img_src=None, img_style='', extras=''
     if badge:
         card_str += f'<span class="badge" style="z-index: 5; font-size:11px; font-weight:700; position:absolute; top:16px; left:16px; margin: 0; letter-spacing: 0;">{badge}</span>'
     if cross:
-        card_str += f'<span class="close-x" style="z-index: 5; position:absolute; top:14px; right:14px; cursor:pointer;"><svg width="20" height="20" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="cross_solid" d="M11.6808 1.17833L10.5025 0L5.84083 4.66167L1.17833 0L0 1.17833L4.6625 5.84L0 10.5017L1.17833 11.6808L5.84083 7.01833L10.5025 11.6808L11.6808 10.5017L7.01917 5.84L11.6808 1.17833Z" fill="{color}" fill-opacity="0.4"/></svg></span>'
+        card_str += f'<span class="close-x" style="z-index: 5; position:absolute; top:16px; right:16px; cursor:pointer; width:20px; height:20px; display:flex; align-items:center; justify-content:center;"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.6808 1.17833L10.5025 0L5.84083 4.66167L1.17833 0L0 1.17833L4.6625 5.84L0 10.5017L1.17833 11.6808L5.84083 7.01833L10.5025 11.6808L11.6808 10.5017L7.01917 5.84L11.6808 1.17833Z" fill="{color}" fill-opacity="0.4"/></svg></span>'
     if img_src:
         card_str += f'<img src="{img_src}" style="{img_style}" />'
     if extras:
@@ -58,12 +58,12 @@ def card_html(x, y, w, h, bg, badge, text, img_src=None, img_style='', extras=''
     return card_str
 
 game_cards = [
-    card_html(16, 175, 174, 171, '#282e8b', 'PC게임', '승률을 바꾸는<br>PC 세팅', 'images/3af11f3dcf672c9b4903491a082063fc3bbb9287.png', 'position:absolute; left: 85px; top: 49px; width:110px; height:auto; object-fit:contain; opacity:0.9;'),
-    card_html(200, 175, 174, 171, '#e70012', '휴대용 게임기', '새롭게 출시된<br>스위치 2지금이 기회', 'images/f20f8ba4e4f9ffd597b8b791eaa4fafb3b651c75.png', 'position:absolute; right:-60px; bottom:-30px; width:190px;'),
-    card_html(16, 356, 174, 171, '#4c7df9', '게이밍 기어', '사운드<br>플레이의 완성', 'images/bdfa442346e670eb4ac457ba91ff00e1eff7aab6.png', 'position:absolute; right: -25px; bottom: -20px; width:123px; transform: scaleX(-1);'),
-    card_html(200, 356, 174, 352, '#010212', '', '페이커가 직접 꼽은<br>2026 T1 우승템', 'images/8a8f2c97240b2c25f73107ed67960f33515a8e46.png', 'position:absolute; width: 616px; left:-190px; top:-44px; max-width: none; opacity:0.6;', None, True, False),
+    card_html(16, 175, 174, 171, '#282e8b', 'PC GAMES', '승률을 바꾸는<br>최강 세팅', 'images/3af11f3dcf672c9b4903491a082063fc3bbb9287.png', 'position:absolute; left: 85px; top: 49px; width:110px; height:auto; object-fit:contain; opacity:0.9;'),
+    card_html(200, 175, 174, 171, '#e70012', 'CONSOLES', '지금이 살 때<br>Switch 2', 'images/f20f8ba4e4f9ffd597b8b791eaa4fafb3b651c75.png', 'position:absolute; right:-60px; bottom:-30px; width:190px;'),
+    card_html(16, 356, 174, 171, '#4c7df9', 'GAMING GEAR', '프로 사양<br>기어 특집', 'images/bdfa442346e670eb4ac457ba91ff00e1eff7aab6.png', 'position:absolute; right: -25px; bottom: -20px; width:123px; transform: scaleX(-1);'),
+    card_html(200, 356, 174, 352, '#010212', '', 'Faker 셀렉트<br>2026 T1 우승템 특집', 'images/8a8f2c97240b2c25f73107ed67960f33515a8e46.png', 'position:absolute; width: 616px; left:-190px; top:-44px; max-width: none; opacity:0.6;', None, True, False),
     card_html(16, 537, 174, 171, '#202020', '', '', 'images/8d084f9cd61b8af0d9ed50f73076279220ae3dc5.png', 'position:absolute; width:119px; height:80px; object-fit:contain; bottom:15px; left: 27.5px;', "", False, False),
-    card_html(16, 718, 358, 91, '#010c18', '', '프로게이머 장비 세팅전', 'images/dc537cf7ec9578f6e9624ff599e91173d523c8a3.png', 'position:absolute; top: 18px; left: 220px; width: 104px; height:53px; object-fit:contain;', None, False, False)
+    card_html(16, 718, 358, 91, '#010c18', '', '프로가 쓰는 최강 세팅', 'images/dc537cf7ec9578f6e9624ff599e91173d523c8a3.png', 'position:absolute; top: 18px; left: 220px; width: 104px; height:53px; object-fit:contain;', None, False, False)
 ]
 game_html = '<div style="position:relative; height: 680px;">' + ''.join(game_cards) + '</div>'
 
@@ -150,8 +150,8 @@ js_function = f"""
             }}
 
             main.innerHTML = htmlContent + `
-                <button class="floating-ai" onclick="location.reload()" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; border: none; background: #FFF; width: 68px; height: 68px; border-radius: 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0px 4px 16px rgba(0,0,0,0.12); cursor:pointer;">
-                    <video autoPlay loop muted playsInline style="width: 58px; height: 58px; border-radius: 14px; object-fit: cover; pointer-events:none;">
+                <button class="floating-ai" onclick="location.reload()" style="position: fixed; bottom: 24px; right: 20px; z-index: 1000; border: none; background: #FFF; width: 68px; height: 68px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0px 4px 20px rgba(0,0,0,0.18); cursor:pointer; overflow:hidden; padding:0;">
+                    <video autoPlay loop muted playsInline style="width: 68px; height: 68px; border-radius: 50%; object-fit: cover; pointer-events:none;">
                         <source src="images/ai_icon.mp4" type="video/mp4" />
                     </video>
                 </button>
@@ -196,8 +196,8 @@ js_function = f"""
 
             // Maintain the AI character overlapping button
             main.innerHTML += `
-                <button class="floating-ai" onclick="location.reload()" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; border: none; background: #FFF; width: 68px; height: 68px; border-radius: 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0px 4px 16px rgba(0,0,0,0.12); cursor:pointer;">
-                    <video autoPlay loop muted playsInline style="width: 58px; height: 58px; border-radius: 14px; object-fit: cover; pointer-events:none;">
+                <button class="floating-ai" onclick="location.reload()" style="position: fixed; bottom: 24px; right: 20px; z-index: 1000; border: none; background: #FFF; width: 68px; height: 68px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0px 4px 20px rgba(0,0,0,0.18); cursor:pointer; overflow:hidden; padding:0;">
+                    <video autoPlay loop muted playsInline style="width: 68px; height: 68px; border-radius: 50%; object-fit: cover; pointer-events:none;">
                         <source src="images/ai_icon.mp4" type="video/mp4" />
                     </video>
                 </button>
