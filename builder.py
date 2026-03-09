@@ -78,22 +78,22 @@ sports_cards = [
 sports_html = '<div style="position:relative; height: 680px;">' + ''.join(sports_cards) + '</div>'
 
 fashion_cards = [
-    card_html(16, 175, 174, 352, '#eaeaea', 'バッグ', '포터 x 르메르<br><span style="font-weight: normal; color:rgba(255,255,255,0.8);">레더 컬렉션 공개</span>', 'images/0a480fd69ed6b7d0470ca4942ba25022b6b4663e.png', 'position:absolute; width: 327px; height:440px; left:-124px; top:-82px; mix-blend-mode:multiply; object-fit:cover;', '', False, True, 'black'),
-    card_html(200, 175, 174, 171, '#bdbebf', 'Stüssy', '2026 Spring', 'images/4ee4d3be59f0a707ea21a5ab5c2cb0ccfb0ec86c.png', 'position:absolute; width:174px; height:171px; left:0px; top:0px; object-fit:cover;', '', False, True),
+    card_html(16, 175, 174, 352, '#eaeaea', 'BAG', '포터 x 르메르<br><span style="font-weight: normal; color:rgba(0,0,0,0.6);">레더 콜렉션 공개</span>', 'images/0a480fd69ed6b7d0470ca4942ba25022b6b4663e.png', 'position:absolute; width: 327px; height:440px; left:-124px; top:-82px; mix-blend-mode:multiply; object-fit:cover;', '', False, True, 'black'),
+    card_html(200, 175, 174, 171, '#bdbebf', 'PALACE', '2026 Spring', 'images/4ee4d3be59f0a707ea21a5ab5c2cb0ccfb0ec86c.png', 'position:absolute; width:174px; height:171px; left:0px; top:0px; object-fit:cover;', '', False, True),
     card_html(200, 356, 174, 171, '#25242c', 'COUPON', '', None, '', '<div style="position:absolute; top:70px; left:0; right:0; text-align:center;"><p style="font-size:24px; font-weight:900; color:white; margin:0;">30% OFF</p></div>', False, True),
-    card_html(16, 537, 358, 91, '#355375', '', '#한정판<br>프라그먼트 x 나이키 북 2 공개', 'images/60377435440851c08f633eba2e9569cb74fa0248.png', 'position:absolute; width:364px; height:114px; left:-1px; top:-10px; object-fit:cover; mix-blend-mode: color-dodge;', None, False, True),
-    card_html(16, 638, 174, 171, '#000', 'BEAMS', '2026年春の<br>리바이스 x 빔스<br>협업 컬렉션 출시', 'images/b47e35420a10978c1b796b1cbccd74d623b5c0fc.png', 'position:absolute; width:174px; height:171px; left:0px; top:0px; object-fit:cover; opacity:0.8;', '<div style="position:absolute; bottom:0; left:0; right:0; height:80px; background:linear-gradient(to top, rgba(0,0,0,0.8), transparent);"></div>', False, True),
-    card_html(200, 638, 174, 171, '#000', 'アクセサリー', '클래시 드 까르띠에 컬렉션<br>옐로 골드 공개', 'images/ba5cbf5b981ef84560b765b0de11fbafe00cb268.png', 'position:absolute; width:174px; height:171px; left:0px; top:0px; object-fit:cover; opacity:0.9;', '<div style="position:absolute; bottom:0; left:0; right:0; height:80px; background:linear-gradient(to top, rgba(0,0,0,0.7), transparent);"></div>', False, True)
+    card_html(16, 537, 358, 91, '#355375', '', '#한정판<br>나이키 북 2 공개', 'images/60377435440851c08f633eba2e9569cb74fa0248.png', 'position:absolute; width:364px; height:114px; left:-1px; top:-10px; object-fit:cover; mix-blend-mode: color-dodge;', None, False, True),
+    card_html(16, 638, 174, 171, '#000', 'BEAMS', '2026 리바이스 x 빔스<br>콜라보 컨렉션 출시', 'images/b47e35420a10978c1b796b1cbccd74d623b5c0fc.png', 'position:absolute; width:174px; height:171px; left:0px; top:0px; object-fit:cover; opacity:0.8;', '<div style="position:absolute; bottom:0; left:0; right:0; height:80px; background:linear-gradient(to top, rgba(0,0,0,0.8), transparent);"></div>', False, True),
+    card_html(200, 638, 174, 171, '#000', 'ACCESSORY', '애플워치 스트랩<br>추천 콜렉션', 'images/ba5cbf5b981ef84560b765b0de11fbafe00cb268.png', 'position:absolute; width:174px; height:171px; left:0px; top:0px; object-fit:cover; opacity:0.9;', '<div style="position:absolute; bottom:0; left:0; right:0; height:80px; background:linear-gradient(to top, rgba(0,0,0,0.7), transparent);"></div>', False, True)
 ]
 fashion_html = '<div style="position:relative; height: 680px;">' + ''.join(fashion_cards) + '</div>'
 
 kitchen_cards = [
-    card_html(16, 175, 174, 171, '#222138', '냄비', '2026 트렌드<br>키친웨어 모음', 'images/1baeb382aafba0a98c721a8ed94425e35305704e.png', 'position:absolute; width:107px; height:102px; left: 96px; top: 48px; object-fit:cover;'),
-    card_html(200, 175, 174, 171, '#622121', '후라이팬', '스테이크를 이븐하게<br>굽는 후라이팬', 'images/a7f9f1718fc5ecf987d89908fdffebac9d6f5371.png', 'position:absolute; width:157px; height:74px; left: 63px; top: 47px; object-fit:cover;', '<div style="position:absolute; bottom:0; left:0; right:0; height:80px; background:linear-gradient(to top, rgba(0,0,0,0.4), transparent);"></div>'),
-    card_html(16, 356, 174, 171, '#97b9b8', '멀티쿠커', '퇴근 후<br>가장 빠른 미식(美食)', 'images/3540db8dba331fe503fc44d0065db853f9283497.png', 'position:absolute; width:117px; height:117px; left: 57px; top: 19px; object-fit:cover;', '<div style="position:absolute; bottom:0; left:0; right:0; height:95px; background:linear-gradient(to top, rgba(0,0,0,0.4), transparent);"></div>'),
-    card_html(200, 356, 174, 352, '#1f353f', '', '그랑메종 도쿄의<br>화제가 된 주방 아이템', 'images/a958eefb1b6f856c272750b696159d3806e2096f.png', 'position:absolute; width:574px; height:323px; left:-1px; top:30px; object-fit:cover;', '<div style="position:absolute; bottom:0; left:0; right:0; height:114px; background:linear-gradient(to top, rgba(0,0,0,0.6), transparent);"></div>', True, False),
+    card_html(16, 175, 174, 171, '#222138', 'POTS', '2026 트렌드<br>키친웨어 모음', 'images/1baeb382aafba0a98c721a8ed94425e35305704e.png', 'position:absolute; width:107px; height:102px; left: 96px; top: 48px; object-fit:cover;'),
+    card_html(200, 175, 174, 171, '#622121', 'FRYING PANS', '스테이크를 이븐하게<br>괽는 후라이팬', 'images/a7f9f1718fc5ecf987d89908fdffebac9d6f5371.png', 'position:absolute; width:157px; height:74px; left: 63px; top: 47px; object-fit:cover;', '<div style="position:absolute; bottom:0; left:0; right:0; height:80px; background:linear-gradient(to top, rgba(0,0,0,0.4), transparent);"></div>'),
+    card_html(16, 356, 174, 171, '#97b9b8', 'MULTI COOKERS', '퇁근 후<br>가장 빠른 미식(美食)', 'images/3540db8dba331fe503fc44d0065db853f9283497.png', 'position:absolute; width:117px; height:117px; left: 57px; top: 19px; object-fit:cover;', '<div style="position:absolute; bottom:0; left:0; right:0; height:95px; background:linear-gradient(to top, rgba(0,0,0,0.4), transparent);"></div>'),
+    card_html(200, 356, 174, 352, '#1f353f', '', '드라마 그랑메종<br>화제가 된 주방 아이템', 'images/a958eefb1b6f856c272750b696159d3806e2096f.png', 'position:absolute; width:574px; height:323px; left:-1px; top:30px; object-fit:cover;', '<div style="position:absolute; bottom:0; left:0; right:0; height:114px; background:linear-gradient(to top, rgba(0,0,0,0.6), transparent);"></div>', True, False),
     card_html(16, 537, 174, 171, '#2c3132', '', '', None, '', '<div style="position:absolute; top:40px; left:0; right:0; text-align:center;"><p style="font-size:32px; font-weight:900; color:rgba(255,255,255,0.4); margin:0;">SPRING</p><p style="font-size:32px; font-weight:900; color:white; margin:-10px 0; line-height:1.2;">20% OFF</p></div>', False, False),
-    card_html(16, 718, 358, 91, '#0032be', '', '58만 인플루언서 까사림 콜라보!', 'images/fd795b966d00d7e719e8c157aec2458123b40761.png', 'position:absolute; width:108px; height:39px; right:12px; top:26px; object-fit:cover;', None, False, False)
+    card_html(16, 718, 358, 91, '#0032be', '', '인플루언서 콜라보', 'images/fd795b966d00d7e719e8c157aec2458123b40761.png', 'position:absolute; width:108px; height:39px; right:12px; top:26px; object-fit:cover;', None, False, False)
 ]
 kitchen_html = '<div style="position:relative; height: 680px;">' + ''.join(kitchen_cards) + '</div>'
 
@@ -149,13 +149,8 @@ js_function = f"""
                 feedHeader.innerHTML = headers[categoryName];
             }}
 
-            main.innerHTML = htmlContent + `
-                <button class="floating-ai" onclick="location.reload()" style="position: fixed; bottom: 24px; right: 20px; z-index: 1000; border: none; background: #FFF; width: 68px; height: 68px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0px 4px 20px rgba(0,0,0,0.18); cursor:pointer; overflow:hidden; padding:0;">
-                    <video autoPlay loop muted playsInline style="width: 68px; height: 68px; border-radius: 50%; object-fit: cover; pointer-events:none;">
-                        <source src="images/ai_icon.mp4" type="video/mp4" />
-                    </video>
-                </button>
-            `;
+            main.innerHTML = htmlContent;
+
             
             const tabs = document.querySelector('.chip-scroll');
             if (tabs) {{
@@ -193,15 +188,6 @@ js_function = f"""
             }}
 
             main.innerHTML = htmlContent;
-
-            // Maintain the AI character overlapping button
-            main.innerHTML += `
-                <button class="floating-ai" onclick="location.reload()" style="position: fixed; bottom: 24px; right: 20px; z-index: 1000; border: none; background: #FFF; width: 68px; height: 68px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0px 4px 20px rgba(0,0,0,0.18); cursor:pointer; overflow:hidden; padding:0;">
-                    <video autoPlay loop muted playsInline style="width: 68px; height: 68px; border-radius: 50%; object-fit: cover; pointer-events:none;">
-                        <source src="images/ai_icon.mp4" type="video/mp4" />
-                    </video>
-                </button>
-            `;
             
             // Adjust scroll for tabs
             const tabs = document.querySelector('.chip-scroll');
