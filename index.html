@@ -129,7 +129,9 @@
         let selectedOptions = [];
 
         function initApp() {
-            renderQuestion();
+            // 분석 로직 및 퀴즈 생략하고 바로 게임 카테고리 결과 화면으로 이동
+            selectedOptions = ["게임"];
+            showResult();
         }
 
         function renderQuestion() {
@@ -239,10 +241,10 @@
             }, 2500);
         }
 
-        
+
         function getRecommendedCategory() {
             const opts = selectedOptions.join(" ");
-            
+
             // Analyze selected images logic:
             if (opts.includes("top_spin") || opts.includes("casual_sports")) return "sports";
             if (opts.includes("classic_formal") || opts.includes("design_mood")) return "fashion";
@@ -250,7 +252,16 @@
             return "game";
         }
 
-        
+
+        function getRecommendedCategory() {
+            const opts = selectedOptions.join(" ");
+            if (opts.includes("top_spin") || opts.includes("casual_sports")) return "sports";
+            if (opts.includes("classic_formal") || opts.includes("design_mood") || opts.includes("straight_drink") || opts.includes("sweet_soft")) return "fashion";
+            if (opts.includes("function_practicality")) return "kitchen";
+            return "game";
+        }
+
+
         function getRecommendedCategory() {
             const opts = selectedOptions.join(" ");
             if (opts.includes("top_spin") || opts.includes("casual_sports")) return "sports";
@@ -269,7 +280,9 @@
         }
 
         function showResult() {
-            document.getElementById('header-container').style.display = 'none';
+            const appHeader = document.querySelector('.app-header');
+            if (appHeader) appHeader.style.display = 'none';
+            
             const progressContainer = document.querySelector('.progress-bar-container');
             if (progressContainer) progressContainer.style.display = 'none';
 

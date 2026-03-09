@@ -107,7 +107,9 @@ js_function = f"""
         }}
 
         function showResult() {{
-            document.getElementById('header-container').style.display = 'none';
+            const appHeader = document.querySelector('.app-header');
+            if (appHeader) appHeader.style.display = 'none';
+            
             const progressContainer = document.querySelector('.progress-bar-container');
             if (progressContainer) progressContainer.style.display = 'none';
 
