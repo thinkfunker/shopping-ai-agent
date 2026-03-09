@@ -129,14 +129,12 @@
         let selectedOptions = [];
 
         function initApp() {
-            // 분석 로직 및 퀴즈 생략하고 바로 게임 카테고리 결과 화면으로 이동
-            selectedOptions = ["게임"];
-            showResult();
+            renderQuestion();
         }
 
         function renderQuestion() {
             if (currentStep >= questions.length) {
-                showAnalyzing();
+                showResult();
                 return;
             }
 
@@ -270,7 +268,7 @@
             return "game";
         }
 
-        
+
         function getRecommendedCategory() {
             const opts = selectedOptions.join(" ");
             if (opts.includes("top_spin") || opts.includes("casual_sports")) return "sports";
@@ -282,19 +280,19 @@
         function showResult() {
             const appHeader = document.querySelector('.app-header');
             if (appHeader) appHeader.style.display = 'none';
-            
+
             const progressContainer = document.querySelector('.progress-bar-container');
             if (progressContainer) progressContainer.style.display = 'none';
 
             const main = document.getElementById('main-content');
             main.className = 'main-content fade-in feed-mode scroll-hide';
-            
+
             // Allow vertical scrolling inside main since cards are absolute
             main.style.overflowY = 'auto';
 
             const targetCategory = getRecommendedCategory();
             let htmlContent = '';
-            
+
             if (targetCategory === 'sports') {
                 htmlContent = `
 <div class="feed-header">
@@ -406,7 +404,7 @@
                     </video>
                 </button>
             `;
-            
+
             const tabs = document.querySelector('.chip-scroll');
             if (tabs) {
                 const active = tabs.querySelector('.active');
@@ -419,7 +417,7 @@
         function switchTab(category) {
             const main = document.getElementById('main-content');
             let htmlContent = '';
-            
+
             if (category === '스포츠') {
                 htmlContent = `
 <div class="feed-header">
@@ -534,7 +532,7 @@
                     </video>
                 </button>
             `;
-            
+
             // Adjust scroll for tabs
             const tabs = document.querySelector('.chip-scroll');
             if (tabs) {
