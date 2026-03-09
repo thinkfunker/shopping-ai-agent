@@ -40,7 +40,7 @@ def card_html(x, y, w, h, bg, badge, text, img_src=None, img_style='', extras=''
     top = y - 146
     card_str = f'''<div class="feed-card" style="position: absolute; left: {x}px; top: {top}px; width: {w}px; height: {h}px; background: {bg}; border-radius: 16px; overflow: hidden; color: {color};">'''
     if badge:
-        card_str += f'<span class="badge" style="z-index: 5; font-size:11px; font-weight:700; position:absolute; top:16px; left:16px;">{badge}</span>'
+        card_str += f'<span class="badge" style="z-index: 5; font-size:11px; font-weight:700; position:absolute; top:16px; left:16px; margin: 0; letter-spacing: 0;">{badge}</span>'
     if cross:
         card_str += f'<span class="close-x" style="z-index: 5; position:absolute; top:14px; right:14px; cursor:pointer;"><svg width="20" height="20" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="cross_solid" d="M11.6808 1.17833L10.5025 0L5.84083 4.66167L1.17833 0L0 1.17833L4.6625 5.84L0 10.5017L1.17833 11.6808L5.84083 7.01833L10.5025 11.6808L11.6808 10.5017L7.01917 5.84L11.6808 1.17833Z" fill="{color}" fill-opacity="0.4"/></svg></span>'
     if img_src:
@@ -51,9 +51,9 @@ def card_html(x, y, w, h, bg, badge, text, img_src=None, img_style='', extras=''
         card_str += f'''<div style="background: rgba(0,0,0,0.4); position:absolute; inset:0;"></div>'''
         card_str += f'''<div class="yt-play" style="top:50%; left:50%; transform:translate(-50%,-50%); width:48px; height:48px; position:absolute; z-index:3;">
                 <svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
-                <span class="yt-time" style="position:absolute; top:calc(50% + 30px); right:10px; font-size:11px; z-index: 5;">01:30</span>'''
+                <span class="yt-time" style="position:absolute; top:calc(50% + 30px); right:10px; font-size:11px; margin: 0; z-index: 5;">01:30</span>'''
     if text:
-        card_str += f'<p class="card-title" style="z-index: 5; position:absolute; left:16px; bottom:20px; font-size:14px; font-weight:700; line-height:1.2; text-shadow:0 2px 4px rgba(0,0,0,0.2);">{text}</p>'
+        card_str += f'<p class="card-title feed-card-title" style="z-index: 5; position:absolute; left:16px; bottom:20px; font-size:14px; font-weight:700; line-height:1.2; text-shadow:0 2px 4px rgba(0,0,0,0.2); margin: 0; text-align: left; letter-spacing: 0;">{text}</p>'
     card_str += '</div>'
     return card_str
 
