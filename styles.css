@@ -434,11 +434,12 @@ body {
     background: #FFF;
 }
 
-.feed-header h1 {
-    font-size: 17px;
+.header-logo {
+    font-size: 24px;
     font-weight: 800;
     color: #17181a;
     letter-spacing: -0.5px;
+    margin: 0;
 }
 
 .feed-actions {
@@ -459,8 +460,8 @@ body {
     overflow-x: auto;
     align-items: center;
     gap: 6px;
-    height: 40px;
-    padding: 0 0 0 16px;
+    height: 48px;
+    padding: 4px 16px;
     scrollbar-width: none;
 }
 
@@ -485,7 +486,11 @@ body {
 }
 
 .feed-chip.icon-chip {
-    padding: 0 12px;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    border-radius: 50%;
 }
 
 .feed-chip.active {

@@ -14,7 +14,7 @@ def get_header(active_tab):
             
     return f'''
 <div class="feed-header">
-    <h1>Shopping Ai</h1>
+    <h1 class="header-logo">Shopping Ai</h1>
     <div class="feed-actions">
         <svg width="24" height="24" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path id="search_solid" fill-rule="evenodd" clip-rule="evenodd" d="M14.512 7.257C14.512 8.897 13.958 10.407 13.037 11.623L18.057 16.643L16.643 18.057L11.623 13.037C10.406 13.959 8.897 14.513 7.256 14.513C3.255 14.513 0 11.258 0 7.257C0 3.256 3.255 0 7.256 0C11.257 0 14.512 3.256 14.512 7.257ZM7.256 2C4.358 2 2 4.358 2 7.257C2 10.155 4.358 12.513 7.256 12.513C10.154 12.513 12.512 10.155 12.512 7.257C12.512 4.358 10.154 2 7.256 2Z" fill="#17181A"/>
@@ -28,8 +28,8 @@ def get_header(active_tab):
             <path id="sliders-horizonal_solid" fill-rule="evenodd" clip-rule="evenodd" d="M7.50667 0C8.325 0 9.01833 0.519167 9.29 1.24333H11.4V2.57583H9.29C9.01833 3.30083 8.325 3.82 7.50667 3.82C6.68833 3.82 5.995 3.30083 5.72333 2.57583H0V1.24333H5.72333C5.995 0.519167 6.68833 0 7.50667 0ZM7.50667 2.48667C7.18833 2.48667 6.93 2.2275 6.93 1.91C6.93 1.59167 7.18833 1.3325 7.50667 1.3325C7.825 1.3325 8.08333 1.59167 8.08333 1.91C8.08333 2.2275 7.825 2.48667 7.50667 2.48667ZM0 7.16617H11.4V5.83283H0V7.16617ZM3.89333 11.6663C3.575 11.6663 3.31667 11.4072 3.31667 11.0897C3.31667 10.7713 3.575 10.5122 3.89333 10.5122C4.21167 10.5122 4.47 10.7713 4.47 11.0897C4.47 11.4072 4.21167 11.6663 3.89333 11.6663ZM2.11 10.423C2.38167 9.69883 3.075 9.17967 3.89333 9.17967C4.71167 9.17967 5.405 9.69883 5.67667 10.423H11.4V11.7555H5.67667C5.405 12.4805 4.71167 12.9997 3.89333 12.9997C3.075 12.9997 2.38167 12.4805 2.11 11.7555H0V10.423H2.11Z" fill="#17181A"/>
         </svg>
     </button>
-    <button class="feed-chip" style="color:#17181a;">
-        <img src="images/350f5853f65e236ad6dcd3d639b7ac83d1ba6ee8.png" style="width:20px; height:20px;" />
+    <button class="feed-chip" style="color:#17181a; background: #F6F6F6;">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.4035 6.16392C15.0646 5.72745 14.4549 5.6527 14.0311 5.99994L9.15383 10.1596C9.05496 10.2392 8.91843 10.2392 8.82191 10.1548L6.09581 8.08826C5.68386 7.73379 5.08357 7.7579 4.69986 8.14614C4.48329 8.36316 4.375 8.65494 4.375 8.94672C4.375 9.19509 4.45268 9.44347 4.61276 9.64844L8.36758 13.8707C8.77012 14.3241 9.45045 14.3361 9.86711 13.8973L15.3353 7.5553C15.6931 7.17912 15.7237 6.57386 15.4035 6.16392Z" fill="#17181A"/></svg>
         AI Pick
     </button>
     {chips}
@@ -37,7 +37,7 @@ def get_header(active_tab):
 '''
 
 def card_html(x, y, w, h, bg, badge, text, img_src=None, img_style='', extras='', yt=False, cross=True, color='white'):
-    top = y - 146
+    top = y - 154
     card_str = f'''<div class="feed-card" style="position: absolute; left: {x}px; top: {top}px; width: {w}px; height: {h}px; background: {bg}; border-radius: 16px; overflow: hidden; color: {color};">'''
     if badge:
         card_str += f'<span class="badge" style="z-index: 5; font-size:11px; font-weight:700; position:absolute; top:16px; left:16px; margin: 0; letter-spacing: 0;">{badge}</span>'
@@ -53,7 +53,7 @@ def card_html(x, y, w, h, bg, badge, text, img_src=None, img_style='', extras=''
                 <svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
                 <span class="yt-time" style="position:absolute; top:calc(50% + 30px); right:10px; font-size:11px; margin: 0; z-index: 5;">01:30</span>'''
     if text:
-        card_str += f'<p class="card-title feed-card-title" style="z-index: 5; position:absolute; left:16px; bottom:20px; font-size:14px; font-weight:700; line-height:1.2; text-shadow:0 2px 4px rgba(0,0,0,0.2); margin: 0; text-align: left; letter-spacing: 0;">{text}</p>'
+        card_str += f'<p class="card-title feed-card-title" style="z-index: 5; position:absolute; left:16px; bottom:20px; font-size:15px; font-weight:800; line-height:1.2; text-shadow:0 2px 4px rgba(0,0,0,0.2); margin: 0; text-align: left; letter-spacing: -0.3px;">{text}</p>'
     card_str += '</div>'
     return card_str
 
@@ -65,7 +65,7 @@ game_cards = [
     card_html(16, 537, 174, 171, '#202020', '', '', 'images/8d084f9cd61b8af0d9ed50f73076279220ae3dc5.png', 'position:absolute; width:119px; height:80px; object-fit:contain; bottom:15px; left: 27.5px;', "", False, False),
     card_html(16, 718, 358, 91, '#010c18', '', '프로게이머 장비 세팅전', 'images/dc537cf7ec9578f6e9624ff599e91173d523c8a3.png', 'position:absolute; top: 18px; left: 220px; width: 104px; height:53px; object-fit:contain;', None, False, False)
 ]
-game_html = get_header("게임") + '<div style="position:relative; height: 680px;">' + ''.join(game_cards) + '</div>'
+game_html = '<div style="position:relative; height: 680px;">' + ''.join(game_cards) + '</div>'
 
 sports_cards = [
     card_html(16, 175, 174, 171, '#222138', 'TENNIS', '테니스<br>시작해볼까요', 'images/1b270d270fdb35cee2e2c97d12427e158ca2bc85.png', 'position:absolute; width:131px; height:142px; left: 70px; top: 48px; object-fit:cover;'),
@@ -150,8 +150,8 @@ js_function = f"""
             }}
 
             main.innerHTML = htmlContent + `
-                <button class="floating-ai" onclick="location.reload()" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; border: none; background: transparent; padding: 0; cursor:pointer;">
-                    <video autoPlay loop muted playsInline style="width: 52px; height: 49px; border-radius: 12px; transform: scale(1.1); pointer-events:none;">
+                <button class="floating-ai" onclick="location.reload()" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; border: none; background: #FFF; width: 68px; height: 68px; border-radius: 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0px 4px 16px rgba(0,0,0,0.12); cursor:pointer;">
+                    <video autoPlay loop muted playsInline style="width: 58px; height: 58px; border-radius: 14px; object-fit: cover; pointer-events:none;">
                         <source src="images/ai_icon.mp4" type="video/mp4" />
                     </video>
                 </button>
@@ -196,8 +196,8 @@ js_function = f"""
 
             // Maintain the AI character overlapping button
             main.innerHTML += `
-                <button class="floating-ai" onclick="location.reload()" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; border: none; background: transparent; padding: 0; cursor:pointer;">
-                    <video autoPlay loop muted playsInline style="width: 52px; height: 49px; border-radius: 12px; transform: scale(1.1); pointer-events:none;">
+                <button class="floating-ai" onclick="location.reload()" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; border: none; background: #FFF; width: 68px; height: 68px; border-radius: 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0px 4px 16px rgba(0,0,0,0.12); cursor:pointer;">
+                    <video autoPlay loop muted playsInline style="width: 58px; height: 58px; border-radius: 14px; object-fit: cover; pointer-events:none;">
                         <source src="images/ai_icon.mp4" type="video/mp4" />
                     </video>
                 </button>
