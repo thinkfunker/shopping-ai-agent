@@ -16,16 +16,16 @@ def get_header(active_tab):
 <div class="feed-header">
     <h1>Shopping Ai</h1>
     <div class="feed-actions">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C12.1102 18 14.0254 17.1831 15.4532 15.8674L20.2929 20.7071C20.6834 21.0976 21.3166 21.0976 21.7071 20.7071C22.0976 20.3166 22.0976 19.6834 21.7071 19.2929L16.8674 14.4532C18.1831 13.0254 19 11.1102 19 10C19 5.58172 15.4183 2 10 2ZM4 10C4 6.68629 6.68629 4 10 4C13.3137 4 16 6.68629 16 10C16 13.3137 13.3137 16 10 16C6.68629 16 4 13.3137 4 10Z" fill="#17181A"/>
+        <svg width="24" height="24" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path id="search_solid" fill-rule="evenodd" clip-rule="evenodd" d="M14.512 7.257C14.512 8.897 13.958 10.407 13.037 11.623L18.057 16.643L16.643 18.057L11.623 13.037C10.406 13.959 8.897 14.513 7.256 14.513C3.255 14.513 0 11.258 0 7.257C0 3.256 3.255 0 7.256 0C11.257 0 14.512 3.256 14.512 7.257ZM7.256 2C4.358 2 2 4.358 2 7.257C2 10.155 4.358 12.513 7.256 12.513C10.154 12.513 12.512 10.155 12.512 7.257C12.512 4.358 10.154 2 7.256 2Z" fill="#17181A"/>
         </svg>
         <img src="images/6cf779209837fe69c1fd4ccbb5d0abc91833f717.png" class="avatar" style="border:1px solid #ddd; object-fit:cover;" alt="Avatar"/>
     </div>
 </div>
 <div class="chip-scroll">
     <button class="feed-chip icon-chip">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4.16669 8.33333C4.16669 8.33333 4.16668 8.33333 4.16667 8.33333C3.24619 8.33333 2.5 7.58714 2.5 6.66667C2.5 5.74619 3.24619 5 4.16667 5C5.08714 5 5.83333 5.74619 5.83333 6.66667C5.83333 7.58714 5.08714 8.33333 4.16667 8.33333ZM4.16669 8.33333H17.5M15.8333 15C15.8333 15 15.8333 15 15.8333 15C16.7538 15 17.5 14.2538 17.5 13.3333C17.5 12.4129 16.7538 11.6667 15.8333 11.6667C14.9129 11.6667 14.1667 12.4129 14.1667 13.3333C14.1667 14.2538 14.9129 15 15.8333 15ZM15.8333 15H2.5" stroke="#17181A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg width="20" height="20" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path id="sliders-horizonal_solid" fill-rule="evenodd" clip-rule="evenodd" d="M7.50667 0C8.325 0 9.01833 0.519167 9.29 1.24333H11.4V2.57583H9.29C9.01833 3.30083 8.325 3.82 7.50667 3.82C6.68833 3.82 5.995 3.30083 5.72333 2.57583H0V1.24333H5.72333C5.995 0.519167 6.68833 0 7.50667 0ZM7.50667 2.48667C7.18833 2.48667 6.93 2.2275 6.93 1.91C6.93 1.59167 7.18833 1.3325 7.50667 1.3325C7.825 1.3325 8.08333 1.59167 8.08333 1.91C8.08333 2.2275 7.825 2.48667 7.50667 2.48667ZM0 7.16617H11.4V5.83283H0V7.16617ZM3.89333 11.6663C3.575 11.6663 3.31667 11.4072 3.31667 11.0897C3.31667 10.7713 3.575 10.5122 3.89333 10.5122C4.21167 10.5122 4.47 10.7713 4.47 11.0897C4.47 11.4072 4.21167 11.6663 3.89333 11.6663ZM2.11 10.423C2.38167 9.69883 3.075 9.17967 3.89333 9.17967C4.71167 9.17967 5.405 9.69883 5.67667 10.423H11.4V11.7555H5.67667C5.405 12.4805 4.71167 12.9997 3.89333 12.9997C3.075 12.9997 2.38167 12.4805 2.11 11.7555H0V10.423H2.11Z" fill="#17181A"/>
         </svg>
     </button>
     <button class="feed-chip" style="color:#17181a;">
@@ -42,7 +42,7 @@ def card_html(x, y, w, h, bg, badge, text, img_src=None, img_style='', extras=''
     if badge:
         card_str += f'<span class="badge" style="z-index: 5; font-size:11px; font-weight:700; position:absolute; top:16px; left:16px;">{badge}</span>'
     if cross:
-        card_str += f'<span class="close-x" style="z-index: 5; position:absolute; top:14px; right:14px; cursor:pointer;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="{color}" stroke-opacity="0.4" stroke-width="1.5" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span>'
+        card_str += f'<span class="close-x" style="z-index: 5; position:absolute; top:14px; right:14px; cursor:pointer;"><svg width="20" height="20" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="cross_solid" d="M11.6808 1.17833L10.5025 0L5.84083 4.66167L1.17833 0L0 1.17833L4.6625 5.84L0 10.5017L1.17833 11.6808L5.84083 7.01833L10.5025 11.6808L11.6808 10.5017L7.01917 5.84L11.6808 1.17833Z" fill="{color}" fill-opacity="0.4"/></svg></span>'
     if img_src:
         card_str += f'<img src="{img_src}" style="{img_style}" />'
     if extras:
