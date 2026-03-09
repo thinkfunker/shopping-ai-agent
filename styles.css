@@ -51,6 +51,8 @@ body {
         border-radius: 42px;
         border: 8px solid #383838;
         box-shadow: 16px 16px 32px 0 rgba(0, 0, 0, 0.12);
+        box-sizing: content-box;
+        /* border is OUTSIDE 390px content area */
     }
 }
 
