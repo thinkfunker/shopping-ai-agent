@@ -75,7 +75,7 @@ sports_cards = [
     card_html(16, 537, 174, 171, '#f49caa', '', '', None, '', '<div style="position:absolute; top:40px; left:0; right:0; text-align:center;"><p style="font-size:32px; font-weight:900; color:rgba(255,255,255,0.4); margin:0;">SPRING</p><p style="font-size:32px; font-weight:900; color:white; margin:-10px 0; line-height:1.2;">20% OFF</p></div>', False, False),
     card_html(16, 718, 358, 91, '#466136', '', '초보자에게 인기있는<br>라켓 TOP5', 'images/1b2d9139889a6fced8b130e89b1707ea16f75a80.png', 'position:absolute; width:147px; height:221px; left:211px; top:-61px; object-fit:cover;', None, False, False)
 ]
-sports_html = get_header("스포츠") + '<div style="position:relative; height: 680px;">' + ''.join(sports_cards) + '</div>'
+sports_html = '<div style="position:relative; height: 680px;">' + ''.join(sports_cards) + '</div>'
 
 fashion_cards = [
     card_html(16, 175, 174, 352, '#eaeaea', 'バッグ', '포터 x 르메르<br><span style="font-weight: normal; color:rgba(255,255,255,0.8);">레더 컬렉션 공개</span>', 'images/0a480fd69ed6b7d0470ca4942ba25022b6b4663e.png', 'position:absolute; width: 327px; height:440px; left:-124px; top:-82px; mix-blend-mode:multiply; object-fit:cover;', '', False, True, 'black'),
@@ -85,7 +85,7 @@ fashion_cards = [
     card_html(16, 638, 174, 171, '#000', 'BEAMS', '2026年春の<br>리바이스 x 빔스<br>협업 컬렉션 출시', 'images/b47e35420a10978c1b796b1cbccd74d623b5c0fc.png', 'position:absolute; width:174px; height:171px; left:0px; top:0px; object-fit:cover; opacity:0.8;', '<div style="position:absolute; bottom:0; left:0; right:0; height:80px; background:linear-gradient(to top, rgba(0,0,0,0.8), transparent);"></div>', False, True),
     card_html(200, 638, 174, 171, '#000', 'アクセサリー', '클래시 드 까르띠에 컬렉션<br>옐로 골드 공개', 'images/ba5cbf5b981ef84560b765b0de11fbafe00cb268.png', 'position:absolute; width:174px; height:171px; left:0px; top:0px; object-fit:cover; opacity:0.9;', '<div style="position:absolute; bottom:0; left:0; right:0; height:80px; background:linear-gradient(to top, rgba(0,0,0,0.7), transparent);"></div>', False, True)
 ]
-fashion_html = get_header("패션") + '<div style="position:relative; height: 680px;">' + ''.join(fashion_cards) + '</div>'
+fashion_html = '<div style="position:relative; height: 680px;">' + ''.join(fashion_cards) + '</div>'
 
 kitchen_cards = [
     card_html(16, 175, 174, 171, '#222138', '냄비', '2026 트렌드<br>키친웨어 모음', 'images/1baeb382aafba0a98c721a8ed94425e35305704e.png', 'position:absolute; width:107px; height:102px; left: 96px; top: 48px; object-fit:cover;'),
@@ -95,7 +95,7 @@ kitchen_cards = [
     card_html(16, 537, 174, 171, '#2c3132', '', '', None, '', '<div style="position:absolute; top:40px; left:0; right:0; text-align:center;"><p style="font-size:32px; font-weight:900; color:rgba(255,255,255,0.4); margin:0;">SPRING</p><p style="font-size:32px; font-weight:900; color:white; margin:-10px 0; line-height:1.2;">20% OFF</p></div>', False, False),
     card_html(16, 718, 358, 91, '#0032be', '', '58만 인플루언서 까사림 콜라보!', 'images/fd795b966d00d7e719e8c157aec2458123b40761.png', 'position:absolute; width:108px; height:39px; right:12px; top:26px; object-fit:cover;', None, False, False)
 ]
-kitchen_html = get_header("키친") + '<div style="position:relative; height: 680px;">' + ''.join(kitchen_cards) + '</div>'
+kitchen_html = '<div style="position:relative; height: 680px;">' + ''.join(kitchen_cards) + '</div>'
 
 js_function = f"""
         function getRecommendedCategory() {{
@@ -120,16 +120,33 @@ js_function = f"""
             main.style.overflowY = 'auto';
 
             const targetCategory = getRecommendedCategory();
+            let categoryName = '';
             let htmlContent = '';
             
             if (targetCategory === 'sports') {{
+                categoryName = '스포츠';
                 htmlContent = `{sports_html}`;
             }} else if (targetCategory === 'fashion') {{
+                categoryName = '패션';
                 htmlContent = `{fashion_html}`;
             }} else if (targetCategory === 'kitchen') {{
+                categoryName = '키친';
                 htmlContent = `{kitchen_html}`;
             }} else {{
+                categoryName = '게임';
                 htmlContent = `{game_html}`;
+            }}
+
+            const feedHeader = document.getElementById('feed-header-container');
+            if (feedHeader) {{
+                feedHeader.style.display = 'block';
+                const headers = {{
+                    "스포츠": `{get_header("스포츠")}`,
+                    "패션": `{get_header("패션")}`,
+                    "키친": `{get_header("키친")}`,
+                    "게임": `{get_header("게임")}`
+                }};
+                feedHeader.innerHTML = headers[categoryName];
             }}
 
             main.innerHTML = htmlContent + `
@@ -151,6 +168,18 @@ js_function = f"""
 
         function switchTab(category) {{
             const main = document.getElementById('main-content');
+            const feedHeader = document.getElementById('feed-header-container');
+            
+            if (feedHeader) {{
+                const headers = {{
+                    "스포츠": `{get_header("스포츠")}`,
+                    "패션": `{get_header("패션")}`,
+                    "키친": `{get_header("키친")}`,
+                    "게임": `{get_header("게임")}`
+                }};
+                feedHeader.innerHTML = headers[category];
+            }}
+
             let htmlContent = '';
             
             if (category === '스포츠') {{
