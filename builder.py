@@ -8,9 +8,9 @@ def get_header(active_tab):
     chips = ''
     for t in tabs:
         if t == active_tab:
-            chips += f'<button class="feed-chip active">{t}</button>'
+            chips += f'<button class="feed-chip active" onclick="switchTab(\'{t}\')">{t}</button>'
         else:
-            chips += f'<button class="feed-chip">{t}</button>'
+            chips += f'<button class="feed-chip" onclick="switchTab(\'{t}\')">{t}</button>'
             
     return f'''
 <div class="feed-header">
@@ -138,6 +138,41 @@ js_function = f"""
                 </button>
             `;
             
+            const tabs = document.querySelector('.chip-scroll');
+            if (tabs) {{
+                const active = tabs.querySelector('.active');
+                if (active) {{
+                    tabs.scrollLeft = active.offsetLeft - 80;
+                }}
+            }}
+        }}
+
+        function switchTab(category) {{
+            const main = document.getElementById('main-content');
+            let htmlContent = '';
+            
+            if (category === '스포츠') {{
+                htmlContent = `{sports_html}`;
+            }} else if (category === '패션') {{
+                htmlContent = `{fashion_html}`;
+            }} else if (category === '키친') {{
+                htmlContent = `{kitchen_html}`;
+            }} else {{
+                htmlContent = `{game_html}`;
+            }}
+
+            main.innerHTML = htmlContent;
+
+            // Maintain the AI character overlapping button
+            main.innerHTML += `
+                <button class="floating-ai" onclick="location.reload()" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; border: none; background: transparent; padding: 0; cursor:pointer;">
+                    <video autoPlay loop muted playsInline style="width: 52px; height: 49px; border-radius: 12px; transform: scale(1.1); pointer-events:none;">
+                        <source src="images/ai_icon.mp4" type="video/mp4" />
+                    </video>
+                </button>
+            `;
+            
+            // Adjust scroll for tabs
             const tabs = document.querySelector('.chip-scroll');
             if (tabs) {{
                 const active = tabs.querySelector('.active');
