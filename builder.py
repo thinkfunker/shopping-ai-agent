@@ -37,7 +37,7 @@ def get_header(active_tab):
 '''
 
 def card_html(x, y, w, h, bg, badge, text, img_src=None, img_style='', extras='', yt=False, cross=True, color='white'):
-    top = y - 154
+    top = y - 146
     card_str = f'''<div class="feed-card" style="position: absolute; left: {x}px; top: {top}px; width: {w}px; height: {h}px; background: {bg}; border-radius: 16px; overflow: hidden; color: {color};">'''
     if badge:
         card_str += f'<span class="badge" style="z-index: 5; font-size:11px; font-weight:700; position:absolute; top:16px; left:16px; margin: 0; letter-spacing: 0;">{badge}</span>'
