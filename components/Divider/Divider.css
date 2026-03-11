@@ -1,0 +1,42 @@
+@import "../../design_system.css";
+
+.divider {
+    background-color: var(--border-secondary);
+    border: none;
+    flex-shrink: 0;
+}
+
+.divider-horizontal {
+    width: 100%;
+    height: 1px;
+    margin: var(--spacing-400) 0;
+    /* Default spacing */
+}
+
+.divider-vertical {
+    width: 1px;
+    height: 100%;
+    margin: 0 var(--spacing-400);
+    /* Default spacing */
+}
+
+/* Modifier classes for spacing */
+.divider-spacing-none {
+    margin: 0;
+}
+
+.divider-spacing-small {
+    margin: var(--spacing-200) 0;
+}
+
+.divider-spacing-large {
+    margin: var(--spacing-800) 0;
+}
+
+.divider-vertical.divider-spacing-small {
+    margin: 0 var(--spacing-200);
+}
+
+.divider-vertical.divider-spacing-large {
+    margin: 0 var(--spacing-800);
+}

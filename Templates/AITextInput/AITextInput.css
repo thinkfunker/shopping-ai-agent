@@ -1,0 +1,160 @@
+@import "../../design_system.css";
+
+.ai-text-input-template {
+    width: 390px;
+    /* Mobile width fixed for safety, can be adjusted to 100% */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.ai-text-input-template.bg-on {
+    background-color: var(--background-primary, white);
+}
+
+.ai-text-input-template-container {
+    width: 100%;
+    padding: var(--spacing-300, 12px) var(--spacing-400, 16px) var(--spacing-400, 16px);
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    gap: var(--spacing-300, 12px);
+}
+
+.ai-text-input-wrapper {
+    flex: 1;
+    min-height: 48px;
+    background-color: var(--background-elevated-1, white);
+    border: 1px solid var(--border-accent, rgba(0, 0, 0, 0.28));
+    display: flex;
+    align-items: center;
+    padding-left: var(--spacing-300, 12px);
+    padding-right: var(--spacing-200, 8px);
+    border-radius: var(--radius-full, 100px);
+    box-sizing: border-box;
+    gap: var(--spacing-300, 12px);
+}
+
+.ai-text-input-wrapper.multiline {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--spacing-400, 16px);
+    border-radius: 24px;
+    min-height: 120px;
+}
+
+.ai-text-input-field {
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-100, 16px);
+    line-height: var(--line-height-body-large, 24px);
+    color: var(--content-primary, #17181a);
+    outline: none;
+    width: 100%;
+    resize: none;
+}
+
+.ai-text-input-field::placeholder {
+    color: var(--content-placeholder, rgba(0, 0, 0, 0.56));
+}
+
+.ai-input-controls {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-200, 8px);
+}
+
+/* Button Styles */
+.ai-send-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-full, 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    background-image: linear-gradient(46.9deg, var(--gradient-background-stop-1, #a83deb) 5.1%, var(--gradient-background-stop-2, #3083fd) 92.3%);
+    color: white;
+}
+
+.ai-send-btn:disabled {
+    background-image: none;
+    background-color: var(--background-disabled, #e4e7ed);
+    color: var(--content-disabled, rgba(0, 0, 0, 0.16));
+    cursor: default;
+}
+
+.ai-login-btn {
+    height: 32px;
+    padding: 0 var(--spacing-400, 16px);
+    border-radius: var(--radius-400, 16px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    background-image: linear-gradient(26deg, var(--gradient-background-stop-1, #a83deb) 5.1%, var(--gradient-background-stop-2, #3083fd) 92.3%);
+    color: white;
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-0875, 14px);
+    white-space: nowrap;
+}
+
+/* Footer Styles */
+.ai-text-input-footer {
+    width: 100%;
+    padding: 0 var(--spacing-400, 16px) var(--spacing-400, 16px);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-100, 4px);
+}
+
+.disclaimer-text {
+    font-family: var(--font-family-primary);
+    font-size: 12px;
+    line-height: var(--line-height-body-small, 19px);
+    color: var(--content-tertiary, rgba(0, 0, 0, 0.56));
+    margin: 0;
+}
+
+.disclaimer-link {
+    color: #0f62fe;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer-meta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-info-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Home Indicator */
+.home-indicator-container {
+    height: 21px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-indicator-bar {
+    width: 139px;
+    height: 5px;
+    border-radius: 100px;
+    background-color: var(--content-primary, #17181a);
+}

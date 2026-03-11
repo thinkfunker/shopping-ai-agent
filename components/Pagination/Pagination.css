@@ -1,0 +1,118 @@
+@import "../../design_system.css";
+
+/* --- Pagination Base --- */
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-200);
+    font-family: var(--font-family-primary);
+    user-select: none;
+}
+
+/* --- Pagination Standard (Numeric) --- */
+.pagination-standard {
+    gap: var(--spacing-100);
+}
+
+.pagination-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-100);
+    cursor: pointer;
+    font-size: var(--font-size-0875);
+    font-weight: var(--font-weight-regular);
+    color: var(--content-primary);
+    transition: all 0.2s ease;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.pagination-item:hover:not(.disabled):not(.selected) {
+    background-color: var(--state-hover-primary, rgba(0, 0, 0, 0.04));
+}
+
+.pagination-item:active:not(.disabled):not(.selected) {
+    background-color: var(--state-pressed-primary, rgba(0, 0, 0, 0.12));
+}
+
+.pagination-item.selected {
+    background: var(--gradient-primary);
+    color: var(--content-white, #ffffff);
+    font-weight: var(--font-weight-bold);
+    cursor: default;
+}
+
+.pagination-item.disabled {
+    color: var(--content-disabled);
+    cursor: not-allowed;
+}
+
+.pagination-ellipsis {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    color: var(--content-tertiary);
+    cursor: default;
+}
+
+.pagination-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Pagination Indicators (Dots/Numbers) --- */
+.pagination-indicator {
+    padding: var(--spacing-200) 0;
+}
+
+/* Dot Type */
+.pagination-dots {
+    display: flex;
+    gap: var(--spacing-100);
+}
+
+.pagination-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: var(--radius-full);
+    background-color: var(--border-tertiary);
+    transition: all 0.2s ease;
+}
+
+.pagination-dot.selected {
+    background-color: var(--content-key);
+    /* Or brand gradient if it grows */
+    width: 13px;
+    /* As seen in some designs for active dot */
+}
+
+/* Number Type (Simple) */
+.pagination-simple-numbers {
+    font-size: var(--font-size-075);
+    color: var(--content-tertiary);
+}
+
+.pagination-current {
+    color: var(--content-primary);
+    font-weight: var(--font-weight-bold);
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+    .pagination-standard {
+        gap: var(--spacing-050, 4px);
+    }
+
+    .pagination-item {
+        width: 28px;
+        height: 28px;
+        font-size: var(--font-size-075);
+    }
+}

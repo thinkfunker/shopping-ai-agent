@@ -1,0 +1,66 @@
+@import "../../design_system.css";
+
+/* Result Pattern Container */
+.result-pattern {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: var(--spacing-400, 16px);
+}
+
+/* List Type */
+.result-pattern.type-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-200, 8px);
+}
+
+/* Carousel Type */
+.result-pattern.type-carousel {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-400, 16px);
+}
+
+.result-carousel-container {
+    display: flex;
+    gap: var(--spacing-200, 8px);
+    overflow-x: auto;
+    scrollbar-width: none;
+    /* Firefox */
+    padding-bottom: 4px;
+    /* Space for better touch/shadow */
+    mask-image: linear-gradient(to right, black 85%, transparent 100%);
+}
+
+.result-carousel-container::-webkit-scrollbar {
+    display: none;
+    /* Safari/Chrome */
+}
+
+/* Media Card Adaptations for Carousel */
+.result-carousel-item {
+    flex-shrink: 0;
+}
+
+/* Pagination Indicator for Carousel */
+.result-pagination {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-100, 4px);
+    margin-top: var(--spacing-200, 8px);
+}
+
+.pagination-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--content-tertiary, rgba(0, 0, 0, 0.12));
+    transition: all 0.2s ease;
+}
+
+.pagination-dot.active {
+    background-color: var(--content-key, #0F62FE);
+    width: 12px;
+    border-radius: 3px;
+}

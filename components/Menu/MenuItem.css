@@ -1,0 +1,52 @@
+@import "../../design_system.css";
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-200, 8px) var(--spacing-400, 16px);
+    gap: var(--spacing-100, 4px);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+    min-height: 45px;
+}
+
+.menu-item-label {
+    flex: 1;
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-0875, 14px);
+    line-height: var(--line-height-label-medium, 17px);
+    color: var(--content-primary, #17181a);
+}
+
+.menu-item-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    color: var(--content-primary, #17181a);
+}
+
+/* States */
+.menu-item:hover:not(:disabled) {
+    background-color: var(--state-hover-secondary, rgba(15, 98, 254, 0.04));
+}
+
+.menu-item:active:not(:disabled) {
+    background-color: var(--state-pressed-secondary, rgba(15, 98, 254, 0.12));
+}
+
+.menu-item:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.menu-item-divider-container {
+    padding: var(--spacing-100, 4px) 0;
+    width: 100%;
+}

@@ -1,0 +1,99 @@
+@import "../../design_system.css";
+
+.toast {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-100, 4px);
+    width: 360px;
+    min-width: 256px;
+    padding: var(--spacing-300, 12px) var(--spacing-400, 16px);
+    background-color: var(--background-floating-1, white);
+    border: 1px solid var(--border-tertiary, rgba(0, 0, 0, 0.08));
+    border-radius: var(--radius-200, 8px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.toast-left-area {
+    display: flex;
+    flex: 1;
+    gap: var(--spacing-100, 4px);
+    align-items: flex-start;
+}
+
+.toast-icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+    /* Alignment adjustment */
+}
+
+/* Type Colors for Icons */
+.toast-info .toast-icon {
+    color: var(--content-key, #0f62fe);
+}
+
+.toast-success .toast-icon {
+    color: var(--content-success, #24a148);
+}
+
+.toast-warning .toast-icon {
+    color: var(--content-warning, #f1c21b);
+}
+
+.toast-error .toast-icon {
+    color: var(--content-alert, #db3d42);
+}
+
+.toast-text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-050, 2px);
+    flex: 1;
+}
+
+.toast-title {
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-0875, 14px);
+    line-height: var(--line-height-label-medium, 17px);
+    color: var(--content-primary, #17181a);
+    margin: 0;
+}
+
+.toast-description {
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-0875, 14px);
+    line-height: var(--line-height-body-medium, 22px);
+    color: var(--content-secondary, rgba(0, 0, 0, 0.76));
+    margin: 0;
+}
+
+.toast-button-wrapper {
+    flex-shrink: 0;
+    margin-left: var(--spacing-300, 12px);
+}
+
+.toast-action-button {
+    height: 32px;
+    padding: 0 var(--spacing-300, 12px);
+    border-radius: var(--radius-100, 4px);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-0875, 14px);
+    color: var(--content-primary, #17181a);
+}
+
+.toast-action-button:hover {
+    background-color: var(--state-hover-primary, rgba(0, 0, 0, 0.04));
+}

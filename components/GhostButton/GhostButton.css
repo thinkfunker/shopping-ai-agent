@@ -1,0 +1,152 @@
+@import "../../design_system.css";
+
+.ghost-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    border-radius: var(--radius-100, 4px);
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-bold);
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+/* Priority Styles */
+.ghost-button-primary {
+    color: var(--content-key);
+}
+
+.ghost-button-secondary {
+    color: var(--content-primary);
+}
+
+/* Size Styles */
+.ghost-button-small {
+    height: 28px;
+    padding: 0 var(--spacing-300);
+    font-size: var(--font-size-075);
+    line-height: var(--line-height-label-small);
+}
+
+.ghost-button-medium {
+    height: 32px;
+    padding: 0 var(--spacing-300);
+    font-size: var(--font-size-0875);
+    line-height: var(--line-height-label-medium);
+}
+
+.ghost-button-large {
+    height: 40px;
+    padding: 0 var(--spacing-400);
+    font-size: var(--font-size-0875);
+    line-height: var(--line-height-label-medium);
+}
+
+.ghost-button-xlarge {
+    height: 48px;
+    padding: 0 var(--spacing-400);
+    font-size: var(--font-size-100);
+    line-height: var(--line-height-label-large);
+}
+
+/* Icon Only Adjustments */
+.ghost-button-icon-only.ghost-button-small {
+    width: 28px;
+    padding: 0;
+}
+
+.ghost-button-icon-only.ghost-button-medium {
+    width: 32px;
+    padding: 0;
+}
+
+.ghost-button-icon-only.ghost-button-large {
+    width: 40px;
+    padding: 0;
+}
+
+.ghost-button-icon-only.ghost-button-xlarge {
+    width: 48px;
+    padding: 0;
+}
+
+/* Content Layout */
+.ghost-button-content {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-100);
+}
+
+.ghost-button-xlarge .ghost-button-content {
+    gap: var(--spacing-200);
+}
+
+/* State Layers */
+.ghost-button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transition: background-color 0.2s ease;
+    pointer-events: none;
+}
+
+/* Hover States */
+.ghost-button-primary:hover:not(:disabled) {
+    background-color: var(--state-hover-secondary, rgba(15, 98, 254, 0.04));
+}
+
+.ghost-button-secondary:hover:not(:disabled) {
+    background-color: var(--state-hover-primary, rgba(0, 0, 0, 0.04));
+}
+
+/* Pressed States */
+.ghost-button-primary:active:not(:disabled) {
+    background-color: var(--state-pressed-secondary, rgba(15, 98, 254, 0.12));
+}
+
+.ghost-button-secondary:active:not(:disabled) {
+    background-color: var(--state-pressed-primary, rgba(0, 0, 0, 0.12));
+}
+
+/* Focused State */
+.ghost-button-primary:focus-visible {
+    background-color: var(--state-focused-secondary, rgba(15, 98, 254, 0.08));
+    outline: 2px solid var(--border-key);
+    outline-offset: 2px;
+}
+
+.ghost-button-secondary:focus-visible {
+    background-color: var(--state-focused-primary, rgba(0, 0, 0, 0.08));
+    outline: 2px solid var(--border-primary);
+    outline-offset: 2px;
+}
+
+/* Disabled State */
+.ghost-button:disabled {
+    cursor: not-allowed;
+    color: var(--content-disabled);
+}
+
+/* Icon Resizing */
+.ghost-button-small .ghost-button-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.ghost-button-medium .ghost-button-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.ghost-button-large .ghost-button-icon,
+.ghost-button-xlarge .ghost-button-icon {
+    width: 24px;
+    height: 24px;
+}

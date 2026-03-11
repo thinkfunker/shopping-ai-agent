@@ -1,0 +1,125 @@
+@import "../../design_system.css";
+
+.chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    box-sizing: border-box;
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-regular);
+    gap: var(--spacing-100);
+    border: 1px solid transparent;
+}
+
+/* Variants */
+.chip-solid-rounded-rect {
+    border-radius: var(--radius-200, 8px);
+    background: var(--background-secondary, #f0f2f7);
+    border: none;
+}
+
+.chip-solid-rounded {
+    border-radius: var(--radius-full, 100px);
+    background: var(--background-secondary, #f0f2f7);
+    border: none;
+}
+
+.chip-outline-gradient {
+    border-radius: var(--radius-full, 100px);
+    background: var(--background-primary, white);
+    border: 1px solid var(--gradient-border-secondary-stop-1, rgba(168, 61, 235, 0.16));
+}
+
+/* State Layer - absolute overlay for precise states */
+.chip-state-layer {
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    pointer-events: none;
+    transition: background-color 0.2s ease;
+}
+
+/* Selected State */
+.chip.selected {
+    background: var(--background-selection-secondary, rgba(15, 98, 254, 0.06));
+    border-color: var(--gradient-border-stop-1, #a83deb);
+    color: var(--content-key, #0f62fe);
+}
+
+.chip.selected .chip-label {
+    color: inherit;
+}
+
+/* Hover State */
+.chip:hover:not(:disabled) .chip-state-layer {
+    background-color: var(--state-hover-secondary, rgba(15, 98, 254, 0.04));
+}
+
+/* Focus State */
+.chip:focus:not(:disabled) .chip-state-layer {
+    background-color: var(--state-focused-secondary, rgba(15, 98, 254, 0.08));
+    outline: none;
+}
+
+/* Pressed State */
+.chip:active:not(:disabled) .chip-state-layer {
+    background-color: var(--state-pressed-secondary, rgba(15, 98, 254, 0.12));
+}
+
+/* Disabled State */
+.chip:disabled,
+.chip.disabled {
+    cursor: not-allowed;
+    background-color: var(--background-disabled-accent, rgba(0, 0, 0, 0.04)) !important;
+    border-color: var(--border-disabled, rgba(0, 0, 0, 0.16)) !important;
+    color: var(--content-disabled, rgba(0, 0, 0, 0.28)) !important;
+}
+
+/* Sizes */
+.chip-small {
+    height: 28px;
+    padding: 0 var(--spacing-200, 8px);
+    font-size: var(--font-size-075, 12px);
+}
+
+.chip-medium {
+    height: 32px;
+    padding: 0 var(--spacing-300, 12px);
+    font-size: var(--font-size-0875, 14px);
+}
+
+.chip-large {
+    height: 40px;
+    padding: 0 var(--spacing-400, 16px);
+    font-size: var(--font-size-0875, 14px);
+}
+
+.chip-xlarge {
+    height: 48px;
+    padding: 0 var(--spacing-500, 20px);
+    font-size: var(--font-size-100, 16px);
+}
+
+/* Outline Gradient specific padding from Figma */
+.chip-outline-gradient {
+    padding-left: var(--spacing-100, 4px);
+    padding-right: var(--spacing-100, 4px);
+}
+
+.chip-label {
+    position: relative;
+    z-index: 1;
+    line-height: 1.2;
+}
+
+.chip-icon {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}

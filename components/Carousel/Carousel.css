@@ -1,0 +1,53 @@
+@import "../../design_system.css";
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-track-wrapper {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    /* Firefox */
+    gap: var(--spacing-200, 8px);
+    padding: var(--spacing-400, 16px) 0;
+}
+
+.carousel-track-wrapper::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    display: flex;
+}
+
+/* Type specific gaps */
+.carousel-gallery .carousel-track-wrapper {
+    gap: 8px;
+}
+
+.carousel-media .carousel-track-wrapper {
+    gap: var(--spacing-200, 8px);
+}
+
+.carousel-list .carousel-track-wrapper {
+    gap: var(--spacing-200, 8px);
+}
+
+.carousel-review .carousel-track-wrapper {
+    gap: var(--spacing-300, 12px);
+}
+
+.carousel-more-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+}

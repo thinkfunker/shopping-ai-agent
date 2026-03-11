@@ -1,0 +1,135 @@
+@import "../../design_system.css";
+@import "../Card/Card.css";
+
+/* Interaction Card Base */
+.interaction-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-500, 20px) var(--spacing-400, 16px);
+    gap: var(--spacing-600, 24px);
+    width: 358px;
+    background-color: var(--background-elevated-1, white);
+    border: 1px solid var(--border-elevated-1, rgba(0, 0, 0, 0.08));
+    border-radius: var(--radius-400, 16px);
+    overflow: hidden;
+}
+
+/* AI Gradient Background Overlay */
+.interaction-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: linear-gradient(45deg,
+            rgba(168, 61, 235, 0.06) 0%,
+            rgba(48, 131, 253, 0.06) 100%);
+}
+
+.interaction-card>* {
+    position: relative;
+    z-index: 1;
+}
+
+/* Section Styling */
+.interaction-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-400, 16px);
+    width: 100%;
+}
+
+.interaction-header {
+    display: flex;
+    gap: var(--spacing-100, 4px);
+    align-items: flex-start;
+}
+
+.interaction-title {
+    font-size: var(--font-size-100, 16px);
+    font-weight: var(--font-weight-bold);
+    color: var(--content-primary);
+    line-height: 1.3;
+}
+
+/* Chip Groups */
+.interaction-chip-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-200, 8px);
+}
+
+.interaction-chip-group-mini {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-100, 4px);
+}
+
+/* Depth levels (indented or smaller sub-options) */
+.interaction-sub-section {
+    padding-left: var(--spacing-100, 4px);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-300, 12px);
+}
+
+.interaction-sub-label {
+    font-size: var(--font-size-075, 12px);
+    font-weight: var(--font-weight-bold);
+    color: var(--content-secondary);
+}
+
+/* Result Section */
+.interaction-result-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-050, 2px);
+    margin-top: var(--spacing-400, 16px);
+}
+
+.interaction-result-count {
+    font-size: var(--font-size-100, 16px);
+    font-weight: var(--font-weight-bold);
+    color: #8C4EEF;
+    /* Special AI purple for results */
+}
+
+.interaction-result-unit {
+    font-size: var(--font-size-0875, 14px);
+    background: linear-gradient(90deg, #A83DEB, #3083FD);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: var(--font-weight-bold);
+}
+
+.interaction-result-pattern {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+}
+
+.interaction-result-pattern::-webkit-scrollbar {
+    display: none;
+}
+
+/* Status: Completed / Incomplete (for Question Card) */
+.interaction-card.status-completed {
+    border-color: var(--status-success-border, rgba(0, 200, 100, 0.2));
+}
+
+.interaction-card.expanded {
+    height: auto;
+}
+
+.interaction-card.collapsed {
+    height: 56px;
+    /* Typical compact header height */
+    padding-top: 0;
+    padding-bottom: 0;
+    align-items: center;
+    justify-content: space-between;
+}

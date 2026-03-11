@@ -1,0 +1,78 @@
+@import "../../design_system.css";
+@import "./Card.css";
+
+.list-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    /* Items handle their own spacing/dividers */
+    width: 358px;
+}
+
+/* List Card Header */
+.list-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: var(--spacing-300, 12px);
+    border-bottom: 1px solid var(--border-elevated-1, rgba(0, 0, 0, 0.08));
+}
+
+.list-card-header-left {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.list-card-badge-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.list-card-title {
+    font-size: var(--font-size-100, 16px);
+    font-weight: var(--font-weight-bold);
+    color: var(--content-primary);
+    margin: 0;
+}
+
+/* Gallery Section inside List Card */
+.list-card-gallery {
+    display: flex;
+    gap: 8px;
+    padding: var(--spacing-400, 16px) 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.list-card-gallery::-webkit-scrollbar {
+    display: none;
+}
+
+.list-card-gallery-item {
+    width: 80px;
+    height: 80px;
+    border-radius: var(--radius-200, 8px);
+    background-color: var(--background-secondary, #f4f4f4);
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+/* Items List */
+.list-card-items {
+    display: flex;
+    flex-direction: column;
+}
+
+/* List Card Footer / Actions */
+.list-card-footer {
+    display: flex;
+    gap: 8px;
+    padding-top: var(--spacing-400, 16px);
+    border-top: 1px solid var(--border-elevated-1, rgba(0, 0, 0, 0.08));
+}
+
+.list-card-footer button {
+    flex: 1;
+}

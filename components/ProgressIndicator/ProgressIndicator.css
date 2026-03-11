@@ -1,0 +1,63 @@
+@import "../../design_system.css";
+
+.progress-indicator {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Bar Type */
+.progress-bar {
+    width: 100%;
+    height: 16px;
+    background-color: var(--bg-tertiary);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: var(--gradient-primary);
+    border-radius: var(--radius-full);
+    transition: width 0.3s ease;
+}
+
+/* Circle Type */
+.progress-circle {
+    display: inline-block;
+    border-radius: 50%;
+    border: 3px solid var(--bg-tertiary);
+    border-top-color: #a83deb;
+    /* Part of gradient */
+    border-right-color: #3083fd;
+    /* Part of gradient */
+    animation: rotate 1s linear infinite;
+}
+
+.progress-circle-small {
+    width: 20px;
+    height: 20px;
+    border-width: 2px;
+}
+
+.progress-circle-medium {
+    width: 32px;
+    height: 32px;
+    border-width: 3px;
+}
+
+.progress-circle-large {
+    width: 40px;
+    height: 40px;
+    border-width: 4px;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

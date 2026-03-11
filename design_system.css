@@ -1,0 +1,159 @@
+:root {
+    /* Primitive Colors - Red */
+    --red-1: #f9dedf;
+    --red-2: #f4c3c5;
+    --red-3: #efa8ab;
+    --red-4: #ea8d90;
+    --red-5: #e57376;
+    --red-6: #e0585c;
+    --red-7: #db3d42;
+    --red-8: #d62228;
+    --red-9: #b81d22;
+    --red-10: #99181d;
+    --red-11: #7b1417;
+    --red-12: #5d0f11;
+    --red-13: #3e0a0c;
+    --red-14: #200506;
+
+    /* Primitive Colors - Blue */
+    --blue-1: #dbe7ff;
+    --blue-2: #bed4ff;
+    --blue-3: #a1c1ff;
+    --blue-4: #84aefe;
+    --blue-5: #669bfe;
+    --blue-6: #4988fe;
+    --blue-7: #2c75fe;
+    --blue-8: #0f62fe;
+    /* Key Color */
+    --blue-9: #0d54da;
+    --blue-10: #0b46b6;
+    --blue-11: #093892;
+    --blue-12: #062a6e;
+    --blue-13: #041d4a;
+    --blue-14: #020f26;
+
+    /* Semantic Colors - Background */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f0f2f7;
+    --bg-tertiary: #e4e7ed;
+    --bg-key: #0f62fe;
+    --bg-success: #147f3a;
+    --bg-alert: #d62228;
+    --bg-warning: #a86400;
+    --bg-disabled: #e4e7ed;
+    --bg-surface: #ffffff;
+    --bg-scrim: rgba(0, 0, 0, 0.48);
+    /* #0000007a */
+
+    /* Semantic Colors - Content */
+    --content-primary: #17181a;
+    --content-secondary: rgba(0, 0, 0, 0.76);
+    /* #000000c2 */
+    --content-tertiary: rgba(0, 0, 0, 0.56);
+    /* #0000008f */
+    --content-key: #0f62fe;
+    --content-success: #147f3a;
+    --content-alert: #d62228;
+    --content-disabled: rgba(0, 0, 0, 0.28);
+    /* #00000047 */
+    --content-white: #ffffff;
+
+    /* Semantic Colors - Border */
+    --border-primary: rgba(0, 0, 0, 0.48);
+    /* #0000007a */
+    --border-secondary: rgba(0, 0, 0, 0.16);
+    /* #00000029 */
+    --border-tertiary: rgba(0, 0, 0, 0.08);
+    /* #00000014 */
+    --border-key: #2c75fe;
+
+    /* Typography - Additional Sizes */
+    --font-size-275: 44px;
+    --font-size-200: 32px;
+    --font-size-175: 28px;
+    --font-size-150: 24px;
+    --font-size-125: 20px;
+    --font-size-112: 18px;
+    --font-size-100: 16px;
+    --font-size-0875: 14px;
+    --font-size-075: 12px;
+    --font-size-0687: 11px;
+
+    /* Typography - Font Families */
+    --font-family-primary: 'Noto Sans JP', 'Hiragino Kaku Gothic Pro', sans-serif;
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+
+    /* Typography - Line Heights */
+    --line-height-title-xxlarge: 57px;
+    --line-height-title-xlarge: 42px;
+    --line-height-title-large: 36px;
+    --line-height-title-medium: 31px;
+    --line-height-title-small: 26px;
+    --line-height-title-xsmall: 23px;
+    --line-height-title-xxsmall: 21px;
+
+    --line-height-body-large: 26px;
+    --line-height-body-medium: 22px;
+    --line-height-body-small: 19px;
+
+    --line-height-label-large: 19px;
+    --line-height-label-medium: 17px;
+    --line-height-label-small: 14px;
+    --line-height-label-xsmall: 13px;
+
+    /* Spacing - Expanded */
+    --spacing-100: 4px;
+    --spacing-200: 8px;
+    --spacing-300: 12px;
+    --spacing-400: 16px;
+    --spacing-500: 20px;
+    --spacing-600: 24px;
+    --spacing-800: 32px;
+
+    /* Radius & Border */
+    --radius-200: 8px;
+    --radius-full: 100px;
+    --border-width-100: 1px;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #a83deb 0%, #3083fd 100%);
+    --gradient-ai-surface: linear-gradient(135deg, rgba(168, 61, 235, 0.06) 0%, rgba(48, 131, 253, 0.06) 100%);
+}
+
+/* Typography Utility Classes (Optional but helpful) */
+.title-bold-xxlarge {
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-275);
+    line-height: var(--line-height-title-xxlarge);
+    letter-spacing: -1px;
+}
+
+.title-bold-xlarge {
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-200);
+    line-height: var(--line-height-title-xlarge);
+}
+
+.title-bold-large {
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-175);
+    line-height: var(--line-height-title-large);
+}
+
+.body-medium {
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-0875);
+    line-height: var(--line-height-body-medium);
+}
+
+.label-bold-small {
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-075);
+    line-height: var(--line-height-label-small);
+}

@@ -1,0 +1,58 @@
+@import "../../design_system.css";
+
+.more-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 100%;
+    min-height: 40px;
+    padding-left: var(--spacing-300, 12px);
+    padding-right: var(--spacing-500, 20px);
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.more-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full, 100px);
+    background-color: var(--background-primary, white);
+    border: var(--border-width-100, 1px) solid var(--border-secondary, rgba(0, 0, 0, 0.16));
+    box-shadow: var(--shadow-100);
+    transition: all 0.2s ease;
+    color: var(--content-primary, #17181a);
+}
+
+.more-button-container:hover .more-button {
+    background-color: var(--background-secondary, #f0f2f7);
+    border-color: var(--border-primary, rgba(0, 0, 0, 0.24));
+    transform: scale(1.05);
+}
+
+.more-button-container:active .more-button {
+    background-color: var(--background-tertiary, #e4e7ed);
+    transform: scale(0.95);
+}
+
+.more-button-container.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.more-button-container.disabled .more-button {
+    background-color: var(--background-disabled, #f0f0f0);
+    border-color: var(--border-disabled, rgba(0, 0, 0, 0.08));
+    color: var(--content-disabled, rgba(0, 0, 0, 0.28));
+}
+
+.more-button-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+}

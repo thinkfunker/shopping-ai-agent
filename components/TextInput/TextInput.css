@@ -1,0 +1,88 @@
+@import "../../design_system.css";
+
+.text-input-container {
+    position: relative;
+    width: 390px;
+}
+
+.text-input-wrapper {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 0 var(--spacing-400, 16px);
+    border: 1px solid var(--border-secondary, rgba(0, 0, 0, 0.16));
+    border-radius: var(--radius-200, 8px);
+    background-color: var(--background-primary, white);
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+}
+
+.text-input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-0875, 14px);
+    line-height: var(--line-height-label-medium, 17px);
+    color: var(--content-primary, #17181a);
+    padding: 0;
+    outline: none;
+}
+
+.text-input::placeholder {
+    color: var(--content-placeholder, rgba(0, 0, 0, 0.56));
+}
+
+/* States */
+.text-input-wrapper.state-focused,
+.text-input-wrapper.state-typing {
+    border-color: #a83deb;
+    /* Primary Gradient Start Color */
+}
+
+/* Focused State Indicator (Cursor Simulation) */
+.text-input-wrapper.state-focused .text-input {
+    caret-color: #a83deb;
+}
+
+.text-input-wrapper.state-error {
+    border-color: var(--border-alert, #db3d42);
+}
+
+.text-input-wrapper.state-disabled {
+    border-color: var(--border-disabled, rgba(0, 0, 0, 0.16));
+    background-color: var(--background-primary, white);
+    cursor: not-allowed;
+}
+
+.text-input-wrapper.state-disabled .text-input {
+    color: var(--content-disabled, rgba(0, 0, 0, 0.28));
+    cursor: not-allowed;
+}
+
+/* Icons */
+.text-input-icon-left {
+    margin-right: var(--spacing-100, 4px);
+    display: flex;
+    align-items: center;
+    color: var(--content-placeholder, rgba(0, 0, 0, 0.56));
+}
+
+.text-input-icon-right {
+    margin-left: var(--spacing-300, 12px);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: var(--content-secondary, rgba(0, 0, 0, 0.48));
+}
+
+.text-input-icon-right:hover {
+    color: var(--content-primary, #17181a);
+}
+
+/* Hidden elements logic */
+.state-disabled .text-input-icon-left,
+.state-disabled .text-input-icon-right {
+    opacity: 0.5;
+    pointer-events: none;
+}

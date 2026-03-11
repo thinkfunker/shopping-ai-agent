@@ -1,0 +1,89 @@
+@import "../../design_system.css";
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 20px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch-track {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background-tertiary, #e4e7ed);
+    transition: background-color 0.2s ease;
+    border-radius: var(--radius-full, 100px);
+}
+
+.switch-thumb {
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: var(--content-inverted, white);
+    transition: transform 0.2s ease;
+    border-radius: 50%;
+}
+
+/* Selected/On State */
+.switch input:checked+.switch-track {
+    background-color: var(--background-key, #0f62fe);
+}
+
+.switch input:checked+.switch-track .switch-thumb {
+    transform: translateX(16px);
+}
+
+/* State Layers (Hover, Focus, Press) */
+.switch:hover .switch-track::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background-color: var(--state-hover-primary, rgba(0, 0, 0, 0.04));
+}
+
+.switch input:checked:hover+.switch-track::after {
+    background-color: var(--state-hover-secondary, rgba(15, 98, 254, 0.04));
+}
+
+.switch input:focus-visible+.switch-track {
+    outline: 2px solid var(--border-key);
+    outline-offset: 2px;
+}
+
+.switch:active .switch-track::after {
+    background-color: var(--state-pressed-primary, rgba(0, 0, 0, 0.12));
+}
+
+.switch input:checked:active+.switch-track::after {
+    background-color: var(--state-pressed-secondary, rgba(15, 98, 254, 0.12));
+}
+
+/* Disabled State */
+.switch.disabled {
+    cursor: not-allowed;
+    opacity: 1;
+    /* Keeping it opaque but with disabled colors */
+}
+
+.switch.disabled .switch-track {
+    background-color: var(--background-disabled, #e4e7ed);
+}
+
+.switch.disabled .switch-thumb {
+    background-color: var(--content-inverted, white);
+    /* In case dot color changes when disabled and ON, but Figma shows thumb white */
+}

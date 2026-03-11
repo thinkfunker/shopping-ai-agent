@@ -1,0 +1,134 @@
+@import "../../design_system.css";
+
+.top-navigation {
+    width: 100%;
+    background-color: var(--background-primary, white);
+    border-bottom: 1px solid var(--border-secondary, rgba(0, 0, 0, 0.16));
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: var(--z-index-sticky, 100);
+}
+
+.top-navigation-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 52px;
+    padding: 0 var(--spacing-400, 16px);
+    box-sizing: border-box;
+    gap: var(--spacing-200, 8px);
+}
+
+/* OS: PC specific */
+.top-navigation-pc .top-navigation-header {
+    height: 60px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-600, 24px);
+    justify-content: space-between;
+}
+
+/* Left/Center/Right sections */
+.top-navigation-left,
+.top-navigation-right {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.top-navigation-left {
+    gap: var(--spacing-200, 8px);
+}
+
+.top-navigation-right {
+    gap: var(--spacing-200, 8px);
+    justify-content: flex-end;
+}
+
+.top-navigation-center {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+    /* Allow truncation */
+}
+
+/* Alignment logic for Mobile */
+.top-navigation-mobile.align-left .top-navigation-left {
+    flex: 1;
+}
+
+.top-navigation-mobile.align-center .top-navigation-left,
+.top-navigation-mobile.align-center .top-navigation-right {
+    width: 80px;
+    /* Balance both sides for centering */
+}
+
+/* Typography */
+.top-navigation-title {
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-bold);
+    color: var(--content-primary, #17181a);
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.top-navigation-mobile .top-navigation-title {
+    font-size: var(--font-size-100, 16px);
+    line-height: var(--line-height-label-large, 19px);
+}
+
+.top-navigation-pc .top-navigation-title {
+    font-size: var(--font-size-112, 18px);
+    line-height: var(--line-height-title-xsmall, 23px);
+}
+
+/* Utility classes for icons and buttons */
+.top-navigation-icon-btn {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
+    color: var(--content-primary, #17181a);
+}
+
+.top-navigation-text-buttons {
+    display: flex;
+    gap: var(--spacing-500, 20px);
+    margin-left: var(--spacing-1000, 40px);
+}
+
+.top-navigation-text-btn {
+    font-size: 16px;
+    color: var(--content-secondary, rgba(0, 0, 0, 0.76));
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.top-navigation-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-400, 16px);
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.top-navigation-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

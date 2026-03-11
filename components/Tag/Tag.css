@@ -1,0 +1,111 @@
+@import "../../design_system.css";
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-050, 2px);
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+
+/* Sizes */
+.tag-size-medium {
+    height: 24px;
+    padding: 0 var(--spacing-200, 8px);
+}
+
+.tag-size-small {
+    height: 20px;
+    padding: 0 var(--spacing-200, 8px);
+}
+
+.tag-size-small.tag-shape-rectangle {
+    padding: 0 var(--spacing-100, 4px);
+}
+
+/* Shapes */
+.tag-shape-rectangle {
+    border-radius: var(--radius-100, 4px);
+}
+
+.tag-shape-circle {
+    border-radius: var(--radius-full, 100px);
+}
+
+/* Styles & Priorities */
+
+/* Solid */
+.tag-style-solid.tag-priority-secondary {
+    background-color: var(--background-accent, #383a3d);
+    color: var(--content-inverted, white);
+}
+
+.tag-style-solid.tag-priority-tertiary {
+    background-color: var(--background-secondary, #f0f2f7);
+    color: var(--content-secondary, rgba(0, 0, 0, 0.76));
+}
+
+/* Gradient */
+.tag-style-gradient.tag-priority-primary {
+    background: linear-gradient(20deg, #a83deb 0%, #3083fd 100%);
+    color: var(--content-inverted, white);
+}
+
+.tag-style-gradient.tag-priority-secondary {
+    background: linear-gradient(20deg, rgba(168, 61, 235, 0.16) 0%, rgba(48, 131, 253, 0.16) 100%);
+    color: var(--content-key, #0f62fe);
+}
+
+/* Outline */
+.tag-style-outline {
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+
+.tag-style-outline.tag-priority-primary {
+    border-color: #a83deb;
+    /* Using stop-1 for border */
+    color: var(--content-primary, #17181a);
+}
+
+.tag-style-outline.tag-priority-secondary {
+    border-color: var(--border-primary, rgba(0, 0, 0, 0.48));
+    color: var(--content-primary, #17181a);
+}
+
+/* Typography */
+.tag-label {
+    font-family: var(--font-family-primary);
+    text-align: center;
+}
+
+.tag-size-medium .tag-label {
+    font-size: var(--font-size-075, 12px);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-label-small, 14px);
+}
+
+.tag-size-small .tag-label {
+    font-size: 11px;
+    /* label-xsmall */
+    font-weight: var(--font-weight-regular);
+    line-height: 13px;
+}
+
+/* Icons */
+.tag-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tag-size-medium .tag-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.tag-size-small .tag-icon {
+    width: 12px;
+    height: 12px;
+}

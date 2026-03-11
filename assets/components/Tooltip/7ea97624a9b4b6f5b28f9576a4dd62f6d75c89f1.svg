@@ -1,0 +1,14 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 314 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Arrow Align">
+<g id="Vector">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M18 0L24 8L12 8L18 0Z" fill="white"/>
+<path d="M13.25 8L12 8L18 0L24 8H22.75L18 1.66601L13.25 8Z" fill="url(#paint0_linear_48645_5394)"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_48645_5394" x1="12.3884" y1="7.43239" x2="19.22" y2="-2.14432" gradientUnits="userSpaceOnUse">
+<stop stop-color="#A83DEB"/>
+<stop offset="1" stop-color="#3083FD"/>
+</linearGradient>
+</defs>
+</svg>

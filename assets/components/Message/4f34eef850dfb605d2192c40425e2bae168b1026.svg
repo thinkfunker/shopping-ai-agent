@@ -1,0 +1,13 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="ic_circular_24h">
+<g id="claear bg">
+</g>
+<path id="Circular" d="M7.1938 25.8745C6.55986 25.3088 6.50458 24.3362 7.07033 23.7023C7.63607 23.0684 8.6086 23.0131 9.24253 23.5788C11.0907 25.2282 13.4715 26.1541 16.0004 26.1541C21.6082 26.1541 26.1542 21.6081 26.1542 16.0003C26.1542 10.3925 21.6082 5.84645 16.0004 5.84645C15.1507 5.84645 14.4619 5.15766 14.4619 4.30799C14.4619 3.45832 15.1507 2.76953 16.0004 2.76953C23.3075 2.76953 29.2312 8.69315 29.2312 16.0003C29.2312 23.3075 23.3075 29.2311 16.0004 29.2311C12.7085 29.2311 9.60045 28.0223 7.1938 25.8745Z" fill="url(#paint0_linear_48645_4146)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_48645_4146" x1="7.40959" y1="27.3536" x2="30.702" y2="8.8022" gradientUnits="userSpaceOnUse">
+<stop stop-color="#A83DEB"/>
+<stop offset="1" stop-color="#3083FD"/>
+</linearGradient>
+</defs>
+</svg>

@@ -1,0 +1,102 @@
+@import "../../design_system.css";
+
+.tooltip {
+    position: absolute;
+    z-index: var(--z-index-tooltip, 1100);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 314px;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.16));
+}
+
+.tooltip-container {
+    background-color: var(--background-floating-1, white);
+    border: 1px solid #a83deb;
+    /* Using a fixed color as gradient border is tricky in CSS without extra wrappers or border-image */
+    border-radius: var(--radius-100, 4px);
+    padding: var(--spacing-300, 12px) var(--spacing-400, 16px);
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Close Button within Tooltip */
+.tooltip-close {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: var(--content-primary);
+    border-radius: var(--radius-100, 4px);
+}
+
+.tooltip-close:hover {
+    background-color: var(--state-hover-primary, rgba(0, 0, 0, 0.04));
+}
+
+.tooltip-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-100, 4px);
+    padding-right: 28px;
+    /* Leave space for close button */
+}
+
+.tooltip-title {
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-0875, 14px);
+    line-height: var(--line-height-label-medium, 17px);
+    color: var(--content-primary);
+}
+
+.tooltip-text {
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-0875, 14px);
+    line-height: var(--line-height-body-medium, 22px);
+    color: var(--content-primary);
+}
+
+/* Arrow / Pointer */
+.tooltip-arrow {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    position: absolute;
+}
+
+/* Top Position (Arrow pointing down) */
+.tooltip-top {
+    bottom: 100%;
+    margin-bottom: 8px;
+}
+
+.tooltip-top .tooltip-arrow {
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 6px solid #a83deb;
+}
+
+/* Bottom Position (Arrow pointing up) */
+.tooltip-bottom {
+    top: 100%;
+    margin-top: 8px;
+}
+
+.tooltip-bottom .tooltip-arrow {
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 6px solid #a83deb;
+}

@@ -692,9 +692,20 @@ body {
     -webkit-tap-highlight-color: transparent;
 }
 
+
 .floating-ai video {
     width: 42px;
     height: 42px;
     border-radius: 50%;
     object-fit: cover;
+}
+
+/* Figma Icon System Utilities */
+.figma-icon {
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    flex-shrink: 0;
+}
+
+.icon-btn:hover .figma-icon {
+    transform: scale(1.1);
 }

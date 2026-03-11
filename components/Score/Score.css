@@ -1,0 +1,53 @@
+@import "../../design_system.css";
+
+.score {
+    display: inline-flex;
+    align-items: center;
+}
+
+.score-default {
+    gap: var(--spacing-100, 4px);
+}
+
+.score-simple {
+    gap: var(--spacing-050, 2px);
+}
+
+.score-stars {
+    display: flex;
+    align-items: center;
+    padding-right: 2px;
+}
+
+.score-star {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: -2px;
+    color: var(--content-key, #0f62fe);
+    /* Star color usually brand key or yellow */
+}
+
+.score-size-medium .score-star {
+    width: 20px;
+    height: 20px;
+}
+
+.score-size-small .score-star {
+    width: 16px;
+    height: 16px;
+}
+
+.score-text {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-075);
+    line-height: var(--line-height-body-small);
+}
+
+.score-leading {
+    color: var(--content-secondary);
+}
+
+.score-trailing {
+    color: var(--content-tertiary);
+}

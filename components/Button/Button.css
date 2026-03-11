@@ -1,0 +1,108 @@
+@import "../../design_system.css";
+
+.btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-100, 4px);
+    border: none;
+    border-radius: var(--radius-200, 8px);
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-bold, 700);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    outline: none;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* State Layer - absolute overlay for precise states */
+.btn-state-layer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    transition: background-color 0.2s ease;
+}
+
+/* Sizes */
+.btn-medium {
+    height: 32px;
+    padding: 0 var(--spacing-300, 12px);
+    font-size: var(--font-size-0875, 14px);
+}
+
+.btn-large {
+    height: 40px;
+    padding: 0 var(--spacing-400, 16px);
+    font-size: var(--font-size-100, 16px);
+}
+
+.btn-xlarge {
+    height: 48px;
+    padding: 0 var(--spacing-500, 20px);
+    font-size: var(--font-size-112, 18px);
+}
+
+.btn-xxlarge {
+    height: 56px;
+    padding: 0 var(--spacing-600, 24px);
+    font-size: var(--font-size-125, 20px);
+}
+
+/* Priorities */
+
+/* Solid Primary */
+.btn-solid-primary {
+    background: var(--gradient-primary);
+    color: var(--content-white, white);
+}
+
+.btn-solid-primary:hover:not(:disabled) .btn-state-layer {
+    background-color: var(--state-hover-on-interaction, rgba(255, 255, 255, 0.08));
+}
+
+.btn-solid-primary:active:not(:disabled) .btn-state-layer {
+    background-color: var(--state-pressed-on-interaction, rgba(0, 0, 0, 0.12));
+}
+
+/* Outline Primary */
+.btn-outline-primary {
+    background: var(--background-primary, white);
+    border: 1.5px solid transparent;
+    background-image: linear-gradient(white, white), var(--gradient-primary);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    color: var(--content-key, #0f62fe);
+}
+
+.btn-outline-primary:hover:not(:disabled) .btn-state-layer {
+    background-color: var(--state-hover-secondary, rgba(15, 98, 254, 0.04));
+}
+
+.btn-outline-primary:active:not(:disabled) .btn-state-layer {
+    background-color: var(--state-pressed-secondary, rgba(15, 98, 254, 0.12));
+}
+
+/* States */
+.btn:disabled {
+    cursor: not-allowed;
+    background: var(--background-disabled, #f0f0f0) !important;
+    color: var(--content-disabled, rgba(0, 0, 0, 0.28)) !important;
+    border: none !important;
+}
+
+.btn:focus-visible .btn-state-layer {
+    background-color: var(--state-focused-secondary, rgba(15, 98, 254, 0.08));
+}
+
+.btn-label {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-icon {
+    position: relative;
+    z-index: 1;
+}

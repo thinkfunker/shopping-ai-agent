@@ -1,0 +1,65 @@
+@import "../../design_system.css";
+
+.message-action-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.message-action-bar-container {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-050, 4px);
+    padding: var(--spacing-100) var(--spacing-300);
+    background-color: var(--background-elevated-1, white);
+    border: 1px solid var(--border-tertiary, rgba(0, 0, 0, 0.08));
+    border-radius: var(--radius-full, 100px);
+    box-shadow: var(--shadow-small);
+    /* Optional but fits 'elevated-1' */
+    box-sizing: border-box;
+}
+
+.message-action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-100, 4px);
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    transition: background-color 0.2s ease;
+    padding: 0;
+    color: var(--content-primary);
+}
+
+.message-action-btn:hover {
+    background-color: var(--state-hover-secondary, rgba(15, 98, 254, 0.04));
+}
+
+.message-action-btn:active {
+    background-color: var(--state-pressed-secondary, rgba(15, 98, 254, 0.12));
+}
+
+.message-action-btn.selected {
+    color: var(--content-key, #0f62fe);
+}
+
+.message-action-btn.bad-icon {
+    transform: rotate(180deg);
+}
+
+.message-action-divider {
+    width: 1px;
+    height: 16px;
+    /* Based on Figma h=24px frame but visual line is smaller */
+    background-color: var(--border-tertiary, rgba(0, 0, 0, 0.08));
+}
+
+/* Specific icon sizing */
+.message-action-btn .icon {
+    width: 20px;
+    height: 20px;
+}

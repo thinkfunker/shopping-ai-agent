@@ -1,0 +1,85 @@
+@import "../../design_system.css";
+
+.radio-button {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-200);
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    padding: var(--spacing-100) 0;
+}
+
+.radio-button input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.radio-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--border-primary, rgba(0, 0, 0, 0.48));
+    border-radius: var(--radius-full, 100px);
+    background-color: transparent;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.radio-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: var(--radius-full, 100px);
+    background-color: var(--content-key, #0f62fe);
+    transform: scale(0);
+    transition: transform 0.2s ease;
+}
+
+.radio-button input:checked~.radio-circle .radio-dot {
+    transform: scale(1);
+}
+
+/* State Layers */
+.radio-button:hover .radio-circle {
+    background-color: var(--state-hover-secondary, rgba(15, 98, 254, 0.04));
+}
+
+.radio-button:active .radio-circle {
+    background-color: var(--state-pressed-secondary, rgba(15, 98, 254, 0.12));
+}
+
+.radio-button input:focus-visible~.radio-circle {
+    background-color: var(--state-focused-secondary, rgba(15, 98, 254, 0.08));
+    outline: 2px solid var(--border-key);
+    outline-offset: 2px;
+}
+
+/* Disabled State */
+.radio-button.disabled {
+    cursor: not-allowed;
+}
+
+.radio-button.disabled .radio-circle {
+    background-color: var(--background-disabled, #e4e7ed);
+    border-color: var(--border-disabled, rgba(0, 0, 0, 0.16));
+}
+
+.radio-button.disabled .radio-dot {
+    background-color: var(--content-disabled, rgba(0, 0, 0, 0.28));
+}
+
+.radio-button.disabled .radio-label {
+    color: var(--content-disabled, rgba(0, 0, 0, 0.28));
+}
+
+.radio-label {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-0875);
+    line-height: var(--line-height-label-medium);
+    color: var(--content-primary);
+}

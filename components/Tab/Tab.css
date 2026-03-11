@@ -1,0 +1,124 @@
+@import "../../design_system.css";
+
+/* Tab Container */
+.tabs {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid var(--border-tertiary, rgba(0, 0, 0, 0.08));
+    box-sizing: border-box;
+}
+
+.tabs-fixed {
+    display: flex;
+}
+
+.tabs-fixed .tab-item {
+    flex: 1;
+}
+
+.tabs-flexible {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    /* Hide scrollbar for cleaner look */
+}
+
+.tabs-flexible::-webkit-scrollbar {
+    display: none;
+}
+
+/* Tab Item */
+.tab-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    padding: 0 var(--spacing-400, 16px);
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    background: transparent;
+    border: none;
+    box-sizing: border-box;
+    min-width: 70px;
+}
+
+.tab-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-100, 4px);
+    width: 100%;
+    height: 100%;
+}
+
+.tab-label {
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-0875, 14px);
+    line-height: var(--line-height-label-medium, 17px);
+    text-align: center;
+    color: var(--content-secondary, rgba(0, 0, 0, 0.76));
+}
+
+.tab-item.selected .tab-label {
+    color: var(--content-primary, #17181a);
+}
+
+/* Underline Indicator */
+.tab-indicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: transparent;
+}
+
+/* Default Emphasis: Gradient Underline */
+.tabs-emphasis-default .tab-item.selected .tab-indicator {
+    background: linear-gradient(90deg, #a83deb 0%, #3083fd 100%);
+    height: 2px;
+}
+
+/* Subtle Emphasis: Primary Color Underline */
+.tabs-emphasis-subtle .tab-item.selected .tab-indicator {
+    background-color: var(--content-primary, #17181a);
+    height: 1px;
+}
+
+/* Flexible type has shorter underline centered in Figma */
+.tabs-flexible .tab-indicator {
+    left: var(--spacing-400);
+    right: var(--spacing-400);
+}
+
+/* Badges */
+.tab-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 16px;
+    height: 16px;
+    padding: 0 4px;
+    border-radius: var(--radius-full, 100px);
+    background: linear-gradient(45deg, #a83deb 0%, #3083fd 100%);
+    color: var(--content-inverted, white);
+    font-size: 11px;
+    font-weight: var(--font-weight-bold);
+    line-height: 13px;
+}
+
+.tab-dot-badge {
+    position: absolute;
+    top: 14px;
+    right: 12px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--content-notification, #db3d42);
+    border: 1px solid var(--border-inverted, white);
+    border-radius: 50%;
+}

@@ -1,0 +1,87 @@
+@import "../../design_system.css";
+
+.toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-key);
+    border-radius: var(--radius-200);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    box-sizing: border-box;
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-bold);
+    color: var(--content-key);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Sizes */
+.toggle-btn-medium {
+    height: 32px;
+    padding: 0 var(--spacing-400);
+    font-size: var(--font-size-0875);
+    gap: var(--spacing-100);
+}
+
+.toggle-btn-large {
+    height: 40px;
+    padding: 0 var(--spacing-600);
+    font-size: var(--font-size-0875);
+    gap: var(--spacing-100);
+}
+
+.toggle-btn-xlarge {
+    height: 48px;
+    padding: 0 var(--spacing-600);
+    font-size: var(--font-size-100);
+    gap: var(--spacing-200);
+}
+
+.toggle-btn-xxlarge {
+    height: 56px;
+    padding: 0 var(--spacing-800);
+    font-size: var(--font-size-100);
+    gap: var(--spacing-200);
+}
+
+/* Selection State */
+.toggle-btn.selected {
+    background: var(--background-selection-secondary, rgba(15, 98, 254, 0.06));
+}
+
+/* Interactions via state layers (simulated with overlays or opacity) */
+.toggle-btn:hover:not(:disabled) {
+    background-color: var(--state-hover-secondary, rgba(15, 98, 254, 0.04));
+}
+
+.toggle-btn.selected:hover:not(:disabled) {
+    background-color: rgba(15, 98, 254, 0.1);
+}
+
+.toggle-btn:active:not(:disabled) {
+    background-color: var(--state-pressed-secondary, rgba(15, 98, 254, 0.12));
+}
+
+/* Disabled State */
+.toggle-btn:disabled {
+    cursor: not-allowed;
+    background: var(--bg-disabled) !important;
+    border-color: var(--border-secondary) !important;
+    color: var(--content-disabled) !important;
+}
+
+/* Focus State */
+.toggle-btn:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--bg-primary), 0 0 0 4px var(--blue-7);
+}
+
+.toggle-btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}

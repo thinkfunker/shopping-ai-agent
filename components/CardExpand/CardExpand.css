@@ -1,0 +1,67 @@
+@import "../../design_system.css";
+
+.card-expand {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.card-expand-default {
+    justify-content: center;
+}
+
+.card-expand-inline {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-100, 4px);
+    width: 100%;
+}
+
+.card-expand-text {
+    flex: 1;
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-0875, 14px);
+    line-height: var(--line-height-body-medium, 22px);
+    color: var(--content-secondary, rgba(0, 0, 0, 0.76));
+    margin: 0;
+}
+
+.card-expand-text.collapsed {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-expand-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    padding: 0 var(--spacing-050, 2px);
+    border-radius: var(--radius-100, 4px);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border: none;
+    background: transparent;
+    color: var(--content-key, #0f62fe);
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-bold, 700);
+    font-size: var(--font-size-0875, 14px);
+    gap: var(--spacing-100, 4px);
+    white-space: nowrap;
+}
+
+.card-expand-btn:hover {
+    background-color: var(--state-hover-secondary, rgba(15, 98, 254, 0.04));
+}
+
+.card-expand-btn:active {
+    background-color: var(--state-pressed-secondary, rgba(15, 98, 254, 0.12));
+}
+
+.card-expand-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    size: 20px;
+}

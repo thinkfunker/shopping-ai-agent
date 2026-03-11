@@ -1,0 +1,16 @@
+@import "../../design_system.css";
+
+.message-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: var(--spacing-600, 24px) var(--spacing-400, 16px);
+    gap: var(--spacing-400, 16px);
+    box-sizing: border-box;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.message-list-item {
+    width: 100%;
+}

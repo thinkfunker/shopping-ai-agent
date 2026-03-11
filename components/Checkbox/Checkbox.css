@@ -1,0 +1,124 @@
+@import "../../design_system.css";
+
+.checkbox-container {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    gap: var(--spacing-200);
+    /* Spacing 8px as per guide */
+    padding: var(--spacing-100) 0;
+    transition: all 0.2s ease;
+}
+
+.checkbox-container.disabled {
+    cursor: not-allowed;
+    color: var(--content-disabled);
+}
+
+.checkbox-input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkbox-box {
+    position: relative;
+    width: var(--sizing-500);
+    /* 20px */
+    height: var(--sizing-500);
+    /* 20px */
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--radius-100);
+    /* 4px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+/* Selected State */
+.checkbox-container.selected .checkbox-box {
+    background: linear-gradient(46.94deg, var(--gradient-background-stop-1) 5.1%, var(--gradient-background-stop-2) 92.36%);
+    border-color: transparent;
+}
+
+/* Unselected State */
+.checkbox-container:not(.selected) .checkbox-box {
+    background-color: var(--bg-primary);
+    border-color: var(--border-primary);
+}
+
+/* Hover State */
+.checkbox-container:hover:not(.disabled) .checkbox-box {
+    border-color: var(--border-key);
+}
+
+.checkbox-container.selected:hover:not(.disabled) .checkbox-box {
+    opacity: 0.9;
+}
+
+/* State Layers (matching Figma) */
+.checkbox-container:hover:not(.disabled) .checkbox-box::after {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    background: var(--state-hover-primary, rgba(0, 0, 0, 0.04));
+    border-radius: inherit;
+}
+
+.checkbox-container:active:not(.disabled) .checkbox-box::after {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    background: var(--state-pressed-primary, rgba(0, 0, 0, 0.12));
+    border-radius: inherit;
+}
+
+/* Internal Check Icon */
+.checkbox-icon {
+    width: 12px;
+    height: 12px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkbox-container.selected .checkbox-icon {
+    display: flex;
+}
+
+.checkbox-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Disabled State */
+.checkbox-container.disabled .checkbox-box {
+    background: var(--bg-disabled);
+    border-color: var(--border-disabled);
+}
+
+.checkbox-container.disabled.selected .checkbox-box {
+    background: var(--bg-disabled);
+    border-color: var(--border-disabled);
+}
+
+.checkbox-container.disabled .checkbox-icon {
+    filter: grayscale(1);
+    opacity: 0.5;
+}
+
+/* Label Spacing */
+.checkbox-label {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-100);
+    line-height: var(--line-height-label-large);
+    color: var(--content-primary);
+}

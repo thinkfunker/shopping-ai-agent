@@ -1,0 +1,70 @@
+@import "../../design_system.css";
+
+.page-indicator {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-100);
+}
+
+/* Type: Numbers */
+.page-indicator-numbers {
+    background-color: var(--background-accent, #383a3d);
+    height: 20px;
+    padding: var(--spacing-100) var(--spacing-200);
+    border-radius: var(--radius-full, 100px);
+    color: var(--content-inverted, white);
+    font-size: var(--font-size-075);
+    line-height: var(--line-height-label-small);
+}
+
+.page-indicator-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Type: Dot */
+.page-indicator-dots {
+    display: flex;
+    gap: var(--spacing-100);
+}
+
+.page-indicator-dot {
+    border-radius: 50%;
+    background-color: var(--border-tertiary);
+    /* Default/Inactive dot color */
+    transition: all 0.2s ease;
+}
+
+.page-indicator-dot.active {
+    background-color: var(--content-key);
+    /* Active dot color */
+}
+
+/* Sizes for 'over 6 pages' effect */
+.page-indicator-dot-default {
+    width: 5px;
+    height: 5px;
+}
+
+.page-indicator-dot-large {
+    width: 5px;
+    height: 5px;
+}
+
+/* Same as default but contextually larger in 'over 6' */
+.page-indicator-dot-medium {
+    width: 3px;
+    height: 3px;
+}
+
+.page-indicator-dot-small {
+    width: 2px;
+    height: 2px;
+}
+
+/* Special handling for over 6 pages to mimic the shrinking effect seen in Figma */
+.page-indicator-dots.over-6 {
+    gap: 4px;
+}
