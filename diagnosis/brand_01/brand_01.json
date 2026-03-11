@@ -1,20 +1,89 @@
 {
   "packageName": "Brand Preference Diagnosis G01",
+  "version": "1.2.0",
   "questions": [
     {
-      "topic": "ファッション",
-      "title": "あなたの ファッションスタイルは？",
-      "subtitle": "お好みの スタイルを 選択してください。",
+      "topic": "プレイスタイル",
+      "title": "どちらのスタイルをより好みますか？",
+      "subtitle": "あなたの好みに近いほうを選んでください。",
       "options": [
         {
-          "id": "modern",
-          "title": "モダン",
-          "img": "images/products/module_fashion_black_coat.png"
+          "id": "top_spin",
+          "title": "トップスピンで巻き上げ",
+          "img": "images/e6bd620396c065e3ae103366b9ea27489d739d2e.png"
         },
         {
-          "id": "vintage",
-          "title": "ヴィンテージ",
-          "img": "images/products/module_fashion_cardigan_new.png"
+          "id": "flat_hit",
+          "title": "フラットで直線的な打撃",
+          "img": "images/fa706669c06c11d53b748af7b5b5562d3e17ffe1.png"
+        }
+      ]
+    },
+    {
+      "topic": "時計・小物",
+      "title": "どちらのスタイルをより好みますか？",
+      "subtitle": "あなたの好みに近いほうを選んでください。",
+      "options": [
+        {
+          "id": "design_mood",
+          "title": "デザイン/ムード",
+          "img": "images/07582c46950206b52eb0c94859f17e5bb61cb4dc.png"
+        },
+        {
+          "id": "function_practicality",
+          "title": "機能/実用性",
+          "img": "images/c1f63fbcc6ccf78848170a64cbad3cabef06f1fc.png"
+        }
+      ]
+    },
+    {
+      "topic": "ファッション",
+      "title": "どちらのスタイルをより好みますか？",
+      "subtitle": "あなたの好みに近いほうを選んでください。",
+      "options": [
+        {
+          "id": "classic_formal",
+          "title": "クラシック/フォーマル",
+          "img": "images/3a59c7bfe9af23a4e91361dc43c16907853eed0c.png"
+        },
+        {
+          "id": "casual_sports",
+          "title": "カジュアル/スポーツ",
+          "img": "images/ef8c28633ff25a0b3731d47f3f1de044a41dd423.png"
+        }
+      ]
+    },
+    {
+      "topic": "香り・風味",
+      "title": "どちらのスタイルをより好みますか？",
+      "subtitle": "あなたの好みに近いほうを選んでください。",
+      "options": [
+        {
+          "id": "sweet_soft",
+          "title": "甘くて柔らかく",
+          "img": "images/f4f461752fc1854b840a8c78eee6ee41e9278079.png"
+        },
+        {
+          "id": "smoky_heavy",
+          "title": "スモーキーで重厚に",
+          "img": "images/35638a03c7b7159397cf549600f09b36aee6f23b.png"
+        }
+      ]
+    },
+    {
+      "topic": "お酒の飲み方",
+      "title": "どちらのスタイルをより好みますか？",
+      "subtitle": "あなたの好みに近いほうを選んでください。",
+      "options": [
+        {
+          "id": "highball_mix",
+          "title": "ハイボール/ミックス",
+          "img": "images/c96bd412b1a970a501fa0560f95160ae11b4012f.png"
+        },
+        {
+          "id": "on_the_rocks",
+          "title": "オン・ザ・ロック／ストレート",
+          "img": "images/cd25a170d09bfc74827e35cbc8f25fcca05c6d6f.png"
         }
       ]
     }
@@ -22,24 +91,51 @@
   "content_pool": {
     "fashion": [
       {
-        "id": "suit",
+        "id": "spring_sale",
         "type": "normal",
-        "badge": "BASIC",
-        "title": "オンオフ使用 可能な 優れる カーディガン",
+        "badge": "SALE",
+        "title": "SPRING\n20% OFF",
         "img": "images/products/module_fashion_cardigan_new.png",
-        "bg": "#008487",
+        "bg": "#2c3132",
+        "isTall": false
+      },
+      {
+        "id": "influ_collab",
+        "type": "normal",
+        "badge": "COLLAB",
+        "title": "人気インフルエンサー\nコラボアイテム",
+        "img": "images/fd795b966d00d7e719e8c157aec2458123b40761.png",
+        "bg": "#0032be",
+        "isWide": true
+      },
+      {
+        "id": "porter_tanker",
+        "type": "video",
+        "badge": "BAG",
+        "title": "星野源セレクト\nPORTER TANKER",
+        "img": "images/products/module_fashion_black_tote.png",
+        "bg": "#eaeaea",
         "isTall": true
       }
     ],
     "game": [
       {
-        "id": "switch",
+        "id": "faker_select",
+        "type": "video",
+        "badge": "GAMING",
+        "title": "Fakerセレクト\n2026 T1優勝ギア特集",
+        "img": "images/8a8f2c97240b2c25f73107ed67960f33515a8e46.png",
+        "bg": "#010212",
+        "isTall": true
+      },
+      {
+        "id": "switch_2",
         "type": "normal",
-        "badge": "NINTENDO",
-        "title": "ニンテンドー スイッチ",
-        "img": "images/products/module_game_nintendo.png",
-        "bg": "#E60012",
-        "isWide": true
+        "badge": "CONSOLES",
+        "title": "今が買い時の\nSwitch 2",
+        "img": "images/f20f8ba4e4f9ffd597b8b791eaa4fafb3b651c75.png",
+        "bg": "#e70012",
+        "isTall": false
       }
     ]
   }
