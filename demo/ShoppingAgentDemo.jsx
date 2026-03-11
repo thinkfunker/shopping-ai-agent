@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './ShoppingAgentDemo.css';
-import TopNavigation from '../components/TopNavigation/TopNavigation';
-import MessageList from '../components/Message/MessageList';
-import Message from '../components/Message/Message';
-import Carousel from '../components/Carousel/Carousel';
-import Card from '../Templates/Card/Card';
-import AiSuggestionList from '../components/Carousel/AiSuggestionList';
-import AITextInput from '../components/AITextInput/AITextInput';
-import ImagePreview from '../components/ImagePreview/ImagePreview';
+import TopNavigation from '../design-system/components/TopNavigation/TopNavigation';
+import MessageList from '../design-system/components/Message/MessageList';
+import Message from '../design-system/components/Message/Message';
+import Carousel from '../design-system/components/Carousel/Carousel';
+import Card from '../design-system/Templates/Card/Card';
+import AiSuggestionList from '../design-system/components/Carousel/AiSuggestionList';
+import AITextInput from '../design-system/components/AITextInput/AITextInput';
+import ImagePreview from '../design-system/components/ImagePreview/ImagePreview';
 
 const ShoppingAgentDemo = () => {
     const [messages, setMessages] = useState([]);

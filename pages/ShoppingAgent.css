@@ -1,0 +1,44 @@
+@import "../design-system/design_system.css";
+
+/* [PROTECTED] This file is a Page-level layout. 
+   It MUST use 100% Design System Variables. */
+
+.sa-page-root {
+    display: flex;
+    flex-direction: column;
+    /* Fixed mockup size as per Figma spec */
+    width: 390px;
+    height: 844px;
+    margin: 0 auto;
+    background-color: var(--bg-secondary);
+    /* Corrected: was --background-neutral */
+    box-shadow: 0 var(--spacing-200) var(--spacing-800) var(--bg-scrim);
+    position: relative;
+    overflow: hidden;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* 2. Main Layout Areas */
+.sa-header-area {
+    background-color: var(--bg-primary);
+    z-index: 100;
+}
+
+.sa-chat-area {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.sa-input-area {
+    background-color: var(--bg-primary);
+    border-top: var(--border-width-100) solid var(--border-tertiary);
+    padding: var(--spacing-400);
+    z-index: 100;
+}
+
+/* Hide scrollbar */
+.sa-chat-area::-webkit-scrollbar {
+    display: none;
+}
