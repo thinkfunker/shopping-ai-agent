@@ -4,10 +4,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empty Page</title>
+    <title>Shopping AI Agent</title>
+    <!-- Design System Foundation -->
+    <link rel="stylesheet" href="./design-system/design_system.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Component Specific CSS -->
+    <link rel="stylesheet" href="./design-system/components/TopNavigation/TopNavigation.css">
+    <link rel="stylesheet" href="./design-system/components/StatusBar/StatusBar.css">
+    <link rel="stylesheet" href="./design-system/components/Message/Message.css">
+    <link rel="stylesheet" href="./design-system/components/Message/MessageList.css">
+    <link rel="stylesheet" href="./design-system/components/Carousel/Carousel.css">
+    <link rel="stylesheet" href="./design-system/Templates/MediaCard/MediaCard.css">
+    <link rel="stylesheet" href="./design-system/components/Carousel/AiSuggestionList.css">
+    <link rel="stylesheet" href="./design-system/components/AITextInput/AITextInput.css">
+    <link rel="stylesheet" href="./design-system/components/Icon.css">
+    <link rel="stylesheet" href="./design-system/components/Tag/Tag.css">
 </head>
 
 <body>
+    <div class="shopping-agent-container">
+        <!-- Header Section -->
+        <header id="header-root" class="header-fixed"></header>
+
+        <!-- Message List Viewport -->
+        <main id="chat-root" class="chat-viewport"></main>
+
+        <!-- Input Section -->
+        <footer id="input-root" class="input-fixed"></footer>
+    </div>
+
+    <!-- Component Logic Load -->
+    <script src="./design-system/components/Icon.js"></script>
+    <script src="./design-system/components/TopNavigation/TopNavigation.js"></script>
+    <script src="./design-system/components/Message/Message.js"></script>
+    <script src="./design-system/components/Message/MessageList.js"></script>
+    <script src="./design-system/Templates/MediaCard/MediaCard.js"></script>
+    <script src="./design-system/components/Carousel/Carousel.js"></script>
+    <script src="./design-system/components/Carousel/AiSuggestionList.js"></script>
+    <script src="./design-system/components/AITextInput/AITextInput.js"></script>
+
+    <script>
+        // Data Definitions
+        const INITIAL_MSG = { role: 'AI', content: '안녕하세요! 당신의 개인 쇼핑 어시스턴트입니다. 무엇을 도와드릴까요?', name: 'Shopping AI' };
+
+        const SAMPLE_PRODUCTS = [
+            { title: 'Air Jordan 1 Retro', subtitle: 'Iconic high-top', metaText: ['Nike', 'Performance', '₩249,000'], rating: 4.8, reviewCount: 120, score: 98, imageUrl: 'https://images.unsplash.com/photo-1552346154-21d32810aba3?w=300' },
+            { title: 'Jordan 4 Blue', subtitle: 'Timeless classic', metaText: ['Nike', 'Lifestyle', '₩299,000'], rating: 5.0, reviewCount: 85, score: 92, imageUrl: 'https://images.unsplash.com/photo-1597043530272-bc882ff38289?w=300' }
+        ];
+
+        // Component Assembly
+        function initApp() {
+            // Header
+            const headerRoot = document.getElementById('header-root');
+            headerRoot.appendChild(renderTopNavigation({
+                os: 'mobile',
+                headerTitle: 'Shopping AI',
+                rightIcons: ['magnifying-glass-solid', 'cart-shopping-solid']
+            }));
+
+            // Message List
+            const chatRoot = document.getElementById('chat-root');
+            const messages = [
+                renderMessage(INITIAL_MSG),
+                renderMessage({ role: 'user', content: '나이키 신제품 추천해줘' }),
+                renderMessage({ role: 'AI', content: '고객님의 취향에 맞는 조단 시리즈를 선별했습니다.', name: 'Shopping AI' })
+            ];
+
+            // Product Carousel
+            const productCards = SAMPLE_PRODUCTS.map(p => renderMediaCard(p));
+            const carousel = renderCarousel({ items: productCards, type: 'media' });
+
+            // Suggestion List
+            const suggestions = renderAiSuggestionList({
+                title: '추천 질문',
+                suggestions: ['다른 색상 보기', '재고 확인', '후기 보기']
+            });
+
+            const messageList = renderMessageList({
+                messages: [...messages, carousel, suggestions]
+            });
+            chatRoot.appendChild(messageList);
+
+            // Input
+            const inputRoot = document.getElementById('input-root');
+            inputRoot.appendChild(renderAITextInput({
+                placeholder: '메시지를 입력하세요...'
+            }));
+        }
+
+        document.addEventListener('DOMContentLoaded', initApp);
+    </script>
 </body>
 
 </html>
