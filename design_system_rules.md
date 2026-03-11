@@ -1,4 +1,5 @@
-# Design System Rules & Guidelines
+<!-- [PROTECTED] Modification of this file requires explicit USER confirmation. See .agent/rules.md for protocol. -->
+# Design System Specification & Component Guidelines
 
 This document is based on the Figma design system guidelines and serves as a set of prompt rules for future design and code generation tasks.
 

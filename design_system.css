@@ -1,3 +1,5 @@
+/* [PROTECTED] Modification of this file requires explicit USER confirmation. 
+   See .agent/rules.md for the modification protocol. */
 :root {
     /* Primitive Colors - Red */
     --red-1: #f9dedf;
@@ -79,8 +81,10 @@
     --font-size-075: 12px;
     --font-size-0687: 11px;
 
-    /* Typography - Font Families */
-    --font-family-primary: 'Noto Sans JP', 'Hiragino Kaku Gothic Pro', sans-serif;
+    /* [PROTECTED] This file is part of the core design system. 
+   Modifications require explicit user confirmation. 
+   See .agent/rules.md for the protocol. */
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:ital,wght@0,100..900;1,100..900&display=swap');
     --font-weight-regular: 400;
     --font-weight-bold: 700;
 

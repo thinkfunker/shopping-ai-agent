@@ -1,0 +1,40 @@
+@import "../design_system.css";
+
+.demo-app-container {
+    width: 390px;
+    height: 844px;
+    background-color: var(--background-primary, white);
+    margin: 40px auto;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius-large, 40px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family-primary);
+}
+
+.demo-content-area {
+    flex: 1;
+    overflow-y: auto;
+    background-color: var(--background-neutral, #f0f2f7);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hide scrollbar for cleaner mobile look */
+.demo-content-area::-webkit-scrollbar {
+    display: none;
+}
+
+.demo-footer {
+    padding-bottom: 20px;
+    /* Space for home indicator if needed */
+    background-color: var(--background-primary, white);
+    border-top: 1px solid var(--border-tertiary);
+}
+
+/* Glassmorphism effect for the input area */
+.demo-input-container {
+    padding: var(--spacing-400, 16px);
+}

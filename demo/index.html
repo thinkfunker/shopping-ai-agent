@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping AI Agent Demo</title>
+    <link rel="stylesheet" href="../design_system.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="ShoppingAgentDemo.css">
+    <!-- Component CSS -->
+    <link rel="stylesheet" href="../components/TopNavigation/TopNavigation.css">
+    <link rel="stylesheet" href="../components/StatusBar/StatusBar.css">
+    <link rel="stylesheet" href="../components/Message/Message.css">
+    <link rel="stylesheet" href="../components/Message/MessageList.css">
+    <link rel="stylesheet" href="../components/Carousel/Carousel.css">
+    <link rel="stylesheet" href="../components/Carousel/AiSuggestionList.css">
+    <link rel="stylesheet" href="../components/AITextInput/AITextInput.css">
+    <link rel="stylesheet" href="../components/ImagePreview/ImagePreview.css">
+    <link rel="stylesheet" href="../Templates/Card/Card.css">
+    <link rel="stylesheet" href="../components/Score/Score.css">
+    <link rel="stylesheet" href="../components/Tag/Tag.css">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .mobile-frame {
+            border: 16px solid #222;
+            border-radius: 60px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mobile-frame">
+        <div id="app" class="demo-app-container"></div>
+    </div>
+
+    <!-- Component Scripts -->
+    <script src="../components/Icon.js"></script>
+    <script src="../components/StatusBar/StatusBar.js"></script>
+    <script src="../components/TopNavigation/TopNavigation.js"></script>
+    <script src="../components/Message/Message.js"></script>
+    <script src="../components/Message/MessageList.js"></script>
+    <script src="../Templates/Card/Card.js"></script>
+    <script src="../components/Carousel/Carousel.js"></script>
+    <script src="../components/Carousel/AiSuggestionList.js"></script>
+    <script src="../components/AITextInput/AITextInput.js"></script>
+    <script src="../components/Score/Score.js"></script>
+    <script src="../components/Tag/Tag.js"></script>
+    <script src="../components/ImagePreview/ImagePreview.js"></script>
+
+    <script>
+        // Mock State & Render Logic
+        const app = document.getElementById('app');
+        let messages = [
+            { role: 'AI', content: '안녕하세요! 쇼핑 어시스턴트입니다. 찾으시는 상품이 있나요?', name: 'Shopping AI' }
+        ];
+
+        function render() {
+            app.innerHTML = '';
+
+            // Header
+            const nav = renderTopNavigation({
+                headerTitle: 'Shopping AI',
+                rightIcons: ['magnifying-glass-solid', 'cart-shopping-solid'],
+                showAvatar: true
+            });
+            app.appendChild(nav);
+
+            // Content
+            const contentArea = document.createElement('div');
+            contentArea.className = 'demo-content-area';
+
+            const msgDomList = messages.map(m => {
+                const msgEl = renderMessage({
+                    role: m.role,
+                    content: m.content,
+                    agentName: m.name
+                });
+
+                if (m.hasResults) {
+                    const wrap = document.createElement('div');
+                    wrap.appendChild(msgEl);
+
+                    const products = [
+                        { title: 'Chuck Taylor', price: '₩55,000', img: 'https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=300' },
+                        { title: 'Chuck 70', price: '₩95,000', img: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300' }
+                    ];
+
+                    const cards = products.map(p => renderCard({
+                        type: 'media',
+                        title: p.title,
+                        price: p.price,
+                        imageSrc: p.img,
+                        onClick: () => showPreview(p)
+                    }));
+
+                    const carousel = renderCarousel({ items: cards, type: 'media' });
+                    wrap.appendChild(carousel);
+
+                    const suggestions = renderAiSuggestionList({
+                        suggestions: ['다른 컬러?', '유사 상품 추천', '후기 보기'],
+                        onSuggestionClick: (t) => handleSend(t)
+                    });
+                    wrap.appendChild(suggestions);
+
+                    return wrap;
+                }
+                return msgEl;
+            });
+
+            const messageList = renderMessageList({ messages: msgDomList });
+            contentArea.appendChild(messageList);
+            app.appendChild(contentArea);
+
+            // Footer
+            const footer = document.createElement('div');
+            footer.className = 'demo-footer';
+            const inputContainer = document.createElement('div');
+            inputContainer.className = 'demo-input-container';
+            const textInput = renderAITextInput({
+                placeholder: '메시지를 입력하세요...',
+                onSend: (val) => handleSend(val)
+            });
+            inputContainer.appendChild(textInput);
+            footer.appendChild(inputContainer);
+            app.appendChild(footer);
+        }
+
+        function handleSend(val) {
+            if (!val) return;
+            messages.push({ role: 'user', content: val });
+            render();
+
+            // Mock AI behavior
+            setTimeout(() => {
+                messages.push({
+                    role: 'AI',
+                    content: 'Converse 블랙 스니커즈를 찾아보았습니다.',
+                    name: 'Shopping AI',
+                    hasResults: true
+                });
+                render();
+            }, 1000);
+        }
+
+        function showPreview(p) {
+            const preview = renderImagePreview({
+                isOpen: true,
+                imageSrc: p.img,
+                title: p.title,
+                serviceName: 'Converse Store',
+                onClose: () => {
+                    document.querySelector('.image-preview-overlay').remove();
+                }
+            });
+            document.body.appendChild(preview);
+        }
+
+        render();
+    </script>
+</body>
+
+</html>
