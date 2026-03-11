@@ -1,0 +1,47 @@
+{
+    "packageName": "Brand Preference Diagnosis G03 Lifestyle",
+    "version": "1.0.0",
+    "questions": [
+        {
+            "topic": "ライフスタイル",
+            "title": "休日の過ごし方は？",
+            "subtitle": "インドア vs アウトドア",
+            "options": [
+                {
+                    "id": "indoor",
+                    "title": "家でゆっくり",
+                    "img": "images/products/module_game_nintendo.png"
+                },
+                {
+                    "id": "outdoor",
+                    "title": "外でアクティブ",
+                    "img": "images/products/module_outdoor_shoes.png"
+                }
+            ]
+        }
+    ],
+    "content_pool": {
+        "game": [
+            {
+                "id": "ps5",
+                "type": "normal",
+                "badge": "NEW",
+                "title": "PS5 Pro 입고 완료",
+                "img": "images/products/module_game_accessories.png",
+                "bg": "#0032e6",
+                "isWide": true
+            }
+        ],
+        "sports": [
+            {
+                "id": "yoga_mat",
+                "type": "normal",
+                "badge": "ZEN",
+                "title": "朝のヨガルーティン",
+                "img": "images/products/module_outdoor_tent.png",
+                "bg": "#466136",
+                "isTall": true
+            }
+        ]
+    }
+}

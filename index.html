@@ -82,59 +82,40 @@
 
     <!-- Script for interaction -->
     <script>
-        const questions = [
-            {
-                topic: "プレイスタイル",
-                title: "どちらのスタイルをより好みますか？",
-                subtitle: "あなたの好みに近いほうを選んでください。",
-                options: [
-                    { id: 'top_spin', title: "トップスピンで巻き上げ", img: "images/e6bd620396c065e3ae103366b9ea27489d739d2e.png" },
-                    { id: 'flat_hit', title: "フラットで直線的な打撃", img: "images/fa706669c06c11d53b748af7b5b5562d3e17ffe1.png" }
-                ]
-            },
-            {
-                topic: "時計・小物",
-                title: "どちらのスタイルをより好みますか？",
-                subtitle: "あなたの好みに近いほうを選んでください。",
-                options: [
-                    { id: 'design_mood', title: "デザイン/ムード", img: "images/07582c46950206b52eb0c94859f17e5bb61cb4dc.png" },
-                    { id: 'function_practicality', title: "機能/実用性", img: "images/c1f63fbcc6ccf78848170a64cbad3cabef06f1fc.png" }
-                ]
-            },
-            {
-                topic: "ファッション",
-                title: "どちらのスタイルをより好みますか？",
-                subtitle: "あなたの好みに近いほうを選んでください。",
-                options: [
-                    { id: 'classic_formal', title: "クラシック/フォーマル", img: "images/3a59c7bfe9af23a4e91361dc43c16907853eed0c.png" },
-                    { id: 'casual_sports', title: "カジュアル/スポーツ", img: "images/ef8c28633ff25a0b3731d47f3f1de044a41dd423.png" }
-                ]
-            },
-            {
-                topic: "香り・風味",
-                title: "どちらのスタイルをより好みますか？",
-                subtitle: "あなたの好みに近いほうを選んでください。",
-                options: [
-                    { id: 'sweet_soft', title: "甘くて柔らかく", img: "images/f4f461752fc1854b840a8c78eee6ee41e9278079.png" },
-                    { id: 'smoky_heavy', title: "スモーキーで重厚に", img: "images/35638a03c7b7159397cf549600f09b36aee6f23b.png" }
-                ]
-            },
-            {
-                topic: "お酒の飲み方",
-                title: "どちらのスタイルをより好みますか？",
-                subtitle: "あなたの好みに近いほうを選んでください。",
-                options: [
-                    { id: 'highball_mix', title: "ハイボール/ミックス", img: "images/c96bd412b1a970a501fa0560f95160ae11b4012f.png" },
-                    { id: 'on_the_rocks', title: "オン・ザ・ロック／ストレート", img: "images/cd25a170d09bfc74827e35cbc8f25fcca05c6d6f.png" }
-                ]
-            }
-        ];
-
+        let questions = [];
+        let contentPool = {};
         let currentStep = 0;
         let selectedOptions = [];
 
-        function initApp() {
-            renderQuestion();
+        async function initApp() {
+            try {
+                const pkgRes = await fetch('diagnosis/packages.json');
+                const pkgData = await pkgRes.json();
+
+                const randomPkgPath = pkgData.packages[Math.floor(Math.random() * pkgData.packages.length)];
+
+                const res = await fetch(randomPkgPath);
+                const data = await res.json();
+                questions = data.questions;
+                contentPool = data.content_pool;
+                renderQuestion();
+            } catch (err) {
+                console.warn('Fetch failed, using fallback (Brand_01).', err);
+                // Hardcoded Brand_01 fallback
+                questions = [
+                    {
+                        topic: "ファッション",
+                        title: "あなたの ファッションスタイルは？",
+                        subtitle: "お好みの スタイルを 選択してください。",
+                        options: [
+                            { id: "modern", title: "モダン", img: "images/products/module_fashion_black_coat.png" },
+                            { id: "vintage", title: "ヴィンテージ", img: "images/products/module_fashion_cardigan_new.png" }
+                        ]
+                    }
+                ];
+                contentPool = {};
+                renderQuestion();
+            }
         }
 
         function renderQuestion() {
@@ -248,165 +229,36 @@
         function getRecommendedCategory() {
             const opts = selectedOptions.join(" ");
 
-            // Analyze selected images logic:
+            // Hardcoded logic for legacy questions
             if (opts.includes("top_spin") || opts.includes("casual_sports")) return "sports";
             if (opts.includes("classic_formal") || opts.includes("design_mood")) return "fashion";
             if (opts.includes("sweet_soft") || opts.includes("function_practicality")) return "kitchen";
-            return "game";
-        }
+            if (opts.includes("on_the_rocks") || opts.includes("flat_hit")) return "game";
 
+            // Default: pick first available category from contentPool or "fashion"
+            const keys = Object.keys(contentPool);
+            if (keys.length > 0) return keys[0];
 
-        function getRecommendedCategory() {
-            const opts = selectedOptions.join(" ");
-            if (opts.includes("top_spin") || opts.includes("casual_sports")) return "sports";
-            if (opts.includes("classic_formal") || opts.includes("design_mood") || opts.includes("straight_drink") || opts.includes("sweet_soft")) return "fashion";
-            if (opts.includes("function_practicality")) return "kitchen";
-            return "game";
-        }
-
-
-        function getRecommendedCategory() {
-            const opts = selectedOptions.join(" ");
-            if (opts.includes("top_spin") || opts.includes("casual_sports")) return "sports";
-            if (opts.includes("classic_formal") || opts.includes("design_mood") || opts.includes("straight_drink") || opts.includes("sweet_soft")) return "fashion";
-            if (opts.includes("function_practicality")) return "kitchen";
-            return "game";
-        }
-
-
-        function getRecommendedCategory() {
-            const opts = selectedOptions.join(" ");
-            if (opts.includes("top_spin") || opts.includes("casual_sports")) return "sports";
-            if (opts.includes("classic_formal") || opts.includes("design_mood") || opts.includes("straight_drink") || opts.includes("sweet_soft")) return "fashion";
-            if (opts.includes("function_practicality")) return "kitchen";
-            return "game";
-        }
-
-
-        function getRecommendedCategory() {
-            const opts = selectedOptions.join(" ");
-            if (opts.includes("top_spin") || opts.includes("casual_sports")) return "sports";
-            if (opts.includes("classic_formal") || opts.includes("design_mood") || opts.includes("straight_drink") || opts.includes("sweet_soft")) return "fashion";
-            if (opts.includes("function_practicality")) return "kitchen";
-            return "game";
-        }
-
-
-        function getRecommendedCategory() {
-            const opts = selectedOptions.join(" ");
-            if (opts.includes("top_spin") || opts.includes("casual_sports")) return "sports";
-            if (opts.includes("classic_formal") || opts.includes("design_mood") || opts.includes("straight_drink") || opts.includes("sweet_soft")) return "fashion";
-            if (opts.includes("function_practicality")) return "kitchen";
-            return "game";
-        }
-
-
-        function getRecommendedCategory() {
-            const opts = selectedOptions.join(" ");
-            if (opts.includes("top_spin") || opts.includes("casual_sports")) return "sports";
-            if (opts.includes("classic_formal") || opts.includes("design_mood") || opts.includes("straight_drink") || opts.includes("sweet_soft")) return "fashion";
-            if (opts.includes("function_practicality")) return "kitchen";
-            return "game";
-        }
-
-        
-        function getRecommendedCategory() {
-            const opts = selectedOptions.join(" ");
-            if (opts.includes("top_spin") || opts.includes("casual_sports")) return "sports";
-            if (opts.includes("classic_formal") || opts.includes("design_mood") || opts.includes("straight_drink") || opts.includes("sweet_soft")) return "fashion";
-            if (opts.includes("function_practicality")) return "kitchen";
-            return "game";
-        }
-
-        
-        function getRecommendedCategory() {
-            const opts = selectedOptions.join(" ");
-            if (opts.includes("top_spin") || opts.includes("casual_sports")) return "sports";
-            if (opts.includes("classic_formal") || opts.includes("design_mood") || opts.includes("straight_drink") || opts.includes("sweet_soft")) return "fashion";
-            if (opts.includes("function_practicality")) return "kitchen";
-            return "game";
-        }
-
-        
-        function getRecommendedCategory() {
-            const opts = selectedOptions.join(" ");
-            if (opts.includes("top_spin") || opts.includes("casual_sports")) return "sports";
-            if (opts.includes("classic_formal") || opts.includes("design_mood") || opts.includes("straight_drink") || opts.includes("sweet_soft")) return "fashion";
-            if (opts.includes("function_practicality")) return "kitchen";
-            return "game";
-        }
-
-        
-        function getRecommendedCategory() {
-            const opts = selectedOptions.join(" ");
-            if (opts.includes("top_spin") || opts.includes("casual_sports")) return "sports";
-            if (opts.includes("classic_formal") || opts.includes("design_mood") || opts.includes("straight_drink") || opts.includes("sweet_soft")) return "fashion";
-            if (opts.includes("function_practicality")) return "kitchen";
-            return "game";
-        }
-
-        
-        function getRecommendedCategory() {
-            const opts = selectedOptions.join(" ");
-            if (opts.includes("top_spin") || opts.includes("casual_sports")) return "sports";
-            if (opts.includes("classic_formal") || opts.includes("design_mood") || opts.includes("straight_drink") || opts.includes("sweet_soft")) return "fashion";
-            if (opts.includes("function_practicality")) return "kitchen";
-            return "game";
-        }
-
-        
-        function getRecommendedCategory() {
-            const opts = selectedOptions.join(" ");
-            if (opts.includes("top_spin") || opts.includes("casual_sports")) return "sports";
-            if (opts.includes("classic_formal") || opts.includes("design_mood") || opts.includes("straight_drink") || opts.includes("sweet_soft")) return "fashion";
-            if (opts.includes("function_practicality")) return "kitchen";
-            return "game";
-        }
-
-        
-        function getRecommendedCategory() {
-            const opts = selectedOptions.join(" ");
-            if (opts.includes("top_spin") || opts.includes("casual_sports")) return "sports";
-            if (opts.includes("classic_formal") || opts.includes("design_mood") || opts.includes("straight_drink") || opts.includes("sweet_soft")) return "fashion";
-            if (opts.includes("function_practicality")) return "kitchen";
-            return "game";
-        }
-
-        
-        function getRecommendedCategory() {
-            const opts = selectedOptions.join(" ");
-            if (opts.includes("top_spin") || opts.includes("casual_sports")) return "sports";
-            if (opts.includes("classic_formal") || opts.includes("design_mood") || opts.includes("straight_drink") || opts.includes("sweet_soft")) return "fashion";
-            if (opts.includes("function_practicality")) return "kitchen";
-            return "game";
-        }
-
-        
-        function getRecommendedCategory() {
-            const opts = selectedOptions.join(" ");
-            if (opts.includes("top_spin") || opts.includes("casual_sports")) return "sports";
-            if (opts.includes("classic_formal") || opts.includes("design_mood") || opts.includes("straight_drink") || opts.includes("sweet_soft")) return "fashion";
-            if (opts.includes("function_practicality")) return "kitchen";
-            return "game";
+            return "fashion";
         }
 
         function showResult() {
             const appHeader = document.querySelector('.app-header');
             if (appHeader) appHeader.style.display = 'none';
-            
+
             const progressContainer = document.querySelector('.progress-bar-container');
             if (progressContainer) progressContainer.style.display = 'none';
 
             const main = document.getElementById('main-content');
             main.className = 'main-content fade-in feed-mode scroll-hide';
-            
+
             // Allow vertical scrolling inside main since cards are absolute
             main.style.overflowY = 'auto';
 
             const targetCategory = getRecommendedCategory();
             let categoryName = '';
             let htmlContent = '';
-            
+
             if (targetCategory === 'sports') {
                 categoryName = '스포츠';
                 htmlContent = `<div style="position:relative; height: 680px;"><div class="feed-card" style="position: absolute; left: 16px; top: 29px; width: 174px; height: 171px; background: #222138; border-radius: 16px; overflow: hidden; color: white;"><span class="badge" style="z-index: 5; font-size:11px; font-weight:700; position:absolute; top:16px; left:16px; margin: 0; letter-spacing: 0;">TENNIS</span><span class="close-x" style="z-index: 5; position:absolute; top:16px; right:16px; cursor:pointer; width:20px; height:20px; display:flex; align-items:center; justify-content:center;"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.6808 1.17833L10.5025 0L5.84083 4.66167L1.17833 0L0 1.17833L4.6625 5.84L0 10.5017L1.17833 11.6808L5.84083 7.01833L10.5025 11.6808L11.6808 10.5017L7.01917 5.84L11.6808 1.17833Z" fill="white" fill-opacity="0.4"/></svg></span><img src="images/1b270d270fdb35cee2e2c97d12427e158ca2bc85.png" style="position:absolute; width:131px; height:142px; left: 70px; top: 48px; object-fit:cover;" /><p class="card-title feed-card-title" style="z-index: 5; position:absolute; left:16px; bottom:20px; font-size:15px; font-weight:800; line-height:1.2; text-shadow:0 2px 4px rgba(0,0,0,0.2); margin: 0; text-align: left; letter-spacing: -0.3px;">テニス<br>始めましょうか</p></div><div class="feed-card" style="position: absolute; left: 200px; top: 29px; width: 174px; height: 171px; background: #213828; border-radius: 16px; overflow: hidden; color: white;"><span class="badge" style="z-index: 5; font-size:11px; font-weight:700; position:absolute; top:16px; left:16px; margin: 0; letter-spacing: 0;">GOLF</span><span class="close-x" style="z-index: 5; position:absolute; top:16px; right:16px; cursor:pointer; width:20px; height:20px; display:flex; align-items:center; justify-content:center;"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.6808 1.17833L10.5025 0L5.84083 4.66167L1.17833 0L0 1.17833L4.6625 5.84L0 10.5017L1.17833 11.6808L5.84083 7.01833L10.5025 11.6808L11.6808 10.5017L7.01917 5.84L11.6808 1.17833Z" fill="white" fill-opacity="0.4"/></svg></span><img src="images/fe3e8dc892ca1b216b02fb2f38e33ebcb3e34789.png" style="position:absolute; width:163px; height:204px; left:42px; top:-17px; object-fit:cover;" /><div style="position:absolute; bottom:0; left:0; right:0; height:114px; background:linear-gradient(to top, rgba(0,0,0,0.6), transparent);"></div><p class="card-title feed-card-title" style="z-index: 5; position:absolute; left:16px; bottom:20px; font-size:15px; font-weight:800; line-height:1.2; text-shadow:0 2px 4px rgba(0,0,0,0.2); margin: 0; text-align: left; letter-spacing: -0.3px;">飛距離200ヤード<br>新素材ドライバー</p></div><div class="feed-card" style="position: absolute; left: 16px; top: 210px; width: 174px; height: 171px; background: #97b9b8; border-radius: 16px; overflow: hidden; color: white;"><span class="badge" style="z-index: 5; font-size:11px; font-weight:700; position:absolute; top:16px; left:16px; margin: 0; letter-spacing: 0;">RUNNING</span><span class="close-x" style="z-index: 5; position:absolute; top:16px; right:16px; cursor:pointer; width:20px; height:20px; display:flex; align-items:center; justify-content:center;"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.6808 1.17833L10.5025 0L5.84083 4.66167L1.17833 0L0 1.17833L4.6625 5.84L0 10.5017L1.17833 11.6808L5.84083 7.01833L10.5025 11.6808L11.6808 10.5017L7.01917 5.84L11.6808 1.17833Z" fill="white" fill-opacity="0.4"/></svg></span><img src="images/3939934e844e19c0205dbacae2d94d4d564bfc52.png" style="position:absolute; width:200px; height:200px; right:-50px; top:-5px; transform: scaleX(-1); object-fit:cover;" /><div style="position:absolute; bottom:0; left:0; right:0; height:95px; background:linear-gradient(to top, rgba(0,0,0,0.4), transparent);"></div><p class="card-title feed-card-title" style="z-index: 5; position:absolute; left:16px; bottom:20px; font-size:15px; font-weight:800; line-height:1.2; text-shadow:0 2px 4px rgba(0,0,0,0.2); margin: 0; text-align: left; letter-spacing: -0.3px;">2026年の目標に向け<br>ランニングシューズ</p></div><div class="feed-card" style="position: absolute; left: 200px; top: 210px; width: 174px; height: 352px; background: #010212; border-radius: 16px; overflow: hidden; color: white;"><img src="images/397b8016f4fb3986abc42562d50bb175a946167a.png" style="position:absolute; width:357px; height:421px; left:-68px; top:31px; object-fit:cover; opacity: 0.8" /><div style="position:absolute; bottom:0; left:0; right:0; height:100px; background:linear-gradient(to top, rgba(0,0,0,0.4), transparent);"></div><div style="background: rgba(0,0,0,0.4); position:absolute; inset:0;"></div><div class="yt-play" style="top:50%; left:50%; transform:translate(-50%,-50%); width:48px; height:48px; position:absolute; z-index:3;">
@@ -529,7 +381,7 @@
 
             main.innerHTML = htmlContent;
 
-            
+
             const tabs = document.querySelector('.chip-scroll');
             if (tabs) {
                 const active = tabs.querySelector('.active');
@@ -542,7 +394,7 @@
         function switchTab(category) {
             const main = document.getElementById('main-content');
             const feedHeader = document.getElementById('feed-header-container');
-            
+
             if (feedHeader) {
                 const headers = {
                     "스포츠": `
@@ -642,7 +494,7 @@
             }
 
             let htmlContent = '';
-            
+
             if (category === '스포츠') {
                 htmlContent = `<div style="position:relative; height: 680px;"><div class="feed-card" style="position: absolute; left: 16px; top: 29px; width: 174px; height: 171px; background: #222138; border-radius: 16px; overflow: hidden; color: white;"><span class="badge" style="z-index: 5; font-size:11px; font-weight:700; position:absolute; top:16px; left:16px; margin: 0; letter-spacing: 0;">TENNIS</span><span class="close-x" style="z-index: 5; position:absolute; top:16px; right:16px; cursor:pointer; width:20px; height:20px; display:flex; align-items:center; justify-content:center;"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.6808 1.17833L10.5025 0L5.84083 4.66167L1.17833 0L0 1.17833L4.6625 5.84L0 10.5017L1.17833 11.6808L5.84083 7.01833L10.5025 11.6808L11.6808 10.5017L7.01917 5.84L11.6808 1.17833Z" fill="white" fill-opacity="0.4"/></svg></span><img src="images/1b270d270fdb35cee2e2c97d12427e158ca2bc85.png" style="position:absolute; width:131px; height:142px; left: 70px; top: 48px; object-fit:cover;" /><p class="card-title feed-card-title" style="z-index: 5; position:absolute; left:16px; bottom:20px; font-size:15px; font-weight:800; line-height:1.2; text-shadow:0 2px 4px rgba(0,0,0,0.2); margin: 0; text-align: left; letter-spacing: -0.3px;">テニス<br>始めましょうか</p></div><div class="feed-card" style="position: absolute; left: 200px; top: 29px; width: 174px; height: 171px; background: #213828; border-radius: 16px; overflow: hidden; color: white;"><span class="badge" style="z-index: 5; font-size:11px; font-weight:700; position:absolute; top:16px; left:16px; margin: 0; letter-spacing: 0;">GOLF</span><span class="close-x" style="z-index: 5; position:absolute; top:16px; right:16px; cursor:pointer; width:20px; height:20px; display:flex; align-items:center; justify-content:center;"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.6808 1.17833L10.5025 0L5.84083 4.66167L1.17833 0L0 1.17833L4.6625 5.84L0 10.5017L1.17833 11.6808L5.84083 7.01833L10.5025 11.6808L11.6808 10.5017L7.01917 5.84L11.6808 1.17833Z" fill="white" fill-opacity="0.4"/></svg></span><img src="images/fe3e8dc892ca1b216b02fb2f38e33ebcb3e34789.png" style="position:absolute; width:163px; height:204px; left:42px; top:-17px; object-fit:cover;" /><div style="position:absolute; bottom:0; left:0; right:0; height:114px; background:linear-gradient(to top, rgba(0,0,0,0.6), transparent);"></div><p class="card-title feed-card-title" style="z-index: 5; position:absolute; left:16px; bottom:20px; font-size:15px; font-weight:800; line-height:1.2; text-shadow:0 2px 4px rgba(0,0,0,0.2); margin: 0; text-align: left; letter-spacing: -0.3px;">飛距離200ヤード<br>新素材ドライバー</p></div><div class="feed-card" style="position: absolute; left: 16px; top: 210px; width: 174px; height: 171px; background: #97b9b8; border-radius: 16px; overflow: hidden; color: white;"><span class="badge" style="z-index: 5; font-size:11px; font-weight:700; position:absolute; top:16px; left:16px; margin: 0; letter-spacing: 0;">RUNNING</span><span class="close-x" style="z-index: 5; position:absolute; top:16px; right:16px; cursor:pointer; width:20px; height:20px; display:flex; align-items:center; justify-content:center;"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.6808 1.17833L10.5025 0L5.84083 4.66167L1.17833 0L0 1.17833L4.6625 5.84L0 10.5017L1.17833 11.6808L5.84083 7.01833L10.5025 11.6808L11.6808 10.5017L7.01917 5.84L11.6808 1.17833Z" fill="white" fill-opacity="0.4"/></svg></span><img src="images/3939934e844e19c0205dbacae2d94d4d564bfc52.png" style="position:absolute; width:200px; height:200px; right:-50px; top:-5px; transform: scaleX(-1); object-fit:cover;" /><div style="position:absolute; bottom:0; left:0; right:0; height:95px; background:linear-gradient(to top, rgba(0,0,0,0.4), transparent);"></div><p class="card-title feed-card-title" style="z-index: 5; position:absolute; left:16px; bottom:20px; font-size:15px; font-weight:800; line-height:1.2; text-shadow:0 2px 4px rgba(0,0,0,0.2); margin: 0; text-align: left; letter-spacing: -0.3px;">2026年の目標に向け<br>ランニングシューズ</p></div><div class="feed-card" style="position: absolute; left: 200px; top: 210px; width: 174px; height: 352px; background: #010212; border-radius: 16px; overflow: hidden; color: white;"><img src="images/397b8016f4fb3986abc42562d50bb175a946167a.png" style="position:absolute; width:357px; height:421px; left:-68px; top:31px; object-fit:cover; opacity: 0.8" /><div style="position:absolute; bottom:0; left:0; right:0; height:100px; background:linear-gradient(to top, rgba(0,0,0,0.4), transparent);"></div><div style="background: rgba(0,0,0,0.4); position:absolute; inset:0;"></div><div class="yt-play" style="top:50%; left:50%; transform:translate(-50%,-50%); width:48px; height:48px; position:absolute; z-index:3;">
                 <svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
@@ -660,7 +512,7 @@
             }
 
             main.innerHTML = htmlContent;
-            
+
             // Adjust scroll for tabs
             const tabs = document.querySelector('.chip-scroll');
             if (tabs) {

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image Preview</title>
+</head>
+
+<body>
+    <div id="images">
+        <!-- Images will be injected here -->
+    </div>
+    <script>
+        const images = [
+            "ChatGPT Image 2026년 3월 10일 오전 07_43_52.png",
+            "ChatGPT Image 2026년 3월 10일 오전 07_44_59.png",
+            "ChatGPT Image 2026년 3월 10일 오전 07_47_09.png",
+            "ChatGPT Image 2026년 3월 10일 오전 07_50_09.png",
+            "ChatGPT Image 2026년 3월 10일 오전 07_51_22.png",
+            "ChatGPT Image 2026년 3월 10일 오전 07_53_36.png",
+            "ChatGPT Image 2026년 3월 10일 오전 07_57_25.png",
+            "ChatGPT Image 2026년 3월 10일 오전 07_58_42.png",
+            "ChatGPT Image 2026년 3월 10일 오전 08_02_20.png",
+            "ChatGPT Image 2026년 3월 10일 오전 08_04_37.png",
+            "ChatGPT Image 2026년 3월 10일 오전 08_05_59.png",
+            "ChatGPT Image 2026년 3월 10일 오전 08_07_05.png",
+            "ChatGPT Image 2026년 3월 10일 오전 08_10_53.png",
+            "ChatGPT Image 2026년 3월 10일 오전 08_12_14.png",
+            "ChatGPT Image 2026년 3월 10일 오전 08_13_44.png",
+            "ChatGPT Image 2026년 3월 10일 오전 08_15_23.png",
+            "ChatGPT Image 2026년 3월 10일 오전 08_16_48.png",
+            "ChatGPT Image 2026년 3월 10일 오전 08_17_43.png",
+            "ChatGPT Image 2026년 3월 10일 오전 08_20_39.png",
+            "ChatGPT Image 2026년 3월 10일 오전 08_22_08.png",
+            "ChatGPT Image 2026년 3월 10일 오전 08_27_50.png",
+            "ChatGPT Image 2026년 3월 10일 오전 08_29_10.png",
+            "ChatGPT Image 2026년 3월 10일 오전 08_36_08.png",
+            "ChatGPT Image 2026년 3월 10일 오전 08_39_45.png",
+            "ChatGPT Image 2026년 3월 10일 오전 08_42_45.png",
+            "ChatGPT Image 2026년 3월 10일 오전 08_43_05.png",
+            "ChatGPT Image 2026년 3월 10일 오전 08_45_45.png",
+            "ChatGPT Image 2026년 3월 10일 오전 08_47_56.png",
+            "ChatGPT Image 2026년 3월 10일 오전 08_58_04.png",
+            "ChatGPT Image 2026년 3월 10일 오전 09_00_03.png",
+            "ChatGPT Image 2026년 3월 10일 오전 09_07_59.png",
+            "ChatGPT Image 2026년 3월 10일 오전 09_17_51.png",
+            "ChatGPT Image 2026년 3월 10일 오전 09_19_40.png",
+            "ChatGPT Image 2026년 3월 10일 오전 09_33_11.png",
+            "ChatGPT Image 2026년 3월 10일 오전 09_39_29.png",
+            "ChatGPT Image 2026년 3월 10일 오전 09_41_03.png",
+            "ChatGPT Image 2026년 3월 10일 오전 10_58_49.png",
+            "ChatGPT Image 2026년 3월 10일 오전 11_14_14.png"
+        ];
+        const container = document.getElementById('images');
+        images.forEach(img => {
+            const div = document.createElement('div');
+            div.style.marginBottom = '20px';
+            div.innerHTML = `<h3>${img}</h3><img src="images/external_llm/${img}" style="max-width: 500px;">`;
+            container.appendChild(div);
+        });
+    </script>
+</body>
+
+</html>

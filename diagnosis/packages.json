@@ -1,0 +1,7 @@
+{
+    "packages": [
+        "diagnosis/brand_01/brand_01.json",
+        "diagnosis/brand_02/brand_02.json",
+        "diagnosis/brand_03/brand_03.json"
+    ]
+}

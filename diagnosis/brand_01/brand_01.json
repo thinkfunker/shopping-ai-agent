@@ -1,0 +1,46 @@
+{
+  "packageName": "Brand Preference Diagnosis G01",
+  "questions": [
+    {
+      "topic": "ファッション",
+      "title": "あなたの ファッションスタイルは？",
+      "subtitle": "お好みの スタイルを 選択してください。",
+      "options": [
+        {
+          "id": "modern",
+          "title": "モダン",
+          "img": "images/products/module_fashion_black_coat.png"
+        },
+        {
+          "id": "vintage",
+          "title": "ヴィンテージ",
+          "img": "images/products/module_fashion_cardigan_new.png"
+        }
+      ]
+    }
+  ],
+  "content_pool": {
+    "fashion": [
+      {
+        "id": "suit",
+        "type": "normal",
+        "badge": "BASIC",
+        "title": "オンオフ使用 可能な 優れる カーディガン",
+        "img": "images/products/module_fashion_cardigan_new.png",
+        "bg": "#008487",
+        "isTall": true
+      }
+    ],
+    "game": [
+      {
+        "id": "switch",
+        "type": "normal",
+        "badge": "NINTENDO",
+        "title": "ニンテンドー スイッチ",
+        "img": "images/products/module_game_nintendo.png",
+        "bg": "#E60012",
+        "isWide": true
+      }
+    ]
+  }
+}
