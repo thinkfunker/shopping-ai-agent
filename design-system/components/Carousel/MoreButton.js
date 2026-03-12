@@ -7,7 +7,7 @@
  * @param {string} options.className - Extra classes
  * @returns {HTMLElement}
  */
-function renderMoreButton({
+window.renderMoreButton = function ({
     disabled = false,
     onClick = null,
     className = ''
@@ -31,7 +31,7 @@ function renderMoreButton({
 
     // Assuming renderIcon is available globally or imported
     if (typeof renderIcon === 'function') {
-        iconContainer.appendChild(renderIcon('chevron-right-solid', '24px'));
+        iconContainer.appendChild(renderIcon({ name: 'chevron-right-solid', size: 24 }));
     } else {
         iconContainer.textContent = '>'; // Fallback
     }
@@ -40,4 +40,4 @@ function renderMoreButton({
     container.appendChild(button);
 
     return container;
-}
+};

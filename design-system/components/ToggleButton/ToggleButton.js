@@ -10,12 +10,12 @@
  * @param {string} options.className - Extra classes
  * @returns {HTMLElement}
  */
-function renderToggleButton({
-    label,
+window.renderToggleButton = function renderToggleButton({
+    label = 'Toggle Item',
     selected = false,
     size = 'medium',
     disabled = false,
-    iconName = 'check',
+    iconName = 'ai-shopping',
     onChange = null,
     className = ''
 } = {}) {
@@ -31,10 +31,12 @@ function renderToggleButton({
     function renderContent() {
         button.innerHTML = '';
         if (isSelected) {
-            const iconSize = (size === 'xlarge' || size === 'xxlarge') ? '24px' : '20px';
+            const iconSizeNum = (size === 'xlarge' || size === 'xxlarge') ? 24 : 20;
             const iconContainer = document.createElement('span');
             iconContainer.className = 'toggle-btn-icon';
-            iconContainer.appendChild(renderIcon(iconName, iconSize));
+            if (window.renderIcon) {
+                iconContainer.appendChild(renderIcon({ name: iconName, size: iconSizeNum }));
+            }
             button.appendChild(iconContainer);
         }
 

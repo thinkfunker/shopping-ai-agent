@@ -8,13 +8,20 @@
  * @param {string} params.id - 고유 ID
  * @returns {string} HTML String
  */
-window.renderAvatar = function ({ size = 'medium', type = 'user', src = '', id = '' }) {
-    const avatarSrc = src || (type === 'AI' ? './icons/ai/logo-gradient.svg' : './images/user-avatar.png');
-    const typeClass = type.toLowerCase();
+window.renderAvatar = function ({ size = 'medium', type = 'user', src = '', id = '' } = {}) {
+    const avatarSrc = src || (type === 'AI' ? './design-system/icons/ai/logo-gradient.svg' : './design-system/assets/components/TopNavigation/6cf779209837fe69c1fd4ccbb5d0abc91833f717.png');
 
-    return `
-        <div class="avatar ${size} ${typeClass}" id="${id}">
-            <img src="${avatarSrc}" alt="${type} avatar" />
-        </div>
-    `.trim();
+    const container = document.createElement('div');
+    if (id) container.id = id;
+    container.className = `avatar ${size} ${type.toLowerCase()}`;
+
+    const img = document.createElement('img');
+    img.src = avatarSrc;
+    img.alt = `${type} avatar`;
+    if (type === 'AI') {
+        img.className = 'avatar-ai-logo';
+    }
+
+    container.appendChild(img);
+    return container;
 };

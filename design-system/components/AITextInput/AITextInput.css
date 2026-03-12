@@ -1,6 +1,6 @@
 .ai-text-input-container {
     position: relative;
-    width: 343px;
+    width: 100%;
     background: var(--bg-surface);
     border: var(--border-width-100) solid var(--border-secondary);
     display: flex;
@@ -11,7 +11,7 @@
 
 /* Simple state - rounded pill */
 .ai-text-input-container.simple {
-    height: 48px;
+    height: 56px;
     border-radius: var(--radius-full);
     align-items: center;
     padding: 0 var(--spacing-200) 0 var(--spacing-400);

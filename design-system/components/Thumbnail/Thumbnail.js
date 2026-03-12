@@ -10,7 +10,7 @@
  * @param {string} options.className
  * @returns {HTMLElement}
  */
-function renderThumbnail({
+window.renderThumbnail = function ({
     src = '',
     ratio = '1:1',
     state = 'image',
@@ -41,4 +41,4 @@ function renderThumbnail({
     }
 
     return container;
-}
+};

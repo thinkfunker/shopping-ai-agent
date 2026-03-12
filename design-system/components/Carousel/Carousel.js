@@ -9,7 +9,7 @@
  * @param {string} options.className - Extra classes
  * @returns {HTMLElement}
  */
-function renderCarousel({
+window.renderCarousel = function ({
     type = 'gallery',
     items = [],
     showMore = true,
@@ -48,4 +48,4 @@ function renderCarousel({
 
     container.appendChild(trackWrapper);
     return container;
-}
+};

@@ -74,7 +74,6 @@
     display: flex;
     align-items: center;
     gap: var(--spacing-200);
-    margin-bottom: var(--spacing-100);
 }
 
 .message-ai-name {
@@ -96,8 +95,27 @@
     font-family: var(--font-family-primary);
     font-size: var(--font-size-100);
     line-height: var(--line-height-body-large);
+    /* 26px */
     color: var(--content-primary);
     white-space: pre-wrap;
+    margin: 0;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.message {
+    animation: fadeInUp 0.4s ease-out forwards;
 }
 
 .message-ai-title {

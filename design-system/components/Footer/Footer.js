@@ -7,8 +7,12 @@
  * @param {string} options.className - Extra classes
  * @returns {HTMLElement}
  */
-function renderFooter({
-    links = [],
+window.renderFooter = function renderFooter({
+    links = [
+        { label: 'ヘルプ', href: '#' },
+        { label: '規約', href: '#' },
+        { label: 'プライバシー', href: '#' }
+    ],
     copyright = '© LY Corporation',
     os = 'PC',
     className = ''

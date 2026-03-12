@@ -9,10 +9,10 @@
  * @param {string} options.className - Extra classes
  * @returns {HTMLElement}
  */
-function renderPagination({
+window.renderPagination = function renderPagination({
     type = 'standard',
     current = 1,
-    total = 1,
+    total = 5,
     showNav = true,
     onChange = null,
     className = ''
@@ -32,7 +32,11 @@ function renderPagination({
             const prev = document.createElement('button');
             prev.className = `pagination-item pagination-nav ${current === 1 ? 'disabled' : ''}`;
             prev.disabled = current === 1;
-            prev.innerHTML = '←'; // Placeholder for Icon component logic
+            if (window.renderIcon) {
+                prev.appendChild(renderIcon({ name: 'chevron-left', size: 16 }));
+            } else {
+                prev.innerHTML = '←';
+            }
             prev.addEventListener('click', () => handlePageClick(current - 1));
             container.appendChild(prev);
         }
@@ -74,7 +78,11 @@ function renderPagination({
             const next = document.createElement('button');
             next.className = `pagination-item pagination-nav ${current === total ? 'disabled' : ''}`;
             next.disabled = current === total;
-            next.innerHTML = '→';
+            if (window.renderIcon) {
+                next.appendChild(renderIcon({ name: 'chevron-left', size: 16, className: 'rotate-180' }));
+            } else {
+                next.innerHTML = '→';
+            }
             next.addEventListener('click', () => handlePageClick(current + 1));
             container.appendChild(next);
         }

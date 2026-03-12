@@ -1,7 +1,5 @@
-<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 13.9996 12.9144" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="bars_outline">
-<path d="M13.9996 1.3V0H0V1.3H13.9996Z" fill="var(--fill-0, #17181A)"/>
-<path d="M13.9996 5.8072V7.1072H0V5.8072H13.9996Z" fill="var(--fill-0, #17181A)"/>
-<path d="M13.9996 11.6144V12.9144H0V11.6144H13.9996Z" fill="var(--fill-0, #17181A)"/>
-</g>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M19.0001 6.84285V5.54285H5.00049V6.84285H19.0001Z" fill="#17181A"/>
+  <path d="M19.0001 11.35V12.65H5.00049V11.35H19.0001Z" fill="#17181A"/>
+  <path d="M19.0001 17.1572V18.4572H5.00049V17.1572H19.0001Z" fill="#17181A"/>
 </svg>

@@ -6,12 +6,19 @@
  * @param {string} options.className - Extra classes
  * @returns {HTMLElement}
  */
-function renderMessageList({
+window.renderMessageList = function renderMessageList({
     messages = [],
     className = ''
 } = {}) {
     const container = document.createElement('div');
     container.className = `message-list ${className}`.trim();
+
+    if (messages.length === 0 && typeof renderMessage === 'function') {
+        messages = [
+            renderMessage({ role: 'user', content: 'おすすめの商品を教えてください' }),
+            renderMessage({ role: 'AI', content: 'こちらがおすすめの商品です。' })
+        ];
+    }
 
     messages.forEach(msg => {
         const item = document.createElement('div');

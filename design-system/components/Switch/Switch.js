@@ -7,7 +7,7 @@
  * @param {string} options.className - Additional classes
  * @returns {HTMLElement}
  */
-function renderSwitch({
+window.renderSwitch = function ({
     checked = false,
     disabled = false,
     onChange = null,
@@ -35,4 +35,4 @@ function renderSwitch({
     label.appendChild(track);
 
     return label;
-}
+};

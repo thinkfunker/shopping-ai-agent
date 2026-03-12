@@ -12,7 +12,7 @@
  * @param {string} options.className - Extra classes
  * @returns {HTMLElement}
  */
-function renderGhostButton({
+window.renderGhostButton = function ({
     label = 'Label',
     priority = 'primary',
     size = 'medium',
@@ -67,4 +67,4 @@ function renderGhostButton({
 
     button.appendChild(content);
     return button;
-}
+};

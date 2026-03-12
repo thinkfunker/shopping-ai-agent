@@ -9,7 +9,7 @@
  * @param {string} options.className - Additional classes
  * @returns {HTMLElement}
  */
-function renderRadioButton({
+window.renderRadioButton = function ({
     label = 'Label',
     checked = false,
     disabled = false,
@@ -49,4 +49,4 @@ function renderRadioButton({
     }
 
     return radioLabel;
-}
+};

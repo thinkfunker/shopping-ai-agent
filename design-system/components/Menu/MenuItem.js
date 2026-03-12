@@ -9,7 +9,7 @@
  * @param {Function} options.onClick - Click handler
  * @returns {DocumentFragment}
  */
-function renderMenuItem({
+window.renderMenuItem = function renderMenuItem({
     label = 'Label',
     icon = null,
     divider = false,
@@ -27,7 +27,7 @@ function renderMenuItem({
         const iconSpan = document.createElement('span');
         iconSpan.className = 'menu-item-icon';
         if (typeof renderIcon === 'function') {
-            iconSpan.appendChild(renderIcon(icon, '20px'));
+            iconSpan.appendChild(renderIcon({ name: icon, size: 20 }));
         }
         btn.appendChild(iconSpan);
     }

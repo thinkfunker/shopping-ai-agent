@@ -13,7 +13,7 @@
  * @param {Object} options.secondaryAction - { label, onClick }
  * @returns {HTMLElement|null}
  */
-function renderModal({
+window.renderModal = function ({
     isOpen = false,
     onClose = null,
     os = 'mobile',
@@ -60,7 +60,7 @@ function renderModal({
         const closeBtn = document.createElement('button');
         closeBtn.className = 'modal-close-btn';
         if (typeof renderIcon === 'function') {
-            closeBtn.appendChild(renderIcon('cross-outline', '24px'));
+            closeBtn.appendChild(renderIcon({ name: 'cross-outline', size: 24 }));
         }
         closeBtn.addEventListener('click', onClose);
         header.appendChild(closeBtn);

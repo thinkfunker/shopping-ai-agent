@@ -9,10 +9,10 @@
  * @param {string} options.className - Extra classes
  * @returns {HTMLElement}
  */
-function renderCardExpand({
+window.renderCardExpand = function renderCardExpand({
     type = 'Default',
     expand = false,
-    text = '',
+    text = 'これは詳細テキストのサンプルです。',
     onToggle = null,
     className = ''
 } = {}) {

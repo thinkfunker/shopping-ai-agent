@@ -4,19 +4,22 @@
 
 body {
     margin: 0;
-    padding: 0;
-    background-color: var(--bg-secondary);
-    font-family: var(--font-family-primary);
-    color: var(--content-primary);
 }
 
 .shopping-agent-container {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    max-width: 100%;
-    /* No fixed phone mockup */
+    width: 100%;
+    max-width: 390px;
+    /* Exact iPhone width requested */
+    margin: 0 auto;
     background-color: var(--bg-primary);
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+    border-left: 1px solid var(--border-tertiary);
+    border-right: 1px solid var(--border-tertiary);
+    position: relative;
+    overflow: hidden;
 }
 
 .header-fixed {

@@ -7,9 +7,9 @@
  * @param {Function} options.onSuggestionClick - Click handler
  * @returns {HTMLElement}
  */
-function renderAiSuggestionList({
+window.renderAiSuggestionList = function renderAiSuggestionList({
     title = 'AIに追加の質問',
-    suggestions = [],
+    suggestions = ['もっと安い商品はある？', '送料はいくら？', 'ポイント還元率は？'],
     onSuggestionClick = null
 } = {}) {
     const list = document.createElement('div');
@@ -22,7 +22,7 @@ function renderAiSuggestionList({
     const iconDiv = document.createElement('div');
     iconDiv.className = 'ai-suggestion-header-icon';
     if (typeof renderIcon === 'function') {
-        iconDiv.appendChild(renderIcon('ai-stars', '20px'));
+        iconDiv.appendChild(renderIcon({ name: 'ai-shopping', size: 20 }));
     }
 
     const h3 = document.createElement('h3');
@@ -48,7 +48,7 @@ function renderAiSuggestionList({
         const btn = document.createElement('div');
         btn.className = 'ai-suggestion-btn';
         if (typeof renderIcon === 'function') {
-            btn.appendChild(renderIcon('arrow-up-solid', '20px'));
+            btn.appendChild(renderIcon({ name: 'send', size: 20 }));
         }
 
         item.appendChild(textDiv);

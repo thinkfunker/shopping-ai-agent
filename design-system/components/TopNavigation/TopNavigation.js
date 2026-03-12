@@ -6,16 +6,18 @@
  * @param {string} options.headerTitle - Title text
  * @param {boolean} options.showLeftIcon - Show back button
  * @param {boolean} options.showAvatar - Show user avatar
+ * @param {boolean} options.showDivider - Show bottom divider
  * @param {Array<string>} options.rightIcons - List of icon names
  * @param {Array<string>} options.textButtons - List of text labels (PC only)
  * @returns {HTMLElement}
  */
-function renderTopNavigation({
+window.renderTopNavigation = function ({
     os = 'mobile',
     titleAlign = 'center',
     headerTitle = 'Title text',
     showLeftIcon = true,
     showAvatar = false,
+    showDivider = true,
     rightIcons = ['bars-solid'],
     textButtons = []
 } = {}) {
@@ -24,11 +26,14 @@ function renderTopNavigation({
     const align = isPC ? 'left' : titleAlign;
 
     const nav = document.createElement('nav');
-    nav.className = `top-navigation top-navigation-${os} align-${align}`;
+    nav.className = `top-navigation top-navigation-${os} align-${align}${!showDivider ? ' no-divider' : ''}`;
 
+    // Status bar removed as per request
+    /*
     if (isMobile && typeof renderStatusBar === 'function') {
         nav.appendChild(renderStatusBar());
     }
+    */
 
     const header = document.createElement('div');
     header.className = 'top-navigation-header';
@@ -41,7 +46,17 @@ function renderTopNavigation({
         const backBtn = document.createElement('button');
         backBtn.className = 'top-navigation-icon-btn';
         backBtn.type = 'button';
-        backBtn.innerHTML = '←'; // Simplified for vanilla
+        if (typeof renderIcon === 'function') {
+            backBtn.appendChild(renderIcon({
+                category: 'common',
+                name: 'chevron-left',
+                variant: 'outline',
+                size: 24
+            }));
+        }
+        else {
+            backBtn.textContent = '←';
+        }
         leftArea.appendChild(backBtn);
     }
 
@@ -82,17 +97,21 @@ function renderTopNavigation({
     rightArea.className = 'top-navigation-right';
 
     rightIcons.forEach(iconName => {
+        const [name, variant = 'solid'] = iconName.split('-');
         const btn = document.createElement('button');
         btn.className = 'top-navigation-icon-btn';
-        btn.innerHTML = '☰'; // Simplified icon
+        if (typeof renderIcon === 'function') {
+            btn.appendChild(renderIcon({ category: 'common', name: name, variant: variant, size: 24 }));
+        } else {
+            btn.textContent = '☰';
+        }
         rightArea.appendChild(btn);
     });
 
     if (showAvatar) {
-        const avatar = document.createElement('div');
-        avatar.className = 'top-navigation-avatar';
-        avatar.innerHTML = `<img src="../../assets/components/TopNavigation/6cf779209837fe69c1fd4ccbb5d0abc91833f717.png" alt="User">`;
-        rightArea.appendChild(avatar);
+        if (typeof renderAvatar === 'function') {
+            rightArea.appendChild(renderAvatar({ size: 'small', type: 'user' }));
+        }
     }
     header.appendChild(rightArea);
 

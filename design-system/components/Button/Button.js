@@ -12,7 +12,7 @@
  * @param {string} options.className - Extra classes
  * @returns {HTMLElement}
  */
-function renderButton({
+window.renderButton = function ({
     priority = 'solid-primary',
     size = 'medium',
     label = '',
@@ -33,10 +33,12 @@ function renderButton({
     stateLayer.className = 'btn-state-layer';
     button.appendChild(stateLayer);
 
+    const iconSize = size === 'xxlarge' ? 24 : 20;
+
     if (leftIcon) {
         const span = document.createElement('span');
         span.className = 'btn-icon';
-        span.appendChild(renderIcon(leftIcon, size === 'xxlarge' ? '24px' : '20px'));
+        span.appendChild(renderIcon({ name: leftIcon, size: iconSize }));
         button.appendChild(span);
     }
 
@@ -50,7 +52,7 @@ function renderButton({
     if (rightIcon) {
         const span = document.createElement('span');
         span.className = 'btn-icon';
-        span.appendChild(renderIcon(rightIcon, size === 'xxlarge' ? '24px' : '20px'));
+        span.appendChild(renderIcon({ name: rightIcon, size: iconSize }));
         button.appendChild(span);
     }
 
@@ -59,4 +61,4 @@ function renderButton({
     }
 
     return button;
-}
+};

@@ -6,7 +6,7 @@
  * @param {string} options.className - Extra classes
  * @returns {HTMLElement}
  */
-function renderDivider({
+window.renderDivider = function ({
     type = 'horizontal',
     spacing = 'medium',
     className = ''
@@ -14,4 +14,4 @@ function renderDivider({
     const divider = document.createElement('div');
     divider.className = `divider divider-${type} ${spacing !== 'medium' ? `divider-spacing-${spacing}` : ''} ${className}`.trim();
     return divider;
-}
+};

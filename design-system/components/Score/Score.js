@@ -10,7 +10,7 @@
  * @param {string} options.className - Extra classes
  * @returns {HTMLElement}
  */
-function renderScore({
+window.renderScore = function renderScore({
     value = 5.0,
     count = 999,
     type = 'default',
@@ -33,19 +33,27 @@ function renderScore({
     starGroup.className = 'score-stars';
 
     if (type === 'default') {
+        const fullStars = Math.floor(value);
+        const hasHalf = value % 1 >= 0.5;
         for (let i = 1; i <= 5; i++) {
-            const star = document.createElement('span');
-            star.className = 'score-star';
-            if (value >= i) star.textContent = '★';
-            else if (value >= i - 0.5) star.textContent = '☆'; // Simplified for vanilla
-            else star.textContent = '☆';
-            starGroup.appendChild(star);
+            let iconName = 'star-empty';
+            let variant = 'outline';
+            if (i <= fullStars) {
+                iconName = 'star-full';
+                variant = 'solid';
+            } else if (i === fullStars + 1 && hasHalf) {
+                iconName = 'star-half';
+                variant = 'solid';
+            }
+            if (typeof renderIcon === 'function') {
+                const icon = renderIcon({ category: 'common', name: iconName, variant: variant, size: size === 'small' ? 16 : 20 });
+                starGroup.appendChild(icon);
+            }
         }
     } else {
-        const star = document.createElement('span');
-        star.className = 'score-star';
-        star.textContent = '★';
-        starGroup.appendChild(star);
+        if (typeof renderIcon === 'function') {
+            starGroup.appendChild(renderIcon({ category: 'common', name: 'star-full', variant: 'solid', size: size === 'small' ? 16 : 20 }));
+        }
     }
     container.appendChild(starGroup);
 

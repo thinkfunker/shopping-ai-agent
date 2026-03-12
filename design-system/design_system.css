@@ -35,37 +35,33 @@
     --blue-14: #020f26;
 
     /* Semantic Colors - Background */
-    --bg-primary: #ffffff;
-    --bg-secondary: #f0f2f7;
-    --bg-tertiary: #e4e7ed;
+    --bg-primary: var(--bg-color);
+    --bg-secondary: var(--bg-color);
+    --bg-tertiary: var(--border-tertiary);
     --bg-key: #0f62fe;
     --bg-success: #147f3a;
     --bg-alert: #d62228;
     --bg-warning: #a86400;
     --bg-disabled: #e4e7ed;
-    --bg-surface: #ffffff;
+    --bg-surface: var(--bg-color);
+    --bg-elevated-1: var(--bg-color);
     --bg-scrim: rgba(0, 0, 0, 0.48);
     /* #0000007a */
 
     /* Semantic Colors - Content */
-    --content-primary: #17181a;
-    --content-secondary: rgba(0, 0, 0, 0.76);
-    /* #000000c2 */
-    --content-tertiary: rgba(0, 0, 0, 0.56);
-    /* #0000008f */
+    --content-primary: var(--text-color);
+    --content-secondary: var(--text-color);
+    --content-tertiary: rgba(var(--text-rgb), 0.56);
     --content-key: #0f62fe;
     --content-success: #147f3a;
     --content-alert: #d62228;
-    --content-disabled: rgba(0, 0, 0, 0.28);
-    /* #00000047 */
+    --content-disabled: rgba(var(--text-rgb), 0.28);
     --content-white: #ffffff;
 
     /* Semantic Colors - Border */
-    --border-primary: rgba(0, 0, 0, 0.48);
-    /* #0000007a */
-    --border-secondary: rgba(0, 0, 0, 0.16);
-    /* #00000029 */
-    --border-tertiary: rgba(0, 0, 0, 0.08);
+    --border-primary: rgba(var(--text-rgb), 0.48);
+    --border-secondary: rgba(var(--text-rgb), 0.16);
+    --border-tertiary: rgba(var(--text-rgb), 0.08);
     /* #00000014 */
     --border-key: #2c75fe;
 
@@ -84,7 +80,7 @@
     /* [PROTECTED] This file is part of the core design system. 
    Modifications require explicit user confirmation. 
    See .agent/rules.md for the protocol. */
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:ital,wght@0,100..900;1,100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Noto+Sans+JP:wght@100..900&display=swap');
     --font-weight-regular: 400;
     --font-weight-bold: 700;
 
@@ -160,4 +156,92 @@
     font-weight: var(--font-weight-bold);
     font-size: var(--font-size-075);
     line-height: var(--line-height-label-small);
+}
+
+/* --- Added Typography & Color Variables --- */
+:root {
+    /* Typography */
+    --base-font-size: 17px;
+    --title-font-size: 48px;
+
+    /* Colors (Light Mode Default) */
+    --bg-color: #ffffff;
+    --bg-rgb: 255, 255, 255;
+    --text-color: #1d1d1f;
+    --text-rgb: 29, 29, 31;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: var(--base-font-size);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Smooth transition for dark mode */
+}
+
+/* 2. For headings and emphasized text (Desktop) */
+h1,
+h2,
+h3,
+.title-text {
+    font-family: "SF Pro Display", "SF Pro Icons", "Apple SD Gothic Neo", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: var(--title-font-size);
+    font-weight: 600;
+    line-height: 1.08349;
+    letter-spacing: -0.003em;
+}
+
+/* 3. For standard body text (Desktop) */
+p,
+span,
+.body-text {
+    font-family: "SF Pro Text", "SF Pro Icons", "Apple SD Gothic Neo", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.47059;
+    letter-spacing: -0.022em;
+}
+
+/* 4. Responsive adjustments for mobile devices */
+@media only screen and (max-width: 768px) {
+    :root {
+        --base-font-size: 15px;
+        --title-font-size: 32px;
+    }
+
+    body {
+        line-height: 1.4;
+    }
+
+    h1,
+    h2,
+    h3,
+    .title-text {
+        line-height: 1.125;
+        letter-spacing: 0.004em;
+    }
+
+    p,
+    span,
+    .body-text {
+        line-height: 1.46667;
+        letter-spacing: -0.016em;
+    }
+}
+
+/* 5. Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Colors (Dark Mode) */
+        --bg-color: #000000;
+        --bg-rgb: 0, 0, 0;
+        --bg-elevated-1: #1c1c1e;
+        /* Apple Style Dark Elevated */
+        --text-color: #f5f5f7;
+        --text-rgb: 245, 245, 247;
+    }
 }

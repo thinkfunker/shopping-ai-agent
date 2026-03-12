@@ -10,7 +10,7 @@
  * @param {string} options.className - Additional classes
  * @returns {HTMLElement}
  */
-function renderTag({
+window.renderTag = function ({
     label = 'Label',
     style = 'solid',
     priority = 'secondary',
@@ -23,10 +23,14 @@ function renderTag({
     el.className = `tag tag-style-${style} tag-priority-${priority} tag-size-${size} tag-shape-${shape} ${className}`.trim();
 
     if (icon) {
-        const iconEl = document.createElement('span');
-        iconEl.className = 'tag-icon';
-        iconEl.textContent = icon; // Placeholder for actual icon rendering
-        el.appendChild(iconEl);
+        if (typeof renderIcon === 'function') {
+            const iconEl = renderIcon({
+                name: icon,
+                size: size === 'small' ? 12 : 16
+            });
+            iconEl.className += ' tag-icon';
+            el.appendChild(iconEl);
+        }
     }
 
     const labelEl = document.createElement('span');
@@ -35,4 +39,4 @@ function renderTag({
     el.appendChild(labelEl);
 
     return el;
-}
+};

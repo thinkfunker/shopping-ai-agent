@@ -5,7 +5,7 @@
  * @param {string} options.className - Additional classes
  * @returns {HTMLElement}
  */
-function renderAIBackground({
+window.renderAIBackground = function renderAIBackground({
     darkMode = false,
     className = ''
 } = {}) {
@@ -15,8 +15,8 @@ function renderAIBackground({
     const img = document.createElement('img');
     // Paths relative to where this script would typically be used in a web context
     img.src = darkMode
-        ? '../../assets/components/AIBackground/54e50cd0ba2cd08962dc2d6898f736913685e123.png'
-        : '../../assets/components/AIBackground/f87ad5e8ecc0d4c8530a5f042f6532b2afb56c6e.png';
+        ? './design-system/assets/components/AIBackground/54e50cd0ba2cd08962dc2d6898f736913685e123.png'
+        : './design-system/assets/components/AIBackground/f87ad5e8ecc0d4c8530a5f042f6532b2afb56c6e.png';
     img.className = 'ai-background-image';
     img.setAttribute('aria-hidden', 'true');
 

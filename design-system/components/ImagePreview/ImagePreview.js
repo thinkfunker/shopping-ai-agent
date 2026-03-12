@@ -16,13 +16,13 @@
  * @param {boolean} options.showBottomArea - Whether to show info at bottom
  * @returns {HTMLElement|null}
  */
-function renderImagePreview({
+window.renderImagePreview = function renderImagePreview({
     isOpen = false,
-    imageSrc = '',
-    title = '',
+    imageSrc = 'https://picsum.photos/800/600',
+    title = 'Sample Image Title',
     score = 5.0,
     reviewCount = 999,
-    tags = [],
+    tags = ['Tag 1', 'Tag 2'],
     serviceLink = '#',
     serviceName = 'Service Name',
     onClose = null,
@@ -39,7 +39,7 @@ function renderImagePreview({
     const closeBtn = document.createElement('button');
     closeBtn.className = 'image-preview-close-btn';
     if (typeof renderIcon === 'function') {
-        closeBtn.appendChild(renderIcon('cross-solid', '24px'));
+        closeBtn.appendChild(renderIcon({ name: 'plus', size: 24, className: 'rotate-45' })); // Using plus rotated as cross
     }
     closeBtn.addEventListener('click', onClose);
     overlay.appendChild(closeBtn);
@@ -63,7 +63,7 @@ function renderImagePreview({
             priority: 'solid-primary',
             size: 'medium',
             iconOnly: true,
-            icon: 'chevron-left-outline',
+            leftIcon: 'chevron-left',
             onClick: onPrev
         }));
         main.appendChild(prevWrap);
@@ -76,7 +76,8 @@ function renderImagePreview({
             priority: 'solid-primary',
             size: 'medium',
             iconOnly: true,
-            icon: 'chevron-right-outline',
+            leftIcon: 'chevron-left',
+            className: 'rotate-180',
             onClick: onNext
         }));
         main.appendChild(nextWrap);
@@ -99,11 +100,10 @@ function renderImagePreview({
 
         if (typeof renderScore === 'function') {
             textGroup.appendChild(renderScore({
-                score,
+                value: score,
                 count: reviewCount,
-                showLeadingText: true,
-                showTrailingText: true,
-                color: 'white'
+                leadingText: true,
+                trailingText: true
             }));
         }
 
@@ -113,8 +113,8 @@ function renderImagePreview({
             tags.forEach(t => {
                 tagContainer.appendChild(renderTag({
                     label: t,
-                    type: 'gradient',
-                    size: 'xsmall'
+                    style: 'gradient',
+                    size: 'small'
                 }));
             });
             textGroup.appendChild(tagContainer);
@@ -134,7 +134,7 @@ function renderImagePreview({
         const moreBtn = document.createElement('button');
         moreBtn.className = 'image-preview-more-btn';
         if (typeof renderIcon === 'function') {
-            moreBtn.appendChild(renderIcon('ellipsis-vertical-solid', '24px'));
+            moreBtn.appendChild(renderIcon({ name: 'menu', size: 24 }));
         }
         serviceRow.appendChild(moreBtn);
 

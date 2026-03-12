@@ -12,13 +12,13 @@
  * @param {string} options.className - Additional classes
  * @returns {HTMLElement}
  */
-function renderMessage({
+window.renderMessage = function renderMessage({
     role = 'user',
-    content = '',
-    agentName = 'Agent Name',
+    content = 'こんにちは！何かお手伝いしましょうか？',
+    agentName = 'Agent i',
     background = false,
     type = 'text',
-    imageSrc = null,
+    imageSrc = 'https://picsum.photos/300/200',
     os = 'mobile',
     state = 'enabled',
     className = ''
@@ -41,7 +41,15 @@ function renderMessage({
         if (!background) {
             const header = document.createElement('div');
             header.className = 'message-ai-header';
-            header.innerHTML = `<div class="avatar avatar-medium">AI</div><div class="message-ai-name">${agentName}</div>`;
+
+            if (typeof renderAvatar === 'function') {
+                header.appendChild(renderAvatar({ type: 'AI', size: 'medium' }));
+            }
+
+            const nameDiv = document.createElement('div');
+            nameDiv.className = 'message-ai-name';
+            nameDiv.textContent = agentName;
+            header.appendChild(nameDiv);
             bubble.appendChild(header);
         }
 
@@ -63,10 +71,10 @@ function renderMessage({
             bubble.appendChild(imgCont);
         } else {
             if (!background) {
-                const av = document.createElement('div');
-                av.className = 'avatar avatar-medium';
-                av.textContent = 'U';
-                bubble.appendChild(av);
+                if (typeof renderAvatar === 'function') {
+                    const av = renderAvatar({ type: 'user', size: 'medium' });
+                    bubble.appendChild(av);
+                }
             }
             const contentDiv = document.createElement('div');
             contentDiv.className = 'message-user-content';

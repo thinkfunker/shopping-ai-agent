@@ -9,7 +9,7 @@
  * @param {string} options.className - Extra classes
  * @returns {HTMLElement}
  */
-function renderTooltip({
+window.renderTooltip = function ({
     title = '',
     text = 'Tool tip message',
     position = 'top',
@@ -57,30 +57,4 @@ function renderTooltip({
 
     tooltip.appendChild(container);
     return tooltip;
-}
-
-/**
- * Utility to attach tooltip to an element
- * @param {HTMLElement} target - The element to anchor to
- * @param {Object} tooltipOptions - Same options as renderTooltip
- */
-function attachTooltip(target, tooltipOptions) {
-    const tooltip = renderTooltip(tooltipOptions);
-    tooltip.style.display = 'none';
-
-    // Simplistic wrapping for positioning
-    const wrapper = document.createElement('div');
-    wrapper.style.position = 'relative';
-    wrapper.style.display = 'inline-block';
-
-    target.parentNode.insertBefore(wrapper, target);
-    wrapper.appendChild(target);
-    wrapper.appendChild(tooltip);
-
-    target.addEventListener('mouseenter', () => {
-        tooltip.style.display = 'flex';
-    });
-    target.addEventListener('mouseleave', () => {
-        tooltip.style.display = 'none';
-    });
-}
+};

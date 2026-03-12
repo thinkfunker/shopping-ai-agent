@@ -12,7 +12,7 @@
  * @param {string} options.className - Extra classes
  * @returns {HTMLElement}
  */
-function renderListItem({
+window.renderListItem = function ({
     type = 'default',
     title = '',
     subtext = '',

@@ -8,7 +8,7 @@
  * @param {Function} options.onButtonClick - Action handler
  * @returns {HTMLElement}
  */
-function renderToast({
+window.renderToast = function ({
     type = 'info',
     title = 'Title text',
     description = 'Text',
@@ -62,4 +62,4 @@ function renderToast({
     }
 
     return el;
-}
+};

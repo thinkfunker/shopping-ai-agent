@@ -7,7 +7,7 @@
  * @param {string} options.className - Extra classes
  * @returns {HTMLElement}
  */
-function renderProgressIndicator({
+window.renderProgressIndicator = function ({
     type = 'circle',
     size = 'medium',
     value = 0,
@@ -26,4 +26,4 @@ function renderProgressIndicator({
     }
 
     return indicator;
-}
+};

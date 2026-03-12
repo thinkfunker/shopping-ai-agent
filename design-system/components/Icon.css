@@ -1,0 +1,28 @@
+.figma-icon-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.figma-icon-wrapper:active {
+    transform: scale(0.9);
+}
+
+.figma-icon {
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Rotation utility for reusing icons */
+.rotate-90 {
+    transform: rotate(90deg);
+}
+
+.rotate-180 {
+    transform: rotate(180deg);
+}
+
+.rotate-270 {
+    transform: rotate(270deg);
+}

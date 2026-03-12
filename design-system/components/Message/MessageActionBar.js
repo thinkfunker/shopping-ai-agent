@@ -7,7 +7,7 @@
  * @param {string} options.className - Additional classes
  * @returns {HTMLElement}
  */
-function renderMessageActionBar({
+window.renderMessageActionBar = function renderMessageActionBar({
     type = 'full',
     feedback = { good: false, bad: false },
     onAction = null,
@@ -28,7 +28,7 @@ function renderMessageActionBar({
     const createBtn = (actionKey, iconName, isBad = false, selected = false) => {
         const btn = document.createElement('button');
         btn.className = `message-action-btn ${isBad ? 'bad-icon' : ''} ${selected ? 'selected' : ''}`.trim();
-        btn.innerHTML = `<span class="icon">${iconName}</span>`; // Placeholder for real icons
+        btn.innerHTML = `<span class="icon">${iconName}</span>`;
         btn.title = actionKey;
         btn.addEventListener('click', () => handleAction(actionKey));
         return btn;

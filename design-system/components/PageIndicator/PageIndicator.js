@@ -7,7 +7,7 @@
  * @param {string} options.className - Extra classes
  * @returns {HTMLElement}
  */
-function renderPageIndicator({
+window.renderPageIndicator = function renderPageIndicator({
     type = 'dot',
     current = 1,
     total = 3,

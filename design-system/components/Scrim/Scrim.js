@@ -6,7 +6,7 @@
  * @param {string} options.className - Extra classes
  * @returns {HTMLElement}
  */
-function renderScrim({
+window.renderScrim = function renderScrim({
     visible = false,
     onClick = null,
     className = ''

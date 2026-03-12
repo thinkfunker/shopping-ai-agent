@@ -8,7 +8,7 @@
  * @param {string} options.className - Extra classes
  * @returns {HTMLElement}
  */
-function renderCheckbox({
+window.renderCheckbox = function ({
     label = '',
     checked = false,
     disabled = false,
@@ -30,8 +30,9 @@ function renderCheckbox({
     const iconDiv = document.createElement('div');
     iconDiv.className = 'checkbox-icon';
 
+    // Using renderIcon for consistency if possible, or correcting the path
     const iconImg = document.createElement('img');
-    iconImg.src = '/assets/icons/common/check-solid.svg';
+    iconImg.src = './design-system/icons/common/check-solid.svg';
     iconImg.alt = 'check';
 
     iconDiv.appendChild(iconImg);
@@ -62,4 +63,4 @@ function renderCheckbox({
     });
 
     return labelElement;
-}
+};

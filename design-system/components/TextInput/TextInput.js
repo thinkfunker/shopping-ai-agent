@@ -8,7 +8,7 @@
  * @param {boolean} options.showLeftIcon - Show pen icon
  * @returns {HTMLElement}
  */
-function renderTextInput({
+window.renderTextInput = function ({
     value = '',
     placeholder = 'Placeholder',
     state = 'enabled',
@@ -75,4 +75,4 @@ function renderTextInput({
 
     container.appendChild(wrapper);
     return container;
-}
+};

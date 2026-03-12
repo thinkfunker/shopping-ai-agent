@@ -8,7 +8,7 @@
  * @param {Function} options.onClick - Click handler
  * @returns {HTMLElement}
  */
-function renderTabItem({
+window.renderTabItem = function ({
     label = 'Label',
     selected = false,
     badge = null,
@@ -54,17 +54,9 @@ function renderTabItem({
     }
 
     return btn;
-}
+};
 
-/**
- * Render a Tab container
- * @param {Object} options
- * @param {string} options.type - fixed | flexible
- * @param {string} options.emphasis - default | subtle
- * @param {Array<Object>} options.items - [ { label, selected, onClick, badge, dotBadge } ]
- * @returns {HTMLElement}
- */
-function renderTabs({
+window.renderTabs = function ({
     type = 'fixed',
     emphasis = 'default',
     items = []
@@ -77,4 +69,4 @@ function renderTabs({
     });
 
     return nav;
-}
+};

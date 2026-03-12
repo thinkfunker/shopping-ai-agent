@@ -33,6 +33,56 @@
     border: 1px solid var(--gradient-border-secondary-stop-1, rgba(168, 61, 235, 0.16));
 }
 
+.chip-hero-category {
+    height: 48px;
+    border-radius: var(--radius-full, 100px);
+    background: var(--bg-primary, white);
+    border: 1px solid rgba(168, 61, 235, 0.16);
+    padding: 0 16px 0 8px;
+    gap: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1;
+    /* Allow sharing width in grid */
+}
+
+.chip-hero-category .chip-icon-container {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--gradient-ai-surface);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.chip-hero-category .chip-label {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--content-primary);
+}
+
+.chip-suggestion-card {
+    background: var(--bg-primary, white);
+    border: 1px solid var(--border-tertiary);
+    border-radius: 16px;
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+    height: 48px;
+    /* Matches Figma 48px */
+    white-space: normal;
+    text-align: left;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 14px;
+    line-height: var(--line-height-body-medium, 22px);
+}
+
 /* State Layer - absolute overlay for precise states */
 .chip-state-layer {
     position: absolute;
