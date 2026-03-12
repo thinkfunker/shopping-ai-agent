@@ -102,11 +102,23 @@
 
         .sidebar-header h1 {
             margin: 0;
-            font-size: 14px;
-            font-weight: 700;
-            letter-spacing: 0.5px;
+            font-size: 12px;
+            /* Slightly smaller for elegance */
+            font-weight: 800;
+            letter-spacing: 1.2px;
             text-transform: uppercase;
             color: #000;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sidebar-header h1::before {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 12px;
+            background: #000;
         }
 
         .sidebar-menu {
@@ -120,12 +132,12 @@
         }
 
         .menu-title {
-            padding: 0 12px 8px;
-            font-size: 10px;
+            padding: 0 12px 10px;
+            font-size: 9px;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #999;
-            font-weight: 600;
+            letter-spacing: 1.5px;
+            color: #bbb;
+            font-weight: 700;
         }
 
         .menu-item {
@@ -164,7 +176,8 @@
             border-bottom: 1px solid var(--border-color);
             display: flex;
             align-items: center;
-            padding: 0 32px;
+            padding: 0 24px;
+            /* Unified padding */
             justify-content: space-between;
         }
 
@@ -172,16 +185,6 @@
             font-size: 13px;
             font-weight: 600;
             color: #000;
-        }
-
-        .top-bar {
-            height: var(--header-height);
-            background: #fff;
-            border-bottom: 1px solid var(--border-color);
-            display: flex;
-            align-items: center;
-            padding: 0 24px;
-            justify-content: space-between;
         }
 
         .preview-area {
@@ -334,11 +337,12 @@
         }
 
         .modal-title {
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 700;
             color: #000;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
+            margin-bottom: 24px;
         }
 
         .color-preview-large {
@@ -364,10 +368,21 @@
             margin-bottom: 20px;
         }
 
-        .info-value.variable {
-            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-            color: #000;
+        .mode-toggles button {
+            background: none;
+            border: 1px solid #eee;
+            padding: 6px 14px;
+            border-radius: 100px;
+            font-size: 11px;
             font-weight: 500;
+            color: #666;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .mode-toggles button:hover {
+            border-color: #000;
+            color: #000;
         }
     </style>
 </head>
@@ -485,76 +500,76 @@
             {
                 section: 'Core UI',
                 items: [
-                    { id: 'button', name: 'Button' },
-                    { id: 'ghost-button', name: 'Ghost Button' },
                     { id: 'avatar', name: 'Avatar' },
                     { id: 'badge', name: 'Badge' },
+                    { id: 'button', name: 'Button' },
                     { id: 'chip', name: 'Chip' },
-                    { id: 'tag', name: 'Tag' },
-                    { id: 'divider', name: 'Divider' }
+                    { id: 'divider', name: 'Divider' },
+                    { id: 'ghost-button', name: 'Ghost Button' },
+                    { id: 'tag', name: 'Tag' }
                 ]
             },
             {
                 section: 'Selection & Forms',
                 items: [
+                    { id: 'ai-input', name: 'AI Text Input' },
                     { id: 'checkbox', name: 'Checkbox' },
                     { id: 'radio', name: 'Radio Button' },
                     { id: 'switch', name: 'Switch' },
-                    { id: 'toggle-btn', name: 'Toggle Button' },
                     { id: 'text-input', name: 'Text Input' },
-                    { id: 'ai-input', name: 'AI Text Input' }
+                    { id: 'toggle-btn', name: 'Toggle Button' }
                 ]
             },
             {
                 section: 'Navigation',
                 items: [
-                    { id: 'top-nav', name: 'Top Navigation' },
-                    { id: 'tabs', name: 'Tabs' },
-                    { id: 'pagination', name: 'Pagination' },
-                    { id: 'page-indicator', name: 'Page Indicator' },
+                    { id: 'footer', name: 'Footer' },
                     { id: 'menu', name: 'Menu' },
-                    { id: 'footer', name: 'Footer' }
+                    { id: 'page-indicator', name: 'Page Indicator' },
+                    { id: 'pagination', name: 'Pagination' },
+                    { id: 'tabs', name: 'Tabs' },
+                    { id: 'top-nav', name: 'Top Navigation' }
                 ]
             },
             {
                 section: 'Feedback & Overlays',
                 items: [
                     { id: 'modal', name: 'Modal' },
+                    { id: 'progress', name: 'Progress Indicator' },
                     { id: 'scrim', name: 'Scrim' },
                     { id: 'toast', name: 'Toast' },
-                    { id: 'tooltip', name: 'Tooltip' },
-                    { id: 'progress', name: 'Progress Indicator' }
+                    { id: 'tooltip', name: 'Tooltip' }
                 ]
             },
             {
                 section: 'Complex UI',
                 items: [
                     { id: 'accordion', name: 'Accordion' },
-                    { id: 'list-item', name: 'List Item' },
-                    { id: 'carousel', name: 'Carousel' },
+                    { id: 'ai-bg', name: 'AI Background' },
                     { id: 'card-expand', name: 'Card Expand' },
-                    { id: 'score', name: 'Score' },
-                    { id: 'thumbnail', name: 'Thumbnail' },
+                    { id: 'carousel', name: 'Carousel' },
                     { id: 'image-preview', name: 'Image Preview' },
-                    { id: 'ai-bg', name: 'AI Background' }
+                    { id: 'list-item', name: 'List Item' },
+                    { id: 'score', name: 'Score' },
+                    { id: 'thumbnail', name: 'Thumbnail' }
                 ]
             },
             {
                 section: 'AI Templates',
                 items: [
-                    { id: 'message', name: 'Message' },
-                    { id: 'message-action-bar', name: 'Message Action Bar' },
-                    { id: 'message-list', name: 'Message List' },
+                    { id: 'ai-input-template', name: 'AI Input Template' },
                     { id: 'ai-suggestion', name: 'AI Suggestion List' },
                     { id: 'ai-suggestion-chips', name: 'AI Suggestion Chips' },
                     { id: 'base-card', name: 'Base Card' },
-                    { id: 'media-card', name: 'Media Card' },
-                    { id: 'list-card', name: 'List Card' },
-                    { id: 'review-card', name: 'Review Card' },
-                    { id: 'interaction-card', name: 'Interaction Card' },
                     { id: 'bottom-button', name: 'Bottom Button Bar' },
                     { id: 'bottom-sheet', name: 'Bottom Sheet' },
-                    { id: 'ai-input-template', name: 'AI Input Template' }
+                    { id: 'interaction-card', name: 'Interaction Card' },
+                    { id: 'list-card', name: 'List Card' },
+                    { id: 'media-card', name: 'Media Card' },
+                    { id: 'message', name: 'Message' },
+                    { id: 'message-action-bar', name: 'Message Action Bar' },
+                    { id: 'message-list', name: 'Message List' },
+                    { id: 'review-card', name: 'Review Card' }
                 ]
             }
         ];
@@ -623,44 +638,56 @@
             }
 
             switch (item.id) {
+                // --- Foundations ---
                 case 'colors': renderColors(canvas); break;
                 case 'typography': renderTypography(canvas); break;
-                case 'icon-explorer': renderIconExplorer(canvas); break;
                 case 'spacing-radius': renderSpacingRadius(canvas); break;
                 case 'gradients-effects': renderGradientsEffects(canvas); break;
-                case 'chip': setupChipStory(canvas, controls); break;
-                case 'avatar': setupAvatarStory(canvas, controls); break;
+                case 'icon-explorer': renderIconExplorer(canvas); break;
+
+                // --- Core UI ---
                 case 'button': setupButtonStory(canvas, controls); break;
+                case 'ghost-button': setupGhostButtonStory(canvas, controls); break;
+                case 'avatar': setupAvatarStory(canvas, controls); break;
                 case 'badge': setupBadgeStory(canvas, controls); break;
-                case 'accordion': setupAccordionStory(canvas, controls); break;
+                case 'chip': setupChipStory(canvas, controls); break;
+                case 'tag': setupTagStory(canvas, controls); break;
+                case 'divider': setupDividerStory(canvas, controls); break;
+
+                // --- Selection & Forms ---
                 case 'checkbox': setupCheckboxStory(canvas, controls); break;
                 case 'radio': setupRadioButtonStory(canvas, controls); break;
                 case 'switch': setupSwitchStory(canvas, controls); break;
+                case 'toggle-btn': setupToggleBtnStory(canvas, controls); break;
                 case 'text-input': setupTextInputStory(canvas, controls); break;
-                case 'tag': setupTagStory(canvas, controls); break;
-                case 'ghost-button': setupGhostButtonStory(canvas, controls); break;
-                case 'divider': setupDividerStory(canvas, controls); break;
-                case 'modal': setupModalStory(canvas, controls); break;
+                case 'ai-input': setupAIInputStory(canvas, controls); break;
+
+                // --- Navigation ---
+                case 'top-nav': setupTopNavStory(canvas, controls); break;
                 case 'tabs': setupTabsStory(canvas, controls); break;
+                case 'pagination': setupPaginationStory(canvas, controls); break;
+                case 'page-indicator': setupPageIndicatorStory(canvas, controls); break;
+                case 'menu': setupMenuStory(canvas, controls); break;
+                case 'footer': setupFooterStory(canvas, controls); break;
+
+                // --- Feedback & Overlays ---
+                case 'modal': setupModalStory(canvas, controls); break;
+                case 'scrim': setupScrimStory(canvas, controls); break;
+                case 'toast': setupToastStory(canvas, controls); break;
+                case 'tooltip': setupTooltipStory(canvas, controls); break;
+                case 'progress': setupProgressStory(canvas, controls); break;
+
+                // --- Complex UI ---
+                case 'accordion': setupAccordionStory(canvas, controls); break;
                 case 'list-item': setupListItemStory(canvas, controls); break;
                 case 'carousel': setupCarouselStory(canvas, controls); break;
-                case 'tooltip': setupTooltipStory(canvas, controls); break;
-                case 'toast': setupToastStory(canvas, controls); break;
-                case 'thumbnail': setupThumbnailStory(canvas, controls); break;
-                case 'progress': setupProgressStory(canvas, controls); break;
-                case 'top-nav': setupTopNavStory(canvas, controls); break;
-                case 'ai-input': setupAIInputStory(canvas, controls); break;
-                case 'ai-bg': setupAIBgStory(canvas, controls); break;
                 case 'card-expand': setupCardExpandStory(canvas, controls); break;
-                case 'carousel': setupCarouselStory(canvas, controls); break;
-                case 'footer': setupFooterStory(canvas, controls); break;
-                case 'pagination': setupPaginationStory(canvas, controls); break;
                 case 'score': setupScoreStory(canvas, controls); break;
-                case 'scrim': setupScrimStory(canvas, controls); break;
-                case 'toggle-btn': setupToggleBtnStory(canvas, controls); break;
-                case 'page-indicator': setupPageIndicatorStory(canvas, controls); break;
+                case 'thumbnail': setupThumbnailStory(canvas, controls); break;
                 case 'image-preview': setupImagePreviewStory(canvas, controls); break;
-                case 'menu': setupMenuStory(canvas, controls); break;
+                case 'ai-bg': setupAIBgStory(canvas, controls); break;
+
+                // --- AI Templates ---
                 case 'message': setupMessageStory(canvas, controls); break;
                 case 'message-action-bar': setupMessageActionBarStory(canvas, controls); break;
                 case 'message-list': setupMessageListStory(canvas, controls); break;
@@ -777,8 +804,8 @@
             for (const [groupName, vars] of Object.entries(colorGroups)) {
                 html += `
                     <div>
-                        <h4 style="margin-bottom:16px; font-size: 14px; text-transform: uppercase; color: var(--content-secondary); letter-spacing: 1px;">${groupName}</h4>
-                        <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap:12px;">
+                        <h4 style="margin-bottom:16px; font-size: 10px; text-transform: uppercase; color: #999; letter-spacing: 1.5px; font-weight: 700;">${groupName}</h4>
+                        <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap:16px;">
                 `;
                 vars.forEach(v => {
                     const meta = metadata.colors[v] || {};
@@ -852,8 +879,8 @@
                 if (categories[catId]) {
                     html += `
                         <div class="icon-section-group" id="section-${catId}">
-                            <h4 style="margin-bottom:16px; font-size: 14px; text-transform: uppercase; color: var(--content-secondary); letter-spacing: 1px;">${catLabels[catId]}</h4>
-                            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 16px;">
+                            <h4 style="margin-bottom:16px; font-size: 10px; text-transform: uppercase; color: #999; letter-spacing: 1.5px; font-weight: 700;">${catLabels[catId]}</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 16px;">
                     `;
 
                     categories[catId].sort().forEach(name => {
