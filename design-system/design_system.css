@@ -34,35 +34,49 @@
     --blue-13: #041d4a;
     --blue-14: #020f26;
 
+    /* Primitive Colors - Gray */
+    --gray-1: #f5f5f7;
+    --gray-2: #e8e8ed;
+    --gray-3: #d2d2d7;
+    --gray-4: #bcbcc3;
+    --gray-5: #a1a1aa;
+    --gray-6: #86868b;
+    --gray-7: #6e6e73;
+    --gray-8: #48484a;
+    --gray-9: #3a3a3c;
+    --gray-10: #2c2c2e;
+    --gray-11: #1c1c1e;
+    --gray-12: #121212;
+    --gray-13: #0a0a0a;
+    --gray-14: #000000;
+
     /* Semantic Colors - Background */
-    --bg-primary: var(--bg-color);
-    --bg-secondary: var(--bg-color);
-    --bg-tertiary: var(--border-tertiary);
+    --bg-primary: #ffffff;
+    --bg-secondary: #f5f5f7;
+    --bg-tertiary: #e8e8ed;
     --bg-key: #0f62fe;
     --bg-success: #147f3a;
     --bg-alert: #d62228;
     --bg-warning: #a86400;
-    --bg-disabled: #e4e7ed;
-    --bg-surface: var(--bg-color);
-    --bg-elevated-1: var(--bg-color);
+    --bg-disabled: #f2f2f7;
+    --bg-surface: #ffffff;
+    --bg-elevated: #ffffff;
     --bg-scrim: rgba(0, 0, 0, 0.48);
-    /* #0000007a */
 
     /* Semantic Colors - Content */
-    --content-primary: var(--text-color);
-    --content-secondary: var(--text-color);
-    --content-tertiary: rgba(var(--text-rgb), 0.56);
+    --content-primary: #1d1d1f;
+    --content-secondary: #6e6e73;
+    --content-tertiary: #a1a1aa;
     --content-key: #0f62fe;
     --content-success: #147f3a;
     --content-alert: #d62228;
-    --content-disabled: rgba(var(--text-rgb), 0.28);
+    --content-disabled: #d2d2d7;
     --content-white: #ffffff;
 
     /* Semantic Colors - Border */
-    --border-primary: rgba(var(--text-rgb), 0.48);
-    --border-secondary: rgba(var(--text-rgb), 0.16);
-    --border-tertiary: rgba(var(--text-rgb), 0.08);
-    /* #00000014 */
+    --border-primary: #d2d2d7;
+    --border-secondary: #e8e8ed;
+    --border-tertiary: #f5f5f7;
     --border-key: #2c75fe;
 
     /* Typography - Additional Sizes */
@@ -144,10 +158,24 @@
     line-height: var(--line-height-title-large);
 }
 
+.title-bold-medium {
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-150);
+    line-height: var(--line-height-title-medium);
+}
+
+.title-bold-small {
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-125);
+    line-height: var(--line-height-title-small);
+}
+
 .body-medium {
     font-family: var(--font-family-primary);
     font-weight: var(--font-weight-regular);
-    font-size: var(--font-size-0875);
+    font-size: var(--font-size-100);
     line-height: var(--line-height-body-medium);
 }
 

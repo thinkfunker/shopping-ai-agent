@@ -17,8 +17,8 @@ window.renderGhostButton = function ({
     priority = 'primary',
     size = 'medium',
     iconOnly = false,
-    leftIconSrc = null,
-    rightIconSrc = null,
+    leftIcon = null,
+    rightIcon = null,
     disabled = false,
     onClick = null,
     className = ''
@@ -31,40 +31,32 @@ window.renderGhostButton = function ({
         button.addEventListener('click', onClick);
     }
 
-    const content = document.createElement('div');
-    content.className = 'ghost-button-content';
+    const iconSize = (size === 'xlarge' || size === 'large') ? 24 : 20;
 
-    if (!iconOnly && leftIconSrc) {
+    if (leftIcon) {
         const iconDiv = document.createElement('div');
         iconDiv.className = 'ghost-button-icon';
-        const img = document.createElement('img');
-        img.src = leftIconSrc;
-        iconDiv.appendChild(img);
-        content.appendChild(iconDiv);
+        if (typeof renderIcon === 'function') {
+            iconDiv.appendChild(renderIcon({ name: leftIcon, size: iconSize }));
+        }
+        button.appendChild(iconDiv);
     }
 
-    if (iconOnly) {
-        const iconDiv = document.createElement('div');
-        iconDiv.className = 'ghost-button-icon';
-        const img = document.createElement('img');
-        img.src = leftIconSrc || rightIconSrc;
-        iconDiv.appendChild(img);
-        content.appendChild(iconDiv);
-    } else {
+    if (!iconOnly && label) {
         const span = document.createElement('span');
+        span.className = 'ghost-button-label';
         span.textContent = label;
-        content.appendChild(span);
+        button.appendChild(span);
     }
 
-    if (!iconOnly && rightIconSrc) {
+    if (rightIcon) {
         const iconDiv = document.createElement('div');
         iconDiv.className = 'ghost-button-icon';
-        const img = document.createElement('img');
-        img.src = rightIconSrc;
-        iconDiv.appendChild(img);
-        content.appendChild(iconDiv);
+        if (typeof renderIcon === 'function') {
+            iconDiv.appendChild(renderIcon({ name: rightIcon, size: iconSize }));
+        }
+        button.appendChild(iconDiv);
     }
 
-    button.appendChild(content);
     return button;
 };

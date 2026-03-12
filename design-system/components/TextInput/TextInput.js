@@ -21,11 +21,15 @@ window.renderTextInput = function ({
     const wrapper = document.createElement('div');
     wrapper.className = `text-input-wrapper state-${state}`;
 
-    if (showLeftIcon && state === 'enabled') {
-        const leftIcon = document.createElement('div');
-        leftIcon.className = 'text-input-icon-left';
-        leftIcon.innerHTML = '✎'; // Simplified icon
-        wrapper.appendChild(leftIcon);
+    if (showLeftIcon) {
+        const leftIconDiv = document.createElement('div');
+        leftIconDiv.className = 'text-input-icon-left';
+        if (typeof renderIcon === 'function') {
+            leftIconDiv.appendChild(renderIcon({ name: 'mic', size: 20 }));
+        } else {
+            leftIconDiv.textContent = '✎';
+        }
+        wrapper.appendChild(leftIconDiv);
     }
 
     const input = document.createElement('input');
@@ -59,19 +63,21 @@ window.renderTextInput = function ({
     wrapper.appendChild(input);
 
     // Right icon for typing state
-    if (state === 'typing') {
-        const rightIcon = document.createElement('div');
-        rightIcon.className = 'text-input-icon-right';
-        rightIcon.innerHTML = 'ⓧ';
-        rightIcon.addEventListener('click', () => {
-            input.value = '';
-            wrapper.classList.remove('state-typing');
-            wrapper.classList.add('state-focused');
-            input.focus();
-            if (onChange) onChange('');
-        });
-        wrapper.appendChild(rightIcon);
+    const rightIconDiv = document.createElement('div');
+    rightIconDiv.className = 'text-input-icon-right';
+    if (typeof renderIcon === 'function') {
+        rightIconDiv.appendChild(renderIcon({ name: 'plus', size: 20 }));
+    } else {
+        rightIconDiv.textContent = 'ⓧ';
     }
+    rightIconDiv.addEventListener('click', () => {
+        input.value = '';
+        wrapper.classList.remove('state-typing');
+        wrapper.classList.add('state-focused');
+        input.focus();
+        if (onChange) onChange('');
+    });
+    wrapper.appendChild(rightIconDiv);
 
     container.appendChild(wrapper);
     return container;

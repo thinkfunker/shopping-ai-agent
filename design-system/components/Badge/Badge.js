@@ -15,12 +15,14 @@ window.renderBadge = function ({
     priority = "primary",
     size = "small",
     id = ""
-}) {
-    const content = type === "number" ? text : "";
+} = {}) {
+    const badge = document.createElement('div');
+    if (id) badge.id = id;
+    badge.className = `badge ${type} ${priority} ${size}`;
 
-    return `
-        <div class="badge ${type} ${priority} ${size}" id="${id}">
-            ${content}
-        </div>
-    `.trim();
+    if (type === "number") {
+        badge.textContent = text;
+    }
+
+    return badge;
 };

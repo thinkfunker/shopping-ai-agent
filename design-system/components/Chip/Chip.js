@@ -15,7 +15,7 @@
  * @param {string} options.className - Extra classes
  * @returns {HTMLElement}
  */
-function renderChip({
+window.renderChip = function ({
     label,
     variant = 'solid-rounded-rect',
     size = 'small',

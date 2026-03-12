@@ -30,12 +30,10 @@ window.renderCheckbox = function ({
     const iconDiv = document.createElement('div');
     iconDiv.className = 'checkbox-icon';
 
-    // Using renderIcon for consistency if possible, or correcting the path
-    const iconImg = document.createElement('img');
-    iconImg.src = './design-system/icons/common/check-solid.svg';
-    iconImg.alt = 'check';
+    if (window.renderIcon) {
+        iconDiv.appendChild(renderIcon({ name: 'check', size: 12 }));
+    }
 
-    iconDiv.appendChild(iconImg);
     checkboxBox.appendChild(iconDiv);
 
     labelElement.appendChild(input);

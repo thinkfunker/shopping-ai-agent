@@ -42,9 +42,7 @@ window.renderMessage = function renderMessage({
             const header = document.createElement('div');
             header.className = 'message-ai-header';
 
-            if (typeof renderAvatar === 'function') {
-                header.appendChild(renderAvatar({ type: 'AI', size: 'medium' }));
-            }
+            // Avatar removed according to design rules
 
             const nameDiv = document.createElement('div');
             nameDiv.className = 'message-ai-name';
@@ -71,10 +69,7 @@ window.renderMessage = function renderMessage({
             bubble.appendChild(imgCont);
         } else {
             if (!background) {
-                if (typeof renderAvatar === 'function') {
-                    const av = renderAvatar({ type: 'user', size: 'medium' });
-                    bubble.appendChild(av);
-                }
+                // Avatar removed according to design rules
             }
             const contentDiv = document.createElement('div');
             contentDiv.className = 'message-user-content';

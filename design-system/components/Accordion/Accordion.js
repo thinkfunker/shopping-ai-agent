@@ -8,19 +8,39 @@
  * @param {string} params.id - 고유 ID
  * @returns {string} HTML String
  */
-window.renderAccordion = function ({ title, content, isOpen = false, id = '' }) {
-    const openClass = isOpen ? 'open' : '';
-    const icon = window.renderIcon ? renderIcon({ name: 'chevron-down', variant: 'solid', size: 14 }) : '';
+window.renderAccordion = function ({ title, content, isOpen = false, id = '' } = {}) {
+    const container = document.createElement('div');
+    if (id) container.id = id;
+    container.className = `accordion ${isOpen ? 'open' : ''}`;
+    container.onclick = (e) => {
+        container.classList.toggle('open');
+    };
 
-    return `
-        <div class="accordion ${openClass}" id="${id}" onclick="this.classList.toggle('open')">
-            <div class="accordion-header">
-                <div class="accordion-title">${title}</div>
-                <div class="accordion-icon">${icon}</div>
-            </div>
-            <div class="accordion-content">
-                <div class="accordion-description">${content}</div>
-            </div>
-        </div>
-    `.trim();
+    const header = document.createElement('div');
+    header.className = 'accordion-header';
+
+    const titleDiv = document.createElement('div');
+    titleDiv.className = 'accordion-title';
+    titleDiv.textContent = title;
+    header.appendChild(titleDiv);
+
+    const iconDiv = document.createElement('div');
+    iconDiv.className = 'accordion-icon';
+    if (window.renderIcon) {
+        iconDiv.appendChild(renderIcon({ name: 'chevron-down', size: 14 }));
+    }
+    header.appendChild(iconDiv);
+
+    const contentWrapper = document.createElement('div');
+    contentWrapper.className = 'accordion-content';
+
+    const description = document.createElement('div');
+    description.className = 'accordion-description';
+    description.innerHTML = content;
+    contentWrapper.appendChild(description);
+
+    container.appendChild(header);
+    container.appendChild(contentWrapper);
+
+    return container;
 };

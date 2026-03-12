@@ -85,6 +85,39 @@
     background-color: var(--state-pressed-secondary, rgba(15, 98, 254, 0.12));
 }
 
+/* Outline Secondary */
+.btn-outline-secondary {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-primary);
+    color: var(--content-primary);
+}
+
+.btn-outline-secondary:hover:not(:disabled) .btn-state-layer {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+/* Tertiary */
+.btn-outline-tertiary {
+    background: transparent;
+    color: var(--content-secondary);
+}
+
+.btn-outline-tertiary:hover:not(:disabled) .btn-state-layer {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+/* Danger */
+.btn-outline-danger {
+    background: transparent;
+    border: 1px solid var(--bg-alert);
+    color: var(--bg-alert);
+}
+
+.btn-outline-danger:hover:not(:disabled) .btn-state-layer {
+    background-color: rgba(214, 34, 40, 0.08);
+    /* alert color with opacity */
+}
+
 /* States */
 .btn:disabled {
     cursor: not-allowed;

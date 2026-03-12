@@ -2,7 +2,7 @@
  * Figma 아이콘 이름과 로컬 자산 파일명 사이의 매핑 테이블
  * 피그마에서 사용하는 논리적 이름을 디자인 시스템 폴더의 실제 파일명과 연결합니다.
  */
-const ICON_MAP = {
+window.ICON_MAP = {
   // [Figma Name]: { category, name, variant }
   'ai-weather': { category: 'ai', name: 'ai-weather', variant: 'solid' },
   'ai-recipe': { category: 'ai', name: 'ai-check', variant: 'solid' },
@@ -15,7 +15,10 @@ const ICON_MAP = {
   'plus': { category: 'common', name: 'plus', variant: 'outline' },
   'mic': { category: 'common', name: 'microphone', variant: 'outline' },
   'send': { category: 'common', name: 'arrow-up', variant: 'solid' },
-  'chevron-left': { category: 'common', name: 'chevron-left', variant: 'outline' }
+  'chevron-left': { category: 'common', name: 'chevron-left', variant: 'outline' },
+  'check': { category: 'common', name: 'check', variant: 'solid' },
+  'close': { category: 'common', name: 'cross', variant: 'solid' },
+  'chevron-down': { category: 'common', name: 'chevron-down', variant: 'solid' }
 };
 
 /**
@@ -56,7 +59,11 @@ window.renderIcon = function ({
   const fallbacks = {
     'star-full': '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>',
     'star-half': '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27l6.18 3.73-1.64-7.03L22 9.24zM12 15.4V6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"/></svg>',
-    'star-empty': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>'
+    'star-empty': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>',
+    'chevron-left': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>',
+    'chevron-right': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>',
+    'chevron-up': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>',
+    'chevron-down': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>'
   };
 
   if (fallbacks[iconName]) {
