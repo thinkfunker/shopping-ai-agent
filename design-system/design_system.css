@@ -63,6 +63,12 @@
     --bg-elevated: #ffffff;
     --bg-scrim: rgba(0, 0, 0, 0.48);
 
+    /* Glassmorphism */
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-bg-dark: rgba(0, 0, 0, 0.3);
+    --glass-blur: blur(20px);
+    --glass-border: 1px solid rgba(255, 255, 255, 0.2);
+
     /* Semantic Colors - Content */
     --content-primary: #1d1d1f;
     --content-secondary: #6e6e73;
@@ -259,6 +265,18 @@ span,
         line-height: 1.46667;
         letter-spacing: -0.016em;
     }
+}
+
+/* --- Utilities --- */
+.rotate-180 {
+    transform: rotate(180deg);
+}
+
+.glass-effect {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: var(--glass-border);
 }
 
 /* 5. Dark Mode Support */

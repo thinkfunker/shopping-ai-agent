@@ -25,7 +25,12 @@ window.renderCardExpand = function renderCardExpand({
 
         const icon = document.createElement('span');
         icon.className = 'card-expand-icon';
-        icon.innerHTML = expand ? '▲' : '▼'; // Placeholder icon
+        if (typeof renderIcon === 'function') {
+            const arrow = renderIcon({ name: expand ? 'chevron-up' : 'chevron-down', size: 16 });
+            icon.appendChild(arrow);
+        } else {
+            icon.innerHTML = expand ? '▲' : '▼';
+        }
 
         const label = document.createElement('span');
         label.textContent = expand ? '閉じる' : '詳細を見る';

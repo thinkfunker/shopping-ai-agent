@@ -59,10 +59,12 @@
     <!-- Explorer Specific Styles -->
     <style>
         :root {
-            --sidebar-width: 260px;
-            --header-height: 60px;
-            --explorer-bg: #f8f9fa;
-            --border-color: #e9ecef;
+            --sidebar-width: 280px;
+            --header-height: 72px;
+            --explorer-bg: #f5f5f7;
+            --border-color: rgba(0, 0, 0, 0.08);
+            --accent-color: #0f62fe;
+            --sidebar-bg: #ffffff;
         }
 
         body,
@@ -83,7 +85,7 @@
         /* Sidebar Navigation */
         .sidebar {
             width: var(--sidebar-width);
-            background: #fff;
+            background: var(--sidebar-bg);
             border-right: 1px solid var(--border-color);
             display: flex;
             flex-direction: column;
@@ -98,9 +100,13 @@
 
         .sidebar-header h1 {
             margin: 0;
-            font-size: 18px;
+            font-size: 20px;
             font-weight: 800;
-            color: var(--content-primary);
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #a83deb 0%, #3083fd 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .sidebar-menu {
@@ -114,33 +120,37 @@
         }
 
         .menu-title {
-            padding: 0 20px 8px;
+            padding: 0 16px 8px;
             font-size: 11px;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #adb5bd;
+            letter-spacing: 1.2px;
+            color: var(--content-tertiary);
             font-weight: 700;
         }
 
         .menu-item {
-            padding: 10px 20px;
+            padding: 10px 16px;
+            margin: 2px 0;
             cursor: pointer;
             font-size: 14px;
-            transition: all 0.2s;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
             color: var(--content-secondary);
-            border-left: 3px solid transparent;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
         }
 
         .menu-item:hover {
-            background: #f1f3f5;
+            background: rgba(0, 0, 0, 0.04);
+            color: var(--content-primary);
         }
 
         .menu-item.active {
-            color: #0f62fe;
-            background: rgba(15, 98, 254, 0.05);
-            border-left-color: #0f62fe;
-            font-weight: 600;
+            color: var(--accent-color);
+            background: rgba(15, 98, 254, 0.08);
+            font-weight: 700;
         }
+
 
         /* Main Content */
         .main-content {
@@ -938,7 +948,16 @@
                 canvas.innerHTML = '';
                 canvas.style.width = '100%';
                 if (window.renderTabs) {
-                    const tabs = renderTabs(params);
+                    const tabs = renderTabs({
+                        ...params,
+                        items: params.items.map((item, idx) => ({
+                            ...item,
+                            onClick: () => {
+                                params.items.forEach((it, i) => it.selected = i === idx);
+                                update();
+                            }
+                        }))
+                    });
                     setCanvasContent(canvas, tabs);
                     updateCode('renderTabs', params);
                 }
@@ -963,7 +982,15 @@
                 canvas.innerHTML = '';
                 canvas.style.width = '100%';
                 if (window.renderListItem) {
-                    const item = renderListItem(params);
+                    const item = renderListItem({
+                        ...params,
+                        onClick: () => {
+                            if (params.type === 'selectable') {
+                                params.selected = !params.selected;
+                                update();
+                            }
+                        }
+                    });
                     setCanvasContent(canvas, item);
                     updateCode('renderListItem', params);
                 }
