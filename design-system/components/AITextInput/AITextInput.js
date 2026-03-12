@@ -24,7 +24,7 @@ window.renderAITextInput = function ({
         const leftBtn = document.createElement('div');
         leftBtn.className = 'ai-left-btn';
         if (window.renderIcon) {
-            leftBtn.appendChild(renderIcon({ category: 'common', name: 'plus', variant: 'outline', size: 14 }));
+            leftBtn.appendChild(renderIcon({ category: 'common', name: 'plus', variant: 'outline', size: 18 }));
         } else {
             leftBtn.textContent = '+';
         }

@@ -886,9 +886,9 @@
                     categories[catId].sort().forEach(name => {
                         const iconDesc = metadata.icons[name]?.description || '';
                         html += `
-                            <div class="icon-card" data-name="${name}" style="padding:16px; background:var(--bg-primary); border-radius:12px; border:1px solid var(--border-secondary); text-align: center; transition: all 0.2s;" title="${iconDesc}">
-                                <div id="icon-preview-${name}" style="margin-bottom:10px; display:flex; justify-content:center; align-items:center; height: 32px;"></div>
-                                <div style="font-size:10px; color:var(--content-primary); font-weight: 500; word-break:break-all; line-height: 1.2;">${name}</div>
+                            <div class="icon-card" data-name="${name}" style="padding:16px; min-height:100px; display:flex; flex-direction:column; justify-content:center; align-items:center; background:var(--bg-primary); border-radius:12px; border:1px solid var(--border-secondary); text-align: center; transition: all 0.2s;" title="${iconDesc}">
+                                <div id="icon-preview-${name}" style="margin-bottom:12px; display:flex; justify-content:center; align-items:center; height: 32px; width: 32px;"></div>
+                                <div style="font-size:10px; color:var(--content-primary); font-weight: 600; word-break:break-all; line-height: 1.2;">${name}</div>
                                 ${iconDesc ? `<div style="font-size:9px; color:var(--content-tertiary); margin-top:4px; line-height:1.2;">${iconDesc}</div>` : ''}
                             </div>
                         `;
