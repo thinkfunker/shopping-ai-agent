@@ -16,11 +16,12 @@
  * @returns {HTMLElement}
  */
 window.renderChip = function ({
-    label,
+    label = 'Label',
     variant = 'solid-rounded-rect',
     size = 'small',
     selected = false,
     disabled = false,
+    graphic = false,
     leftIcon = null,
     leftIconCategory = 'common',
     leftIconVariant = 'solid',
@@ -31,7 +32,7 @@ window.renderChip = function ({
     className = ''
 } = {}) {
     const chip = document.createElement('div');
-    chip.className = `chip chip-${variant} chip-${size} ${selected ? 'selected' : ''} ${className}`.trim();
+    chip.className = `chip chip-${variant} chip-${size} ${selected ? 'selected' : ''} ${graphic ? 'graphic' : ''} ${className}`.trim();
     chip.setAttribute('role', 'button');
     chip.setAttribute('tabindex', disabled ? '-1' : '0');
     chip.setAttribute('aria-pressed', selected);
@@ -46,18 +47,33 @@ window.renderChip = function ({
     stateLayer.className = 'chip-state-layer';
     chip.appendChild(stateLayer);
 
-    const iconSize = (size === 'xlarge' || size === 'large' || variant === 'hero-category') ? 20 : 16;
-    const isHeroCategory = variant === 'hero-category';
+    const iconSize = (size === 'xlarge' || size === 'large') ? 20 : 16;
 
-    if (leftIcon) {
+    // Graphic (AI Gradient Icon Container)
+    if (graphic) {
+        const graphicContainer = document.createElement('div');
+        graphicContainer.className = 'chip-graphic-container';
+        if (window.renderIcon) {
+            graphicContainer.appendChild(renderIcon({
+                category: 'ai',
+                name: 'ai-weather', // Default for graphic
+                size: (size === 'xlarge' || size === 'large') ? 20 : 14
+            }));
+        }
+        chip.appendChild(graphicContainer);
+    }
+
+    if (leftIcon && !graphic) {
         const span = document.createElement('span');
-        span.className = isHeroCategory ? 'chip-icon-container' : 'chip-icon chip-left-icon';
-        span.appendChild(renderIcon({
-            category: leftIconCategory,
-            name: leftIcon,
-            variant: leftIconVariant,
-            size: iconSize
-        }));
+        span.className = 'chip-icon chip-left-icon';
+        if (window.renderIcon) {
+            span.appendChild(renderIcon({
+                category: leftIconCategory,
+                name: leftIcon,
+                variant: leftIconVariant,
+                size: iconSize
+            }));
+        }
         chip.appendChild(span);
     }
 
@@ -69,12 +85,14 @@ window.renderChip = function ({
     if (rightIcon) {
         const span = document.createElement('span');
         span.className = 'chip-icon chip-right-icon';
-        span.appendChild(renderIcon({
-            category: rightIconCategory,
-            name: rightIcon,
-            variant: rightIconVariant,
-            size: iconSize
-        }));
+        if (window.renderIcon) {
+            span.appendChild(renderIcon({
+                category: rightIconCategory,
+                name: rightIcon,
+                variant: rightIconVariant,
+                size: iconSize
+            }));
+        }
         chip.appendChild(span);
     }
 

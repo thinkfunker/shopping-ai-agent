@@ -629,22 +629,36 @@
         function setupChipStory(canvas, controls) {
             const params = {
                 label: 'Sample Chip',
-                variant: 'hero-category',
-                leftIcon: 'ai-weather'
+                variant: 'solid-rounded-rect',
+                size: 'medium',
+                selected: false,
+                disabled: false,
+                graphic: false,
+                leftIcon: null,
+                rightIcon: null
             };
 
             const update = () => {
                 canvas.innerHTML = '';
-                const chip = renderChip(params);
-                setCanvasContent(canvas, chip);
-                updateCode('renderChip', params);
+                if (window.renderChip) {
+                    const chip = renderChip(params);
+                    setCanvasContent(canvas, chip);
+                    updateCode('renderChip', params);
+                }
             };
 
             createControl(controls, 'text', 'Label', (v) => { params.label = v; update(); }, params.label);
             createControl(controls, 'select', 'Variant', (v) => { params.variant = v; update(); }, params.variant,
-                ['solid-rounded-rect', 'solid-rounded', 'outline-gradient']);
-            createControl(controls, 'select', 'Icon', (v) => { params.leftIcon = v; update(); }, params.leftIcon,
-                [null, ...Object.keys(window.ICON_MAP)]);
+                ['solid-rounded-rect', 'solid-rounded', 'outline-gradient', 'suggestion-card']);
+            createControl(controls, 'select', 'Size', (v) => { params.size = v; update(); }, params.size,
+                ['small', 'medium', 'large', 'xlarge']);
+            createControl(controls, 'select', 'Selected', (v) => { params.selected = v === 'true'; update(); }, params.selected.toString(), ['true', 'false']);
+            createControl(controls, 'select', 'Disabled', (v) => { params.disabled = v === 'true'; update(); }, params.disabled.toString(), ['true', 'false']);
+            createControl(controls, 'select', 'Graphic (AI)', (v) => { params.graphic = v === 'true'; update(); }, params.graphic.toString(), ['true', 'false']);
+            createControl(controls, 'select', 'Left Icon', (v) => { params.leftIcon = v === 'None' ? null : v; update(); }, params.leftIcon || 'None',
+                ['None', ...Object.keys(window.ICON_MAP)]);
+            createControl(controls, 'select', 'Right Icon', (v) => { params.rightIcon = v === 'None' ? null : v; update(); }, params.rightIcon || 'None',
+                ['None', ...Object.keys(window.ICON_MAP)]);
 
             update();
         }

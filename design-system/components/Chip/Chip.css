@@ -29,27 +29,18 @@
 
 .chip-outline-gradient {
     border-radius: var(--radius-full, 100px);
-    background: var(--background-primary, white);
-    border: 1px solid var(--gradient-border-secondary-stop-1, rgba(168, 61, 235, 0.16));
-}
-
-.chip-hero-category {
-    height: 48px;
-    border-radius: var(--radius-full, 100px);
     background: var(--bg-primary, white);
+    border: 1px solid var(--border-secondary);
+    /* Fallback */
+    border-image: linear-gradient(135deg, var(--gradient-border-stop-1), var(--gradient-border-stop-2)) 1;
+    /* Approximate if border-image used, but usually it's just a solid color from the stop */
     border: 1px solid rgba(168, 61, 235, 0.16);
-    padding: 0 16px 0 8px;
-    gap: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex: 1;
-    /* Allow sharing width in grid */
 }
 
-.chip-hero-category .chip-icon-container {
-    width: 32px;
-    height: 32px;
+/* Graphic Container (AI Gradient) */
+.chip-graphic-container {
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     background: var(--gradient-ai-surface);
     display: flex;
@@ -58,10 +49,14 @@
     flex-shrink: 0;
 }
 
-.chip-hero-category .chip-label {
-    font-size: 14px;
-    font-weight: 400;
-    color: var(--content-primary);
+.chip-small .chip-graphic-container {
+    width: 16px;
+    height: 16px;
+}
+
+.chip-xlarge .chip-graphic-container {
+    width: 24px;
+    height: 24px;
 }
 
 .chip-suggestion-card {
@@ -154,7 +149,12 @@
 }
 
 /* Outline Gradient specific padding from Figma */
-.chip-outline-gradient {
+.chip.graphic.chip-medium {
+    padding-left: var(--spacing-200, 8px);
+    padding-right: var(--spacing-300, 12px);
+}
+
+.chip-solid-rounded.chip-medium {
     padding-left: var(--spacing-100, 4px);
     padding-right: var(--spacing-100, 4px);
 }
