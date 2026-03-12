@@ -21,7 +21,8 @@ window.renderBadge = function ({
     badge.className = `badge ${type} ${priority} ${size}`;
 
     if (type === "number") {
-        badge.textContent = text;
+        const numText = parseInt(text);
+        badge.textContent = (!isNaN(numText) && numText > 99) ? "99+" : text;
     }
 
     return badge;

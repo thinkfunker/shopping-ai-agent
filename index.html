@@ -303,6 +303,16 @@
     <script src="./design-system/components/Message/MessageList.js"></script>
     <script src="./design-system/components/Carousel/AiSuggestionList.js"></script>
 
+    <!-- Templates -->
+    <script src="./design-system/Templates/AISuggestionChips/AISuggestionChips.js"></script>
+    <script src="./design-system/Templates/BottomButton/BottomButton.js"></script>
+    <script src="./design-system/Templates/BottomSheet/BottomSheet.js"></script>
+    <script src="./design-system/Templates/MediaCard/MediaCard.js"></script>
+    <script src="./design-system/Templates/InteractionCard/InteractionCard.js"></script>
+    <script src="./design-system/Templates/Card/ListCard.js"></script>
+    <script src="./design-system/Templates/Card/ReviewCard.js"></script>
+    <script src="./design-system/Templates/Card/Card.js"></script>
+
     <!-- Explorer Logic -->
     <script>
         // --- Data & Configuration ---
@@ -311,53 +321,80 @@
                 section: 'Foundations',
                 items: [
                     { id: 'colors', name: 'Colors' },
-                    { id: 'typography', name: 'Typography' }
+                    { id: 'typography', name: 'Typography' },
+                    { id: 'spacing-radius', name: 'Spacing & Radius' },
+                    { id: 'icon-explorer', name: 'Icon Explorer' }
                 ]
             },
             {
-                section: 'Icons',
+                section: 'Core UI',
                 items: [
-                    { id: 'icon-explorer', name: 'Icon Explorer' },
-                    { id: 'spacing-radius', name: 'Spacing & Radius' }
-                ]
-            },
-            {
-                section: 'Components',
-                items: [
-                    { id: 'chip', name: 'Chip' },
-                    { id: 'avatar', name: 'Avatar' },
                     { id: 'button', name: 'Button' },
+                    { id: 'ghost-button', name: 'Ghost Button' },
+                    { id: 'avatar', name: 'Avatar' },
                     { id: 'badge', name: 'Badge' },
-                    { id: 'accordion', name: 'Accordion' },
+                    { id: 'chip', name: 'Chip' },
+                    { id: 'tag', name: 'Tag' },
+                    { id: 'divider', name: 'Divider' }
+                ]
+            },
+            {
+                section: 'Selection & Forms',
+                items: [
                     { id: 'checkbox', name: 'Checkbox' },
                     { id: 'radio', name: 'Radio Button' },
                     { id: 'switch', name: 'Switch' },
+                    { id: 'toggle-btn', name: 'Toggle Button' },
                     { id: 'text-input', name: 'Text Input' },
-                    { id: 'tag', name: 'Tag' },
-                    { id: 'ghost-button', name: 'Ghost Button' },
-                    { id: 'divider', name: 'Divider' },
-                    { id: 'modal', name: 'Modal' },
+                    { id: 'ai-input', name: 'AI Text Input' }
+                ]
+            },
+            {
+                section: 'Navigation',
+                items: [
+                    { id: 'top-nav', name: 'Top Navigation' },
                     { id: 'tabs', name: 'Tabs' },
+                    { id: 'pagination', name: 'Pagination' },
+                    { id: 'page-indicator', name: 'Page Indicator' },
+                    { id: 'menu', name: 'Menu' },
+                    { id: 'footer', name: 'Footer' }
+                ]
+            },
+            {
+                section: 'Feedback & Overlays',
+                items: [
+                    { id: 'modal', name: 'Modal' },
+                    { id: 'scrim', name: 'Scrim' },
+                    { id: 'toast', name: 'Toast' },
+                    { id: 'tooltip', name: 'Tooltip' },
+                    { id: 'progress', name: 'Progress Indicator' }
+                ]
+            },
+            {
+                section: 'Complex UI',
+                items: [
+                    { id: 'accordion', name: 'Accordion' },
                     { id: 'list-item', name: 'List Item' },
                     { id: 'carousel', name: 'Carousel' },
-                    { id: 'tooltip', name: 'Tooltip' },
-                    { id: 'toast', name: 'Toast' },
-                    { id: 'thumbnail', name: 'Thumbnail' },
-                    { id: 'progress', name: 'Progress Indicator' },
-                    { id: 'top-nav', name: 'Top Navigation' },
-                    { id: 'ai-input', name: 'AI Text Input' },
-                    { id: 'ai-bg', name: 'AI Background' },
                     { id: 'card-expand', name: 'Card Expand' },
-                    { id: 'footer', name: 'Footer' },
-                    { id: 'pagination', name: 'Pagination' },
                     { id: 'score', name: 'Score' },
-                    { id: 'scrim', name: 'Scrim' },
-                    { id: 'toggle-btn', name: 'Toggle Button' },
-                    { id: 'page-indicator', name: 'Page Indicator' },
+                    { id: 'thumbnail', name: 'Thumbnail' },
                     { id: 'image-preview', name: 'Image Preview' },
-                    { id: 'menu', name: 'Menu' },
+                    { id: 'ai-bg', name: 'AI Background' }
+                ]
+            },
+            {
+                section: 'AI Templates',
+                items: [
                     { id: 'message', name: 'Message' },
-                    { id: 'ai-suggestion', name: 'AI Suggestion List' }
+                    { id: 'ai-suggestion', name: 'AI Suggestion List' },
+                    { id: 'ai-suggestion-chips', name: 'AI Suggestion Chips' },
+                    { id: 'media-card', name: 'Media Card' },
+                    { id: 'list-card', name: 'List Card' },
+                    { id: 'review-card', name: 'Review Card' },
+                    { id: 'interaction-card', name: 'Interaction Card' },
+                    { id: 'bottom-button', name: 'Bottom Button Bar' },
+                    { id: 'bottom-sheet', name: 'Bottom Sheet' }
                 ]
             }
         ];
@@ -428,6 +465,7 @@
                 case 'ai-input': setupAIInputStory(canvas, controls); break;
                 case 'ai-bg': setupAIBgStory(canvas, controls); break;
                 case 'card-expand': setupCardExpandStory(canvas, controls); break;
+                case 'carousel': setupCarouselStory(canvas, controls); break;
                 case 'footer': setupFooterStory(canvas, controls); break;
                 case 'pagination': setupPaginationStory(canvas, controls); break;
                 case 'score': setupScoreStory(canvas, controls); break;
@@ -438,6 +476,13 @@
                 case 'menu': setupMenuStory(canvas, controls); break;
                 case 'message': setupMessageStory(canvas, controls); break;
                 case 'ai-suggestion': setupAISuggestionStory(canvas, controls); break;
+                case 'ai-suggestion-chips': setupAISuggestionChipsStory(canvas, controls); break;
+                case 'media-card': setupMediaCardStory(canvas, controls); break;
+                case 'list-card': setupListCardStory(canvas, controls); break;
+                case 'review-card': setupReviewCardStory(canvas, controls); break;
+                case 'interaction-card': setupInteractionCardStory(canvas, controls); break;
+                case 'bottom-button': setupBottomButtonStory(canvas, controls); break;
+                case 'bottom-sheet': setupBottomSheetStory(canvas, controls); break;
             }
         }
 
@@ -452,12 +497,14 @@
         // --- Foundations ---
         function renderColors(container) {
             const colorGroups = {
-                'Brand & Key': ['--bg-key', '--content-key', '--border-key', '--blue-8'],
-                'Grays': ['--gray-1', '--gray-3', '--gray-5', '--gray-7', '--gray-9', '--gray-11', '--gray-14'],
-                'Content': ['--content-primary', '--content-secondary', '--content-tertiary', '--content-disabled'],
-                'Background': ['--bg-primary', '--bg-secondary', '--bg-tertiary', '--bg-surface'],
-                'Border': ['--border-primary', '--border-secondary', '--border-tertiary'],
-                'System': ['--bg-success', '--bg-alert', '--bg-warning']
+                'Key / Blue': ['--blue-1', '--blue-3', '--blue-5', '--blue-7', '--blue-8', '--blue-10', '--blue-12'],
+                'Neutral / Grays': ['--gray-1', '--gray-2', '--gray-4', '--gray-6', '--gray-8', '--gray-10', '--gray-12', '--gray-14'],
+                'Alert / Red': ['--red-1', '--red-3', '--red-5', '--red-7', '--red-8', '--red-10', '--red-12'],
+                'Success / Green': ['--green-1', '--green-3', '--green-5', '--green-7', '--green-9'],
+                'Warning / Yellow': ['--yellow-1', '--yellow-3', '--yellow-5', '--yellow-7', '--yellow-8'],
+                'Semantic - Background': ['--bg-primary', '--bg-secondary', '--bg-tertiary', '--bg-key', '--bg-surface', '--bg-alert'],
+                'Semantic - Content': ['--content-primary', '--content-secondary', '--content-tertiary', '--content-key', '--content-alert', '--content-success', '--content-disabled'],
+                'Semantic - Border': ['--border-primary', '--border-secondary', '--border-tertiary', '--border-key']
             };
 
             let html = '<div style="width: 100%; display: grid; gap: 32px;">';
@@ -482,6 +529,8 @@
                 { label: 'Title XXLarge', class: 'title-bold-xxlarge', text: 'Agent i Design System' },
                 { label: 'Title XLarge', class: 'title-bold-xlarge', text: 'Components & Guidelines' },
                 { label: 'Title Large', class: 'title-bold-large', text: 'Interactive Explorer' },
+                { label: 'Title Medium', class: 'title-bold-medium', text: 'Standard Interface Title' },
+                { label: 'Title Small', class: 'title-bold-small', text: 'Small Section Title' },
                 { label: 'Body Medium', class: 'body-medium', text: 'This is the standard body text used across the agent interface.' },
                 { label: 'Label Bold Small', class: 'label-bold-small', text: 'LABEL TEXT' }
             ];
@@ -527,8 +576,9 @@
         }
 
         function renderSpacingRadius(container) {
-            const spacing = [100, 200, 300, 400, 500, 600, 800];
-            const radius = [200, 'full'];
+            const spacing = [100, 200, 300, 400, 500, 600, 700, 800, 1000, 1200, 1400];
+            const radius = [100, 200, 300, 400, 'full'];
+            const shadows = ['small', 'medium', 'large', 'ai'];
 
             let html = '<div style="width: 100%; display: grid; gap: 48px;">';
 
@@ -558,6 +608,19 @@
             });
             html += '</div></div>';
 
+            // Shadows
+            html += '<div><h4 style="margin-bottom:16px">Shadows</h4><div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap:24px;">';
+            shadows.forEach(s => {
+                const varName = `--shadow-${s}`;
+                html += `
+                    <div style="display:flex; flex-direction:column; align-items:center; gap:16px;">
+                        <div style="width:80px; height:80px; background:white; border-radius:12px; box-shadow:var(${varName})"></div>
+                        <div style="font-size:11px; font-weight:600">${varName}</div>
+                    </div>
+                `;
+            });
+            html += '</div></div>';
+
             html += '</div>';
             container.innerHTML = html;
         }
@@ -579,7 +642,7 @@
 
             createControl(controls, 'text', 'Label', (v) => { params.label = v; update(); }, params.label);
             createControl(controls, 'select', 'Variant', (v) => { params.variant = v; update(); }, params.variant,
-                ['hero-category', 'suggestion-card', 'solid-rounded-rect', 'solid-rounded', 'outline-gradient']);
+                ['solid-rounded-rect', 'solid-rounded', 'outline-gradient']);
             createControl(controls, 'select', 'Icon', (v) => { params.leftIcon = v; update(); }, params.leftIcon,
                 [null, ...Object.keys(window.ICON_MAP)]);
 
@@ -1340,7 +1403,7 @@
             update();
         }
 
-        function setupAISuggestionStory(canvas, controls) {
+        function setupAiSuggestionListStory(canvas, controls) {
             const params = { title: 'AIに追加の質問' };
             const update = () => {
                 canvas.innerHTML = '';
@@ -1351,7 +1414,169 @@
                     updateCode('renderAiSuggestionList', params);
                 }
             };
-            createControl(controls, 'text', 'Title', (v) => { params.title = v; update(); }, 'AIに追加の質問');
+            createControl(controls, 'text', 'Title', (v) => { params.title = v; update(); }, 'AIに追加의 질문');
+            update();
+        }
+
+        function setupAISuggestionChipsStory(canvas, controls) {
+            const params = {
+                context: 'agent home',
+                layout: 'carousel',
+                items: [
+                    { title: 'Find coffee shops nearby', subtext: 'Based on your location', icon: 'map', tag: 'Recommended' },
+                    { title: 'Best selling laptops', subtext: 'In the last 30 days', icon: 'shopping', tag: 'New' },
+                    { title: 'How to make a cake', subtext: 'Easy recipes', icon: 'cook', tag: 'Popular' }
+                ],
+                showTitleText: true
+            };
+
+            const update = () => {
+                canvas.innerHTML = '';
+                if (window.renderAISuggestionChips) {
+                    const el = renderAISuggestionChips(params);
+                    setCanvasContent(canvas, el);
+                    updateCode('renderAISuggestionChips', params);
+                }
+            };
+
+            createControl(controls, 'select', 'Layout', (v) => { params.layout = v; update(); }, params.layout,
+                ['carousel', 'card compact', 'card description', 'list', 'list icon', 'list tag', 'list title', 'group icon']);
+            createControl(controls, 'select', 'Show Title', (v) => { params.showTitleText = v === 'true'; update(); }, params.showTitleText.toString(), ['true', 'false']);
+
+            update();
+        }
+
+        function setupMediaCardStory(canvas, controls) {
+            const params = {
+                title: 'High-Performance Wireless Headphones',
+                subtitle: 'Active noise cancellation, 40-hour battery life.',
+                metaText: ['Sony', 'Electronics', 'Prime'],
+                rating: 4.8,
+                reviewCount: 2450,
+                score: 85,
+                features: [{ label: 'Battery', icon: 'battery' }, { label: 'Bluetooth', icon: 'bluetooth' }],
+                imageUrl: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=300&q=80',
+                selected: false
+            };
+
+            const update = () => {
+                canvas.innerHTML = '';
+                if (window.renderMediaCard) {
+                    const el = renderMediaCard(params);
+                    setCanvasContent(canvas, el);
+                    updateCode('renderMediaCard', params);
+                }
+            };
+
+            createControl(controls, 'text', 'Title', (v) => { params.title = v; update(); }, params.title);
+            createControl(controls, 'number', 'Score', (v) => { params.score = parseInt(v); update(); }, params.score);
+            createControl(controls, 'select', 'Selected', (v) => { params.selected = v === 'true'; update(); }, params.selected.toString(), ['true', 'false']);
+
+            update();
+        }
+
+        function setupListCardStory(canvas, controls) {
+            const params = {
+                header: { title: 'Shopping List', badge: '3 Items', actionIcon: true },
+                items: [
+                    { title: 'Organic Milk', subtext: '1 Gallon', imageSrc: 'https://images.unsplash.com/photo-1550583724-12558142c4b3?auto=format&fit=crop&w=100&q=80' },
+                    { title: 'Whole Wheat Bread', subtext: 'Fresh baked', imageSrc: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=100&q=80' }
+                ],
+                images: [],
+                actions: [{ label: 'View All', type: 'secondary' }]
+            };
+
+            const update = () => {
+                canvas.innerHTML = '';
+                if (window.renderListCard) {
+                    const el = renderListCard(params);
+                    setCanvasContent(canvas, el);
+                    updateCode('renderListCard', params);
+                }
+            };
+
+            update();
+        }
+
+        function setupReviewCardStory(canvas, controls) {
+            const params = {
+                user: { name: 'Alex Johnson', avatar: 'https://i.pravatar.cc/150?u=alex' },
+                rating: 5,
+                date: '2024.03.12',
+                content: 'This product exceeded my expectations! The quality is top-notch and it arrived earlier than expected.',
+                images: ['https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=200&q=80']
+            };
+
+            const update = () => {
+                canvas.innerHTML = '';
+                if (window.renderReviewCard) {
+                    const el = renderReviewCard(params);
+                    setCanvasContent(canvas, el);
+                    updateCode('renderReviewCard', params);
+                }
+            };
+
+            update();
+        }
+
+        function setupInteractionCardStory(canvas, controls) {
+            const params = {
+                type: 'question',
+                question: 'What kind of coffee do you prefer?',
+                choices: [{ label: 'Espresso', selected: true }, { label: 'Latte', selected: false }, { label: 'Americano', selected: false }]
+            };
+
+            const update = () => {
+                canvas.innerHTML = '';
+                let el;
+                if (params.type === 'question') {
+                    if (window.renderQuestionCard) el = renderQuestionCard({ question: params.question, choices: params.choices });
+                } else if (params.type === 'selection') {
+                    if (window.renderSelectionCard) el = renderSelectionCard({ title: 'Premium Espresso', subtitle: 'Rich and intense', image: 'https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&w=200&q=80', selected: true });
+                }
+                if (el) setCanvasContent(canvas, el);
+                updateCode('renderInteractionCard', params);
+            };
+
+            createControl(controls, 'select', 'Card Type', (v) => { params.type = v; update(); }, params.type, ['question', 'selection']);
+
+            update();
+        }
+
+        function setupBottomButtonStory(canvas, controls) {
+            const params = {
+                layout: 'single',
+                buttons: [{ label: 'Primary Action', type: 'primary' }]
+            };
+
+            const update = () => {
+                canvas.innerHTML = '';
+                if (window.renderBottomButton) {
+                    const el = renderBottomButton(params);
+                    setCanvasContent(canvas, el);
+                    updateCode('renderBottomButton', params);
+                }
+            };
+
+            createControl(controls, 'select', 'Layout', (v) => { params.layout = v; update(); }, params.layout, ['single', 'horizontal', 'vertical']);
+            update();
+        }
+
+        function setupBottomSheetStory(canvas, controls) {
+            const params = {
+                title: 'Bottom Sheet Header',
+                showHandle: true
+            };
+
+            const update = () => {
+                canvas.innerHTML = '';
+                if (window.renderBottomSheet) {
+                    const el = renderBottomSheet(params);
+                    setCanvasContent(canvas, el);
+                    updateCode('renderBottomSheet', params);
+                }
+            };
+
             update();
         }
 

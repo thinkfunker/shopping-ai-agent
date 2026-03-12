@@ -13,12 +13,23 @@ window.ICON_MAP = {
   'bell': { category: 'common', name: 'bell', variant: 'outline' },
   'menu': { category: 'common', name: 'bars', variant: 'outline' },
   'plus': { category: 'common', name: 'plus', variant: 'outline' },
+  'minus': { category: 'common', name: 'minus', variant: 'outline' },
   'mic': { category: 'common', name: 'microphone', variant: 'outline' },
+  'microphone': { category: 'common', name: 'microphone', variant: 'outline' },
   'send': { category: 'common', name: 'arrow-up', variant: 'solid' },
+  'arrow-up': { category: 'common', name: 'arrow-up', variant: 'solid' },
   'chevron-left': { category: 'common', name: 'chevron-left', variant: 'outline' },
+  'chevron-right': { category: 'common', name: 'chevron-right', variant: 'outline' },
+  'chevron-up': { category: 'common', name: 'chevron-up', variant: 'outline' },
+  'chevron-down': { category: 'common', name: 'chevron-down', variant: 'outline' },
   'check': { category: 'common', name: 'check', variant: 'solid' },
   'close': { category: 'common', name: 'cross', variant: 'solid' },
-  'chevron-down': { category: 'common', name: 'chevron-down', variant: 'solid' }
+  'cross': { category: 'common', name: 'cross', variant: 'solid' },
+  'search': { category: 'common', name: 'search', variant: 'outline' },
+  'map': { category: 'common', name: 'map-pin', variant: 'outline' },
+  'shopping': { category: 'common', name: 'shopping-cart', variant: 'outline' },
+  'battery': { category: 'common', name: 'battery-full', variant: 'outline' },
+  'bluetooth': { category: 'common', name: 'bluetooth', variant: 'outline' }
 };
 
 /**
@@ -63,7 +74,13 @@ window.renderIcon = function ({
     'chevron-left': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>',
     'chevron-right': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>',
     'chevron-up': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>',
-    'chevron-down': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>'
+    'chevron-down': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>',
+    'plus': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>',
+    'cross': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>',
+    'check': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>',
+    'search': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
+    'arrow-up': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>',
+    'microphone': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>'
   };
 
   if (fallbacks[iconName]) {

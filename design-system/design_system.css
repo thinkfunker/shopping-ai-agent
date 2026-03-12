@@ -17,6 +17,29 @@
     --red-13: #3e0a0c;
     --red-14: #200506;
 
+    /* Primitive Colors - Green (Success) */
+    --green-1: #e6f6ec;
+    --green-2: #ccecdf;
+    --green-3: #99d9bf;
+    --green-4: #66c69f;
+    --green-5: #33b37f;
+    --green-6: #00a05f;
+    --green-7: #147f3a;
+    /* Success Keyword */
+    --green-8: #00804c;
+    --green-9: #006039;
+
+    /* Primitive Colors - Yellow (Warning) */
+    --yellow-1: #fffbeb;
+    --yellow-2: #fef3c7;
+    --yellow-3: #fde68a;
+    --yellow-4: #facc15;
+    --yellow-5: #eab308;
+    --yellow-6: #ca8a04;
+    --yellow-7: #a86400;
+    /* Warning Keyword */
+    --yellow-8: #854d00;
+
     /* Primitive Colors - Blue */
     --blue-1: #dbe7ff;
     --blue-2: #bed4ff;
@@ -129,7 +152,25 @@
     --spacing-400: 16px;
     --spacing-500: 20px;
     --spacing-600: 24px;
+    --spacing-700: 28px;
     --spacing-800: 32px;
+    --spacing-1000: 40px;
+    --spacing-1200: 48px;
+    --spacing-1400: 56px;
+
+    /* Elevation & Shadows */
+    --shadow-small: 0px 2px 8px 0px rgba(0, 0, 0, 0.16);
+    --shadow-medium: 0px 4px 16px 0px rgba(0, 0, 0, 0.16);
+    --shadow-large: 0px 8px 32px 0px rgba(0, 0, 0, 0.16);
+    --shadow-ai: 0px 4px 20px 0px rgba(168, 61, 235, 0.12);
+
+    /* Z-index */
+    --z-index-sticky: 100;
+    --z-index-modal: 1000;
+    --z-index-scrim: 900;
+    --z-index-toast: 2000;
+    --z-index-tooltip: 1500;
+    --z-index-floating: 500;
 
     /* Radius & Border */
     --radius-200: 8px;
@@ -139,6 +180,9 @@
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, #a83deb 0%, #3083fd 100%);
     --gradient-ai-surface: linear-gradient(135deg, rgba(168, 61, 235, 0.06) 0%, rgba(48, 131, 253, 0.06) 100%);
+    --gradient-border-stop-1: #a83deb;
+    --gradient-border-stop-2: #3083fd;
+    --gradient-brand-horizontal: linear-gradient(90deg, #a83deb 0%, #3083fd 100%);
 }
 
 /* Typography Utility Classes (Optional but helpful) */
