@@ -1,3 +1,3 @@
-<svg preserveAspectRatio="none" width="24" height="24" overflow="visible" style="display: block;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg  width="24" height="24" overflow="visible" style="display: block;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path id="video-camera_solid" d="M19.2899 2.13C19.0599 1.99 18.77 1.99 18.53 2.13L14.7999 4.28V1.65C14.7999 0.74 14.06 0 13.15 0H1.65C0.74 0 0 0.74 0 1.65V12.65C0 13.56 0.74 14.3 1.65 14.3H13.15C14.06 14.3 14.7999 13.56 14.7999 12.65V10.02L18.53 12.17C18.64 12.23 18.77 12.27 18.9 12.27C19.03 12.27 19.17 12.24 19.28 12.17C19.51 12.04 19.65 11.79 19.65 11.52V2.77C19.65 2.51 19.51 2.26 19.28 2.12L19.2899 2.13Z" fill="var(--fill-0, #17181A)" />
 </svg>

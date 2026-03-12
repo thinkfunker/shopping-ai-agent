@@ -1,4 +1,4 @@
-<svg preserveAspectRatio="none" width="24" height="24" overflow="visible" style="display: block;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg  width="24" height="24" overflow="visible" style="display: block;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="keyboard-alt_solid">
 <path d="M17 2.65039C17 1.90481 16.396 1.30078 15.6504 1.30078H2.65039C1.90481 1.30078 1.30078 1.90481 1.30078 2.65039V14.6504C1.30078 15.396 1.90481 16 2.65039 16H15.6504C16.396 16 17 15.396 17 14.6504V2.65039ZM18.3008 14.6504C18.3008 16.1139 17.1139 17.3008 15.6504 17.3008H2.65039C1.18684 17.3008 0 16.1139 0 14.6504V2.65039C0 1.18684 1.18684 4.02602e-09 2.65039 0H15.6504C17.1139 0 18.3008 1.18684 18.3008 2.65039V14.6504Z" fill="var(--fill-0, #17181A)" />
 <path d="M12.8008 11.5V12.8008H5.5V11.5H12.8008Z" fill="var(--fill-0, #17181A)" />

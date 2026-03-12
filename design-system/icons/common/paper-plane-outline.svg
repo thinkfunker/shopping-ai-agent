@@ -1,4 +1,4 @@
-<svg preserveAspectRatio="none" width="24" height="24" overflow="visible" style="display: block;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg  width="24" height="24" overflow="visible" style="display: block;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="paper-plane_outline">
 <path d="M0.0184121 1.31181C-0.143388 0.410508 0.792112 -0.289692 1.61141 0.119808L17.0871 7.85591C17.9076 8.26601 17.9073 9.43671 17.0872 9.84681L1.61141 17.583C0.792112 17.9925 -0.143388 17.2923 0.0184121 16.391L1.37201 8.85141L0.0184121 1.31181ZM1.36391 1.44951L2.65751 8.65471C2.68081 8.78471 2.68081 8.91791 2.65751 9.04791L1.36391 16.2533L16.1711 8.85141L1.36391 1.44951Z" fill="var(--fill-0, #17181A)" />
 <path d="M9.40051 9.50131H2.01761V8.20131H9.40051V9.50131Z" fill="var(--fill-0, #17181A)" />

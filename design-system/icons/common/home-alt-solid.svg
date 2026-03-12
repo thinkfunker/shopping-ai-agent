@@ -1,3 +1,3 @@
-<svg preserveAspectRatio="none" width="24" height="24" overflow="visible" style="display: block;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg  width="24" height="24" overflow="visible" style="display: block;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path id="home-alt_solid" d="M8.282 0L0 6.586V15.83C0 16.74 0.74 17.48 1.65 17.48H7.782V16.83V16.18V13.616H8.782V16.18V16.83V17.48H14.914C15.824 17.48 16.564 16.74 16.564 15.83V6.586L8.282 0Z" fill="var(--fill-0, #17181A)" />
 </svg>
