@@ -25,7 +25,7 @@ window.renderTextInput = function ({
         const leftIconDiv = document.createElement('div');
         leftIconDiv.className = 'text-input-icon-left';
         if (typeof renderIcon === 'function') {
-            leftIconDiv.appendChild(renderIcon({ name: 'mic', size: 20 }));
+            leftIconDiv.appendChild(renderIcon({ category: 'common', name: 'microphone-outline', size: 18 }));
         } else {
             leftIconDiv.textContent = '✎';
         }
@@ -66,7 +66,7 @@ window.renderTextInput = function ({
     const rightIconDiv = document.createElement('div');
     rightIconDiv.className = 'text-input-icon-right';
     if (typeof renderIcon === 'function') {
-        rightIconDiv.appendChild(renderIcon({ name: 'plus', size: 20 }));
+        rightIconDiv.appendChild(renderIcon({ category: 'common', name: 'plus', variant: 'outline', size: 18 }));
     } else {
         rightIconDiv.textContent = 'ⓧ';
     }

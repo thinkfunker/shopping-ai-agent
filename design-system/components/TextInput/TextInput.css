@@ -8,7 +8,8 @@
 .text-input-wrapper {
     display: flex;
     align-items: center;
-    height: 40px;
+    height: 48px;
+    /* Increased height for better proportions */
     padding: 0 var(--spacing-400, 16px);
     border: 1px solid var(--border-secondary, rgba(0, 0, 0, 0.16));
     border-radius: var(--radius-200, 8px);
@@ -19,13 +20,18 @@
 
 .text-input {
     flex: 1;
+    height: 24px;
+    /* Explicit height for alignment */
     border: none;
     background: transparent;
     font-family: var(--font-family-primary);
-    font-size: var(--font-size-0875, 14px);
-    line-height: var(--line-height-label-medium, 17px);
+    font-size: var(--font-size-100, 16px);
+    /* Balanced font size */
+    line-height: 24px;
+    /* Exact match with height */
     color: var(--content-primary, #17181a);
     padding: 0;
+    margin: 0;
     outline: none;
 }
 
@@ -62,9 +68,11 @@
 
 /* Icons */
 .text-input-icon-left {
-    margin-right: var(--spacing-100, 4px);
+    margin-right: var(--spacing-200, 8px);
+    /* More breathing room */
     display: flex;
     align-items: center;
+    justify-content: center;
     color: var(--content-placeholder, rgba(0, 0, 0, 0.56));
 }
 
