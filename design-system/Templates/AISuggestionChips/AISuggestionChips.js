@@ -14,7 +14,7 @@ function renderAISuggestionChips({
     showTitleText = false
 } = {}) {
     const container = document.createElement('div');
-    const layoutClass = layout.replace(' ', '-');
+    const layoutClass = layout.replace(/\s+/g, '-');
     container.className = `ai-suggestion-chips layout-${layoutClass}`;
 
     let target = container;
@@ -25,7 +25,13 @@ function renderAISuggestionChips({
         target = carousel;
     }
 
-    if (layout === 'list title') {
+    if (layout === 'grid') {
+        container.style.display = 'grid';
+        container.style.gridTemplateColumns = '1fr 1fr';
+        container.style.gap = '8px';
+    }
+
+    if (layout === 'list-title' || layout === 'list title') {
         const header = document.createElement('div');
         header.className = 'list-header';
         header.innerHTML = `<h4 class="chip-title" style="font-size: 16px;">${items[0]?.title || 'Header'}</h4>`;
@@ -41,43 +47,128 @@ function renderAISuggestionChips({
     }
 
     items.forEach(item => {
-        const chip = document.createElement('div');
-        chip.className = 'suggestion-chip';
+        let chipEl;
 
-        let innerHTML = '';
-        if (layout === 'carousel') {
-            innerHTML = `
-                ${item.icon ? `<div class="chip-icon">▤</div>` : ''}
-                <p class="chip-subtext">${item.title}</p>
-            `;
-        } else if (layout === 'card compact' || layout === 'card description') {
-            innerHTML = `
-                <div class="flex" style="width: 100%; align-items: center; justify-content: space-between;">
-                    <div class="flex" style="gap: 4px; align-items: center;">
-                        ${item.icon ? '<span>▣</span>' : ''}
-                        ${showTitleText ? `<h4 class="chip-title card-title">${item.title}</h4>` : ''}
-                    </div>
-                    ${layout === 'card description' ? '<span>→</span>' : ''}
-                </div>
-                <p class="chip-subtext">${item.subtext || item.title}</p>
-            `;
-        } else if (layout === 'list tag') {
-            innerHTML = `
-                <span class="tag-placeholder" style="background: purple; color: white; border-radius: 100px; padding: 2px 8px; font-size: 10px;">${item.tag || 'Label'}</span>
-                <p class="chip-subtext">${item.title}</p>
-            `;
-        } else if (layout === 'group icon') {
-            innerHTML = `
-                <span>✦</span>
-                <p class="chip-subtext" style="flex: 1;">${item.title}</p>
-                <span>›</span>
-            `;
+        // Complex Layouts (Cards)
+        if (layout === 'card compact' || layout === 'card-compact' || layout === 'card description' || layout === 'card-description') {
+            chipEl = document.createElement('div');
+            chipEl.className = 'suggestion-chip';
+
+            const headerRow = document.createElement('div');
+            headerRow.style.cssText = 'display: flex; width: 100%; align-items: center; justify-content: space-between;';
+
+            const leftPart = document.createElement('div');
+            leftPart.style.cssText = 'display: flex; gap: 4px; align-items: center;';
+
+            if (item.icon && window.renderIcon) {
+                const iconContainer = document.createElement('div');
+                iconContainer.className = 'chip-graphic-container';
+                iconContainer.style.width = '24px';
+                iconContainer.style.height = '24px';
+                iconContainer.appendChild(renderIcon({ name: item.icon, size: 16, variant: 'gradient' }));
+                leftPart.appendChild(iconContainer);
+            }
+
+            if (showTitleText) {
+                const title = document.createElement('h4');
+                title.className = 'chip-title card-title';
+                title.textContent = item.title;
+                leftPart.appendChild(title);
+            }
+
+            headerRow.appendChild(leftPart);
+
+            if (layout.includes('description') && window.renderIcon) {
+                headerRow.appendChild(renderIcon({ name: 'chevron-right', size: 20 }));
+            }
+
+            chipEl.appendChild(headerRow);
+
+            const subtext = document.createElement('p');
+            subtext.className = 'chip-subtext';
+            subtext.textContent = item.subtext || item.title;
+            chipEl.appendChild(subtext);
+        }
+        // Group Icon (Horizontal Pill Row)
+        else if (layout === 'group icon' || layout === 'group-icon') {
+            if (window.renderChip) {
+                chipEl = renderChip({
+                    label: item.title,
+                    variant: 'outline-gradient',
+                    size: 'medium',
+                    graphic: true,
+                    leftIcon: item.icon || 'ai-shopping',
+                    rightIcon: 'chevron-right'
+                });
+            } else {
+                chipEl = document.createElement('div');
+                chipEl.className = 'suggestion-chip';
+                chipEl.textContent = item.title;
+            }
+        }
+        // Grid (Hero Category)
+        else if (layout === 'grid') {
+            if (window.renderChip) {
+                chipEl = renderChip({
+                    label: item.title,
+                    variant: 'hero-category',
+                    leftIcon: item.icon
+                });
+            } else {
+                chipEl = document.createElement('div');
+                chipEl.className = 'suggestion-chip';
+                chipEl.textContent = item.title;
+            }
+        }
+        // Carousel / Specific List types using core Chips
+        else if (window.renderChip) {
+            if (layout === 'carousel') {
+                chipEl = renderChip({
+                    label: item.title,
+                    variant: 'suggestion-card',
+                    leftIcon: item.icon
+                });
+                chipEl.className += ' suggestion-chip';
+            } else if ((layout === 'list-tag' || layout === 'list tag') && window.renderTag) {
+                chipEl = document.createElement('div');
+                chipEl.className = 'suggestion-chip layout-list-tag-item';
+                chipEl.appendChild(renderTag({
+                    label: item.tag || 'Label',
+                    style: 'solid',
+                    priority: 'primary',
+                    shape: 'circle',
+                    size: 'small'
+                }));
+                const p = document.createElement('p');
+                p.className = 'chip-subtext';
+                p.textContent = item.title;
+                chipEl.appendChild(p);
+            } else if ((layout === 'list-icon' || layout === 'list icon') && window.renderIcon) {
+                chipEl = document.createElement('div');
+                chipEl.className = 'suggestion-chip layout-list-icon-item';
+                chipEl.appendChild(renderIcon({ name: 'arrow-turn-down-right', size: 24, variant: 'outline' }));
+                const p = document.createElement('p');
+                p.className = 'chip-subtext';
+                p.textContent = item.title;
+                chipEl.appendChild(p);
+            } else {
+                // Default List
+                chipEl = renderChip({
+                    label: item.title,
+                    variant: 'solid-rounded',
+                    size: 'small',
+                    leftIcon: item.icon
+                });
+                chipEl.className += ' suggestion-chip';
+            }
         } else {
-            innerHTML = `<p class="chip-subtext">${item.title}</p>`;
+            // Fallback
+            chipEl = document.createElement('div');
+            chipEl.className = 'suggestion-chip';
+            chipEl.textContent = item.title;
         }
 
-        chip.innerHTML = innerHTML;
-        target.appendChild(chip);
+        target.appendChild(chipEl);
     });
 
     return container;

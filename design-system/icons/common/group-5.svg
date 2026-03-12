@@ -1,0 +1,13 @@
+<svg preserveAspectRatio="none" width="24" height="24" overflow="visible" style="display: block;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group-5">
+<path id="Regular-1 (Stroke)" d="M21.4558 5.54541L12.3991 14.6021H9.92451V12.1274L18.5212 3.53174L18.9811 3.07275L21.4558 5.54541ZM11.2253 12.6655V13.3013H11.861L19.6159 5.54541L18.9802 4.91065L11.2253 12.6655Z" fill="var(--fill-0, #17181A)" />
+<g id="Group-4">
+<mask id="mask0_49166_34374" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+<path id="Clip-3" fill-rule="evenodd" clip-rule="evenodd" d="M0 24H24V0H0V24ZM8.575 11.568L18.98 1.163L23.365 5.546L12.958 15.951H8.575V11.568Z" fill="var(--fill-0, white)" />
+</mask>
+<g mask="url(#mask0_49166_34374)">
+<path id="Regular-2 (Stroke)" d="M18.7336 6.09C18.7336 5.89704 18.5769 5.74048 18.384 5.74039H5.6828C5.48978 5.74039 5.33319 5.89699 5.33319 6.09V18.7912C5.33328 18.9841 5.48984 19.1408 5.6828 19.1408H18.384C18.5769 19.1407 18.7335 18.9841 18.7336 18.7912V6.09ZM20.0334 18.7912C20.0333 19.702 19.2948 20.4405 18.384 20.4406H5.6828C4.77187 20.4406 4.0325 19.7021 4.03241 18.7912V6.09C4.03241 5.17902 4.77181 4.43961 5.6828 4.43961H18.384C19.2949 4.4397 20.0334 5.17907 20.0334 6.09V18.7912Z" fill="var(--fill-0, #17181A)" />
+</g>
+</g>
+</g>
+</svg>

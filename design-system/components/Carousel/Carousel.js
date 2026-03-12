@@ -9,6 +9,26 @@
  * @param {string} options.className - Extra classes
  * @returns {HTMLElement}
  */
+/**
+ * Render More Button (Carousel Suffix)
+ */
+window.renderMoreButton = function ({ onClick = null } = {}) {
+    const container = document.createElement('div');
+    container.className = 'carousel-more-button-container';
+
+    const btn = document.createElement('button');
+    btn.className = 'carousel-more-btn';
+    if (window.renderIcon) {
+        btn.appendChild(renderIcon({ name: 'chevron-right', size: 20 }));
+    } else {
+        btn.textContent = '>';
+    }
+
+    if (onClick) btn.addEventListener('click', onClick);
+    container.appendChild(btn);
+    return container;
+};
+
 window.renderCarousel = function ({
     type = 'gallery',
     items = [],
@@ -30,20 +50,17 @@ window.renderCarousel = function ({
     });
 
     if (showMore) {
-        const moreWrapper = document.createElement('div');
-        moreWrapper.className = 'carousel-more-wrapper';
-
-        // Assuming renderMoreButton is available
         if (typeof renderMoreButton === 'function') {
-            moreWrapper.appendChild(renderMoreButton({ onClick: onShowMore }));
+            trackWrapper.appendChild(renderMoreButton({ onClick: onShowMore }));
         } else {
+            const moreWrapper = document.createElement('div');
+            moreWrapper.className = 'carousel-more-wrapper';
             const btn = document.createElement('button');
             btn.textContent = '>';
             btn.addEventListener('click', onShowMore);
             moreWrapper.appendChild(btn);
+            trackWrapper.appendChild(moreWrapper);
         }
-
-        trackWrapper.appendChild(moreWrapper);
     }
 
     container.appendChild(trackWrapper);

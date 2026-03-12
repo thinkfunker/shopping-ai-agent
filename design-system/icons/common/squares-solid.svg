@@ -1,0 +1,6 @@
+<svg preserveAspectRatio="none" width="24" height="24" overflow="visible" style="display: block;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="squares_solid">
+<path d="M15.8 14.4502V2.4582H17.1V14.4502C17.1 15.9142 15.914 17.1002 14.45 17.1002H2.458V15.8002H14.45C15.1961 15.8002 15.8 15.1962 15.8 14.4502Z" fill="var(--fill-0, #17181A)" />
+<path d="M1.15 0C0.5149 0 0 0.515 0 1.15V13.2881C0 13.9232 0.5149 14.4381 1.15 14.4381H13.288C13.9232 14.4381 14.438 13.9232 14.438 13.2881V1.1501C14.438 0.5149 13.9232 9.98974e-05 13.288 9.98974e-05L1.15 0Z" fill="var(--fill-0, #17181A)" />
+</g>
+</svg>

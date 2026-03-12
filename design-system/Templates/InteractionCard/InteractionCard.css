@@ -133,3 +133,31 @@
     align-items: center;
     justify-content: space-between;
 }
+
+/* Selection Card Specifics */
+.selection-card {
+    position: relative;
+    cursor: pointer;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.selection-card.selected {
+    border: 2px solid var(--blue-8, #0f62fe) !important;
+    background-color: var(--background-selection-secondary, rgba(15, 98, 254, 0.06));
+}
+
+.selected-check {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 24px;
+    height: 24px;
+    background-color: var(--blue-8, #0f62fe);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: var(--shadow-small);
+    z-index: 10;
+}

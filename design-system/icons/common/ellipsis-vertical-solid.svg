@@ -1,0 +1,7 @@
+<svg preserveAspectRatio="none" width="24" height="24" overflow="visible" style="display: block;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="ellipsis-vertical_solid">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 5.9722C0.671 5.9722 0 6.6432 0 7.4722C0 8.3012 0.671 8.9722 1.5 8.9722C2.329 8.9722 3 8.3012 3 7.4722C3 6.6432 2.329 5.9722 1.5 5.9722Z" fill="var(--fill-0, #17181A)" />
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 3C2.329 3 3 2.329 3 1.5C3 0.672 2.329 0 1.5 0C0.671 0 0 0.672 0 1.5C0 2.329 0.671 3 1.5 3Z" fill="var(--fill-0, #17181A)" />
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 11.9444C0.671 11.9444 0 12.6154 0 13.4444C0 13.7554 0.094 14.0434 0.256 14.2824C0.31 14.3624 0.372 14.4374 0.439 14.5054C0.711 14.7764 1.086 14.9444 1.5 14.9444C1.914 14.9444 2.289 14.7764 2.561 14.5054C2.628 14.4374 2.69 14.3624 2.744 14.2824C2.906 14.0434 3 13.7554 3 13.4444C3 12.6154 2.329 11.9444 1.5 11.9444Z" fill="var(--fill-0, #17181A)" />
+</g>
+</svg>

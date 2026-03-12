@@ -41,19 +41,33 @@ window.renderMessageActionBar = function renderMessageActionBar({
     };
 
     // Like
-    container.appendChild(createBtn('good', '👍', false, feedback.good));
+    const goodBtn = createBtn('good', '', false, feedback.good);
+    if (window.renderIcon) goodBtn.querySelector('.icon').appendChild(renderIcon({ name: 'thumbs-up', size: 16, variant: feedback.good ? 'solid' : 'outline' }));
+    else goodBtn.querySelector('.icon').textContent = '👍';
+    container.appendChild(goodBtn);
+
     container.appendChild(createDivider());
 
     // Dislike
-    container.appendChild(createBtn('bad', '👎', true, feedback.bad));
+    const badBtn = createBtn('bad', '', true, feedback.bad);
+    if (window.renderIcon) badBtn.querySelector('.icon').appendChild(renderIcon({ name: 'thumbs-down', size: 16, variant: feedback.bad ? 'solid' : 'outline' }));
+    else badBtn.querySelector('.icon').textContent = '👎';
+    container.appendChild(badBtn);
 
     if (isFull) {
         container.appendChild(createDivider());
         // Redo
-        container.appendChild(createBtn('redo', '🔄'));
+        const redoBtn = createBtn('redo', '');
+        if (window.renderIcon) redoBtn.querySelector('.icon').appendChild(renderIcon({ name: 'redo', size: 16 }));
+        else redoBtn.querySelector('.icon').textContent = '🔄';
+        container.appendChild(redoBtn);
+
         container.appendChild(createDivider());
         // Copy
-        container.appendChild(createBtn('copy', '📋'));
+        const copyBtn = createBtn('copy', '');
+        if (window.renderIcon) copyBtn.querySelector('.icon').appendChild(renderIcon({ name: 'copy', size: 16 }));
+        else copyBtn.querySelector('.icon').textContent = '📋';
+        container.appendChild(copyBtn);
     }
 
     bar.appendChild(container);

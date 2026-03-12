@@ -97,11 +97,22 @@ window.renderTopNavigation = function ({
     rightArea.className = 'top-navigation-right';
 
     rightIcons.forEach(iconName => {
-        const [name, variant = 'solid'] = iconName.split('-');
         const btn = document.createElement('button');
         btn.className = 'top-navigation-icon-btn';
+        btn.type = 'button';
         if (typeof renderIcon === 'function') {
-            btn.appendChild(renderIcon({ category: 'common', name: name, variant: variant, size: 24 }));
+            // Check if iconName has a variant suffix like -solid or -outline
+            let name = iconName;
+            let variant = null;
+            if (iconName.includes('-')) {
+                const parts = iconName.split('-');
+                const possibleVariant = parts[parts.length - 1];
+                if (['solid', 'outline', 'gradient'].includes(possibleVariant)) {
+                    variant = possibleVariant;
+                    name = parts.slice(0, parts.length - 1).join('-');
+                }
+            }
+            btn.appendChild(renderIcon({ name: name, variant: variant, size: 24 }));
         } else {
             btn.textContent = '☰';
         }

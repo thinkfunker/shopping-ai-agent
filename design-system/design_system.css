@@ -75,16 +75,27 @@
 
     /* Semantic Colors - Background */
     --bg-primary: #ffffff;
-    --bg-secondary: #f5f5f7;
-    --bg-tertiary: #e8e8ed;
+    --bg-secondary: #f0f2f7;
+    --bg-tertiary: #e4e7ed;
     --bg-key: #0f62fe;
     --bg-success: #147f3a;
     --bg-alert: #d62228;
     --bg-warning: #a86400;
-    --bg-disabled: #f2f2f7;
-    --bg-surface: #ffffff;
-    --bg-elevated: #ffffff;
+    --bg-neutral: rgba(48, 131, 253, 0.16);
+    --bg-disabled: #e4e7ed;
+    --bg-disabled-accent: rgba(0, 0, 0, 0.04);
     --bg-scrim: rgba(0, 0, 0, 0.48);
+    --bg-selection-primary: rgba(15, 98, 254, 0.12);
+    --bg-selection-secondary: rgba(15, 98, 254, 0.06);
+    --bg-selection-text: rgba(15, 98, 254, 0.20);
+    --bg-accent: #383a3d;
+    --bg-surface: #ffffff;
+    --bg-white: #ffffff;
+    --bg-elevated-1: #ffffff;
+    --bg-elevated-2: #e4e7ed;
+    --bg-floating-1: #ffffff;
+    --bg-overlay-white: rgba(255, 255, 255, 0.76);
+    --bg-overlay-black: rgba(0, 0, 0, 0.76);
 
     /* Glassmorphism */
     --glass-bg: rgba(255, 255, 255, 0.7);
@@ -93,20 +104,44 @@
     --glass-border: 1px solid rgba(255, 255, 255, 0.2);
 
     /* Semantic Colors - Content */
-    --content-primary: #1d1d1f;
-    --content-secondary: #6e6e73;
-    --content-tertiary: #a1a1aa;
+    --content-primary: #17181a;
+    --content-secondary: rgba(0, 0, 0, 0.76);
+    --content-tertiary: rgba(0, 0, 0, 0.56);
     --content-key: #0f62fe;
+    --content-link: #0f62fe;
+    --content-link-visited: #5c50a6;
     --content-success: #147f3a;
     --content-alert: #d62228;
-    --content-disabled: #d2d2d7;
+    --content-notification: #db3d42;
+    --content-warning: #a86400;
+    --content-rating: #ffb617;
+    --content-inverted: #ffffff;
+    --content-disabled: rgba(0, 0, 0, 0.28);
     --content-white: #ffffff;
+    --content-placeholder: rgba(0, 0, 0, 0.56);
+    --content-subtle: rgba(0, 0, 0, 0.16);
 
     /* Semantic Colors - Border */
-    --border-primary: #d2d2d7;
-    --border-secondary: #e8e8ed;
-    --border-tertiary: #f5f5f7;
+    --border-primary: rgba(0, 0, 0, 0.48);
+    --border-secondary: rgba(0, 0, 0, 0.16);
+    --border-tertiary: rgba(0, 0, 0, 0.08);
     --border-key: #2c75fe;
+    --border-success: #318f52;
+    --border-alert: #db3d42;
+    --border-warning: #b3771f;
+    --border-accent: rgba(0, 0, 0, 0.28);
+    --border-inverted: #ffffff;
+    --border-disabled: rgba(0, 0, 0, 0.16);
+    --border-elevated-1: rgba(0, 0, 0, 0.08);
+
+    /* Semantic Colors - State */
+    --state-hover-primary: rgba(0, 0, 0, 0.04);
+    --state-focused-primary: rgba(0, 0, 0, 0.08);
+    --state-pressed-primary: rgba(0, 0, 0, 0.12);
+    --state-hover-secondary: rgba(15, 98, 254, 0.04);
+    --state-focused-secondary: rgba(15, 98, 254, 0.08);
+    --state-pressed-secondary: rgba(15, 98, 254, 0.12);
+    --state-disabled: rgba(0, 0, 0, 0.04);
 
     /* Typography - Additional Sizes */
     --font-size-275: 44px;
@@ -178,10 +213,22 @@
     --border-width-100: 1px;
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, #a83deb 0%, #3083fd 100%);
-    --gradient-ai-surface: linear-gradient(135deg, rgba(168, 61, 235, 0.06) 0%, rgba(48, 131, 253, 0.06) 100%);
-    --gradient-border-stop-1: #a83deb;
-    --gradient-border-stop-2: #3083fd;
+    --gradient-content-primary: linear-gradient(46.9deg, #a83deb 5.1%, #3083fd 92.4%);
+    --gradient-content-loading: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0.4) 50%);
+    --gradient-background-primary: linear-gradient(46.9deg, #a83deb 5.1%, #3083fd 92.4%);
+    --gradient-background-secondary: linear-gradient(46.9deg, rgba(168, 61, 235, 0.16) 5.1%, rgba(48, 131, 253, 0.16) 92.4%);
+    --gradient-background-ai-surface: linear-gradient(46.9deg, rgba(168, 61, 235, 0.06) 5.1%, rgba(48, 131, 253, 0.06) 92.4%);
+    --gradient-border-primary: linear-gradient(46.9deg, #a83deb 5.1%, #3083fd 92.4%);
+    --gradient-border-secondary: linear-gradient(46.9deg, rgba(168, 61, 235, 0.16) 5.1%, rgba(48, 131, 253, 0.16) 92.4%);
+
+    /* Logo Gradients */
+    --gradient-logo-primary: linear-gradient(43.6deg, #ff598e 2.2%, #a83deb 30.6%, #3083fd 68.6%, #8ad9fe 97%);
+    --gradient-logo-secondary: linear-gradient(213.6deg, #3083fd 6%, #a83deb 161%);
+    --gradient-logo-tertiary: linear-gradient(43.8deg, #ff598e 2.2%, #a83deb 33%, #3083fd 74.1%, #8ad9fe 104.9%);
+
+    /* Deprecated but kept for compatibility */
+    --gradient-primary: var(--gradient-background-primary);
+    --gradient-ai-surface: var(--gradient-background-ai-surface);
     --gradient-brand-horizontal: linear-gradient(90deg, #a83deb 0%, #3083fd 100%);
 }
 

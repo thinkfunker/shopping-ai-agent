@@ -31,8 +31,25 @@ window.renderChip = function ({
     onClick = null,
     className = ''
 } = {}) {
+    // Legacy/Semantic mapping
+    let activeVariant = variant;
+    let activeSize = size;
+    let activeGraphic = graphic;
+    let activeLeftIcon = leftIcon;
+
+    if (variant === 'hero-category') {
+        activeVariant = 'outline-gradient';
+        activeSize = 'xlarge';
+        activeGraphic = true;
+        activeLeftIcon = leftIcon || 'ai-weather';
+    } else if (variant === 'suggestion-card') {
+        activeVariant = 'suggestion-card';
+        activeSize = 'medium';
+        activeGraphic = graphic !== false; // If not explicitly false, allow graphic
+    }
+
     const chip = document.createElement('div');
-    chip.className = `chip chip-${variant} chip-${size} ${selected ? 'selected' : ''} ${graphic ? 'graphic' : ''} ${className}`.trim();
+    chip.className = `chip chip-${activeVariant} chip-${activeSize} ${selected ? 'selected' : ''} ${activeGraphic ? 'graphic' : ''} ${className}`.trim();
     chip.setAttribute('role', 'button');
     chip.setAttribute('tabindex', disabled ? '-1' : '0');
     chip.setAttribute('aria-pressed', selected);
@@ -47,29 +64,35 @@ window.renderChip = function ({
     stateLayer.className = 'chip-state-layer';
     chip.appendChild(stateLayer);
 
-    const iconSize = (size === 'xlarge' || size === 'large') ? 20 : 16;
+    const iconSize = (activeSize === 'xlarge' || activeSize === 'large') ? 20 : 16;
 
     // Graphic (AI Gradient Icon Container)
-    if (graphic) {
+    if (activeGraphic) {
         const graphicContainer = document.createElement('div');
         graphicContainer.className = 'chip-graphic-container';
         if (window.renderIcon) {
+            // For xlarge, the icon container is 32px
+            if (activeSize === 'xlarge') {
+                graphicContainer.style.width = '32px';
+                graphicContainer.style.height = '32px';
+            }
             graphicContainer.appendChild(renderIcon({
-                category: 'ai',
-                name: 'ai-weather', // Default for graphic
-                size: (size === 'xlarge' || size === 'large') ? 20 : 14
+                category: activeLeftIcon === leftIcon ? leftIconCategory : 'ai',
+                name: activeLeftIcon,
+                variant: 'gradient', // Force gradient for graphic containers
+                size: (activeSize === 'xlarge' || activeSize === 'large') ? 20 : 14
             }));
         }
         chip.appendChild(graphicContainer);
     }
 
-    if (leftIcon && !graphic) {
+    if (activeLeftIcon && !activeGraphic) {
         const span = document.createElement('span');
         span.className = 'chip-icon chip-left-icon';
         if (window.renderIcon) {
             span.appendChild(renderIcon({
                 category: leftIconCategory,
-                name: leftIcon,
+                name: activeLeftIcon,
                 variant: leftIconVariant,
                 size: iconSize
             }));

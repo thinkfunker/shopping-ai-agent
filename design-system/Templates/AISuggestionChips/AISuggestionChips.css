@@ -23,7 +23,6 @@
 .ai-suggestion-chips.layout-list-tag,
 .ai-suggestion-chips.layout-list-icon {
     padding: 0 var(--spacing-400, 16px);
-    gap: var(--spacing-200, 8px);
 }
 
 .ai-suggestion-chips.layout-list-title {
@@ -94,6 +93,22 @@
     display: flex;
     align-items: center;
     border-bottom: 1px solid var(--border-tertiary, rgba(0, 0, 0, 0.08));
+}
+
+.layout-list-tag-item,
+.layout-list-icon-item {
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid var(--border-tertiary, rgba(0, 0, 0, 0.08)) !important;
+    border-radius: 0 !important;
+    padding: var(--spacing-300, 12px) 0 !important;
+    gap: var(--spacing-300, 12px) !important;
+    width: 100%;
+}
+
+.layout-list-tag-item:hover,
+.layout-list-icon-item:hover {
+    background-color: var(--state-hover-secondary, rgba(0, 0, 0, 0.04)) !important;
 }
 
 /* Inner Parts */

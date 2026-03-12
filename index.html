@@ -59,12 +59,13 @@
     <!-- Explorer Specific Styles -->
     <style>
         :root {
-            --sidebar-width: 280px;
-            --header-height: 72px;
-            --explorer-bg: #f5f5f7;
-            --border-color: rgba(0, 0, 0, 0.08);
-            --accent-color: #0f62fe;
+            --sidebar-width: 240px;
+            --header-height: 60px;
+            --explorer-bg: #ffffff;
+            --border-color: #eeeeee;
+            --accent-color: #000000;
             --sidebar-bg: #ffffff;
+            --bg-secondary: #fafafa;
         }
 
         body,
@@ -72,8 +73,10 @@
             margin: 0;
             padding: 0;
             height: 100%;
-            font-family: var(--font-family-primary, 'Inter', sans-serif);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             overflow: hidden;
+            background: #fff;
+            color: #111;
         }
 
         .explorer-container {
@@ -82,7 +85,7 @@
             width: 100vw;
         }
 
-        /* Sidebar Navigation */
+        /* Sidebar - Ultra Minimal */
         .sidebar {
             width: var(--sidebar-width);
             background: var(--sidebar-bg);
@@ -94,71 +97,81 @@
         }
 
         .sidebar-header {
-            padding: 20px;
-            border-bottom: 1px solid var(--border-color);
+            padding: 32px 24px 24px;
         }
 
         .sidebar-header h1 {
             margin: 0;
-            font-size: 20px;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            background: linear-gradient(135deg, #a83deb 0%, #3083fd 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: #000;
         }
 
         .sidebar-menu {
             flex: 1;
             overflow-y: auto;
-            padding: 10px 0;
+            padding: 0 12px 32px;
         }
 
         .menu-section {
-            margin-bottom: 20px;
+            margin-bottom: 32px;
         }
 
         .menu-title {
-            padding: 0 16px 8px;
-            font-size: 11px;
+            padding: 0 12px 8px;
+            font-size: 10px;
             text-transform: uppercase;
-            letter-spacing: 1.2px;
-            color: var(--content-tertiary);
-            font-weight: 700;
+            letter-spacing: 1px;
+            color: #999;
+            font-weight: 600;
         }
 
         .menu-item {
-            padding: 10px 16px;
-            margin: 2px 0;
+            padding: 8px 12px;
+            margin: 1px 0;
             cursor: pointer;
-            font-size: 14px;
-            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-            color: var(--content-secondary);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
+            font-size: 13px;
+            color: #666;
+            border-radius: 6px;
+            transition: all 0.15s ease;
         }
 
         .menu-item:hover {
-            background: rgba(0, 0, 0, 0.04);
-            color: var(--content-primary);
+            color: #000;
+            background: #f5f5f5;
         }
 
         .menu-item.active {
-            color: var(--accent-color);
-            background: rgba(15, 98, 254, 0.08);
-            font-weight: 700;
+            color: #000;
+            background: #eeeeee;
+            font-weight: 600;
         }
 
-
-        /* Main Content */
+        /* Main Content - Ultra Minimal */
         .main-content {
             flex: 1;
             display: flex;
             flex-direction: column;
-            background: var(--explorer-bg);
+            background: #fff;
             overflow: hidden;
+        }
+
+        .top-bar {
+            height: var(--header-height);
+            background: #fff;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            padding: 0 32px;
+            justify-content: space-between;
+        }
+
+        #active-item-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: #000;
         }
 
         .top-bar {
@@ -173,27 +186,23 @@
 
         .preview-area {
             flex: 1;
-            padding: 40px;
+            padding: 60px;
             overflow-y: auto;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
+            background: #fff;
         }
 
-        /* Sandbox Container */
         .sandbox {
             background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-            padding: 48px;
-            min-width: 320px;
-            max-width: 800px;
+            width: 100%;
+            min-height: 80vh;
             position: relative;
-            transition: background 0.3s;
+            display: flex;
+            flex-direction: column;
         }
 
         .sandbox.dark-mode {
-            background: #17181a;
+            background: #1c1c1e;
+            border-color: #3a3a3c;
         }
 
         .controls-panel {
@@ -216,6 +225,65 @@
             background: #fafafa;
             overflow-y: auto;
         }
+
+        /* Color Detail Modal */
+        .color-modal-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(4px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .color-modal {
+            background: #fff;
+            width: 400px;
+            padding: 40px;
+            animation: modalFadeIn 0.2s ease-out;
+        }
+
+        .modal-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #000;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .color-preview-large {
+            width: 100%;
+            height: 80px;
+            margin-bottom: 32px;
+        }
+
+        .info-label {
+            font-size: 9px;
+            font-weight: 700;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .info-value {
+            font-size: 13px;
+            color: #111;
+            padding: 0 0 12px;
+            border-bottom: 1px solid #f0f0f0;
+            margin-bottom: 20px;
+        }
+
+        .info-value.variable {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            color: #000;
+            font-weight: 500;
+        }
     </style>
 </head>
 
@@ -234,17 +302,20 @@
         <!-- Main Workspace -->
         <main class="main-content">
             <header class="top-bar">
-                <div id="active-item-title">Welcome</div>
+                <div id="active-item-title">디자인 시스템 익스플로러</div>
                 <div class="mode-toggles">
                     <button onclick="toggleDarkMode()">Light/Dark</button>
                 </div>
             </header>
 
             <div class="preview-area">
-                <div id="preview-canvas" class="sandbox">
-                    <!-- Component render here -->
-                    <div style="text-align: center; color: #adb5bd;">
-                        Select a component from the sidebar to begin.
+                <div class="sandbox" id="preview-sandbox">
+                    <div id="preview-canvas"
+                        style="flex: 1; overflow-y: auto; position: relative; display: flex; flex-direction: column; padding: 40px;">
+                        <!-- Component render here -->
+                        <div style="text-align: center; color: var(--content-tertiary); padding-top: 100px;">
+                            Select a category from the sidebar
+                        </div>
                     </div>
                 </div>
             </div>
@@ -323,6 +394,7 @@
                     { id: 'colors', name: 'Colors' },
                     { id: 'typography', name: 'Typography' },
                     { id: 'spacing-radius', name: 'Spacing & Radius' },
+                    { id: 'gradients-effects', name: 'Gradients & Effects' },
                     { id: 'icon-explorer', name: 'Icon Explorer' }
                 ]
             },
@@ -387,8 +459,11 @@
                 section: 'AI Templates',
                 items: [
                     { id: 'message', name: 'Message' },
+                    { id: 'message-action-bar', name: 'Message Action Bar' },
+                    { id: 'message-list', name: 'Message List' },
                     { id: 'ai-suggestion', name: 'AI Suggestion List' },
                     { id: 'ai-suggestion-chips', name: 'AI Suggestion Chips' },
+                    { id: 'base-card', name: 'Base Card' },
                     { id: 'media-card', name: 'Media Card' },
                     { id: 'list-card', name: 'List Card' },
                     { id: 'review-card', name: 'Review Card' },
@@ -401,8 +476,21 @@
 
         // --- App State ---
         let currentItem = null;
+        let metadata = { colors: {}, icons: {} };
 
-        function initExplorer() {
+        async function loadMetadata() {
+            try {
+                const response = await fetch('./design-system/metadata.json');
+                if (response.ok) {
+                    metadata = await response.json();
+                }
+            } catch (e) {
+                console.warn('Metadata not found or load failed');
+            }
+        }
+
+        async function initExplorer() {
+            await loadMetadata();
             const menuContainer = document.getElementById('sidebar-menu');
             menuData.forEach(section => {
                 const sectionEl = document.createElement('div');
@@ -441,6 +529,7 @@
                 case 'typography': renderTypography(canvas); break;
                 case 'icon-explorer': renderIconExplorer(canvas); break;
                 case 'spacing-radius': renderSpacingRadius(canvas); break;
+                case 'gradients-effects': renderGradientsEffects(canvas); break;
                 case 'chip': setupChipStory(canvas, controls); break;
                 case 'avatar': setupAvatarStory(canvas, controls); break;
                 case 'button': setupButtonStory(canvas, controls); break;
@@ -475,15 +564,66 @@
                 case 'image-preview': setupImagePreviewStory(canvas, controls); break;
                 case 'menu': setupMenuStory(canvas, controls); break;
                 case 'message': setupMessageStory(canvas, controls); break;
-                case 'ai-suggestion': setupAISuggestionStory(canvas, controls); break;
+                case 'message-action-bar': setupMessageActionBarStory(canvas, controls); break;
+                case 'message-list': setupMessageListStory(canvas, controls); break;
+                case 'ai-suggestion': setupAiSuggestionListStory(canvas, controls); break;
                 case 'ai-suggestion-chips': setupAISuggestionChipsStory(canvas, controls); break;
+                case 'base-card': setupBaseCardStory(canvas, controls); break;
                 case 'media-card': setupMediaCardStory(canvas, controls); break;
-                case 'list-card': setupListCardStory(canvas, controls); break;
-                case 'review-card': setupReviewCardStory(canvas, controls); break;
-                case 'interaction-card': setupInteractionCardStory(canvas, controls); break;
                 case 'bottom-button': setupBottomButtonStory(canvas, controls); break;
                 case 'bottom-sheet': setupBottomSheetStory(canvas, controls); break;
             }
+        }
+
+        // --- Color Detail Logic ---
+        const tokenMapping = {
+            '--bg-primary': '--gray-14 (inverted) or white',
+            '--bg-secondary': '--gray-1',
+            '--bg-tertiary': '--gray-3',
+            '--bg-key': '--blue-8',
+            '--bg-success': '--green-7',
+            '--bg-alert': '--red-8',
+            '--bg-warning': '--yellow-7',
+            '--content-primary': '--gray-12',
+            '--content-secondary': '--gray-8',
+            '--content-tertiary': '--gray-6',
+            '--content-key': '--blue-8',
+            '--border-primary': '--gray-7',
+            '--border-secondary': '--gray-3',
+            '--state-hover-primary': 'rgba(0,0,0,0.04)',
+            '--state-focused-primary': 'rgba(0,0,0,0.08)',
+            '--state-pressed-primary': 'rgba(0,0,0,0.12)',
+            '--gradient-content-primary': 'linear-gradient(135deg, #a83deb, #3083fd)',
+            '--gradient-background-ai-surface': 'linear-gradient(135deg, rgba(168, 61, 235, 0.05), rgba(48, 131, 253, 0.05))'
+        };
+
+        function showColorModal(varName) {
+            const backdrop = document.getElementById('color-modal-backdrop');
+            const preview = document.getElementById('modal-color-preview');
+            const semanticLabel = document.getElementById('modal-semantic-token');
+            const primitiveLabel = document.getElementById('modal-primitive-token');
+            const hexValue = document.getElementById('modal-hex-value');
+            const descValue = document.getElementById('modal-description');
+
+            const style = getComputedStyle(document.documentElement);
+            const value = style.getPropertyValue(varName).trim();
+            const meta = metadata.colors[varName] || {};
+
+            preview.style.background = `var(${varName})`;
+            semanticLabel.textContent = varName;
+            primitiveLabel.textContent = tokenMapping[varName] || 'Direct Value';
+            hexValue.textContent = value || 'Calculating...';
+            descValue.textContent = meta.description || 'No description available for this token.';
+
+            backdrop.style.display = 'flex';
+        }
+
+        function hideColorModal() {
+            document.getElementById('color-modal-backdrop').style.display = 'none';
+        }
+
+        function closeColorModal(e) {
+            if (e.target.id === 'color-modal-backdrop') hideColorModal();
         }
 
         function setCanvasContent(canvas, content) {
@@ -497,24 +637,54 @@
         // --- Foundations ---
         function renderColors(container) {
             const colorGroups = {
-                'Key / Blue': ['--blue-1', '--blue-3', '--blue-5', '--blue-7', '--blue-8', '--blue-10', '--blue-12'],
-                'Neutral / Grays': ['--gray-1', '--gray-2', '--gray-4', '--gray-6', '--gray-8', '--gray-10', '--gray-12', '--gray-14'],
-                'Alert / Red': ['--red-1', '--red-3', '--red-5', '--red-7', '--red-8', '--red-10', '--red-12'],
-                'Success / Green': ['--green-1', '--green-3', '--green-5', '--green-7', '--green-9'],
-                'Warning / Yellow': ['--yellow-1', '--yellow-3', '--yellow-5', '--yellow-7', '--yellow-8'],
-                'Semantic - Background': ['--bg-primary', '--bg-secondary', '--bg-tertiary', '--bg-key', '--bg-surface', '--bg-alert'],
-                'Semantic - Content': ['--content-primary', '--content-secondary', '--content-tertiary', '--content-key', '--content-alert', '--content-success', '--content-disabled'],
-                'Semantic - Border': ['--border-primary', '--border-secondary', '--border-tertiary', '--border-key']
+                'Primitive - Blue': ['--blue-1', '--blue-2', '--blue-3', '--blue-4', '--blue-5', '--blue-6', '--blue-7', '--blue-8', '--blue-9', '--blue-10', '--blue-11', '--blue-12', '--blue-13', '--blue-14'],
+                'Primitive - Gray': ['--gray-1', '--gray-2', '--gray-3', '--gray-4', '--gray-5', '--gray-6', '--gray-7', '--gray-8', '--gray-9', '--gray-10', '--gray-11', '--gray-12', '--gray-13', '--gray-14'],
+                'Primitive - Red': ['--red-1', '--red-2', '--red-3', '--red-4', '--red-5', '--red-6', '--red-7', '--red-8', '--red-9', '--red-10', '--red-11', '--red-12', '--red-13', '--red-14'],
+                'Primitive - Green': ['--green-1', '--green-2', '--green-3', '--green-4', '--green-5', '--green-6', '--green-7', '--green-8', '--green-9'],
+                'Primitive - Yellow': ['--yellow-1', '--yellow-2', '--yellow-3', '--yellow-4', '--yellow-5', '--yellow-6', '--yellow-7', '--yellow-8'],
+                'Semantic - Background': [
+                    '--bg-primary', '--bg-secondary', '--bg-tertiary', '--bg-key', '--bg-success', '--bg-alert', '--bg-warning', '--bg-neutral',
+                    '--bg-disabled', '--bg-disabled-accent', '--bg-scrim', '--bg-selection-primary', '--bg-selection-secondary', '--bg-selection-text',
+                    '--bg-accent', '--bg-surface', '--bg-white', '--bg-elevated-1', '--bg-elevated-2', '--bg-floating-1', '--bg-overlay-white', '--bg-overlay-black'
+                ],
+                'Semantic - Content': [
+                    '--content-primary', '--content-secondary', '--content-tertiary', '--content-key', '--content-link', '--content-link-visited',
+                    '--content-success', '--content-alert', '--content-notification', '--content-warning', '--content-rating', '--content-inverted',
+                    '--content-disabled', '--content-white', '--content-placeholder', '--content-subtle'
+                ],
+                'Semantic - Border': [
+                    '--border-primary', '--border-secondary', '--border-tertiary', '--border-key', '--border-success', '--border-alert', '--border-warning',
+                    '--border-accent', '--border-inverted', '--border-disabled', '--border-elevated-1'
+                ],
+                'Semantic - State': [
+                    '--state-hover-primary', '--state-focused-primary', '--state-pressed-primary',
+                    '--state-hover-secondary', '--state-focused-secondary', '--state-pressed-secondary',
+                    '--state-disabled'
+                ],
+                'Gradients - AI & System': [
+                    '--gradient-content-primary', '--gradient-content-loading',
+                    '--gradient-background-primary', '--gradient-background-secondary', '--gradient-background-ai-surface',
+                    '--gradient-border-primary', '--gradient-border-secondary'
+                ],
+                'Gradients - Logo': [
+                    '--gradient-logo-primary', '--gradient-logo-secondary', '--gradient-logo-tertiary'
+                ]
             };
 
-            let html = '<div style="width: 100%; display: grid; gap: 32px;">';
+            let html = '<div style="width: 100%; display: grid; gap: 48px;">';
             for (const [groupName, vars] of Object.entries(colorGroups)) {
-                html += `<div><h4 style="margin-bottom:12px">${groupName}</h4><div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap:16px;">`;
+                html += `
+                    <div>
+                        <h4 style="margin-bottom:16px; font-size: 14px; text-transform: uppercase; color: var(--content-secondary); letter-spacing: 1px;">${groupName}</h4>
+                        <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap:12px;">
+                `;
                 vars.forEach(v => {
+                    const meta = metadata.colors[v] || {};
+                    const desc = meta.description || '';
                     html += `
-                        <div style="display:flex; flex-direction:column; gap:8px;">
-                            <div style="height:60px; border-radius:8px; border:1px solid #eee; background:var(${v})"></div>
-                            <div style="font-size:11px; font-weight:600">${v}</div>
+                        <div style="display:flex; flex-direction:column; gap:6px; cursor:pointer;" onclick="showColorModal('${v}')" title="Click for details">
+                            <div style="height:48px; border-radius:10px; border:1px solid rgba(0,0,0,0.05); background:var(${v}); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></div>
+                            <div style="font-size:10px; font-family: monospace; color: var(--content-primary); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${v}</div>
                         </div>
                     `;
                 });
@@ -550,31 +720,130 @@
 
         // --- Icon Explorer ---
         function renderIconExplorer(container) {
-            const icons = Object.keys(window.ICON_MAP || {});
+            const iconMap = window.ICON_MAP || {};
+            const categories = {};
+
+            // Group icons by category
+            Object.entries(iconMap).forEach(([key, config]) => {
+                const cat = config.category || 'other';
+                if (!categories[cat]) categories[cat] = [];
+                categories[cat].push(key);
+            });
+
+            const catLabels = {
+                'ai': 'AI Icons (Gradient & Solid)',
+                'common': 'Common UI Icons (Outline & Solid)',
+                'map': 'Map Pins & Location Icons',
+                'service': 'Service & Product Icons'
+            };
+
             let html = `
                 <div style="width: 100%;">
-                    <div style="margin-bottom:20px"><input type="text" placeholder="Search icons..." style="width:100%; padding:10px; border-radius:8px; border:1px solid #ccc; box-sizing: border-box;"></div>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); gap: 16px; text-align: center;">
-            `;
-            icons.forEach(name => {
-                html += `
-                    <div class="icon-card" style="padding:12px; background:#fdfdfd; border-radius:8px; border:1px solid #f0f0f0;">
-                        <div id="icon-preview-${name}" style="margin-bottom:8px; display:flex; justify-content:center;"></div>
-                        <div style="font-size:10px; color:#555; word-break:break-all;">${name}</div>
+                    <div style="margin-bottom:24px; position: sticky; top: -40px; background: inherit; padding: 10px 0; z-index: 5;">
+                        <input type="text" id="icon-search" placeholder="아이콘 이름을 입력하세요..." 
+                            style="width:100%; padding:14px; border-radius:12px; border:1px solid var(--border-primary); box-sizing: border-box; font-size: 15px; outline: none; box-shadow: var(--shadow-small);">
                     </div>
-                `;
+                    <div id="icon-grid-container" style="display: flex; flex-direction: column; gap: 40px;">
+            `;
+
+            Object.keys(catLabels).forEach(catId => {
+                if (categories[catId]) {
+                    html += `
+                        <div class="icon-section-group" id="section-${catId}">
+                            <h4 style="margin-bottom:16px; font-size: 14px; text-transform: uppercase; color: var(--content-secondary); letter-spacing: 1px;">${catLabels[catId]}</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 16px;">
+                    `;
+
+                    categories[catId].sort().forEach(name => {
+                        const iconDesc = metadata.icons[name]?.description || '';
+                        html += `
+                            <div class="icon-card" data-name="${name}" style="padding:16px; background:var(--bg-primary); border-radius:12px; border:1px solid var(--border-secondary); text-align: center; transition: all 0.2s;" title="${iconDesc}">
+                                <div id="icon-preview-${name}" style="margin-bottom:10px; display:flex; justify-content:center; align-items:center; height: 32px;"></div>
+                                <div style="font-size:10px; color:var(--content-primary); font-weight: 500; word-break:break-all; line-height: 1.2;">${name}</div>
+                                ${iconDesc ? `<div style="font-size:9px; color:var(--content-tertiary); margin-top:4px; line-height:1.2;">${iconDesc}</div>` : ''}
+                            </div>
+                        `;
+                    });
+
+                    html += '</div></div>';
+                }
             });
+
             html += '</div></div>';
             container.innerHTML = html;
 
             // Render actual icons
-            icons.forEach(name => {
-                const iconEl = window.renderIcon({ name: name, size: 24 });
-                const target = document.getElementById(`icon-preview-${name}`);
-                if (target) target.appendChild(iconEl);
+            requestAnimationFrame(() => {
+                Object.keys(iconMap).forEach(name => {
+                    const preview = document.getElementById(`icon-preview-${name}`);
+                    if (preview && window.renderIcon) {
+                        preview.appendChild(renderIcon({ name, size: 32 }));
+                    }
+                });
             });
+
+            // Search Filter
+            const searchInput = document.getElementById('icon-search');
+            if (searchInput) {
+                searchInput.addEventListener('input', (e) => {
+                    const term = e.target.value.toLowerCase();
+                    document.querySelectorAll('.icon-card').forEach(card => {
+                        const name = card.getAttribute('data-name').toLowerCase();
+                        card.style.display = name.includes(term) ? 'block' : 'none';
+                    });
+
+                    document.querySelectorAll('.icon-section-group').forEach(group => {
+                        const hasVisible = group.querySelectorAll('.icon-card:not([style*="display: none"])').length > 0;
+                        group.style.display = hasVisible ? 'block' : 'none';
+                    });
+                });
+            }
         }
 
+        function renderGradientsEffects(container) {
+            const gradients = [
+                { name: '--gradient-primary', value: 'var(--gradient-primary)' },
+                { name: '--gradient-brand-horizontal', value: 'var(--gradient-brand-horizontal)' },
+                { name: '--gradient-ai-surface', value: 'var(--gradient-ai-surface)' }
+            ];
+
+            const glass = [
+                { name: 'Glass (Light)', class: 'glass-effect', bg: 'var(--bg-secondary)' },
+                { name: 'Glass (Dark)', class: 'glass-effect', bg: '#1c1c1e', isDark: true }
+            ];
+
+            let html = '<div style="width: 100%; display: grid; gap: 48px;">';
+
+            // Gradients
+            html += '<div><h4 style="margin-bottom:16px">Gradients</h4><div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap:24px;">';
+            gradients.forEach(g => {
+                html += `
+                    <div style="display:flex; flex-direction:column; gap:8px;">
+                        <div style="height:100px; border-radius:16px; background:${g.value}; border:1px solid rgba(0,0,0,0.05);"></div>
+                        <div style="font-size:12px; font-weight:600">${g.name}</div>
+                    </div>
+                `;
+            });
+            html += '</div></div>';
+
+            // Glassmorphism
+            html += '<div><h4 style="margin-bottom:16px">Glassmorphism & Blur</h4><div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap:24px;">';
+            glass.forEach(g => {
+                html += `
+                    <div style="position:relative; height:200px; background:${g.bg}; border-radius:24px; overflow:hidden; display:flex; align-items:center; justify-content:center;">
+                        <div style="position:absolute; width:100px; height:100px; background:var(--blue-8); filter:blur(40px); opacity:0.3; top:20%; left:20%;"></div>
+                        <div style="position:absolute; width:120px; height:120px; background:var(--red-5); filter:blur(50px); opacity:0.2; bottom:10%; right:10%;"></div>
+                        <div class="${g.class}" style="width:80%; height:80px; border-radius:16px; display:flex; align-items:center; justify-content:center; position:relative; z-index:1; border: 1px solid rgba(255,255,255,0.1);">
+                            <span style="font-size:14px; font-weight:600; color:${g.isDark ? 'white' : 'black'}">${g.name}</span>
+                        </div>
+                    </div>
+                `;
+            });
+            html += '</div></div>';
+
+            html += '</div>';
+            container.innerHTML = html;
+        }
         function renderSpacingRadius(container) {
             const spacing = [100, 200, 300, 400, 500, 600, 700, 800, 1000, 1200, 1400];
             const radius = [100, 200, 300, 400, 'full'];
@@ -649,7 +918,7 @@
 
             createControl(controls, 'text', 'Label', (v) => { params.label = v; update(); }, params.label);
             createControl(controls, 'select', 'Variant', (v) => { params.variant = v; update(); }, params.variant,
-                ['solid-rounded-rect', 'solid-rounded', 'outline-gradient', 'suggestion-card']);
+                ['solid-rounded-rect', 'solid-rounded', 'outline-gradient', 'suggestion-card', 'hero-category']);
             createControl(controls, 'select', 'Size', (v) => { params.size = v; update(); }, params.size,
                 ['small', 'medium', 'large', 'xlarge']);
             createControl(controls, 'select', 'Selected', (v) => { params.selected = v === 'true'; update(); }, params.selected.toString(), ['true', 'false']);
@@ -1400,12 +1669,15 @@
         }
 
         function setupMessageStory(canvas, controls) {
-            const params = { role: 'user', content: 'What can you do?', background: true, os: 'mobile' };
+            const params = { role: 'user', content: 'What can you do?', background: true, os: 'mobile', showActionBar: false };
             const update = () => {
                 canvas.innerHTML = '';
                 canvas.style.width = '100%';
                 if (window.renderMessage) {
                     const msg = renderMessage(params);
+                    if (params.showActionBar && params.role === 'AI' && window.renderMessageActionBar) {
+                        msg.appendChild(renderMessageActionBar({ type: 'feedback' }));
+                    }
                     setCanvasContent(canvas, msg);
                     updateCode('renderMessage', params);
                 }
@@ -1414,6 +1686,36 @@
             createControl(controls, 'text', 'Content', (v) => { params.content = v; update(); }, 'What can you do?');
             createControl(controls, 'select', 'Background', (v) => { params.background = v === 'true'; update(); }, 'true', ['true', 'false']);
             createControl(controls, 'select', 'OS', (v) => { params.os = v; update(); }, 'mobile', ['mobile', 'pc']);
+            createControl(controls, 'select', 'Show Action Bar', (v) => { params.showActionBar = v === 'true'; update(); }, 'false', ['true', 'false']);
+            update();
+        }
+
+        function setupMessageActionBarStory(canvas, controls) {
+            const params = { type: 'full', feedback: { good: false, bad: false } };
+            const update = () => {
+                canvas.innerHTML = '';
+                if (window.renderMessageActionBar) {
+                    const bar = renderMessageActionBar(params);
+                    setCanvasContent(canvas, bar);
+                    updateCode('renderMessageActionBar', params);
+                }
+            };
+            createControl(controls, 'select', 'Type', (v) => { params.type = v; update(); }, 'full', ['full', 'feedback']);
+            createControl(controls, 'select', 'Good', (v) => { params.feedback.good = v === 'true'; update(); }, 'false', ['true', 'false']);
+            createControl(controls, 'select', 'Bad', (v) => { params.feedback.bad = v === 'true'; update(); }, 'false', ['true', 'false']);
+            update();
+        }
+
+        function setupMessageListStory(canvas, controls) {
+            const params = {};
+            const update = () => {
+                canvas.innerHTML = '';
+                if (window.renderMessageList) {
+                    const list = renderMessageList(params);
+                    setCanvasContent(canvas, list);
+                    updateCode('renderMessageList', params);
+                }
+            };
             update();
         }
 
@@ -1454,7 +1756,23 @@
             };
 
             createControl(controls, 'select', 'Layout', (v) => { params.layout = v; update(); }, params.layout,
-                ['carousel', 'card compact', 'card description', 'list', 'list icon', 'list tag', 'list title', 'group icon']);
+                ['carousel', 'grid', 'card compact', 'card description', 'list', 'list icon', 'list tag', 'list title', 'group icon']);
+            createControl(controls, 'select', 'Items Type', (v) => {
+                if (v === 'Home Categories') {
+                    params.items = [
+                        { title: '天気', icon: 'ai-weather' },
+                        { title: 'レシピ', icon: 'ai-recipe' },
+                        { title: 'お買い物', icon: 'ai-shopping' },
+                        { title: 'おでかけ', icon: 'ai-map' }
+                    ];
+                } else {
+                    params.items = [
+                        { title: 'Find coffee shops nearby', icon: 'map' },
+                        { title: 'Best selling laptops', icon: 'shopping' }
+                    ];
+                }
+                update();
+            }, 'Suggestions', ['Suggestions', 'Home Categories']);
             createControl(controls, 'select', 'Show Title', (v) => { params.showTitleText = v === 'true'; update(); }, params.showTitleText.toString(), ['true', 'false']);
 
             update();
@@ -1486,6 +1804,30 @@
             createControl(controls, 'number', 'Score', (v) => { params.score = parseInt(v); update(); }, params.score);
             createControl(controls, 'select', 'Selected', (v) => { params.selected = v === 'true'; update(); }, params.selected.toString(), ['true', 'false']);
 
+            update();
+        }
+
+        function setupBaseCardStory(canvas, controls) {
+            const params = {
+                title: 'Data Summary',
+                date: '2024-03-20',
+                value: '1,234',
+                unit: 'items',
+                detail: 'medium',
+                indicator: 12
+            };
+            const update = () => {
+                canvas.innerHTML = '';
+                if (window.renderCard) {
+                    const el = renderCard(params);
+                    setCanvasContent(canvas, el);
+                    updateCode('renderCard', params);
+                }
+            };
+
+            createControl(controls, 'text', 'Title', (v) => { params.title = v; update(); }, params.title);
+            createControl(controls, 'text', 'Value', (v) => { params.value = v; update(); }, params.value);
+            createControl(controls, 'select', 'Detail', (v) => { params.detail = v; update(); }, params.detail, ['low', 'medium', 'high']);
             update();
         }
 
@@ -1537,7 +1879,8 @@
             const params = {
                 type: 'question',
                 question: 'What kind of coffee do you prefer?',
-                choices: [{ label: 'Espresso', selected: true }, { label: 'Latte', selected: false }, { label: 'Americano', selected: false }]
+                choices: [{ label: 'Espresso', selected: true }, { label: 'Latte', selected: false }, { label: 'Americano', selected: false }],
+                interactionType: 'carousel'
             };
 
             const update = () => {
@@ -1546,13 +1889,37 @@
                 if (params.type === 'question') {
                     if (window.renderQuestionCard) el = renderQuestionCard({ question: params.question, choices: params.choices });
                 } else if (params.type === 'selection') {
-                    if (window.renderSelectionCard) el = renderSelectionCard({ title: 'Premium Espresso', subtitle: 'Rich and intense', image: 'https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&w=200&q=80', selected: true });
+                    if (window.renderSelectionCard) el = renderSelectionCard({
+                        title: 'Premium Espresso',
+                        subtitle: 'Rich and intense',
+                        image: 'https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&w=200&q=80',
+                        selected: true,
+                        tags: ['Organic', 'Medium Roast']
+                    });
+                } else if (params.type === 'choice-result') {
+                    if (window.renderChoiceResultCard) el = renderChoiceResultCard({
+                        display: 'both',
+                        questions: [{
+                            text: 'Temperature?',
+                            choices: [{ label: 'Hot', selected: true }, { label: 'Iced', selected: false }]
+                        }],
+                        result: {
+                            count: 12,
+                            items: [
+                                { title: 'Product A', brand: 'Brand X', image: 'https://picsum.photos/200/201' },
+                                { title: 'Product B', brand: 'Brand Y', image: 'https://picsum.photos/200/202' }
+                            ],
+                            type: params.interactionType,
+                            mediaSize: 'medium'
+                        }
+                    });
                 }
                 if (el) setCanvasContent(canvas, el);
                 updateCode('renderInteractionCard', params);
             };
 
-            createControl(controls, 'select', 'Card Type', (v) => { params.type = v; update(); }, params.type, ['question', 'selection']);
+            createControl(controls, 'select', 'Card Type', (v) => { params.type = v; update(); }, params.type, ['question', 'selection', 'choice-result']);
+            createControl(controls, 'select', 'Result Layout', (v) => { params.interactionType = v; update(); }, params.interactionType, ['carousel', 'list']);
 
             update();
         }
@@ -1632,7 +1999,8 @@
         }
 
         function toggleDarkMode() {
-            document.getElementById('preview-canvas').classList.toggle('dark-mode');
+            const sandbox = document.getElementById('preview-sandbox');
+            sandbox.classList.toggle('dark-mode');
         }
 
         window.onload = initExplorer;

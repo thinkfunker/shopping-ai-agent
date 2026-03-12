@@ -1,0 +1,74 @@
+{
+    "colors": {
+        "--bg-primary": {
+            "description": "The main background color used for the overall application surface.",
+            "usage": "Use as the primary container background."
+        },
+        "--bg-secondary": {
+            "description": "A secondary background color for grouping elements or providing subtle contrast.",
+            "usage": "Use for secondary sections, sidebars, or nested containers."
+        },
+        "--bg-tertiary": {
+            "description": "A tertiary background color for deeper nesting or subtle separation.",
+            "usage": "Use for deeply nested elements or very subtle contrast."
+        },
+        "--content-primary": {
+            "description": "The primary color for text and icons, ensuring maximum readability.",
+            "usage": "Use for body text, headings, and primary icons."
+        },
+        "--content-secondary": {
+            "description": "A secondary color for text and icons with slightly lower prominence.",
+            "usage": "Use for subtext, captions, and secondary icons."
+        },
+        "--content-key": {
+            "description": "The core brand color used to highlight key interactive elements.",
+            "usage": "Use for primary buttons, active links, and brand-specific highlights."
+        },
+        "--border-primary": {
+            "description": "The primary border color for providing clear structure and definition.",
+            "usage": "Use for main component outlines and separators."
+        },
+        "--state-hover-primary": {
+            "description": "Visual feedback color when a user hovers over an interactive element.",
+            "usage": "Apply to backgrounds or overlays on hover."
+        },
+        "--state-focused-primary": {
+            "description": "Indicates that an element has keyboard focus or is currently active.",
+            "usage": "Apply to focused elements for accessibility."
+        },
+        "--state-pressed-primary": {
+            "description": "Visual feedback color when a user clicks or taps an interaction element.",
+            "usage": "Apply during the 'active' or 'pressed' state."
+        },
+        "--gradient-content-primary": {
+            "description": "A vibrant gradient used for emphasizing focal points like progress indicators or active cursors.",
+            "usage": "Use for small, high-attention elements that define the user's focus."
+        },
+        "--gradient-content-loading": {
+            "description": "A dynamic gradient indicating that AI processing or content loading is in progress.",
+            "usage": "Apply to elements during generative or retrieval states."
+        },
+        "--gradient-background-ai-surface": {
+            "description": "A sophisticated gradient background for AI response areas and result cards.",
+            "usage": "Use specifically for containers that display AI-generated insights or interactive results."
+        }
+    },
+    "icons": {
+        "ai-stars": {
+            "description": "Represents AI generation or star-rated results."
+        },
+        "ai-chat": {
+            "description": "Used for starting a conversation with the AI agent."
+        },
+        "bell-outline": {
+            "description": "Standard notification icon shown in the navigation bar."
+        },
+        "magnifying-glass-outline": {
+            "description": "Indicates search functionality."
+        },
+        "cart-outline": {
+            "description": "Represents the user's shopping cart."
+        },
+        "default": "All icons are standardized to a 24x24 pixel grid."
+    }
+}

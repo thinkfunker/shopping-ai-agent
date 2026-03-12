@@ -22,7 +22,12 @@ window.renderAiSuggestionList = function renderAiSuggestionList({
     const iconDiv = document.createElement('div');
     iconDiv.className = 'ai-suggestion-header-icon';
     if (typeof renderIcon === 'function') {
-        iconDiv.appendChild(renderIcon({ name: 'ai-shopping', size: 20 }));
+        const iconContainer = document.createElement('div');
+        iconContainer.className = 'chip-graphic-container';
+        iconContainer.style.width = '32px';
+        iconContainer.style.height = '32px';
+        iconContainer.appendChild(renderIcon({ name: 'ai-shopping', size: 20, variant: 'gradient' }));
+        iconDiv.appendChild(iconContainer);
     }
 
     const h3 = document.createElement('h3');

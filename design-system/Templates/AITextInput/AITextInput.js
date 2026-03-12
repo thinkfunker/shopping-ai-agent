@@ -12,7 +12,7 @@ function renderAITextInputTemplate({
     showFooter = false,
     showLeftButton = true,
     showSystem = true,
-    placeholder = "なんでも聞いてください"
+    placeholder = "무엇이든 물어보세요"
 } = {}) {
     const root = document.createElement('div');
     root.className = `ai-text-input-template ${background ? 'bg-on' : 'bg-off'}`;
@@ -23,8 +23,12 @@ function renderAITextInputTemplate({
     if (showLeftButton && type === 'default') {
         const btn = document.createElement('button');
         btn.className = 'ai-left-btn-placeholder';
-        btn.innerHTML = '+';
-        btn.style.cssText = 'width: 48px; height: 48px; border-radius: 100px; border: 1px solid #ddd; background: white;';
+        if (window.renderIcon) {
+            btn.appendChild(renderIcon({ name: 'plus', size: 24, variant: 'outline' }));
+        } else {
+            btn.innerHTML = '+';
+        }
+        btn.style.cssText = 'width: 48px; height: 48px; border-radius: 100px; border: 1px solid #ddd; background: white; display: flex; align-items: center; justify-content: center;';
         container.appendChild(btn);
     }
 
@@ -55,7 +59,11 @@ function renderAITextInputTemplate({
     } else {
         const sendBtn = document.createElement('button');
         sendBtn.className = 'ai-send-btn';
-        sendBtn.innerHTML = '↑';
+        if (window.renderIcon) {
+            sendBtn.appendChild(renderIcon({ name: 'arrow-up', size: 24, variant: 'solid' }));
+        } else {
+            sendBtn.innerHTML = '↑';
+        }
         controls.appendChild(sendBtn);
     }
 
@@ -68,17 +76,17 @@ function renderAITextInputTemplate({
         footer.className = 'ai-text-input-footer';
         footer.innerHTML = `
             <p class="disclaimer-text">
-                AIの回答は不正確な可能性があります。 AIが生成した回答の注意点は
-                <a class="disclaimer-link">ガイドライン</a>
-                をご確認ください
+                AI의 답변은 부정확할 수 있습니다. AI가 생성한 답변의 주의사항은
+                <a class="disclaimer-link">가이드라인</a>
+                을 확인해주세요.
             </p>
             <div class="footer-meta-row">
                 <p class="disclaimer-text">
-                    参考 : <a class="disclaimer-link">mybest</a>（2024/03/11更新）
+                    참고 : <a class="disclaimer-link">mybest</a> (2025/03/12 업데이트)
                 </p>
                 <div class="footer-info-item">
                     <span>💡</span>
-                    <span class="disclaimer-text">商品情報の注意事項</span>
+                    <span class="disclaimer-text">상품 정보 주의사항</span>
                 </div>
             </div>
         `;
