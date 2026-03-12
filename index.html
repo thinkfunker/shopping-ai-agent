@@ -189,6 +189,11 @@
             padding: 60px;
             overflow-y: auto;
             background: #fff;
+            transition: background 0.3s ease;
+        }
+
+        .preview-area.mobile-mode {
+            background: #fafafa;
         }
 
         .sandbox {
@@ -198,6 +203,16 @@
             position: relative;
             display: flex;
             flex-direction: column;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .sandbox.mobile-view {
+            max-width: 375px;
+            margin: 0 auto;
+            border: 1px solid #eee;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.02);
+            border-radius: 8px;
+            /* Subtle radius for mobile look */
         }
 
         .sandbox.dark-mode {
@@ -519,10 +534,23 @@
             document.getElementById('active-item-title').textContent = item.name;
 
             const canvas = document.getElementById('preview-canvas');
+            const sandbox = document.getElementById('preview-sandbox');
+            const previewArea = document.querySelector('.preview-area');
             const controls = document.getElementById('controls-list');
+
             canvas.innerHTML = '';
             controls.innerHTML = '';
             document.getElementById('code-snippet').textContent = '';
+
+            // Handle Mobile View for non-foundations
+            const foundations = ['colors', 'typography', 'spacing-radius', 'gradients-effects', 'icon-explorer'];
+            if (!foundations.includes(item.id)) {
+                sandbox.classList.add('mobile-view');
+                previewArea.classList.add('mobile-mode');
+            } else {
+                sandbox.classList.remove('mobile-view');
+                previewArea.classList.remove('mobile-mode');
+            }
 
             switch (item.id) {
                 case 'colors': renderColors(canvas); break;
