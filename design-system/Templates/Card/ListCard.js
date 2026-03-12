@@ -30,7 +30,14 @@ function renderListCard({
         headerDiv.appendChild(left);
 
         if (header.actionIcon) {
-            headerDiv.innerHTML += `<span class="icon icon-20" style="color: var(--content-tertiary)">🔍</span>`; // Placeholder for icon
+            const iconWrap = document.createElement('div');
+            iconWrap.className = 'list-card-header-icon';
+            if (window.renderIcon) {
+                iconWrap.appendChild(renderIcon({ name: 'magnifying-glass-outline', size: 20 }));
+            } else {
+                iconWrap.innerHTML = '🔍';
+            }
+            headerDiv.appendChild(iconWrap);
         }
         card.appendChild(headerDiv);
     }

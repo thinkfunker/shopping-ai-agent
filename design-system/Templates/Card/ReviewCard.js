@@ -31,13 +31,19 @@ function renderReviewCard({
         storeInfo.innerHTML += `<span class="review-store-name">${storeName}</span>`;
         header.appendChild(storeInfo);
     } else {
-        const ratingGroup = document.createElement('div');
-        ratingGroup.className = 'review-rating-group';
-        ratingGroup.innerHTML = `
-            <div class="review-stars">${'★'.repeat(Math.round(rating))}${'☆'.repeat(5 - Math.round(rating))}</div>
-            <span class="review-score">${rating.toFixed(1)}</span>
-        `;
-        header.appendChild(ratingGroup);
+        if (typeof renderScore === 'function') {
+            const ratingGroup = renderScore({ value: rating, trailingText: false, size: 'small' });
+            ratingGroup.className += ' review-rating-group';
+            header.appendChild(ratingGroup);
+        } else {
+            const ratingGroup = document.createElement('div');
+            ratingGroup.className = 'review-rating-group';
+            ratingGroup.innerHTML = `
+                <div class="review-stars">${'★'.repeat(Math.round(rating))}${'☆'.repeat(5 - Math.round(rating))}</div>
+                <span class="review-score">${rating.toFixed(1)}</span>
+            `;
+            header.appendChild(ratingGroup);
+        }
     }
 
     const meta = document.createElement('div');
@@ -76,10 +82,19 @@ function renderReviewCard({
         const tagsDiv = document.createElement('div');
         tagsDiv.className = 'review-tags';
         tags.forEach(tag => {
-            const span = document.createElement('span');
-            span.className = 'chip chip-small chip-assistive';
-            span.textContent = tag;
-            tagsDiv.appendChild(span);
+            if (typeof renderTag === 'function') {
+                tagsDiv.appendChild(renderTag({
+                    label: tag,
+                    size: 'small',
+                    style: 'assistive',
+                    priority: 'secondary'
+                }));
+            } else {
+                const span = document.createElement('span');
+                span.className = 'chip chip-small chip-assistive';
+                span.textContent = tag;
+                tagsDiv.appendChild(span);
+            }
         });
         card.appendChild(tagsDiv);
     }

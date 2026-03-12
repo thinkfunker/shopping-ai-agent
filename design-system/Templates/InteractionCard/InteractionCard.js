@@ -113,13 +113,18 @@ function renderChoiceResultCard({
             section.className = 'interaction-section';
             section.innerHTML = `
                 <div class="interaction-header">
-                    <span class="icon icon-24">❓</span>
+                    <div class="interaction-icon-container" style="display: flex; align-items: center; justify-content: center; width: 24px; height: 24px;"></div>
                     <h4 class="interaction-title">${q.text}</h4>
                 </div>
                 <div class="interaction-chip-group" id="choice-q-chips-${idx}">
                 </div>
             `;
             card.appendChild(section);
+
+            const iconCont = section.querySelector('.interaction-icon-container');
+            if (window.renderIcon) {
+                iconCont.appendChild(renderIcon({ name: 'bulb', size: 18, variant: 'outline' }));
+            }
 
             const chipGroup = section.querySelector(`#choice-q-chips-${idx}`);
             q.choices.forEach(c => {
@@ -141,7 +146,7 @@ function renderChoiceResultCard({
         resultSection.className = 'interaction-result-section';
         resultSection.innerHTML = `
             <div class="interaction-result-header">
-                <span class="icon icon-24">✅</span>
+                <div class="interaction-result-icon-container" style="display: flex; align-items: center; justify-content: center; width: 24px; height: 24px;"></div>
                 <div class="interaction-result-text">
                     <span class="interaction-result-count">${result.count}</span>
                     <span class="interaction-result-unit">건</span>
@@ -149,6 +154,12 @@ function renderChoiceResultCard({
                 </div>
             </div>
         `;
+        const resIconCont = resultSection.querySelector('.interaction-result-icon-container');
+        if (window.renderIcon) {
+            const icon = renderIcon({ name: 'check-circle', size: 24, variant: 'solid' });
+            icon.style.color = 'var(--green-8, #00804c)';
+            resIconCont.appendChild(icon);
+        }
         resultSection.appendChild(renderResultPattern(result));
         card.appendChild(resultSection);
     }

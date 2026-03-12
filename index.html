@@ -553,7 +553,8 @@
                     { id: 'review-card', name: 'Review Card' },
                     { id: 'interaction-card', name: 'Interaction Card' },
                     { id: 'bottom-button', name: 'Bottom Button Bar' },
-                    { id: 'bottom-sheet', name: 'Bottom Sheet' }
+                    { id: 'bottom-sheet', name: 'Bottom Sheet' },
+                    { id: 'ai-input-template', name: 'AI Input Template' }
                 ]
             }
         ];
@@ -667,8 +668,12 @@
                 case 'ai-suggestion-chips': setupAISuggestionChipsStory(canvas, controls); break;
                 case 'base-card': setupBaseCardStory(canvas, controls); break;
                 case 'media-card': setupMediaCardStory(canvas, controls); break;
+                case 'list-card': setupListCardStory(canvas, controls); break;
+                case 'review-card': setupReviewCardStory(canvas, controls); break;
+                case 'interaction-card': setupInteractionCardStory(canvas, controls); break;
                 case 'bottom-button': setupBottomButtonStory(canvas, controls); break;
                 case 'bottom-sheet': setupBottomSheetStory(canvas, controls); break;
+                case 'ai-input-template': setupAIInputTemplateStory(canvas, controls); break;
             }
         }
 
@@ -2086,6 +2091,35 @@
             input.onchange = (e) => onChange(e.target.value);
             row.appendChild(input);
             container.appendChild(row);
+        }
+
+        function setupAIInputTemplateStory(canvas, controls) {
+            const params = {
+                type: 'default',
+                background: true,
+                showFooter: true,
+                showLeftButton: true,
+                showSystem: true,
+                placeholder: '무엇이든 물어보세요'
+            };
+
+            const update = () => {
+                canvas.innerHTML = '';
+                canvas.style.width = '100vw';
+                canvas.style.maxWidth = '100%';
+                if (window.renderAITextInputTemplate) {
+                    const el = renderAITextInputTemplate(params);
+                    setCanvasContent(canvas, el);
+                    updateCode('renderAITextInputTemplate', params);
+                }
+            };
+
+            createControl(controls, 'select', 'Type', (v) => { params.type = v; update(); }, params.type, ['default', 'login button', 'multiline']);
+            createControl(controls, 'select', 'Background', (v) => { params.background = v === 'true'; update(); }, params.background.toString(), ['true', 'false']);
+            createControl(controls, 'select', 'Show Footer', (v) => { params.showFooter = v === 'true'; update(); }, params.showFooter.toString(), ['true', 'false']);
+            createControl(controls, 'text', 'Placeholder', (v) => { params.placeholder = v; update(); }, params.placeholder);
+
+            update();
         }
 
         function updateCode(fnName, params) {

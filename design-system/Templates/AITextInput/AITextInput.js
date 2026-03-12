@@ -85,11 +85,17 @@ function renderAITextInputTemplate({
                     참고 : <a class="disclaimer-link">mybest</a> (2025/03/12 업데이트)
                 </p>
                 <div class="footer-info-item">
-                    <span>💡</span>
+                    <div class="footer-icon-wrap" style="display:inline-flex; align-items:center; justify-content:center; width:16px; height:16px; margin-right:4px;"></div>
                     <span class="disclaimer-text">상품 정보 주의사항</span>
                 </div>
             </div>
         `;
+        const footerIconWrap = footer.querySelector('.footer-icon-wrap');
+        if (window.renderIcon) {
+            footerIconWrap.appendChild(renderIcon({ name: 'bulb-solid', size: 14 }));
+        } else {
+            footerIconWrap.innerHTML = '💡';
+        }
         root.appendChild(footer);
     }
 
