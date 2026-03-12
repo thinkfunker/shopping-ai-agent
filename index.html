@@ -237,7 +237,8 @@
         }
 
         .controls-panel {
-            height: 240px;
+            height: 200px;
+            /* Reduced from 240px */
             background: #fff;
             border-top: 1px solid var(--border-color);
             display: flex;
@@ -245,25 +246,69 @@
 
         .controls-inner {
             flex: 1;
-            padding: 32px;
+            padding: 24px 32px;
+            /* Reduced vertical padding */
             border-right: 1px solid var(--border-color);
             overflow-y: auto;
         }
 
         .code-inner {
             flex: 1;
-            padding: 32px;
-            background: #fafafa;
+            padding: 24px 32px;
+            background: #fff;
+            /* Match background for seamless look */
             overflow-y: auto;
         }
 
         .controls-panel h3 {
-            font-size: 10px;
+            font-size: 9px;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #999;
-            margin: 0 0 20px 0;
+            letter-spacing: 1.5px;
+            color: #bbb;
+            margin: 0 0 16px 0;
             font-weight: 700;
+        }
+
+        /* Minimalist Input Styles */
+        .control-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            /* Tighter spacing */
+            gap: 20px;
+        }
+
+        .control-label {
+            font-size: 11px;
+            color: #666;
+            font-weight: 400;
+        }
+
+        .control-input,
+        .control-select {
+            border: none;
+            border-bottom: 1px solid #eee;
+            background: transparent;
+            font-size: 11px;
+            padding: 2px 0;
+            width: 120px;
+            outline: none;
+            color: #000;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        }
+
+        .control-input:focus,
+        .control-select:focus {
+            border-bottom-color: #000;
+        }
+
+        #code-snippet {
+            font-size: 11px;
+            color: #777;
+            margin: 0;
+            line-height: 1.5;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
         }
 
         /* Color Detail Modal */
@@ -2016,14 +2061,13 @@
         // --- Helpers ---
         function createControl(container, type, label, onChange, defaultValue, options = []) {
             const row = document.createElement('div');
-            row.style.marginBottom = '12px';
-            row.innerHTML = `<label style="display:block; font-size:12px; margin-bottom:4px; font-weight:600;">${label}</label>`;
+            row.className = 'control-row';
+            row.innerHTML = `<label class="control-label">${label}</label>`;
 
             let input;
             if (type === 'select') {
                 input = document.createElement('select');
-                input.style.width = '100%';
-                input.style.padding = '6px';
+                input.className = 'control-select';
                 options.forEach(opt => {
                     const o = document.createElement('option');
                     o.value = opt === null ? '' : opt;
@@ -2035,8 +2079,7 @@
                 input = document.createElement('input');
                 input.type = 'text';
                 input.value = defaultValue;
-                input.style.width = '100%';
-                input.style.padding = '6px';
+                input.className = 'control-input';
                 input.style.boxSizing = 'border-box';
             }
 
