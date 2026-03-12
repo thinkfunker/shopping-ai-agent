@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent i - Home</title>
+    <!-- Design System Foundation -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Noto+Sans+JP:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./design-system/design_system.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Component Specific CSS -->
+    <link rel="stylesheet" href="./design-system/components/TopNavigation/TopNavigation.css">
+    <link rel="stylesheet" href="./design-system/components/AITextInput/AITextInput.css">
+    <link rel="stylesheet" href="./design-system/components/Icon.css">
+    <link rel="stylesheet" href="./design-system/components/Avatar/Avatar.css">
+    <link rel="stylesheet" href="./design-system/components/Chip/Chip.css">
+
+    <style>
+        .hero-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 32px 16px 40px;
+            text-align: center;
+            gap: 8px;
+        }
+
+        .hero-greeting {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 26px;
+            color: var(--content-primary);
+            white-space: pre-wrap;
+            font-family: 'Noto Sans JP', sans-serif;
+            letter-spacing: -0.02em;
+            max-width: 280px;
+            margin: 0;
+        }
+
+        .input-area-wrapper {
+            padding: 0 16px 32px;
+            /* Bottom gap to grid: 32px */
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px;
+            /* Figma: 198 - (20 + 172) = 6 */
+            width: 100%;
+            padding: 0 20px;
+            /* Figma x=20 */
+            box-sizing: border-box;
+        }
+
+        .pagination-dots {
+            display: flex;
+            justify-content: center;
+            gap: 4px;
+            margin-top: 12px;
+            /* Grid to pagination dots: 12px */
+            margin-bottom: 24px;
+            /* Space before bottom area */
+        }
+
+        .suggestion-cards-container {
+            display: flex;
+            gap: 8px;
+            padding: 0 16px 16px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 50px;
+            /* Adjusted to push suggestions to roughly y=677 */
+        }
+
+        .footer-disclaimer {
+            padding: 0 16px 16px;
+            font-size: 12px;
+            color: var(--content-tertiary);
+            line-height: 19px;
+            text-align: center;
+        }
+
+        .footer-disclaimer a {
+            color: #0f62fe;
+            text-decoration: none;
+        }
+
+        .home-indicator-container {
+            padding: 8px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .home-indicator {
+            width: 134px;
+            height: 5px;
+            background: #000;
+            border-radius: 100px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .home-indicator {
+                background: #fff;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="shopping-agent-container" style="height: 100vh; display: flex; flex-direction: column;">
+        <!-- Header Section -->
+        <header id="header-root" class="header-fixed"></header>
+
+        <!-- Main Hero Viewport -->
+        <main id="chat-root" class="chat-viewport"
+            style="flex: 1; display: flex; flex-direction: column; overflow-x: hidden;">
+            <div class="hero-container">
+                <div id="hero-logo"></div>
+                <h1 class="hero-greeting">こんにちは、<br>お手伝いできる事はありますか</h1>
+            </div>
+
+            <!-- Input area -->
+            <div class="input-area-wrapper">
+                <div id="hero-input"></div>
+            </div>
+
+            <!-- Category Grid -->
+            <div class="category-grid" id="category-grid"></div>
+
+            <!-- Pagination dots -->
+            <div class="pagination-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Bottom Suggestion Cards -->
+            <div class="suggestion-cards-container" id="suggestion-cards"></div>
+
+            <!-- Legal Disclaimer -->
+            <div class="footer-disclaimer">
+                AIの回答は不正確な可能性があります。 AIが生成した回答の注意点は <a href="#">ガイドライン</a> をご確認ください
+            </div>
+
+            <div class="home-indicator-container">
+                <div class="home-indicator"></div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Component Logic Load -->
+    <script src="./design-system/components/Icon.js"></script>
+    <script src="./design-system/components/Avatar/Avatar.js"></script>
+    <script src="./design-system/components/TopNavigation/TopNavigation.js"></script>
+    <script src="./design-system/components/AITextInput/AITextInput.js"></script>
+    <script src="./design-system/components/Chip/Chip.js"></script>
+
+    <script>
+        function initApp() {
+            // 1. Header with custom branding
+            const headerRoot = document.getElementById('header-root');
+            headerRoot.appendChild(renderTopNavigation({
+                os: 'mobile',
+                titleAlign: 'left',
+                headerTitle: 'Agent i',
+                showLeftIcon: false,
+                showDivider: false,
+                rightIcons: ['bell-outline', 'bars-outline']
+            }));
+
+            // 2. Hero Logo (High Fidelity)
+            const heroLogo = document.getElementById('hero-logo');
+            heroLogo.appendChild(renderAvatar({ size: 'xxlarge', type: 'AI' }));
+
+            // 3. Hero Input (Pill style)
+            const heroInput = document.getElementById('hero-input');
+            heroInput.appendChild(renderAITextInput({
+                placeholder: 'なんでも聞いてください',
+                type: 'simple',
+                showLeftIcon: true
+            }));
+
+            // 4. Category Grid (2x3)
+            const grid = document.getElementById('category-grid');
+            const categories = [
+                { label: '天気', icon: 'ai-weather' },
+                { label: 'レシピ', icon: 'ai-recipe' },
+                { label: 'お買い物', icon: 'ai-shopping' },
+                { label: 'おでかけ', icon: 'ai-map' },
+                { label: '旅行', icon: 'ai-travel' },
+                { label: '人間関係', icon: 'ai-counseling' }
+            ];
+
+            categories.forEach(cat => {
+                grid.appendChild(renderChip({
+                    label: cat.label,
+                    variant: 'hero-category',
+                    leftIcon: cat.icon
+                }));
+            });
+
+            // 5. Suggestion Cards
+            const sugContainer = document.getElementById('suggestion-cards');
+            const suggestions = [
+                'スター・ウォーズ를 간단히 해설해줘',
+                '오타니 쇼헤이에 관한 최신 토픽'
+            ];
+
+            // Use translated or original text as per instructions
+            // I'll keep the Japanese text as per Figma screenshot for exact implementation
+            const figmaSuggestions = [
+                'スター・ウォーズを簡単に解説して',
+                '大谷翔平に関する最新トピックス'
+            ];
+
+            figmaSuggestions.forEach(sug => {
+                sugContainer.appendChild(renderChip({
+                    label: sug,
+                    variant: 'suggestion-card'
+                }));
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', initApp);
+    </script>
+</body>
+
+</html>
