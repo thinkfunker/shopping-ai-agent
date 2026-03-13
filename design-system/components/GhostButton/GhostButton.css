@@ -32,28 +32,32 @@
     height: 28px;
     padding: 0 var(--spacing-300);
     font-size: var(--font-size-075);
-    line-height: var(--line-height-label-small);
+    line-height: normal;
+    /* Let flex handle centering */
 }
 
 .ghost-button-medium {
     height: 32px;
     padding: 0 var(--spacing-300);
     font-size: var(--font-size-0875);
-    line-height: var(--line-height-label-medium);
+    line-height: normal;
+    /* Let flex handle centering */
 }
 
 .ghost-button-large {
     height: 40px;
     padding: 0 var(--spacing-400);
     font-size: var(--font-size-0875);
-    line-height: var(--line-height-label-medium);
+    line-height: normal;
+    /* Let flex handle centering */
 }
 
 .ghost-button-xlarge {
     height: 48px;
     padding: 0 var(--spacing-400);
     font-size: var(--font-size-100);
-    line-height: var(--line-height-label-large);
+    line-height: normal;
+    /* Let flex handle centering */
 }
 
 /* Icon Only Adjustments */

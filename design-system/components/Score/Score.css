@@ -41,7 +41,8 @@
 .score-text {
     font-family: var(--font-family-primary);
     font-size: var(--font-size-075);
-    line-height: var(--line-height-body-small);
+    line-height: 1;
+    /* Match flex centering */
 }
 
 .score-leading {

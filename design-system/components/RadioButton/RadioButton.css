@@ -80,6 +80,7 @@
 .radio-label {
     font-family: var(--font-family-primary);
     font-size: var(--font-size-0875);
-    line-height: var(--line-height-label-medium);
+    line-height: 1;
+    /* Match flex centering */
     color: var(--content-primary);
 }

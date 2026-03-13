@@ -1,7 +1,7 @@
 /**
  * Render Result Pattern (List or Carousel)
  */
-function renderResultPattern({
+window.renderResultPattern = function ({
     type = 'list',
     mediaSize = 'medium',
     items = []
@@ -71,34 +71,13 @@ function renderResultPattern({
         }
     }
 
-    if (layout === 'list-title' || layout === 'list title') {
-        const header = document.createElement('div');
-        header.className = 'list-header';
-        const title = document.createElement('h4');
-        title.className = 'chip-title card-title';
-        title.textContent = items[0]?.title || 'Header';
-        header.appendChild(title);
-        container.appendChild(header);
-
-        items.slice(1).forEach(item => {
-            const row = document.createElement('div');
-            row.className = 'list-item';
-            const text = document.createElement('p');
-            text.className = 'chip-subtext';
-            text.textContent = item.title;
-            row.appendChild(text);
-            container.appendChild(row);
-        });
-        return container;
-    }
-
     return container;
 }
 
 /**
  * Render Choice Result Card Template
  */
-function renderChoiceResultCard({
+window.renderChoiceResultCard = function ({
     display = 'choice',
     questions = [],
     result = { count: 0, items: [], type: 'carousel', mediaSize: 'medium' }
@@ -160,7 +139,7 @@ function renderChoiceResultCard({
             icon.style.color = 'var(--green-8, #00804c)';
             resIconCont.appendChild(icon);
         }
-        resultSection.appendChild(renderResultPattern(result));
+        resultSection.appendChild(window.renderResultPattern(result));
         card.appendChild(resultSection);
     }
 
@@ -170,7 +149,7 @@ function renderChoiceResultCard({
 /**
  * Render Question Card Template
  */
-function renderQuestionCard({
+window.renderQuestionCard = function ({
     expanded = true,
     completion = 'incomplete',
     question = '',
@@ -235,7 +214,7 @@ function renderQuestionCard({
 /**
  * Render Selection Card Template
  */
-function renderSelectionCard({
+window.renderSelectionCard = function ({
     selected = false,
     title = '',
     subtitle = '',

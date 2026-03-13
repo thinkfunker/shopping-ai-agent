@@ -2,7 +2,8 @@
 
 .text-input-container {
     position: relative;
-    width: 390px;
+    width: 100%;
+    max-width: 390px;
 }
 
 .text-input-wrapper {

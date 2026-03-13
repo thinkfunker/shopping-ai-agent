@@ -3,7 +3,7 @@
  * @param {Object} options
  * @returns {HTMLElement}
  */
-function renderListCard({
+window.renderListCard = function ({
     header = {},
     items = [],
     images = [],

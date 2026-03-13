@@ -245,6 +245,9 @@ window.ICON_MAP = {
   'television-solid': { category: 'service', name: 'television', variant: 'solid' },
   'washing-machine-outline': { category: 'service', name: 'washing-machine', variant: 'outline' },
   'washing-machine-solid': { category: 'service', name: 'washing-machine', variant: 'solid' },
+  // Aliases for easier use
+  'plus': { category: 'common', name: 'plus', variant: 'outline' },
+  'microphone': { category: 'common', name: 'microphone', variant: 'outline' },
 };
 
 /**
@@ -272,6 +275,8 @@ window.renderIcon = function ({
   const category = mapped.category || manualCategory || 'common';
   const iconName = mapped.name || name;
   const variant = mapped.variant !== undefined ? mapped.variant : (manualVariant || 'solid');
+  const variantSuffix = variant ? `-${variant}` : '';
+  const key = `${category}/${iconName}${variantSuffix}.svg`;
 
   const wrapper = document.createElement('span');
   wrapper.className = `figma-icon-wrapper ${className}`;
@@ -280,6 +285,20 @@ window.renderIcon = function ({
   wrapper.style.display = 'inline-flex';
   wrapper.style.alignItems = 'center';
   wrapper.style.justifyContent = 'center';
+
+  // 1.5. Use SVG_DATA if available (allows for dynamic updates/overrides)
+  if (window.SVG_DATA && window.SVG_DATA[key]) {
+    wrapper.innerHTML = window.SVG_DATA[key];
+    const svg = wrapper.querySelector('svg');
+    if (svg) {
+      svg.setAttribute('width', size);
+      svg.setAttribute('height', size);
+      svg.style.width = '100%';
+      svg.style.height = '100%';
+      svg.style.display = 'block';
+    }
+    return wrapper;
+  }
 
   // 2. Fallbacks for missing generic icons
   const fallbacks = {
@@ -316,16 +335,15 @@ window.renderIcon = function ({
     return wrapper;
   }
 
-  // 3. Load from local design system folder
-  const variantSuffix = variant ? `-${variant}` : '';
-  const iconPath = `./design-system/icons/${category}/${iconName}${variantSuffix}.svg`;
-
+  // 4. Fallback: Load from local design system folder
+  const iconPath = `./design-system/icons/${key}`;
   const img = document.createElement('img');
   img.src = iconPath;
   img.alt = iconName;
   img.style.width = '100%';
   img.style.height = '100%';
   img.style.display = 'block';
+  img.style.objectFit = 'contain';
   img.className = `figma-icon icon-${iconName}`;
 
   img.onerror = () => {

@@ -13,7 +13,7 @@
  * @param {function} options.onClose
  * @returns {HTMLElement}
  */
-function renderBottomSheet({
+window.renderBottomSheet = function ({
     type = 'default',
     headerTitle = 'Title',
     showLeftIcon = false,

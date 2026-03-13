@@ -119,6 +119,7 @@
 .checkbox-label {
     font-family: var(--font-family-primary);
     font-size: var(--font-size-100);
-    line-height: var(--line-height-label-large);
+    line-height: 1;
+    /* Match flex centering */
     color: var(--content-primary);
 }

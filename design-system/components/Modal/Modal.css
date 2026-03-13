@@ -1,7 +1,7 @@
 @import "../../design_system.css";
 
 .modal-overlay {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -12,6 +12,8 @@
     justify-content: center;
     padding: var(--spacing-400, 16px);
     box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.4);
+    /* Added backdrop color just in case renderScrim is missing */
 }
 
 .modal-container {
@@ -71,12 +73,14 @@
 
 .modal-mobile .modal-title {
     font-size: var(--font-size-1125, 18px);
-    line-height: var(--line-height-title-xsmall, 23px);
+    line-height: normal;
+    /* Better for flex centering */
 }
 
 .modal-pc .modal-title {
     font-size: var(--font-size-125, 20px);
-    line-height: var(--line-height-title-small, 26px);
+    line-height: normal;
+    /* Better for flex centering */
 }
 
 .modal-description {

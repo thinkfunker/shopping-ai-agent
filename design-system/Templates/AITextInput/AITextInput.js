@@ -1,110 +1,135 @@
 /**
  * Render AI Text Input Template
+ * Fully reconstructed based on Figma design.
+ * 
  * @param {Object} options
  * @param {string} options.type - default | login button | multiline
  * @param {boolean} options.background
  * @param {boolean} options.showFooter
+ * @param {boolean} options.showLeftButton
+ * @param {boolean} options.showSystem
+ * @param {string} options.placeholder
  * @returns {HTMLElement}
  */
-function renderAITextInputTemplate({
+window.renderAITextInputTemplate = function ({
     type = 'default',
     background = true,
-    showFooter = false,
+    showFooter = true,
     showLeftButton = true,
     showSystem = true,
     placeholder = "무엇이든 물어보세요"
 } = {}) {
-    const root = document.createElement('div');
-    root.className = `ai-text-input-template ${background ? 'bg-on' : 'bg-off'}`;
-
     const container = document.createElement('div');
-    container.className = 'ai-text-input-template-container';
+    container.className = `ai-text-input-template ${background ? 'bg-on' : 'bg-off'}`;
 
-    if (showLeftButton && type === 'default') {
-        const btn = document.createElement('button');
-        btn.className = 'ai-left-btn-placeholder';
-        if (window.renderIcon) {
-            btn.appendChild(renderIcon({ name: 'plus', size: 24, variant: 'outline' }));
-        } else {
-            btn.innerHTML = '+';
-        }
-        btn.style.cssText = 'width: 48px; height: 48px; border-radius: 100px; border: 1px solid #ddd; background: white; display: flex; align-items: center; justify-content: center;';
-        container.appendChild(btn);
+    const mainRow = document.createElement('div');
+    mainRow.className = 'ai-text-input-template-container';
+
+    // 1. Left Action Button (Redo/Refresh) - Using Design System Button
+    if (showLeftButton && type === 'default' && window.renderButton) {
+        const leftBtn = renderButton({
+            priority: 'outline-secondary',
+            size: 'xlarge',
+            leftIcon: 'redo-solid',
+            iconOnly: true,
+            className: 'ai-redo-btn'
+        });
+        mainRow.appendChild(leftBtn);
+    } else if (showLeftButton && type === 'default') {
+        const leftBtn = document.createElement('button');
+        leftBtn.className = 'ai-redo-btn';
+        leftBtn.textContent = '↺';
+        mainRow.appendChild(leftBtn);
     }
 
+    // 2. Input Wrapper (Pill)
     const wrapper = document.createElement('div');
-    wrapper.className = `ai-text-input-wrapper ${type === 'multiline' ? 'multiline' : ''}`;
+    const isMultiline = type === 'multiline';
+    wrapper.className = `ai-text-input-wrapper ${isMultiline ? 'multiline' : ''}`;
 
-    if (type === 'multiline') {
-        const textarea = document.createElement('textarea');
-        textarea.className = 'ai-text-input-field';
-        textarea.placeholder = placeholder;
-        wrapper.appendChild(textarea);
-    } else {
-        const input = document.createElement('input');
-        input.type = 'text';
-        input.className = 'ai-text-input-field';
-        input.placeholder = placeholder;
-        wrapper.appendChild(input);
+    // 2a. Inner Plus Icon (Inside Pill)
+    if (window.renderIcon && type === 'default') {
+        const innerPlus = document.createElement('div');
+        innerPlus.className = 'inner-plus-icon';
+        innerPlus.appendChild(renderIcon({ name: 'plus-outline', size: 20 }));
+        wrapper.appendChild(innerPlus);
     }
 
-    const controls = document.createElement('div');
-    controls.className = 'ai-input-controls';
+    // 2b. Input Field
+    let input;
+    if (isMultiline) {
+        input = document.createElement('textarea');
+        input.rows = 3;
+    } else {
+        input = document.createElement('input');
+        input.type = 'text';
+    }
+    input.className = 'ai-text-input-field';
+    input.placeholder = placeholder;
+    wrapper.appendChild(input);
 
-    if (type === 'login button') {
-        const loginBtn = document.createElement('button');
-        loginBtn.className = 'ai-login-btn';
-        loginBtn.textContent = 'ログイン';
-        controls.appendChild(loginBtn);
+    // 2c. Send Button (Right area of Pill) - Using Design System Button
+    if (window.renderButton) {
+        const sendBtn = renderButton({
+            priority: 'outline-tertiary',
+            size: 'medium',
+            leftIcon: 'arrow-up-outline',
+            iconOnly: true,
+            className: 'ai-send-btn'
+        });
+        wrapper.appendChild(sendBtn);
     } else {
         const sendBtn = document.createElement('button');
         sendBtn.className = 'ai-send-btn';
-        if (window.renderIcon) {
-            sendBtn.appendChild(renderIcon({ name: 'arrow-up', size: 24, variant: 'solid' }));
-        } else {
-            sendBtn.innerHTML = '↑';
-        }
-        controls.appendChild(sendBtn);
+        sendBtn.textContent = '↑';
+        wrapper.appendChild(sendBtn);
     }
 
-    wrapper.appendChild(controls);
-    container.appendChild(wrapper);
-    root.appendChild(container);
+    mainRow.appendChild(wrapper);
+    container.appendChild(mainRow);
 
+    // 3. Footer
     if (showFooter) {
         const footer = document.createElement('footer');
         footer.className = 'ai-text-input-footer';
-        footer.innerHTML = `
-            <p class="disclaimer-text">
-                AI의 답변은 부정확할 수 있습니다. AI가 생성한 답변의 주의사항은
-                <a class="disclaimer-link">가이드라인</a>
-                을 확인해주세요.
-            </p>
-            <div class="footer-meta-row">
-                <p class="disclaimer-text">
-                    참고 : <a class="disclaimer-link">mybest</a> (2025/03/12 업데이트)
-                </p>
-                <div class="footer-info-item">
-                    <div class="footer-icon-wrap" style="display:inline-flex; align-items:center; justify-content:center; width:16px; height:16px; margin-right:4px;"></div>
-                    <span class="disclaimer-text">상품 정보 주의사항</span>
-                </div>
-            </div>
-        `;
-        const footerIconWrap = footer.querySelector('.footer-icon-wrap');
+
+        const line1 = document.createElement('p');
+        line1.className = 'disclaimer-text';
+        line1.innerHTML = `AI의 답변은 부정확할 수 있습니다. AI가 생성한 답변의 주의점은 <a class="disclaimer-link">가이드라인</a>을 확인해주세요.`;
+        footer.appendChild(line1);
+
+        const metaRow = document.createElement('div');
+        metaRow.className = 'footer-meta-row';
+
+        const line2 = document.createElement('p');
+        line2.className = 'disclaimer-text';
+        line2.innerHTML = `참고 : <a class="disclaimer-link">mybest</a>（2024/03/11 업데이트）`;
+        metaRow.appendChild(line2);
+
+        const infoItem = document.createElement('div');
+        infoItem.className = 'footer-info-item';
         if (window.renderIcon) {
-            footerIconWrap.appendChild(renderIcon({ name: 'bulb-solid', size: 14 }));
-        } else {
-            footerIconWrap.innerHTML = '💡';
+            infoItem.appendChild(renderIcon({ name: 'bulb-solid', size: 16 }));
         }
-        root.appendChild(footer);
+        const infoText = document.createElement('span');
+        infoText.className = 'disclaimer-text';
+        infoText.textContent = '상품 정보 주의사항';
+        infoItem.appendChild(infoText);
+
+        metaRow.appendChild(infoItem);
+        footer.appendChild(metaRow);
+        container.appendChild(footer);
     }
 
+    // 4. iOS Home Indicator
     if (showSystem) {
         const system = document.createElement('div');
         system.className = 'home-indicator-container';
-        system.innerHTML = `<div class="home-indicator-bar"></div>`;
-        root.appendChild(system);
+        const bar = document.createElement('div');
+        bar.className = 'home-indicator-bar';
+        system.appendChild(bar);
+        container.appendChild(system);
     }
 
-    return root;
-}
+    return container;
+};

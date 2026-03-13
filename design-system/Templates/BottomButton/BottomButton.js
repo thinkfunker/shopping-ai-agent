@@ -6,7 +6,7 @@
  * @param {boolean} options.showHomeIndicator
  * @returns {HTMLElement}
  */
-function renderBottomButton({
+window.renderBottomButton = function ({
     layout = 'single',
     actions = [],
     showHomeIndicator = true

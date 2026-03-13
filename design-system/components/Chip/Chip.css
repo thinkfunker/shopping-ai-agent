@@ -156,7 +156,8 @@
 .chip-label {
     position: relative;
     z-index: 1;
-    line-height: 1.2;
+    line-height: normal;
+    /* Better for flex centering */
 }
 
 .chip-icon {

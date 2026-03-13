@@ -2,10 +2,11 @@
     position: relative;
     border-radius: 50%;
     overflow: hidden;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    box-sizing: border-box;
 }
 
 .avatar.xsmall {
@@ -47,7 +48,6 @@
 .avatar.ai {
     background: transparent;
     border-radius: 0;
-    overflow: visible;
 }
 
 .avatar.user {

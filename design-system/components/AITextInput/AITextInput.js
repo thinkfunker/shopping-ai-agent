@@ -24,9 +24,9 @@ window.renderAITextInput = function ({
         const leftBtn = document.createElement('div');
         leftBtn.className = 'ai-left-btn';
         if (window.renderIcon) {
-            leftBtn.appendChild(renderIcon({ category: 'common', name: 'plus', variant: 'outline', size: 18 }));
+            leftBtn.appendChild(renderIcon({ name: 'redo-solid', size: 18 }));
         } else {
-            leftBtn.textContent = '+';
+            leftBtn.textContent = '↺';
         }
         container.appendChild(leftBtn);
     }
@@ -54,7 +54,7 @@ window.renderAITextInput = function ({
     voiceBtn.className = 'ai-input-btn voice';
     if (disabled) voiceBtn.disabled = true;
     if (window.renderIcon) {
-        voiceBtn.appendChild(renderIcon({ category: 'common', name: 'microphone', variant: 'outline', size: 20 }));
+        voiceBtn.appendChild(renderIcon({ name: 'microphone-solid', size: 20 }));
     }
     controls.appendChild(voiceBtn);
 
@@ -62,7 +62,7 @@ window.renderAITextInput = function ({
     sendBtn.className = 'ai-input-btn send';
     if (disabled) sendBtn.disabled = true;
     if (window.renderIcon) {
-        sendBtn.appendChild(renderIcon({ category: 'common', name: 'arrow-up', variant: 'solid', size: 20 }));
+        sendBtn.appendChild(renderIcon({ name: 'arrow-up-outline', size: 20 }));
     }
     controls.appendChild(sendBtn);
 

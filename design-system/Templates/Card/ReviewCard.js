@@ -3,7 +3,7 @@
  * @param {Object} options
  * @returns {HTMLElement}
  */
-function renderReviewCard({
+window.renderReviewCard = function ({
     storeName = '',
     storeLogo = '',
     rating = 5,

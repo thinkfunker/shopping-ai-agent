@@ -46,6 +46,22 @@
     color: var(--content-secondary, rgba(0, 0, 0, 0.76));
 }
 
+.tab-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 16px;
+    height: 16px;
+    padding: 0 4px;
+    border-radius: var(--radius-full, 100px);
+    background: linear-gradient(45deg, #a83deb 0%, #3083fd 100%);
+    color: var(--content-inverted, white);
+    font-size: 11px;
+    font-weight: var(--font-weight-bold);
+    line-height: 1;
+    /* Precise centering */
+}
+
 /* Gradient */
 .tag-style-gradient.tag-priority-primary {
     background: linear-gradient(20deg, #a83deb 0%, #3083fd 100%);
@@ -83,14 +99,16 @@
 .tag-size-medium .tag-label {
     font-size: var(--font-size-075, 12px);
     font-weight: var(--font-weight-bold);
-    line-height: var(--line-height-label-small, 14px);
+    line-height: normal;
+    /* Better for flex centering */
 }
 
 .tag-size-small .tag-label {
     font-size: 11px;
     /* label-xsmall */
     font-weight: var(--font-weight-regular);
-    line-height: 13px;
+    line-height: normal;
+    /* Better for flex centering */
 }
 
 /* Icons */

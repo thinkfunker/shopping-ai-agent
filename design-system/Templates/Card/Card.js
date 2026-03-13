@@ -3,7 +3,7 @@
  * @param {Object} options
  * @returns {HTMLElement}
  */
-function renderCard({
+window.renderCard = function ({
     title = 'Title',
     date = '',
     value = '',

@@ -14,7 +14,8 @@
     min-width: 16px;
     height: 16px;
     font-size: var(--font-size-0687);
-    line-height: var(--line-height-label-xsmall);
+    line-height: 1;
+    /* Reset line-height for flex centering */
     padding: 0 4px;
 }
 
@@ -22,7 +23,8 @@
     min-width: 32px;
     height: 32px;
     font-size: var(--font-size-100);
-    line-height: var(--line-height-label-large);
+    line-height: 1;
+    /* Reset line-height for flex centering */
     padding: 0 4px;
 }
 

@@ -4,6 +4,7 @@
 .pagination {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: var(--spacing-200);
     font-family: var(--font-family-primary);
     user-select: none;

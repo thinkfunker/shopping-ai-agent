@@ -27,7 +27,8 @@
     font-family: var(--font-family-primary);
     font-weight: var(--font-weight-bold);
     font-size: var(--font-size-100, 16px);
-    line-height: var(--line-height-label-large, 19px);
+    line-height: normal;
+    /* Better for flex centering */
     color: var(--content-primary, #17181a);
     margin: 0;
 }
@@ -53,7 +54,8 @@
 .ai-suggestion-text {
     font-family: var(--font-family-primary);
     font-size: var(--font-size-100, 16px);
-    line-height: var(--line-height-label-large, 19px);
+    line-height: normal;
+    /* Better for flex centering */
     color: var(--content-primary, #17181a);
     white-space: nowrap;
     overflow: hidden;

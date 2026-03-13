@@ -7,7 +7,7 @@
  * @param {boolean} options.showTitleText
  * @returns {HTMLElement}
  */
-function renderAISuggestionChips({
+window.renderAISuggestionChips = function ({
     context = 'agent home',
     layout = 'carousel',
     items = [],

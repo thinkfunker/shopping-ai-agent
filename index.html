@@ -56,335 +56,13 @@
     <link rel="stylesheet" href="./design-system/components/Message/MessageList.css">
     <link rel="stylesheet" href="./design-system/components/Carousel/AiSuggestionList.css">
 
+    <link rel="stylesheet" href="./design-system/Templates/AITextInput/AITextInput.css">
+
     <!-- Explorer Specific Styles -->
-    <style>
-        :root {
-            --sidebar-width: 240px;
-            --header-height: 60px;
-            --explorer-bg: #ffffff;
-            --border-color: #eeeeee;
-            --accent-color: #000000;
-            --sidebar-bg: #ffffff;
-            --bg-secondary: #fafafa;
-        }
+    <link rel="stylesheet" href="./explorer.css">
 
-        body,
-        html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            overflow: hidden;
-            background: #fff;
-            color: #111;
-        }
-
-        .explorer-container {
-            display: flex;
-            height: 100vh;
-            width: 100vw;
-        }
-
-        /* Sidebar - Ultra Minimal */
-        .sidebar {
-            width: var(--sidebar-width);
-            background: var(--sidebar-bg);
-            border-right: 1px solid var(--border-color);
-            display: flex;
-            flex-direction: column;
-            flex-shrink: 0;
-            z-index: 10;
-        }
-
-        .sidebar-header {
-            padding: 32px 24px 24px;
-        }
-
-        .sidebar-header h1 {
-            margin: 0;
-            font-size: 12px;
-            /* Slightly smaller for elegance */
-            font-weight: 800;
-            letter-spacing: 1.2px;
-            text-transform: uppercase;
-            color: #000;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .sidebar-header h1::before {
-            content: '';
-            display: block;
-            width: 4px;
-            height: 12px;
-            background: #000;
-        }
-
-        .sidebar-menu {
-            flex: 1;
-            overflow-y: auto;
-            padding: 0 12px 32px;
-        }
-
-        .menu-section {
-            margin-bottom: 32px;
-        }
-
-        .menu-title {
-            padding: 0 12px 10px;
-            font-size: 9px;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: #bbb;
-            font-weight: 700;
-        }
-
-        .menu-item {
-            padding: 8px 12px;
-            margin: 1px 0;
-            cursor: pointer;
-            font-size: 13px;
-            color: #666;
-            border-radius: 6px;
-            transition: all 0.15s ease;
-        }
-
-        .menu-item:hover {
-            color: #000;
-            background: #f5f5f5;
-        }
-
-        .menu-item.active {
-            color: #000;
-            background: #eeeeee;
-            font-weight: 600;
-        }
-
-        /* Main Content - Ultra Minimal */
-        .main-content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            background: #fff;
-            overflow: hidden;
-        }
-
-        .top-bar {
-            height: var(--header-height);
-            background: #fff;
-            border-bottom: 1px solid var(--border-color);
-            display: flex;
-            align-items: center;
-            padding: 0 24px;
-            /* Unified padding */
-            justify-content: space-between;
-        }
-
-        #active-item-title {
-            font-size: 13px;
-            font-weight: 600;
-            color: #000;
-        }
-
-        .preview-area {
-            flex: 1;
-            padding: 60px;
-            overflow-y: auto;
-            background: #fff;
-            transition: background 0.3s ease;
-        }
-
-        .preview-area.mobile-mode {
-            background: #fafafa;
-        }
-
-        .sandbox {
-            background: #fff;
-            width: 100%;
-            min-height: 80vh;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .sandbox.mobile-view {
-            max-width: 375px;
-            margin: 0 auto;
-            border: 1px solid #eee;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.02);
-            border-radius: 8px;
-            /* Subtle radius for mobile look */
-        }
-
-        #preview-canvas {
-            flex: 1;
-            overflow-y: auto;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            padding: 40px;
-            align-items: stretch;
-            /* Default for foundations */
-        }
-
-        .sandbox.mobile-view #preview-canvas {
-            align-items: center;
-            /* Center components in mobile view */
-        }
-
-        .sandbox.dark-mode {
-            background: #1c1c1e;
-            border-color: #313131;
-        }
-
-        .controls-panel {
-            height: 200px;
-            /* Reduced from 240px */
-            background: #fff;
-            border-top: 1px solid var(--border-color);
-            display: flex;
-        }
-
-        .controls-inner {
-            flex: 1;
-            padding: 24px 32px;
-            /* Reduced vertical padding */
-            border-right: 1px solid var(--border-color);
-            overflow-y: auto;
-        }
-
-        .code-inner {
-            flex: 1;
-            padding: 24px 32px;
-            background: #fff;
-            /* Match background for seamless look */
-            overflow-y: auto;
-        }
-
-        .controls-panel h3 {
-            font-size: 9px;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: #bbb;
-            margin: 0 0 16px 0;
-            font-weight: 700;
-        }
-
-        /* Minimalist Input Styles */
-        .control-row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 8px;
-            /* Tighter spacing */
-            gap: 20px;
-        }
-
-        .control-label {
-            font-size: 11px;
-            color: #666;
-            font-weight: 400;
-        }
-
-        .control-input,
-        .control-select {
-            border: none;
-            border-bottom: 1px solid #eee;
-            background: transparent;
-            font-size: 11px;
-            padding: 2px 0;
-            width: 120px;
-            outline: none;
-            color: #000;
-            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-        }
-
-        .control-input:focus,
-        .control-select:focus {
-            border-bottom-color: #000;
-        }
-
-        #code-snippet {
-            font-size: 11px;
-            color: #777;
-            margin: 0;
-            line-height: 1.5;
-            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-        }
-
-        /* Color Detail Modal */
-        .color-modal-backdrop {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: rgba(0, 0, 0, 0.4);
-            backdrop-filter: blur(4px);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        .color-modal {
-            background: #fff;
-            width: 400px;
-            padding: 40px;
-            animation: modalFadeIn 0.2s ease-out;
-        }
-
-        .modal-title {
-            font-size: 14px;
-            font-weight: 700;
-            color: #000;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 24px;
-        }
-
-        .color-preview-large {
-            width: 100%;
-            height: 80px;
-            margin-bottom: 32px;
-        }
-
-        .info-label {
-            font-size: 9px;
-            font-weight: 700;
-            color: #999;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 4px;
-        }
-
-        .info-value {
-            font-size: 13px;
-            color: #111;
-            padding: 0 0 12px;
-            border-bottom: 1px solid #f0f0f0;
-            margin-bottom: 20px;
-        }
-
-        .mode-toggles button {
-            background: none;
-            border: 1px solid #eee;
-            padding: 6px 14px;
-            border-radius: 100px;
-            font-size: 11px;
-            font-weight: 500;
-            color: #666;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .mode-toggles button:hover {
-            border-color: #000;
-            color: #000;
-        }
-    </style>
+    <!-- Explorer Components & Logic -->
+    <script src="./explorer-components.js"></script>
 </head>
 
 <body>
@@ -404,7 +82,32 @@
             <header class="top-bar">
                 <div id="active-item-title">디자인 시스템 익스플로러</div>
                 <div class="mode-toggles">
-                    <button onclick="toggleDarkMode()">Light/Dark</button>
+                    <div class="theme-toggle-container">
+                        <!-- Sun Icon -->
+                        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5" />
+                            <line x1="12" y1="1" x2="12" y2="3" />
+                            <line x1="12" y1="21" x2="12" y2="23" />
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                            <line x1="1" y1="12" x2="3" y2="12" />
+                            <line x1="21" y1="12" x2="23" y2="12" />
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                        </svg>
+
+                        <label class="theme-switch">
+                            <input type="checkbox" id="theme-checkbox" onchange="toggleDarkMode()">
+                            <span class="theme-slider"></span>
+                        </label>
+
+                        <!-- Moon Icon -->
+                        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                        </svg>
+                    </div>
                 </div>
             </header>
 
@@ -432,7 +135,63 @@
         </main>
     </div>
 
+    <!-- Icon Detail Modal -->
+    <div id="icon-modal-backdrop" onclick="closeIconModal(event)">
+        <div class="icon-modal-container" style="position:relative;">
+            <button onclick="hideIconModal()"
+                style="position: absolute; top: 16px; right: 16px; background: none; border: none; font-size: 24px; cursor: pointer; color: #999; z-index: 10;">&times;</button>
+            <div class="icon-modal-left">
+                <!-- <div class="modal-breadcrumb">Home / LDS Icons / <span id="modal-breadcrumb-name">...</span></div> -->
+                <div class="icon-preview-container" id="modal-icon-preview-large" style="position:relative;">
+                    <div
+                        style="position: absolute; top: -30px; left: 50%; transform: translateX(-50%); background: #0f62fe; color: white; padding: 4px 12px; border-radius: 4px; font-size: 11px; font-weight: 700; white-space: nowrap;">
+                        Copy PNG<div
+                            style="position: absolute; bottom: -6px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6px solid transparent; border-right: 6px solid transparent; border-top: 6px solid #0f62fe;">
+                        </div>
+                    </div>
+                    <!-- Icon img will be injected here -->
+                </div>
+                <div class="icon-modal-actions">
+                    <button class="modal-btn" onclick="handleIconDownload('png')">PNG</button>
+                    <button class="modal-btn" onclick="handleIconDownload('svg')">SVG</button>
+                    <button class="modal-btn" onclick="handleIconDownload('pdf')">PDF</button>
+                </div>
+            </div>
+            <div class="icon-modal-right">
+                <div class="modal-icon-header">
+                    <h2 class="modal-icon-title" id="modal-icon-name-large">icon-name</h2>
+                </div>
+                <div class="modal-tags">
+                    <span class="modal-tag" id="modal-tag-name">icon-name</span>
+                    <span class="modal-tag">v1.0</span>
+                </div>
+                <div class="modal-variants">
+                    <div class="modal-variant-tab">Regular</div>
+                </div>
+                <div class="modal-info-table">
+                    <div class="modal-info-row">
+                        <div class="modal-info-label">CSS</div>
+                        <div class="modal-info-content" id="modal-info-css"
+                            style="font-family: monospace; background: #f5f5f7; padding: 12px; border-radius: 8px;">...
+                        </div>
+                    </div>
+                    <div class="modal-info-row">
+                        <div class="modal-info-label">INLINE SVG</div>
+                        <div class="modal-info-content" id="modal-info-svg"
+                            style="font-family: monospace; white-space: pre-wrap; word-break: break-all; font-size: 11px; max-height: 150px; overflow-y: auto; background: #f5f5f7; padding: 12px; border-radius: 8px;">
+                            ...</div>
+                    </div>
+                </div>
+                <div class="modal-bottom-options">
+                    <input type="checkbox" id="modal-with-padding">
+                    <label for="modal-with-padding">with padding</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Component Scripts -->
+    <script src="./design-system/components/IconData.js"></script>
     <script src="./design-system/components/Icon.js"></script>
     <script src="./design-system/components/Avatar/Avatar.js"></script>
     <script src="./design-system/components/TopNavigation/TopNavigation.js"></script>
@@ -482,6 +241,7 @@
     <script src="./design-system/Templates/Card/ListCard.js"></script>
     <script src="./design-system/Templates/Card/ReviewCard.js"></script>
     <script src="./design-system/Templates/Card/Card.js"></script>
+    <script src="./design-system/Templates/AITextInput/AITextInput.js"></script>
 
     <!-- Explorer Logic -->
     <script>
@@ -514,6 +274,8 @@
                 items: [
                     { id: 'ai-input', name: 'AI Text Input' },
                     { id: 'checkbox', name: 'Checkbox' },
+                    { id: 'menu', name: 'Menu' },
+                    { id: 'menu-item', name: 'Menu Item' },
                     { id: 'radio', name: 'Radio Button' },
                     { id: 'switch', name: 'Switch' },
                     { id: 'text-input', name: 'Text Input' },
@@ -607,6 +369,15 @@
                 menuContainer.appendChild(sectionEl);
             });
 
+            // Sync theme checkbox
+            const themeCheckbox = document.getElementById('theme-checkbox');
+            if (themeCheckbox) {
+                themeCheckbox.checked = document.documentElement.classList.contains('dark-mode');
+                if (themeCheckbox.checked) {
+                    document.getElementById('preview-sandbox')?.classList.add('dark-mode');
+                }
+            }
+
             // Load default item
             const firstItem = document.querySelector('.menu-item');
             if (firstItem) firstItem.click();
@@ -627,14 +398,28 @@
             controls.innerHTML = '';
             document.getElementById('code-snippet').textContent = '';
 
-            // Handle Mobile View for non-foundations
             const foundations = ['colors', 'typography', 'spacing-radius', 'gradients-effects', 'icon-explorer'];
             if (!foundations.includes(item.id)) {
                 sandbox.classList.add('mobile-view');
                 previewArea.classList.add('mobile-mode');
+                canvas.style.alignItems = 'center';
+                canvas.style.justifyContent = 'center';
             } else {
                 sandbox.classList.remove('mobile-view');
                 previewArea.classList.remove('mobile-mode');
+                canvas.style.alignItems = 'stretch';
+                canvas.style.justifyContent = 'flex-start';
+            }
+
+            // Global width limitation for components (except foundations)
+            if (!foundations.includes(item.id)) {
+                canvas.style.maxWidth = '600px';
+                canvas.style.margin = '0 auto';
+                canvas.style.width = '100%';
+            } else {
+                canvas.style.maxWidth = 'none';
+                canvas.style.margin = '0';
+                canvas.style.width = '100%';
             }
 
             switch (item.id) {
@@ -656,6 +441,8 @@
 
                 // --- Selection & Forms ---
                 case 'checkbox': setupCheckboxStory(canvas, controls); break;
+                case 'menu': setupMenuStory(canvas, controls); break;
+                case 'menu-item': setupMenuItemStory(canvas, controls); break;
                 case 'radio': setupRadioButtonStory(canvas, controls); break;
                 case 'switch': setupSwitchStory(canvas, controls); break;
                 case 'toggle-btn': setupToggleBtnStory(canvas, controls); break;
@@ -755,9 +542,112 @@
             if (e.target.id === 'color-modal-backdrop') hideColorModal();
         }
 
-        function setCanvasContent(canvas, content) {
+        // --- Icon Detail Logic ---
+        let currentSelectedIcon = null;
+
+        async function showIconModal(name) {
+            currentSelectedIcon = name;
+            const backdrop = document.getElementById('icon-modal-backdrop');
+            const iconPreview = document.getElementById('modal-icon-preview-large');
+            const iconNameLarge = document.getElementById('modal-icon-name-large');
+            const tagName = document.getElementById('modal-tag-name');
+
+            const infoCss = document.getElementById('modal-info-css');
+            const infoSvg = document.getElementById('modal-info-svg');
+
+            iconNameLarge.textContent = name;
+            tagName.textContent = name;
+
+            // Clear and render large icon
+            iconPreview.innerHTML = '';
+            let svgContent = '';
+
+            const mapped = (window.ICON_MAP && window.ICON_MAP[name]) || {};
+            const category = mapped.category || 'common';
+            const iconName = mapped.name || name;
+            const variant = mapped.variant !== undefined ? mapped.variant : 'solid';
+            const variantSuffix = variant ? `-${variant}` : '';
+            const key = `${category}/${iconName}${variantSuffix}.svg`;
+
+            // Use pre-loaded SVG data if available (for local file protocol support)
+            if (window.SVG_DATA && window.SVG_DATA[key]) {
+                svgContent = window.SVG_DATA[key];
+            } else {
+                // Fallback to fetch for server environments
+                const filePath = `./design-system/icons/${key}`;
+                try {
+                    const response = await fetch(filePath);
+                    svgContent = await response.text();
+                } catch (e) {
+                    console.error("Failed to fetch SVG for snippet", e);
+                    svgContent = '<svg ... error loading ...></svg>';
+                }
+            }
+
+            if (window.renderIcon) {
+                const largeIcon = renderIcon({ name, size: 240 });
+                iconPreview.appendChild(largeIcon);
+            }
+
+            // Snippets
+            infoCss.textContent = `<span class="icon-${name}"></span>`;
+            infoSvg.textContent = svgContent;
+
+            backdrop.style.display = 'flex';
+        }
+
+        async function handleIconDownload(format) {
+            if (!currentSelectedIcon) return;
+            const name = currentSelectedIcon;
+
+            if (format === 'svg') {
+                const infoSvg = document.getElementById('modal-info-svg');
+                const svgContent = infoSvg.textContent;
+
+                if (svgContent && !svgContent.includes('error loading')) {
+                    const blob = new Blob([svgContent], { type: 'image/svg+xml' });
+                    const url = URL.createObjectURL(blob);
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.download = `${name}.svg`;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    URL.revokeObjectURL(url);
+                } else {
+                    alert("SVG content not found or failed to load.");
+                }
+            } else {
+                alert(`${format.toUpperCase()} 다운로드는 현재 지원되지 않습니다. SVG를 이용해 주세요.`);
+            }
+        }
+
+        function hideIconModal() {
+            document.getElementById('icon-modal-backdrop').style.display = 'none';
+        }
+
+        function closeIconModal(e) {
+            if (e.target.id === 'icon-modal-backdrop') hideIconModal();
+        }
+
+        function setCanvasContent(canvas, content, fullWidth = false) {
+            canvas.innerHTML = '';
+            if (!content) return;
+
+            if (fullWidth) {
+                canvas.style.alignItems = 'stretch';
+                canvas.style.paddingLeft = '0';
+                canvas.style.paddingRight = '0';
+            } else {
+                canvas.style.alignItems = 'center';
+                canvas.style.paddingLeft = '40px';
+                canvas.style.paddingRight = '40px';
+            }
+
             if (typeof content === 'string') {
-                canvas.innerHTML = content;
+                const wrapper = document.createElement('div');
+                wrapper.innerHTML = content;
+                canvas.appendChild(wrapper);
             } else if (content instanceof HTMLElement) {
                 canvas.appendChild(content);
             }
@@ -809,7 +699,6 @@
                 `;
                 vars.forEach(v => {
                     const meta = metadata.colors[v] || {};
-                    const desc = meta.description || '';
                     html += `
                         <div style="display:flex; flex-direction:column; gap:6px; cursor:pointer;" onclick="showColorModal('${v}')" title="Click for details">
                             <div style="height:48px; border-radius:10px; border:1px solid rgba(0,0,0,0.05); background:var(${v}); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></div>
@@ -877,24 +766,24 @@
 
             Object.keys(catLabels).forEach(catId => {
                 if (categories[catId]) {
+                    let cards = '';
+                    categories[catId].sort().forEach(name => {
+                        const iconDesc = metadata.icons[name]?.description || '';
+                        cards += renderExplorerCard({
+                            name: name,
+                            description: iconDesc,
+                            preview: `<div id="icon-preview-${name}" class="explorer-card-preview"></div>`,
+                            className: 'icon-card',
+                            onClick: `showIconModal('${name}')`
+                        });
+                    });
+
                     html += `
                         <div class="icon-section-group" id="section-${catId}">
                             <h4 style="margin-bottom:16px; font-size: 10px; text-transform: uppercase; color: #999; letter-spacing: 1.5px; font-weight: 700;">${catLabels[catId]}</h4>
-                            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 16px;">
+                            ${renderExplorerGrid(cards)}
+                        </div>
                     `;
-
-                    categories[catId].sort().forEach(name => {
-                        const iconDesc = metadata.icons[name]?.description || '';
-                        html += `
-                            <div class="icon-card" data-name="${name}" style="padding:16px; min-height:100px; display:flex; flex-direction:column; justify-content:center; align-items:center; background:var(--bg-primary); border-radius:12px; border:1px solid var(--border-secondary); text-align: center; transition: all 0.2s;" title="${iconDesc}">
-                                <div id="icon-preview-${name}" style="margin-bottom:12px; display:flex; justify-content:center; align-items:center; height: 32px; width: 32px;"></div>
-                                <div style="font-size:10px; color:var(--content-primary); font-weight: 600; word-break:break-all; line-height: 1.2;">${name}</div>
-                                ${iconDesc ? `<div style="font-size:9px; color:var(--content-tertiary); margin-top:4px; line-height:1.2;">${iconDesc}</div>` : ''}
-                            </div>
-                        `;
-                    });
-
-                    html += '</div></div>';
                 }
             });
 
@@ -978,42 +867,42 @@
             const radius = [100, 200, 300, 400, 'full'];
             const shadows = ['small', 'medium', 'large', 'ai'];
 
-            let html = '<div style="width: 100%; display: grid; gap: 48px;">';
+            let html = '<div style="width: 100%; display: grid; gap: 80px;">';
 
             // Spacing
-            html += '<div><h4 style="margin-bottom:16px">Spacing</h4><div style="display:flex; flex-direction:column; gap:12px;">';
+            html += '<div><h4 style="margin-bottom:32px; font-size:18px; font-weight:700;">Spacing</h4><div style="display:grid; gap:16px;">';
             spacing.forEach(s => {
                 html += `
-                    <div style="display:flex; align-items:center; gap:16px;">
-                        <div style="width:100px; font-size:12px; font-weight:600">--spacing-${s}</div>
-                        <div style="height:20px; width:var(--spacing-${s}); background:var(--blue-2);"></div>
-                        <div style="font-size:11px; color:#666">${s * 4 / 100}px / ${s}</div>
+                    <div style="display:flex; align-items:center; gap:20px;">
+                        <div style="width:120px; font-size:13px; font-weight:600; color:#111;">--spacing-${s}</div>
+                        <div style="height:12px; width:var(--spacing-${s}); background:#0f62fe; border-radius:2px;"></div>
+                        <div style="font-size:12px; color:#999;">${s * 4 / 100}px</div>
                     </div>
                 `;
             });
             html += '</div></div>';
 
             // Radius
-            html += '<div><h4 style="margin-bottom:16px">Radius</h4><div style="display:flex; gap:24px;">';
+            html += '<div><h4 style="margin-bottom:32px; font-size:18px; font-weight:700;">Radius</h4><div style="display:flex; flex-wrap:wrap; gap:40px;">';
             radius.forEach(r => {
                 const varName = r === 'full' ? '--radius-full' : `--radius-${r}`;
                 html += `
-                    <div style="display:flex; flex-direction:column; align-items:center; gap:8px;">
-                        <div style="width:80px; height:80px; background:var(--bg-secondary); border:1px solid var(--border-primary); border-radius:var(${varName})"></div>
-                        <div style="font-size:11px; font-weight:600">${varName}</div>
+                    <div style="display:flex; flex-direction:column; align-items:center; gap:12px;">
+                        <div style="width:80px; height:80px; background:#fff; border:1px solid #ddd; border-radius:var(${varName});"></div>
+                        <div style="font-size:12px; font-weight:600; color:#111;">${varName}</div>
                     </div>
                 `;
             });
             html += '</div></div>';
 
             // Shadows
-            html += '<div><h4 style="margin-bottom:16px">Shadows</h4><div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap:24px;">';
+            html += '<div><h4 style="margin-bottom:32px; font-size:18px; font-weight:700;">Shadows</h4><div style="display:flex; flex-wrap:wrap; gap:48px;">';
             shadows.forEach(s => {
                 const varName = `--shadow-${s}`;
                 html += `
                     <div style="display:flex; flex-direction:column; align-items:center; gap:16px;">
-                        <div style="width:80px; height:80px; background:white; border-radius:12px; box-shadow:var(${varName})"></div>
-                        <div style="font-size:11px; font-weight:600">${varName}</div>
+                        <div style="width:100px; height:100px; background:#fff; border-radius:12px; box-shadow:var(${varName});"></div>
+                        <div style="font-size:12px; font-weight:600; color:#111;">${varName}</div>
                     </div>
                 `;
             });
@@ -1090,16 +979,13 @@
                 os: 'mobile',
                 titleAlign: 'left',
                 showLeftIcon: false,
-                rightIcons: ['bell', 'menu']
+                rightIcons: ['bell-solid', 'bars-solid']
             };
 
             const update = () => {
-                canvas.innerHTML = '';
-                canvas.style.width = '100vw';
-                canvas.style.maxWidth = '100%';
                 if (window.renderTopNavigation) {
                     const nav = renderTopNavigation(params);
-                    setCanvasContent(canvas, nav);
+                    setCanvasContent(canvas, nav, true);
                     updateCode('renderTopNavigation', params);
                 }
             };
@@ -1113,23 +999,29 @@
 
         function setupAIInputStory(canvas, controls) {
             const params = {
-                placeholder: 'なん데모 키이테쿠다사이',
-                type: 'simple',
-                showLeftIcon: true
+                placeholder: '무엇이든 물어보세요',
+                type: 'default',
+                background: true,
+                showFooter: true,
+                showLeftButton: true,
+                showSystem: true
             };
 
             const update = () => {
                 canvas.innerHTML = '';
-                canvas.style.width = '100%';
-                if (window.renderAITextInput) {
-                    const input = renderAITextInput(params);
+                if (window.renderAITextInputTemplate) {
+                    const input = renderAITextInputTemplate(params);
                     setCanvasContent(canvas, input);
-                    updateCode('renderAITextInput', params);
+                    updateCode('renderAITextInputTemplate', params);
                 }
             };
 
             createControl(controls, 'text', 'Placeholder', (v) => { params.placeholder = v; update(); }, params.placeholder);
-            createControl(controls, 'select', 'Type', (v) => { params.type = v; update(); }, params.type, ['simple', 'multiple']);
+            createControl(controls, 'select', 'Type', (v) => { params.type = v; update(); }, params.type, ['default', 'login button', 'multiline']);
+            createControl(controls, 'select', 'Background', (v) => { params.background = v === 'true'; update(); }, params.background.toString(), ['true', 'false']);
+            createControl(controls, 'select', 'Show Footer', (v) => { params.showFooter = v === 'true'; update(); }, params.showFooter.toString(), ['true', 'false']);
+            createControl(controls, 'select', 'Left Button', (v) => { params.showLeftButton = v === 'true'; update(); }, params.showLeftButton.toString(), ['true', 'false']);
+            createControl(controls, 'select', 'Home Indicator', (v) => { params.showSystem = v === 'true'; update(); }, params.showSystem.toString(), ['true', 'false']);
 
             update();
         }
@@ -1195,11 +1087,9 @@
             };
 
             const update = () => {
-                canvas.innerHTML = '';
-                canvas.style.width = '100%';
                 if (window.renderAccordion) {
                     const acc = renderAccordion(params);
-                    setCanvasContent(canvas, acc);
+                    setCanvasContent(canvas, acc, true);
                     updateCode('renderAccordion', params);
                 }
             };
@@ -1252,6 +1142,33 @@
 
             createControl(controls, 'text', 'Label', (v) => { params.label = v; update(); }, params.label);
             createControl(controls, 'select', 'Checked', (v) => { params.checked = v === 'true'; update(); }, params.checked.toString(), ['true', 'false']);
+            createControl(controls, 'select', 'Disabled', (v) => { params.disabled = v === 'true'; update(); }, params.disabled.toString(), ['true', 'false']);
+
+            update();
+        }
+
+        function setupMenuItemStory(canvas, controls) {
+            const params = {
+                label: 'Menu Item Label',
+                icon: 'star-full',
+                divider: false,
+                disabled: false
+            };
+
+            const update = () => {
+                canvas.innerHTML = '';
+                if (window.renderMenuItem) {
+                    const item = renderMenuItem(params);
+                    setCanvasContent(canvas, item);
+                    updateCode('renderMenuItem', params);
+                }
+            };
+
+            createControl(controls, 'text', 'Label', (v) => { params.label = v; update(); }, params.label);
+            createControl(controls, 'select', 'Icon', (v) => { params.icon = v === 'None' ? null : v; update(); }, params.icon || 'None',
+                ['None', ...Object.keys(window.ICON_MAP)]);
+            createControl(controls, 'select', 'Divider', (v) => { params.divider = v === 'true'; update(); }, params.divider.toString(), ['true', 'false']);
+            createControl(controls, 'select', 'Disabled', (v) => { params.disabled = v === 'true'; update(); }, params.disabled.toString(), ['true', 'false']);
 
             update();
         }
@@ -1286,11 +1203,9 @@
             };
 
             const update = () => {
-                canvas.innerHTML = '';
-                canvas.style.width = '100%';
                 if (window.renderTextInput) {
                     const input = renderTextInput(params);
-                    setCanvasContent(canvas, input);
+                    setCanvasContent(canvas, input, true);
                     updateCode('renderTextInput', params);
                 }
             };
@@ -1363,11 +1278,9 @@
             };
 
             const update = () => {
-                canvas.innerHTML = '';
-                canvas.style.width = '100%';
                 if (window.renderDivider) {
                     const div = renderDivider(params);
-                    setCanvasContent(canvas, div);
+                    setCanvasContent(canvas, div, params.type === 'horizontal');
                     updateCode('renderDivider', params);
                 }
             };
@@ -1388,14 +1301,13 @@
             };
 
             const update = () => {
-                canvas.innerHTML = '';
                 if (window.renderModal) {
                     const modal = renderModal({
                         ...params,
-                        onClose: () => { alert('Modal Closed'); update(); },
+                        onClose: () => { params.isOpen = false; update(); },
                         primaryAction: { label: 'Confirm', onClick: () => alert('Confirmed') }
                     });
-                    if (modal) canvas.appendChild(modal);
+                    setCanvasContent(canvas, modal, false);
                     updateCode('renderModal', params);
                 }
             };
@@ -1420,8 +1332,6 @@
             };
 
             const update = () => {
-                canvas.innerHTML = '';
-                canvas.style.width = '100%';
                 if (window.renderTabs) {
                     const tabs = renderTabs({
                         ...params,
@@ -1433,7 +1343,7 @@
                             }
                         }))
                     });
-                    setCanvasContent(canvas, tabs);
+                    setCanvasContent(canvas, tabs, true);
                     updateCode('renderTabs', params);
                 }
             };
@@ -1454,8 +1364,6 @@
             };
 
             const update = () => {
-                canvas.innerHTML = '';
-                canvas.style.width = '100%';
                 if (window.renderListItem) {
                     const item = renderListItem({
                         ...params,
@@ -1466,7 +1374,7 @@
                             }
                         }
                     });
-                    setCanvasContent(canvas, item);
+                    setCanvasContent(canvas, item, true);
                     updateCode('renderListItem', params);
                 }
             };
@@ -1488,8 +1396,6 @@
             };
 
             const update = () => {
-                canvas.innerHTML = '';
-                canvas.style.width = '100%';
                 if (window.renderCarousel) {
                     const dummyItems = Array.from({ length: 5 }).map((_, i) => {
                         const div = document.createElement('div');
@@ -1503,7 +1409,7 @@
                         return div;
                     });
                     const carousel = renderCarousel({ ...params, items: dummyItems });
-                    setCanvasContent(canvas, carousel);
+                    setCanvasContent(canvas, carousel, true);
                     updateCode('renderCarousel', params);
                 }
             };
@@ -1651,11 +1557,9 @@
         function setupFooterStory(canvas, controls) {
             const params = { os: 'PC' };
             const update = () => {
-                canvas.innerHTML = '';
-                canvas.style.width = '100%';
                 if (window.renderFooter) {
                     const footer = renderFooter(params);
-                    setCanvasContent(canvas, footer);
+                    setCanvasContent(canvas, footer, true);
                     updateCode('renderFooter', params);
                 }
             };
@@ -1666,13 +1570,12 @@
         function setupPaginationStory(canvas, controls) {
             const params = { type: 'standard', current: 1, total: 10, showNav: true };
             const update = () => {
-                canvas.innerHTML = '';
                 if (window.renderPagination) {
                     const pag = renderPagination({
                         ...params,
                         onChange: (p) => { params.current = p; update(); }
                     });
-                    setCanvasContent(canvas, pag);
+                    setCanvasContent(canvas, pag, true);
                     updateCode('renderPagination', params);
                 }
             };
@@ -2155,9 +2058,25 @@
         }
 
         function toggleDarkMode() {
-            const sandbox = document.getElementById('preview-sandbox');
-            sandbox.classList.toggle('dark-mode');
+            const checkbox = document.getElementById('theme-checkbox');
+            const isDark = checkbox.checked;
+
+            if (isDark) {
+                document.documentElement.classList.add('dark-mode');
+                document.getElementById('preview-sandbox')?.classList.add('dark-mode');
+            } else {
+                document.documentElement.classList.remove('dark-mode');
+                document.getElementById('preview-sandbox')?.classList.remove('dark-mode');
+            }
         }
+
+        // Initial detection removed to favor light mode by default
+        /*
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark-mode');
+            // We'll update checkbox state in initExplorer after DOM is ready
+        }
+        */
 
         window.onload = initExplorer;
     </script>

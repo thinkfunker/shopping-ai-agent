@@ -133,6 +133,8 @@
 .btn-label {
     position: relative;
     z-index: 1;
+    line-height: normal;
+    /* Match flex centering */
 }
 
 .btn-icon {

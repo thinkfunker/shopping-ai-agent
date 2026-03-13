@@ -208,7 +208,10 @@
     --z-index-floating: 500;
 
     /* Radius & Border */
+    --radius-100: 4px;
     --radius-200: 8px;
+    --radius-300: 12px;
+    --radius-400: 16px;
     --radius-full: 100px;
     --border-width-100: 1px;
 
@@ -370,15 +373,116 @@ span,
     border: var(--glass-border);
 }
 
-/* 5. Dark Mode Support */
+/* 5. Dark Mode Support - prefers-color-scheme removed to favor light mode by default
 @media (prefers-color-scheme: dark) {
-    :root {
-        /* Colors (Dark Mode) */
+    :root:not(.light-mode) {
         --bg-color: #000000;
         --bg-rgb: 0, 0, 0;
+        --bg-primary: #000000;
+        --bg-secondary: #1c1c1e;
+        --bg-tertiary: #2c2c2e;
+        --bg-key: #0f62fe;
+        --bg-success: #147f3a;
+        --bg-alert: #d62228;
+        --bg-warning: #a86400;
+        --bg-disabled: #3a3a3c;
+        --bg-disabled-accent: rgba(255, 255, 255, 0.04);
+        --bg-surface: #000000;
         --bg-elevated-1: #1c1c1e;
-        /* Apple Style Dark Elevated */
+        --bg-elevated-2: #2c2c2e;
+        --bg-floating-1: #2c2c2e;
+        --bg-white: #1c1c1e;
+
+        --content-primary: #f5f5f7;
+        --content-secondary: rgba(255, 255, 255, 0.7);
+        --content-tertiary: rgba(255, 255, 255, 0.5);
+        --content-key: #4988fe;
+        --content-success: #24a148;
+        --content-alert: #ff5c62;
+        --content-warning: #f1c21b;
+        --content-inverted: #000000;
+        --content-disabled: rgba(255, 255, 255, 0.3);
+        --content-placeholder: rgba(255, 255, 255, 0.4);
+
+        --border-primary: rgba(255, 255, 255, 0.24);
+        --border-secondary: rgba(255, 255, 255, 0.12);
+        --border-tertiary: rgba(255, 255, 255, 0.08);
+        --border-key: #4988fe;
+        --border-accent: rgba(255, 255, 255, 0.16);
+        --border-inverted: #000000;
+
+        --state-hover-primary: rgba(255, 255, 255, 0.08);
+        --state-focused-primary: rgba(255, 255, 255, 0.12);
+        --state-pressed-primary: rgba(255, 255, 255, 0.16);
+        --state-hover-secondary: rgba(73, 136, 254, 0.1);
+        --state-focused-secondary: rgba(73, 136, 254, 0.15);
+        --state-pressed-secondary: rgba(73, 136, 254, 0.2);
+
+        --shadow-small: 0px 2px 8px 0px rgba(0, 0, 0, 0.4);
+        --shadow-medium: 0px 4px 16px 0px rgba(0, 0, 0, 0.4);
+        --shadow-large: 0px 8px 32px 0px rgba(0, 0, 0, 0.4);
+
         --text-color: #f5f5f7;
         --text-rgb: 245, 245, 247;
+
+        --glass-bg: rgba(0, 0, 0, 0.5);
+        --glass-border: 1px solid rgba(255, 255, 255, 0.1);
     }
+}
+*/
+
+/* Extra rule to ensure .dark-mode class works even if media query is light */
+:root.dark-mode,
+html.dark-mode {
+    --bg-color: #000000;
+    --bg-rgb: 0, 0, 0;
+    --bg-primary: #000000;
+    --bg-secondary: #1c1c1e;
+    --bg-tertiary: #2c2c2e;
+    --bg-key: #0f62fe;
+    --bg-success: #147f3a;
+    --bg-alert: #d62228;
+    --bg-warning: #a86400;
+    --bg-disabled: #3a3a3c;
+    --bg-disabled-accent: rgba(255, 255, 255, 0.04);
+    --bg-surface: #000000;
+    --bg-elevated-1: #1c1c1e;
+    --bg-elevated-2: #2c2c2e;
+    --bg-floating-1: #2c2c2e;
+    --bg-white: #1c1c1e;
+
+    --content-primary: #f5f5f7;
+    --content-secondary: rgba(255, 255, 255, 0.7);
+    --content-tertiary: rgba(255, 255, 255, 0.5);
+    --content-key: #4988fe;
+    --content-success: #24a148;
+    --content-alert: #ff5c62;
+    --content-warning: #f1c21b;
+    --content-inverted: #000000;
+    --content-disabled: rgba(255, 255, 255, 0.3);
+    --content-placeholder: rgba(255, 255, 255, 0.4);
+
+    --border-primary: rgba(255, 255, 255, 0.24);
+    --border-secondary: rgba(255, 255, 255, 0.12);
+    --border-tertiary: rgba(255, 255, 255, 0.08);
+    --border-key: #4988fe;
+    --border-accent: rgba(255, 255, 255, 0.16);
+    --border-inverted: #000000;
+
+    --state-hover-primary: rgba(255, 255, 255, 0.08);
+    --state-focused-primary: rgba(255, 255, 255, 0.12);
+    --state-pressed-primary: rgba(255, 255, 255, 0.16);
+    --state-hover-secondary: rgba(73, 136, 254, 0.1);
+    --state-focused-secondary: rgba(73, 136, 254, 0.15);
+    --state-pressed-secondary: rgba(73, 136, 254, 0.2);
+
+    --shadow-small: 0px 2px 8px 0px rgba(0, 0, 0, 0.4);
+    --shadow-medium: 0px 4px 16px 0px rgba(0, 0, 0, 0.4);
+    --shadow-large: 0px 8px 32px 0px rgba(0, 0, 0, 0.4);
+
+    --text-color: #f5f5f7;
+    --text-rgb: 245, 245, 247;
+
+    --glass-bg: rgba(0, 0, 0, 0.5);
+    --glass-border: 1px solid rgba(255, 255, 255, 0.1);
 }

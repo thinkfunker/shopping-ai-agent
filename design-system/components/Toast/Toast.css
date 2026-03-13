@@ -41,8 +41,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 2px;
-    /* Alignment adjustment */
+    /* margin-top removed for better flex behavior */
 }
 
 /* Type Colors for Icons */
@@ -73,7 +72,8 @@
     font-family: var(--font-family-primary);
     font-weight: var(--font-weight-bold);
     font-size: var(--font-size-0875, 14px);
-    line-height: var(--line-height-label-medium, 17px);
+    line-height: normal;
+    /* Better for flex centering */
     color: var(--content-primary, #17181a);
     margin: 0;
 }

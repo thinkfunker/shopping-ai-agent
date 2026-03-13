@@ -88,12 +88,14 @@
 
 .top-navigation-mobile .top-navigation-title {
     font-size: 17px;
-    line-height: var(--line-height-label-large, 19px);
+    line-height: normal;
+    /* Let flex handle centering */
 }
 
 .top-navigation-pc .top-navigation-title {
     font-size: var(--font-size-112, 18px);
-    line-height: var(--line-height-title-xsmall, 23px);
+    line-height: normal;
+    /* Let flex handle centering */
 }
 
 /* Utility classes for icons and buttons */
