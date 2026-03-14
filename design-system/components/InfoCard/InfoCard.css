@@ -1,0 +1,101 @@
+.info-card {
+    background-color: var(--bg-surface);
+    border: var(--border-width-100) solid var(--border-tertiary);
+    border-radius: var(--radius-300);
+    /* 16px */
+    padding: var(--spacing-400);
+    /* 16px */
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.info-card:hover {
+    box-shadow: var(--shadow-small);
+}
+
+.info-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-400);
+}
+
+.info-card-date {
+    font-size: var(--font-size-75);
+    color: var(--content-tertiary);
+    margin-bottom: var(--spacing-200);
+}
+
+.info-card-content-wrapper {
+    display: flex;
+    gap: var(--spacing-400);
+    /* 16px */
+    align-items: center;
+}
+
+/* Detail levels */
+.info-card.detail-low .info-card-content-wrapper {
+    gap: var(--spacing-400);
+}
+
+.info-card.detail-medium .info-card-content-wrapper {
+    gap: var(--spacing-300);
+}
+
+/* 12px based on some medium variants */
+.info-card.detail-high .info-card-content-wrapper {
+    gap: var(--spacing-1000);
+}
+
+/* 48px based on high detail icon variant */
+
+.info-card-media {
+    flex-shrink: 0;
+}
+
+.info-card-thumbnail {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-100);
+    object-fit: cover;
+}
+
+.info-card-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--content-secondary);
+}
+
+.info-card-text-container {
+    flex: 1;
+}
+
+.info-card-title {
+    font-size: var(--font-size-200);
+    font-weight: var(--font-weight-bold);
+    color: var(--content-primary);
+    margin: 0 0 var(--spacing-100) 0;
+}
+
+.info-card-divider {
+    height: 1px;
+    background-color: var(--border-tertiary);
+    margin: var(--spacing-400) 0;
+}
+
+.info-card-description {
+    font-size: var(--font-size-100);
+    color: var(--content-secondary);
+    line-height: var(--line-height-normal);
+}
+
+.info-card-action {
+    margin-top: var(--spacing-400);
+    width: 100%;
+}

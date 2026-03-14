@@ -1,0 +1,208 @@
+{
+    "components": {
+        "Button": {
+            "figma_id": "component_button",
+            "properties": {
+                "priority": {
+                    "type": "string",
+                    "variants": [
+                        "solid-primary",
+                        "outline-primary",
+                        "outline-secondary",
+                        "outline-tertiary",
+                        "outline-danger"
+                    ],
+                    "mapping": {
+                        "solid-primary": "btn-solid-primary",
+                        "outline-primary": "btn-outline-primary",
+                        "outline-secondary": "btn-outline-secondary",
+                        "outline-tertiary": "btn-outline-tertiary",
+                        "outline-danger": "btn-outline-danger"
+                    }
+                },
+                "size": {
+                    "type": "string",
+                    "variants": [
+                        "medium",
+                        "large",
+                        "xlarge",
+                        "xxlarge"
+                    ],
+                    "mapping": {
+                        "medium": "btn-medium",
+                        "large": "btn-large",
+                        "xlarge": "btn-xlarge",
+                        "xxlarge": "btn-xxlarge"
+                    }
+                },
+                "states": {
+                    "type": "state",
+                    "values": [
+                        "enabled",
+                        "hovered",
+                        "focused",
+                        "pressed",
+                        "disabled"
+                    ],
+                    "mapping": {
+                        "hovered": ":hover",
+                        "focused": ":focus-visible",
+                        "pressed": ":active",
+                        "disabled": ":disabled"
+                    }
+                }
+            },
+            "layout": {
+                "engine": "flexbox",
+                "mapping": {
+                    "Padding.Horizontal": "padding-inline",
+                    "Padding.Vertical": "padding-block",
+                    "ItemSpacing": "gap"
+                }
+            }
+        },
+        "AITextInput": {
+            "figma_id": "component_ai_text_input",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "variants": [
+                        "simple",
+                        "multiple"
+                    ],
+                    "mapping": {
+                        "simple": "ai-input-simple",
+                        "multiple": "ai-input-multiple"
+                    }
+                }
+            }
+        },
+        "Badge": {
+            "figma_id": "component_badge",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "variants": [
+                        "number",
+                        "dot"
+                    ],
+                    "mapping": {
+                        "number": "badge-number",
+                        "dot": "badge-dot"
+                    }
+                },
+                "priority": {
+                    "type": "string",
+                    "variants": [
+                        "primary",
+                        "secondary"
+                    ],
+                    "mapping": {
+                        "primary": "badge-primary",
+                        "secondary": "badge-secondary"
+                    }
+                },
+                "size": {
+                    "type": "string",
+                    "variants": [
+                        "small",
+                        "medium"
+                    ],
+                    "mapping": {
+                        "small": "badge-small",
+                        "medium": "badge-medium"
+                    }
+                }
+            }
+        },
+        "Checkbox": {
+            "figma_id": "component_checkbox",
+            "properties": {
+                "selected": {
+                    "type": "boolean",
+                    "mapping": {
+                        "true": "checkbox-selected",
+                        "false": ""
+                    }
+                },
+                "states": {
+                    "type": "state",
+                    "values": [
+                        "enabled",
+                        "hovered",
+                        "focused",
+                        "pressed",
+                        "disabled"
+                    ],
+                    "mapping": {
+                        "hovered": ":hover",
+                        "disabled": ":disabled"
+                    }
+                }
+            }
+        },
+        "Switch": {
+            "figma_id": "component_switch",
+            "properties": {
+                "on": {
+                    "type": "boolean",
+                    "mapping": {
+                        "true": "switch-on",
+                        "false": "switch-off"
+                    }
+                },
+                "states": {
+                    "type": "state",
+                    "values": [
+                        "enabled",
+                        "hovered",
+                        "focused",
+                        "disabled"
+                    ],
+                    "mapping": {
+                        "hovered": ":hover",
+                        "disabled": ":disabled"
+                    }
+                }
+            }
+        },
+        "QuestionCard": {
+            "figma_id": "component_question_card",
+            "properties": {
+                "completion": {
+                    "type": "string",
+                    "variants": [
+                        "incomplete",
+                        "completed"
+                    ],
+                    "mapping": {
+                        "incomplete": "status-incomplete",
+                        "completed": "status-completed"
+                    }
+                },
+                "selectionType": {
+                    "type": "string",
+                    "variants": [
+                        "none",
+                        "chip default",
+                        "chip horizontal",
+                        "list default"
+                    ],
+                    "mapping": {
+                        "none": "selection-none",
+                        "chip default": "selection-chip-default",
+                        "chip horizontal": "selection-chip-horizontal",
+                        "list default": "selection-list-default"
+                    }
+                },
+                "expanded": {
+                    "type": "boolean",
+                    "mapping": {
+                        "true": "expanded",
+                        "false": "collapsed"
+                    }
+                }
+            }
+        }
+    }
+}

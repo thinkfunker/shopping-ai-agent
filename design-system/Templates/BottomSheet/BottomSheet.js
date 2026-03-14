@@ -14,12 +14,15 @@
  * @returns {HTMLElement}
  */
 window.renderBottomSheet = function ({
-    type = 'default',
+    type = 'header only',
     headerTitle = 'Title',
     showLeftIcon = false,
-    leftButtonLabel = '',
-    rightButtonLabel = '',
-    showRightIcon = true,
+    showLeftButton = true,
+    leftButtonLabel = 'Label',
+    showRightIcon = false,
+    showRightButton = true,
+    rightButtonLabel = 'Label',
+    showTitleText = true,
     showBottomButton = true,
     bottomButtonLabel = 'Label',
     content = null,
@@ -30,60 +33,83 @@ window.renderBottomSheet = function ({
     overlay.onclick = onClose;
 
     const sheet = document.createElement('div');
-    sheet.className = `bottom-sheet-template type-${type}`;
-    sheet.onclick = (e) => e.stopPropagation();
+    const typeClass = type === 'header only' ? 'type-header-only' : `type-${type}`;
+    sheet.className = `bottom-sheet-template ${typeClass}`;
+    sheet.onclick = (e) => e.stopPropagation(); // Keep existing stopPropagation for the sheet itself
 
-    // Header Handlebar
+    // Header Handlebar Area
+    const handlebarArea = document.createElement('div');
+    handlebarArea.className = 'bottom-sheet-header-handlebar';
+
+    const handlebarDrag = document.createElement('div');
+    handlebarDrag.className = 'bottom-sheet-draggable-handle';
+    const handle = document.createElement('div');
+    handle.className = 'handle';
+    handlebarDrag.appendChild(handle);
+    handlebarArea.appendChild(handlebarDrag);
+
+    // Header Container
     const headerContainer = document.createElement('div');
     headerContainer.className = 'bottom-sheet-header-container';
 
-    const handleArea = document.createElement('div');
-    handleArea.className = 'bottom-sheet-draggable-handle';
-    handleArea.innerHTML = '<div class="bottom-sheet-handle"></div>';
-    headerContainer.appendChild(handleArea);
-
-    const headerContent = document.createElement('div');
-    headerContent.className = 'bottom-sheet-header-content';
-
-    // Left area
+    // Left Area
     const leftArea = document.createElement('div');
-    leftArea.className = 'bottom-sheet-side-area left';
+    leftArea.className = 'bottom-sheet-header-left';
+
     if (showLeftIcon) {
-        leftArea.innerHTML += '<button class="bottom-sheet-icon-btn">←</button>';
+        const leftIcon = document.createElement('div');
+        leftIcon.className = 'header-icon';
+        if (window.renderIcon) {
+            leftIcon.appendChild(window.renderIcon('common/chevron-left-outline.svg'));
+        }
+        leftArea.appendChild(leftIcon);
     }
-    if (leftButtonLabel) {
-        const btn = document.createElement('button');
-        btn.className = 'bottom-sheet-ghost-btn secondary';
-        btn.textContent = leftButtonLabel;
-        leftArea.appendChild(btn);
+
+    if (showLeftButton && leftButtonLabel) {
+        const leftBtn = document.createElement('button');
+        leftBtn.className = 'bottom-sheet-ghost-btn secondary';
+        leftBtn.textContent = leftButtonLabel;
+        leftArea.appendChild(leftBtn);
     }
-    headerContent.appendChild(leftArea);
+    headerContainer.appendChild(leftArea);
 
-    // Title
-    const titleContainer = document.createElement('div');
-    titleContainer.className = 'bottom-sheet-title-container';
-    titleContainer.innerHTML = `<h2 class="bottom-sheet-title">${headerTitle}</h2>`;
-    headerContent.appendChild(titleContainer);
+    // Center Area (Title)
+    const centerArea = document.createElement('div');
+    centerArea.className = 'bottom-sheet-header-center';
+    if (showTitleText) {
+        const title = document.createElement('span');
+        title.className = 'bottom-sheet-title';
+        title.textContent = headerTitle;
+        centerArea.appendChild(title);
+    }
+    headerContainer.appendChild(centerArea);
 
-    // Right area
+    // Right Area
     const rightArea = document.createElement('div');
-    rightArea.className = 'bottom-sheet-side-area right';
-    if (rightButtonLabel) {
-        const btn = document.createElement('button');
-        btn.className = 'bottom-sheet-ghost-btn primary';
-        btn.textContent = rightButtonLabel;
-        rightArea.appendChild(btn);
-    }
-    if (showRightIcon) {
-        const closeBtn = document.createElement('button');
-        closeBtn.className = 'bottom-sheet-icon-btn';
-        closeBtn.innerHTML = '✕';
-        closeBtn.onclick = onClose;
-        rightArea.appendChild(closeBtn);
-    }
-    headerContent.appendChild(rightArea);
+    rightArea.className = 'bottom-sheet-header-right';
 
-    headerContainer.appendChild(headerContent);
+    if (showRightButton && rightButtonLabel) {
+        const rightBtn = document.createElement('button');
+        rightBtn.className = 'bottom-sheet-ghost-btn primary';
+        rightBtn.textContent = rightButtonLabel;
+        rightArea.appendChild(rightBtn);
+    }
+
+    if (showRightIcon) {
+        const rightIcon = document.createElement('div');
+        rightIcon.className = 'header-icon';
+        if (window.renderIcon) {
+            rightIcon.appendChild(window.renderIcon('common/cross-outline.svg'));
+        }
+        rightIcon.onclick = (e) => {
+            e.stopPropagation();
+            if (onClose) onClose();
+        };
+        rightArea.appendChild(rightIcon);
+    }
+    headerContainer.appendChild(rightArea);
+
+    sheet.appendChild(handlebarArea);
     sheet.appendChild(headerContainer);
 
     // Content

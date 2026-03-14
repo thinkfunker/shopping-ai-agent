@@ -1,0 +1,38 @@
+/* AITextInputFooter - Atomic Variant (Figma Node 22428:37819) */
+@import "../../../design_system.css";
+
+.ai-text-input-footer {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: var(--spacing-100, 4px) !important;
+    padding: 0 var(--spacing-400, 16px) 16px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.footer-main-text {
+    font-size: 12px !important;
+    line-height: 19px !important;
+    color: var(--content-tertiary, rgba(0, 0, 0, 0.56)) !important;
+    font-family: var(--family-primary, "Noto Sans JP") !important;
+    margin: 0 !important;
+}
+
+.footer-link {
+    color: #0f62fe !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+}
+
+.footer-sub-row {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+
+.footer-ref {
+    font-size: 12px !important;
+    color: var(--content-tertiary, rgba(0, 0, 0, 0.56)) !important;
+    margin: 0 !important;
+}

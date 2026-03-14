@@ -41,16 +41,48 @@
             "usage": "Apply during the 'active' or 'pressed' state."
         },
         "--gradient-content-primary": {
-            "description": "A vibrant gradient used for emphasizing focal points like progress indicators or active cursors.",
-            "usage": "Use for small, high-attention elements that define the user's focus."
+            "description": "Primary content gradient used for highlights and emphasis in AI-driven interfaces.",
+            "usage": "Use for primary action buttons or significant content emphasis."
         },
         "--gradient-content-loading": {
-            "description": "A dynamic gradient indicating that AI processing or content loading is in progress.",
-            "usage": "Apply to elements during generative or retrieval states."
+            "description": "Dynamic gradient used to indicate loading states for AI content.",
+            "usage": "Apply to skeletons or progress indicators during AI processing."
+        },
+        "--gradient-background-primary": {
+            "description": "The primary background gradient that defines the brand identity.",
+            "usage": "Use for major section backgrounds or the main interface surface."
+        },
+        "--gradient-background-secondary": {
+            "description": "A subtle secondary background gradient for modular components.",
+            "usage": "Use for card backgrounds or grouped content areas."
         },
         "--gradient-background-ai-surface": {
-            "description": "A sophisticated gradient background for AI response areas and result cards.",
-            "usage": "Use specifically for containers that display AI-generated insights or interactive results."
+            "description": "A structural background gradient specifically for AI response areas and result cards.",
+            "usage": "Use to distinguish AI-generated sections from standard UI."
+        },
+        "--gradient-border-primary": {
+            "description": "A vibrant gradient for primary borders and structural outlines.",
+            "usage": "Use for highlighting active or focused AI-driven components."
+        },
+        "--gradient-border-secondary": {
+            "description": "A subtle gradient for secondary borders and dividers.",
+            "usage": "Use for grouping related but non-active elements."
+        },
+        "--gradient-logo-primary": {
+            "description": "The core brand logo gradient.",
+            "usage": "Reserved for the primary brand mark."
+        },
+        "--gradient-logo-secondary": {
+            "description": "Alternate brand logo gradient for secondary applications.",
+            "usage": "Use when the primary logo gradient needs contrast."
+        },
+        "--gradient-logo-tertiary": {
+            "description": "Tertiary brand logo gradient for supporting icons.",
+            "usage": "Use for secondary branding elements and icons."
+        },
+        "--gradient-ai-surface": {
+            "description": "Consolidated AI surface gradient for high-priority AI contexts.",
+            "usage": "Use for the most prominent AI interaction surfaces."
         }
     },
     "icons": {

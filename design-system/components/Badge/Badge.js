@@ -18,7 +18,7 @@ window.renderBadge = function ({
 } = {}) {
     const badge = document.createElement('div');
     if (id) badge.id = id;
-    badge.className = `badge ${type} ${priority} ${size}`;
+    badge.className = `badge ${type === 'number' ? 'badge-number' : 'badge-dot'} ${priority === 'primary' ? 'badge-primary' : 'badge-secondary'} ${size === 'small' ? 'badge-small' : 'badge-medium'}`;
 
     if (type === "number") {
         const numText = parseInt(text);

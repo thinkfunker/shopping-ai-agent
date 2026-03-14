@@ -1,0 +1,56 @@
+/* AITextInputDefault - Atomic Variant (Figma Node 22163:48481) */
+@import "../../../design_system.css";
+
+.ai-text-input-default {
+    display: flex !important;
+    align-items: center !important;
+    gap: var(--spacing-300, 12px) !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.input-box-default {
+    background: var(--background-elevated-1, #ffffff) !important;
+    border: 1px solid var(--border-accent, rgba(0, 0, 0, 0.28)) !important;
+    border-radius: var(--border-radius-full, 100px) !important;
+    display: flex !important;
+    flex: 1 0 0 !important;
+    height: 48px !important;
+    align-items: center !important;
+    padding-left: var(--spacing-300, 12px) !important;
+    padding-right: var(--spacing-200, 8px) !important;
+    padding-top: var(--spacing-300, 12px) !important;
+    padding-bottom: var(--spacing-300, 12px) !important;
+    gap: var(--spacing-300, 12px) !important;
+    box-sizing: border-box !important;
+}
+
+.input-placeholder-default {
+    flex: 1 0 0 !important;
+    font-family: var(--famaily-primary, "Noto Sans JP") !important;
+    font-size: var(--size-100, 16px) !important;
+    line-height: var(--line-height-body-large, 24px) !important;
+    color: var(--content-placeholder, rgba(0, 0, 0, 0.56)) !important;
+    font-weight: 300 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    text-ellipsis: ellipsis !important;
+}
+
+.action-button-default {
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: var(--border-radius-full, 100px) !important;
+    background: linear-gradient(46.94deg, #A83DEB 5.1%, #3083FD 92.36%) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    cursor: pointer !important;
+}
+
+.action-button-default.disabled {
+    background: var(--background-disabled, #e4e7ed) !important;
+    cursor: default !important;
+}

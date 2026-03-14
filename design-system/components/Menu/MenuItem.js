@@ -14,6 +14,7 @@ window.renderMenuItem = function renderMenuItem({
     icon = null,
     divider = false,
     disabled = false,
+    hasConnector = false,
     onClick = null
 } = {}) {
     const fragment = document.createDocumentFragment();
@@ -22,6 +23,13 @@ window.renderMenuItem = function renderMenuItem({
     btn.className = 'menu-item';
     if (disabled) btn.disabled = true;
     if (onClick) btn.addEventListener('click', onClick);
+
+    if (hasConnector) {
+        const connector = document.createElement('span');
+        connector.className = 'menu-item-connector';
+        connector.textContent = '└'; // Represents the L shape from Figma
+        btn.appendChild(connector);
+    }
 
     if (icon) {
         const iconSpan = document.createElement('span');

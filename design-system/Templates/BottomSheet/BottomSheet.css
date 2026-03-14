@@ -2,21 +2,24 @@
 
 /* Overlay background */
 .bottom-sheet-overlay {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
-    z-index: var(--z-index-modal, 1000);
+    z-index: 10;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    border-radius: inherit;
+    /* Match sandbox radius */
 }
 
 .bottom-sheet-template {
-    width: 390px;
+    width: 100%;
+    max-width: 500px;
     background-color: var(--background-primary, white);
     border-radius: var(--radius-300, 12px) var(--radius-300, 12px) 0 0;
     display: flex;
@@ -24,7 +27,7 @@
     align-items: center;
     position: relative;
     box-sizing: border-box;
-    max-height: 90vh;
+    max-height: 95%;
 }
 
 .bottom-sheet-template.type-default {
@@ -32,7 +35,7 @@
 }
 
 /* Header & Handlebar */
-.bottom-sheet-header-container {
+.bottom-sheet-header-handlebar {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -50,14 +53,14 @@
     padding-bottom: 2px;
 }
 
-.bottom-sheet-handle {
+.bottom-sheet-draggable-handle .handle {
     width: 36px;
     height: 5px;
     border-radius: 2.5px;
     background-color: var(--content-tertiary, rgba(0, 0, 0, 0.56));
 }
 
-.bottom-sheet-header-content {
+.bottom-sheet-header-container {
     width: 100%;
     height: 48px;
     display: flex;
@@ -67,18 +70,24 @@
     box-sizing: border-box;
 }
 
-.bottom-sheet-side-area {
+.bottom-sheet-header-left,
+.bottom-sheet-header-right {
     width: 104px;
     display: flex;
     align-items: center;
 }
 
-.bottom-sheet-side-area.right {
+.bottom-sheet-header-left {
+    justify-content: flex-start;
+    gap: var(--spacing-200, 8px);
+}
+
+.bottom-sheet-header-right {
     justify-content: flex-end;
     gap: var(--spacing-200, 8px);
 }
 
-.bottom-sheet-title-container {
+.bottom-sheet-header-center {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -98,6 +107,15 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+.header-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
 /* Buttons inside header */

@@ -37,12 +37,12 @@
 
 /* Solid */
 .tag-style-solid.tag-priority-secondary {
-    background-color: var(--background-accent, #383a3d);
+    background-color: var(--bg-accent, #383a3d);
     color: var(--content-inverted, white);
 }
 
 .tag-style-solid.tag-priority-tertiary {
-    background-color: var(--background-secondary, #f0f2f7);
+    background-color: var(--bg-secondary, #f0f2f7);
     color: var(--content-secondary, rgba(0, 0, 0, 0.76));
 }
 

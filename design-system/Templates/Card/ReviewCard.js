@@ -14,9 +14,16 @@ window.renderReviewCard = function ({
     tags = [],
     headerType = 'store'
 } = {}) {
-    // Assuming renderCard is available from Card.js
-    const card = renderCard({ className: 'review-card' });
-    card.innerHTML = ''; // Clear base card internal structure to rebuild review-specific layout
+    // Use the synchronized renderCard as a base
+    const card = renderCard({
+        title: headerType === 'store' ? storeName : reviewerName,
+        date: date,
+        description: content,
+        imageUrl: headerType === 'store' ? storeLogo : '',
+        className: 'review-card'
+    });
+    // We can still add specific review elements if needed, but let's try to keep it simple
+    // If renderCard handles the main layout, we only add tags/images if renderCard doesn't already
 
     // Header
     const header = document.createElement('div');

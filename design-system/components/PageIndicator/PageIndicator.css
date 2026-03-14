@@ -9,7 +9,7 @@
 
 /* Type: Numbers */
 .page-indicator-numbers {
-    background-color: var(--background-accent, #383a3d);
+    background-color: var(--bg-accent, #383a3d);
     height: 20px;
     padding: var(--spacing-100) var(--spacing-200);
     border-radius: var(--radius-full, 100px);

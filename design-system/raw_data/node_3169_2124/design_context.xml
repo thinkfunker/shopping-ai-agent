@@ -1,0 +1,907 @@
+<frame id="3169:2124" name="Icons" x="-2923" y="-1593" width="2443" height="3952">
+  <frame id="22116:40692" name="_Document Header" x="80" y="80" width="2283" height="97">
+    <frame id="22116:40693" name="contents" x="0" y="0" width="2283" height="57">
+      <frame id="22116:40694" name="title + link" x="0" y="0" width="2283" height="57">
+        <instance id="22116:41822" name="_Document text EN" x="0" y="0" width="2283" height="57" />
+        <frame id="22116:40696" name="link" x="686" y="20" width="124" height="17" hidden="true">
+          <text id="22116:40697" name="Landpress Link" x="0" y="0" width="99" height="17" />
+          <instance id="22116:40698" name="_earth" x="108" y="0.5" width="16" height="16" />
+        </frame>
+      </frame>
+      <frame id="22116:40699" name="data" x="0" y="97" width="292" height="88" hidden="true">
+        <frame id="22116:40700" name="author" x="0" y="0" width="292" height="29">
+          <text id="22116:40701" name="Author" x="0" y="8" width="80" height="13" />
+          <text id="22116:40702" name="@Song Jihoon, @Park Yongwoon" x="104" y="8" width="179" height="13" />
+        </frame>
+        <frame id="22116:40703" name="updated" x="0" y="29" width="292" height="29">
+          <text id="22116:40704" name="Last updated" x="0" y="8" width="80" height="13" />
+          <text id="22116:40705" name="2024-03-15" x="104" y="8" width="188" height="13" />
+        </frame>
+        <frame id="22116:40706" name="version" x="0" y="59" width="292" height="29">
+          <text id="22116:40707" name="Version" x="0" y="8" width="80" height="13" />
+          <frame id="22116:40708" name="version + status" x="104" y="8" width="164" height="13">
+            <text id="22116:40709" name="1.0" x="0" y="0" width="164" height="13" />
+            <instance id="22116:40710" name="Tag/small" x="98" y="0" width="68" height="16" hidden="true" />
+          </frame>
+        </frame>
+      </frame>
+    </frame>
+  </frame>
+  <frame id="3153:3276" name="Common" x="80" y="241" width="2283" height="912">
+    <frame id="2344:7374" name="bars" x="80" y="40" width="128" height="64">
+      <symbol id="2344:7377" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="2344:7375" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="2342:7313" name="bell" x="248" y="40" width="128" height="64">
+      <symbol id="2342:7316" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="2342:7314" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="2341:7288" name="check" x="416" y="40" width="128" height="64">
+      <symbol id="2341:7291" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="2341:7289" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="2316:3676" name="ellipsis-horizontal" x="584" y="40" width="128" height="64">
+      <symbol id="2316:3679" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="2316:3677" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="2341:7273" name="gear-alt" x="752" y="40" width="128" height="64">
+      <symbol id="2341:7276" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="2341:7274" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="2342:7293" name="heart" x="920" y="40" width="128" height="64">
+      <symbol id="2342:7296" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="2342:7294" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="2316:3701" name="home" x="1088" y="40" width="128" height="64">
+      <symbol id="2316:3704" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="2316:3702" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="2312:30134" name="minus" x="1256" y="40" width="128" height="64">
+      <symbol id="2312:30137" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="2312:30135" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="3125:10680" name="paper-plane" x="1424" y="40" width="128" height="64">
+      <symbol id="3125:10681" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="3125:10683" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="3125:10767" name="pen" x="1592" y="40" width="128" height="64">
+      <symbol id="3125:10768" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="3125:10770" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="2312:30129" name="plus" x="1760" y="40" width="128" height="64">
+      <symbol id="2312:30132" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="2312:30130" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="2341:7278" name="search" x="1928" y="40" width="128" height="64">
+      <symbol id="2341:7281" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="2341:7279" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="2344:7379" name="sliders-horizontal" x="80" y="144" width="128" height="64">
+      <symbol id="2344:7380" name="Type=outline" x="20" y="20" width="24" height="24" />
+      <symbol id="2344:7382" name="Type=solid" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="2316:3686" name="cross" x="248" y="144" width="128" height="64">
+      <symbol id="2316:3689" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="2316:3687" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="3125:14649" name="trash" x="416" y="144" width="128" height="64">
+      <symbol id="3125:14650" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="3125:14652" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="3114:4575" name="chat-ellipsis" x="584" y="144" width="128" height="64">
+      <symbol id="3114:4576" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="3114:4578" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="3114:4860" name="chat-lines" x="752" y="144" width="128" height="64">
+      <symbol id="3114:4861" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="3114:4863" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="3114:4052" name="cart" x="920" y="144" width="128" height="64">
+      <symbol id="3114:4053" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="3114:4055" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="3121:6213" name="code-reader" x="1088" y="144" width="128" height="64">
+      <symbol id="3121:6214" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="3121:6216" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="3121:6269" name="coins" x="1256" y="144" width="128" height="64">
+      <symbol id="3121:6270" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="3121:6272" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="3121:6517" name="coupon" x="1424" y="144" width="128" height="64">
+      <symbol id="3121:6518" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="3121:6520" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="3121:6698" name="credit-card" x="1592" y="144" width="128" height="64">
+      <symbol id="3121:6699" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="3121:6701" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="3125:11852" name="qr-code-small" x="1760" y="144" width="128" height="64">
+      <symbol id="3125:11853" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="3125:11855" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="3132:2252" name="wallet" x="1928" y="144" width="128" height="64">
+      <symbol id="3132:2253" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="3132:2255" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="3132:2312" name="yen-circle" x="80" y="248" width="128" height="64">
+      <symbol id="3132:2313" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="3132:2315" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="3120:5242" name="check-circle" x="248" y="248" width="128" height="64">
+      <symbol id="3120:5243" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="3120:5245" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="3125:10795" name="phone" x="416" y="248" width="128" height="64">
+      <symbol id="3125:10796" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="3125:10798" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="3125:11597" name="plus-circle" x="584" y="248" width="128" height="64">
+      <symbol id="3125:11598" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="3125:11600" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="3125:13244" name="squares" x="752" y="248" width="128" height="64">
+      <symbol id="3125:13245" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="3125:13247" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="3125:14032" name="times-circle" x="920" y="248" width="128" height="64">
+      <symbol id="3125:14033" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="3125:14035" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="3121:6924" name="desktop" x="1088" y="248" width="128" height="64">
+      <symbol id="3121:6925" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="3121:6927" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="21074:39766" name="clock" x="1256" y="248" width="128" height="64">
+      <symbol id="21074:39769" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="21074:39767" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="3125:9730" name="keyboard" x="1424" y="248" width="128" height="64">
+      <symbol id="3125:9731" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="3125:9733" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="3125:10450" name="mobile" x="1592" y="248" width="128" height="64">
+      <symbol id="3125:10451" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="3125:10453" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="3121:7282" name="envelope" x="1760" y="248" width="128" height="64">
+      <symbol id="3121:7283" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="3121:7285" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="3121:8329" name="folder" x="1928" y="248" width="128" height="64">
+      <symbol id="3121:8330" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="3121:8332" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="3125:10708" name="paperclip" x="80" y="352" width="128" height="64">
+      <symbol id="3125:10709" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="3125:10711" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="3114:3680" name="browser" x="248" y="352" width="128" height="64">
+      <symbol id="3114:3681" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="3114:3683" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="3114:4213" name="chart-bar" x="416" y="352" width="128" height="64">
+      <symbol id="3114:4214" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="3114:4216" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="3125:10032" name="map-marker" x="584" y="352" width="128" height="64">
+      <symbol id="3125:10033" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="3125:10035" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="3114:3893" name="camera" x="752" y="352" width="128" height="64">
+      <symbol id="3114:3894" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="3114:3896" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="3125:9397" name="image-alt" x="920" y="352" width="128" height="64">
+      <symbol id="3125:9398" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="3125:9400" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="3125:10240" name="microphone" x="1088" y="352" width="128" height="64">
+      <symbol id="3125:10241" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="3125:10243" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="3132:2181" name="video-camera" x="1256" y="352" width="128" height="64">
+      <symbol id="3132:2182" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="3132:2184" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="2345:7434" name="chevron-up" x="1424" y="352" width="128" height="64">
+      <symbol id="2345:7437" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="2345:7435" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="2312:30094" name="chevron-down" x="1592" y="352" width="128" height="64">
+      <symbol id="2313:30223" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="2312:30097" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="2312:30099" name="chevron-left" x="1760" y="352" width="128" height="64">
+      <symbol id="2313:30221" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="2312:30102" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="2312:30104" name="chevron-right" x="1928" y="352" width="128" height="64">
+      <symbol id="2312:30105" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="2313:30219" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="3125:14664" name="undo" x="80" y="456" width="128" height="64">
+      <symbol id="3125:14665" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="3125:14667" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="2313:30226" name="redo" x="248" y="456" width="128" height="64">
+      <symbol id="2313:30227" name="Type=outline" x="20" y="20" width="24" height="24" />
+      <symbol id="2313:30229" name="Type=solid" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="3121:7339" name="exclamation-circle" x="416" y="456" width="128" height="64">
+      <symbol id="3121:7340" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="3121:7342" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="2345:7400" name="question-circle" x="584" y="456" width="128" height="64">
+      <symbol id="2345:7403" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="2345:7401" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="2345:7405" name="cross-circle" x="752" y="456" width="128" height="64">
+      <symbol id="2345:7408" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="2345:7406" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="2312:30149" name="arrow-up" x="920" y="456" width="128" height="64">
+      <symbol id="2312:30152" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="2312:30150" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="2312:30159" name="arrow-down" x="1088" y="456" width="128" height="64">
+      <symbol id="2312:30162" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="2312:30160" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="38940:2273" name="arrow-left" x="1256" y="456" width="128" height="64">
+      <symbol id="38940:2274" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="38940:2276" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="38940:1843" name="arrow-right" x="1424" y="456" width="128" height="64">
+      <symbol id="38940:1844" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="38940:1846" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="3125:13447" name="stop" x="1592" y="456" width="128" height="64">
+      <symbol id="3125:13448" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="3125:13450" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="2312:30164" name="user" x="1760" y="456" width="128" height="64">
+      <symbol id="2312:30167" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="2312:30165" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="3132:2125" name="users" x="1928" y="456" width="128" height="64">
+      <symbol id="3132:2126" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="3132:2128" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="21206:69720" name="walk" x="80" y="560" width="128" height="64">
+      <symbol id="21206:69732" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="21206:69736" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="21434:3059" name="car" x="248" y="560" width="128" height="64">
+      <symbol id="21434:3064" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="21434:3067" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="31035:2559" name="volume-slash" x="416" y="560" width="128" height="64">
+      <symbol id="31035:2560" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="31035:2562" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="21297:10150" name="bulb" x="584" y="560" width="128" height="64">
+      <symbol id="21297:10151" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="21297:10153" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="22402:4023" name="question-text-circle" x="752" y="560" width="128" height="64">
+      <symbol id="22402:4030" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="31633:4834" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="3125:13975" name="thumb-up" x="920" y="560" width="128" height="64">
+      <symbol id="3125:13976" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="3125:13978" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="3516:2177" name="thumb-down" x="1088" y="560" width="128" height="64">
+      <symbol id="3516:2180" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="3516:2178" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="29705:14901" name="share-ios" x="1256" y="560" width="128" height="64">
+      <symbol id="29705:14929" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="30145:10482" name="Type=extrabold" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="29948:22804" name="ellipsis-vertical" x="1424" y="560" width="128" height="64">
+      <symbol id="29948:22805" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="31617:4379" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="30162:12125" name="lightning-times" x="1592" y="560" width="128" height="64">
+      <symbol id="30162:12126" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="31631:4665" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="30166:12131" name="sync" x="1760" y="560" width="128" height="64">
+      <symbol id="30166:12132" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="31633:4795" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="31682:5915" name="arrow-turn-down-right" x="1928" y="560" width="128" height="64">
+      <symbol id="31682:5916" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="31682:5924" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="31682:6048" name="exclamation-triangle" x="80" y="664" width="128" height="64">
+      <symbol id="31682:6049" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="31682:6053" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="21434:3070" name="train" x="248" y="664" width="128" height="64">
+      <symbol id="21434:3156" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="21434:3164" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="21453:1832" name="bus" x="416" y="664" width="128" height="64">
+      <symbol id="21453:1835" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="33029:767" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="32822:3059" name="plane-departure" x="584" y="664" width="128" height="64">
+      <symbol id="32822:3060" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="32822:3087" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="33023:560" name="ship" x="752" y="664" width="128" height="64">
+      <symbol id="33023:563" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="33029:778" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="32822:3098" name="arrows-diagonal-in" x="920" y="664" width="128" height="64">
+      <symbol id="32822:3099" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="32822:3101" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="32822:3127" name="arrows-diagonal-out" x="1088" y="664" width="128" height="64">
+      <symbol id="32822:3128" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="32822:3130" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="34045:530" name="info-circle" x="1256" y="664" width="128" height="64">
+      <symbol id="34045:531" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="34045:533" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="34045:634" name="share-aos" x="1424" y="664" width="128" height="64">
+      <symbol id="34045:635" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="34045:640" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="34045:978" name="moon" x="1592" y="664" width="128" height="64">
+      <symbol id="34045:979" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="34045:981" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="34045:1008" name="sun" x="1760" y="664" width="128" height="64">
+      <symbol id="34045:1009" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="34045:1011" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="30162:12094" name="timer" x="1928" y="664" width="192" height="64">
+      <symbol id="31622:4492" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="31622:4483" name="Type=outline" x="84" y="20" width="24" height="24" />
+      <symbol id="30162:12095" name="Type=extrabold" x="148" y="20" width="24" height="24" />
+    </frame>
+    <frame id="29911:22636" name="edit-alt" x="80" y="768" width="192" height="64">
+      <symbol id="31617:4250" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="31617:4244" name="Type=outline" x="84" y="20" width="24" height="24" />
+      <symbol id="29911:22637" name="Type=extrabold" x="148" y="20" width="24" height="24" />
+    </frame>
+    <frame id="21206:60465" name="star" x="312" y="768" width="192" height="64">
+      <symbol id="21206:60464" name="Type=solid_full" x="20" y="20" width="24" height="24" />
+      <symbol id="21206:60520" name="Type=outline" x="84" y="20" width="24" height="24" />
+      <symbol id="21206:60486" name="Type=solid_half" x="148" y="20" width="24" height="24" />
+    </frame>
+    <frame id="18338:33723" name="arrow-up-bold" x="544" y="768" width="64" height="64">
+      <symbol id="18338:33724" name="Type=solid" x="20" y="20" width="24" height="24" />
+    </frame>
+    <frame id="18338:36566" name="arrow-down-bold" x="648" y="768" width="64" height="64">
+      <symbol id="18338:36567" name="Type=solid" x="20" y="20" width="24" height="24" />
+    </frame>
+    <frame id="18338:38357" name="check-marker" x="752" y="768" width="64" height="64">
+      <symbol id="18338:38358" name="Type=solid" x="20" y="20" width="24" height="24" />
+    </frame>
+    <frame id="20359:4288" name="keyboard-alt" x="856" y="768" width="64" height="64">
+      <symbol id="20359:4291" name="Type=outline" x="20" y="20" width="24" height="24" />
+    </frame>
+    <frame id="3468:2215" name="x-com" x="960" y="768" width="64" height="64">
+      <symbol id="3468:2216" name="Type=outline" x="20" y="20" width="24" height="24" />
+    </frame>
+    <frame id="3468:2218" name="instagram" x="1064" y="768" width="64" height="64">
+      <symbol id="3468:2219" name="Type=outline" x="20" y="20" width="24" height="24" />
+    </frame>
+    <frame id="3468:2221" name="facebook" x="1168" y="768" width="64" height="64">
+      <symbol id="3468:2222" name="Type=solid" x="20" y="20" width="24" height="24" />
+    </frame>
+    <frame id="21318:21133" name="paypay" x="1272" y="768" width="64" height="64">
+      <symbol id="33540:2680" name="Type=solid" x="20" y="20" width="24" height="24" />
+    </frame>
+    <frame id="41929:8320" name="Jiaa" x="1376" y="768" width="64" height="64">
+      <symbol id="41929:8321" name="Type=solid" x="20" y="20" width="24" height="24" />
+    </frame>
+  </frame>
+  <frame id="32813:637" name="_Document Header" x="80" y="1217" width="2283" height="97">
+    <frame id="32813:638" name="contents" x="0" y="0" width="2283" height="57">
+      <frame id="32813:639" name="title + link" x="0" y="0" width="2283" height="57">
+        <instance id="32813:640" name="_Document text EN" x="0" y="0" width="2283" height="57" />
+      </frame>
+    </frame>
+  </frame>
+  <frame id="32813:697" name="Search" x="80" y="1378" width="2283" height="288">
+    <frame id="31670:5754" name="sidebar" x="80" y="40" width="128" height="64">
+      <symbol id="31670:5755" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="31670:5763" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="31665:4968" name="earth" x="248" y="40" width="128" height="64">
+      <symbol id="31665:4969" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="31665:4976" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="31665:4843" name="baseball-ball" x="416" y="40" width="128" height="64">
+      <symbol id="31665:4844" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="31665:4854" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="31665:5077" name="balloons" x="584" y="40" width="128" height="64">
+      <symbol id="31665:5078" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="31665:5085" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="31665:5281" name="conical-flask" x="752" y="40" width="128" height="64">
+      <symbol id="31665:5282" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="31665:5300" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="31682:5791" name="palette" x="920" y="40" width="128" height="64">
+      <symbol id="31682:5792" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="31682:5795" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="31682:5820" name="graduation-cap" x="1088" y="40" width="128" height="64">
+      <symbol id="31682:5821" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="31682:5823" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="31682:5874" name="newspaper" x="1256" y="40" width="128" height="64">
+      <symbol id="31682:5875" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="31682:5888" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="34884:1138" name="earphones" x="1424" y="40" width="128" height="64">
+      <symbol id="34884:1139" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="34884:1148" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="34884:1177" name="refrigerator" x="1592" y="40" width="128" height="64">
+      <symbol id="34884:1184" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="34884:1180" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="34884:1188" name="rice-cooker" x="1760" y="40" width="128" height="64">
+      <symbol id="34884:1189" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="34884:1191" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="34903:3506" name="washing-machine" x="1928" y="40" width="128" height="64">
+      <symbol id="34903:3507" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="34903:3509" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="34903:3534" name="vacuum-cleaner" x="80" y="144" width="128" height="64">
+      <symbol id="34903:3535" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="34903:3537" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="34903:3545" name="air-conditioner" x="248" y="144" width="128" height="64">
+      <symbol id="34903:3546" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="34903:3548" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="34903:3573" name="television" x="416" y="144" width="128" height="64">
+      <symbol id="34903:3574" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="34903:3576" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="34934:3605" name="hair-dryer" x="584" y="144" width="128" height="64">
+      <symbol id="34934:3606" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="34934:3608" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+  </frame>
+  <frame id="22116:40737" name="_Document Header" x="80" y="1730" width="2283" height="97">
+    <frame id="22116:40738" name="contents" x="0" y="0" width="2283" height="57">
+      <frame id="22116:40739" name="title + link" x="0" y="0" width="2283" height="57">
+        <instance id="22116:41825" name="_Document text EN" x="0" y="0" width="2283" height="57" />
+        <frame id="22116:40741" name="link" x="686" y="20" width="124" height="17" hidden="true">
+          <text id="22116:40742" name="Landpress Link" x="0" y="0" width="99" height="17" />
+          <instance id="22116:40743" name="_earth" x="108" y="0.5" width="16" height="16" />
+        </frame>
+      </frame>
+      <frame id="22116:40744" name="data" x="0" y="97" width="292" height="88" hidden="true">
+        <frame id="22116:40745" name="author" x="0" y="0" width="292" height="29">
+          <text id="22116:40746" name="Author" x="0" y="8" width="80" height="13" />
+          <text id="22116:40747" name="@Song Jihoon, @Park Yongwoon" x="104" y="8" width="179" height="13" />
+        </frame>
+        <frame id="22116:40748" name="updated" x="0" y="29" width="292" height="29">
+          <text id="22116:40749" name="Last updated" x="0" y="8" width="80" height="13" />
+          <text id="22116:40750" name="2024-03-15" x="104" y="8" width="188" height="13" />
+        </frame>
+        <frame id="22116:40751" name="version" x="0" y="59" width="292" height="29">
+          <text id="22116:40752" name="Version" x="0" y="8" width="80" height="13" />
+          <frame id="22116:40753" name="version + status" x="104" y="8" width="164" height="13">
+            <text id="22116:40754" name="1.0" x="0" y="0" width="164" height="13" />
+            <instance id="22116:40755" name="Tag/small" x="98" y="0" width="68" height="16" hidden="true" />
+          </frame>
+        </frame>
+      </frame>
+    </frame>
+  </frame>
+  <frame id="21297:19397" name="map" x="80" y="1891" width="2283" height="208">
+    <frame id="21297:18995" name="pet" x="80" y="40" width="64" height="64">
+      <symbol id="21297:18996" name="Type=solid" x="20" y="20" width="24" height="24" />
+    </frame>
+    <frame id="21297:19016" name="sightseeing" x="184" y="40" width="64" height="64">
+      <symbol id="21297:19017" name="Type=solid" x="20" y="20" width="24" height="24" />
+    </frame>
+    <frame id="21297:19021" name="date" x="288" y="40" width="64" height="64">
+      <symbol id="21297:19022" name="Type=solid" x="20" y="20" width="24" height="24" />
+    </frame>
+    <frame id="21297:19026" name="cafe" x="392" y="40" width="64" height="64">
+      <symbol id="21297:19027" name="Type=solid" x="20" y="20" width="24" height="24" />
+    </frame>
+    <frame id="21297:19006" name="summer" x="496" y="40" width="64" height="64">
+      <symbol id="21297:19007" name="Type=solid" x="20" y="20" width="24" height="24" />
+    </frame>
+    <frame id="21297:19031" name="ocean-view" x="600" y="40" width="64" height="64">
+      <symbol id="21297:19032" name="Type=solid" x="20" y="20" width="24" height="24" />
+    </frame>
+    <frame id="21297:19042" name="gourmet" x="704" y="40" width="128" height="64">
+      <symbol id="21297:19043" name="Type=solid" x="20" y="20" width="24" height="24" />
+      <symbol id="41438:427" name="Type=outline" x="84" y="20" width="24" height="24" />
+    </frame>
+    <frame id="21486:2205" name="streetfood" x="872" y="40" width="64" height="64">
+      <symbol id="21486:2206" name="Type=solid" x="20" y="20" width="24" height="24" />
+    </frame>
+    <frame id="21486:2194" name="souvenir" x="976" y="40" width="64" height="64">
+      <symbol id="21486:2195" name="Type=solid" x="20" y="20" width="24" height="24" />
+    </frame>
+    <frame id="21486:2210" name="landmark" x="1080" y="40" width="64" height="64">
+      <symbol id="21486:2211" name="Type=solid" x="20" y="20" width="24" height="24" />
+    </frame>
+    <frame id="21489:2215" name="child" x="1184" y="40" width="64" height="64">
+      <symbol id="21489:2216" name="Type=solid" x="20" y="20" width="24" height="24" />
+    </frame>
+    <frame id="40466:8687" name="mappin-selected" x="1288" y="40" width="160" height="88">
+      <symbol id="40466:8699" name="Type=solid" x="20" y="20" width="40" height="48" />
+      <symbol id="40466:8705" name="Type=outline" x="100" y="20" width="40" height="48" />
+    </frame>
+    <frame id="40466:8717" name="mappin-other" x="1488" y="40" width="160" height="88">
+      <symbol id="40466:8718" name="Type=solid" x="20" y="20" width="40" height="48" />
+      <symbol id="40466:8722" name="Type=outline" x="100" y="20" width="40" height="48" />
+    </frame>
+    <frame id="40466:8749" name="mappin-number" x="1688" y="40" width="336" height="88">
+      <symbol id="40466:8750" name="Type=solid, Digit=single" x="20" y="20" width="40" height="48" />
+      <symbol id="40466:8754" name="Type=outline, Digit=single" x="100" y="20" width="40" height="48" />
+      <symbol id="40466:8770" name="Type=solid, Digit=multiple" x="180" y="22.5" width="48" height="43" />
+      <symbol id="40466:8835" name="Type=outline, Digit=multiple" x="268" y="22.5" width="48" height="43" />
+    </frame>
+    <symbol id="40466:8876" name="mappin-check-ballon" x="2064" y="40" width="67" height="40.00111389160156" />
+  </frame>
+  <frame id="22116:40782" name="_Document Header" x="80" y="2163" width="2283" height="97">
+    <frame id="22116:40783" name="contents" x="0" y="0" width="2283" height="57">
+      <frame id="22116:40784" name="title + link" x="0" y="0" width="2283" height="57">
+        <instance id="22116:41828" name="_Document text EN" x="0" y="0" width="2283" height="57" />
+        <frame id="22116:40786" name="link" x="686" y="20" width="124" height="17" hidden="true">
+          <text id="22116:40787" name="Landpress Link" x="0" y="0" width="99" height="17" />
+          <instance id="22116:40788" name="_earth" x="108" y="0.5" width="16" height="16" />
+        </frame>
+      </frame>
+      <frame id="22116:40789" name="data" x="0" y="97" width="292" height="88" hidden="true">
+        <frame id="22116:40790" name="author" x="0" y="0" width="292" height="29">
+          <text id="22116:40791" name="Author" x="0" y="8" width="80" height="13" />
+          <text id="22116:40792" name="@Song Jihoon, @Park Yongwoon" x="104" y="8" width="179" height="13" />
+        </frame>
+        <frame id="22116:40793" name="updated" x="0" y="29" width="292" height="29">
+          <text id="22116:40794" name="Last updated" x="0" y="8" width="80" height="13" />
+          <text id="22116:40795" name="2024-03-15" x="104" y="8" width="188" height="13" />
+        </frame>
+        <frame id="22116:40796" name="version" x="0" y="59" width="292" height="29">
+          <text id="22116:40797" name="Version" x="0" y="8" width="80" height="13" />
+          <frame id="22116:40798" name="version + status" x="104" y="8" width="164" height="13">
+            <text id="22116:40799" name="1.0" x="0" y="0" width="164" height="13" />
+            <instance id="22116:40800" name="Tag/small" x="98" y="0" width="68" height="16" hidden="true" />
+          </frame>
+        </frame>
+      </frame>
+    </frame>
+  </frame>
+  <frame id="18547:441" name="AI" x="80" y="2324" width="2283" height="1548">
+    <frame id="18547:589" name="ai-agent-primary" x="80" y="56" width="461" height="264">
+      <symbol id="18547:636" name="Size=xxlarge, Style=primary" x="20" y="20" width="48" height="48" />
+      <symbol id="23552:15147" name="Size=xlarge, Style=primary" x="108" y="24" width="40" height="40" />
+      <symbol id="23552:15155" name="Size=large, Style=primary" x="188" y="32" width="24" height="24" />
+      <symbol id="23552:15163" name="Size=medium, Style=primary" x="252" y="34" width="20" height="20" />
+      <symbol id="23552:15862" name="Size=small, Style=primary" x="312" y="36" width="16" height="16" />
+      <symbol id="24178:7643" name="Size=xsmall, Style=primary" x="368" y="37" width="14" height="14" />
+      <symbol id="24178:7651" name="Size=xxsmall, Style=primary" x="422" y="38" width="12" height="12" />
+      <symbol id="18547:628" name="Size=xxlarge, Style=black" x="20" y="108" width="48" height="48" />
+      <symbol id="23552:15143" name="Size=xlarge, Style=black" x="108" y="112" width="40" height="40" />
+      <symbol id="23552:15151" name="Size=large, Style=black" x="188" y="120" width="24" height="24" />
+      <symbol id="23552:15159" name="Size=medium, Style=black" x="252" y="122" width="20" height="20" />
+      <symbol id="23552:15866" name="Size=small, Style=black" x="312" y="124" width="16" height="16" />
+      <symbol id="24178:7668" name="Size=xsmall, Style=black" x="368" y="125" width="14" height="14" />
+      <symbol id="24178:7672" name="Size=xxsmall, Style=black" x="422" y="126" width="12" height="12" />
+      <symbol id="41239:1539" name="Size=xxlarge, Style=riff" x="20" y="196" width="48" height="48" />
+      <symbol id="41239:1544" name="Size=xlarge, Style=riff" x="108" y="200" width="40" height="40" />
+      <symbol id="41239:1549" name="Size=large, Style=riff" x="188" y="208" width="24" height="24" />
+      <symbol id="41239:1554" name="Size=medium, Style=riff" x="252" y="210" width="20" height="20" />
+      <symbol id="41239:1559" name="Size=small, Style=riff" x="312" y="212" width="16" height="16" />
+      <symbol id="41239:1564" name="Size=xsmall, Style=riff" x="368" y="213" width="14" height="14" />
+      <symbol id="41239:1569" name="Size=xxsmall, Style=riff" x="422" y="214" width="12" height="12" />
+    </frame>
+    <instance id="44231:6429" name="_Document text EN" x="80" y="6" width="170" height="26" />
+    <text id="44233:6432" name="ai-status-indicator" x="1168" y="6" width="186" height="26" />
+    <text id="44233:6433" name="ai-agent-icons" x="80" y="648" width="147" height="26" />
+    <text id="44233:6434" name="ai-quick-menu" x="80" y="1138" width="146" height="26" />
+    <text id="44233:6435" name="property-icons" x="80" y="1420" width="145" height="26" />
+    <text id="44233:6436" name="⚠️ Deprecated 未使用のため、次回 Major で削除予定です。" x="237" y="1423" width="429" height="21" />
+    <frame id="32741:37" name="ai-agent-primary-dark" x="581" y="56" width="467" height="264">
+      <instance id="32741:8" name="ai-agent-primary" x="20" y="20" width="48" height="48" />
+      <instance id="32741:9" name="ai-agent-primary" x="108" y="24" width="40" height="40" />
+      <instance id="32741:10" name="ai-agent-primary" x="188" y="32" width="24" height="24" />
+      <instance id="32741:11" name="ai-agent-primary" x="252" y="34" width="20" height="20" />
+      <instance id="32741:12" name="ai-agent-primary" x="312" y="36" width="16" height="16" />
+      <instance id="32741:13" name="ai-agent-primary" x="368" y="37" width="14" height="14" />
+      <instance id="32741:38" name="ai-agent-primary" x="422" y="38" width="12" height="12" />
+      <instance id="41065:1806" name="ai-agent-primary" x="20" y="108" width="48" height="48" />
+      <instance id="41065:1807" name="ai-agent-primary" x="108" y="112" width="40" height="40" />
+      <instance id="41065:1808" name="ai-agent-primary" x="188" y="120" width="24" height="24" />
+      <instance id="41065:1809" name="ai-agent-primary" x="252" y="122" width="20" height="20" />
+      <instance id="41065:1810" name="ai-agent-primary" x="312" y="124" width="16" height="16" />
+      <instance id="41065:1811" name="ai-agent-primary" x="368" y="125" width="14" height="14" />
+      <instance id="41065:1812" name="ai-agent-primary" x="422" y="126" width="12" height="12" />
+      <instance id="41239:1574" name="ai-agent-primary" x="20" y="196" width="48" height="48" />
+      <instance id="41239:1575" name="ai-agent-primary" x="108" y="200" width="40" height="40" />
+      <instance id="41239:1576" name="ai-agent-primary" x="188" y="208" width="24" height="24" />
+      <instance id="41239:1577" name="ai-agent-primary" x="252" y="210" width="20" height="20" />
+      <instance id="41239:1578" name="ai-agent-primary" x="312" y="212" width="16" height="16" />
+      <instance id="41239:1579" name="ai-agent-primary" x="368" y="213" width="14" height="14" />
+      <instance id="41239:1580" name="ai-agent-primary" x="422" y="214" width="12" height="12" />
+    </frame>
+    <frame id="24250:1042" name="ai-status-indicator" x="1168" y="56" width="348" height="528">
+      <symbol id="24250:1043" name="Type=word, Size=xxlarge, Style=primary" x="20" y="20" width="48" height="48" />
+      <symbol id="30864:2074" name="Type=word, Size=xlarge, Style=primary" x="108" y="24" width="40" height="40" />
+      <symbol id="30864:2110" name="Type=word, Size=large, Style=primary" x="188" y="32" width="24" height="24" />
+      <symbol id="30864:2164" name="Type=word, Size=medium, Style=primary" x="252" y="34" width="20" height="20" />
+      <symbol id="30864:2200" name="Type=word, Size=small, Style=primary" x="312" y="36" width="16" height="16" />
+      <symbol id="24250:1077" name="Type=check, Size=xxlarge, Style=primary" x="20" y="108" width="48" height="48" />
+      <symbol id="30864:3183" name="Type=check, Size=xlarge, Style=primary" x="108" y="112" width="40" height="40" />
+      <symbol id="30864:3217" name="Type=check, Size=large, Style=primary" x="188" y="120" width="24" height="24" />
+      <symbol id="30864:3251" name="Type=check, Size=medium, Style=primary" x="252" y="122" width="20" height="20" />
+      <symbol id="30864:3285" name="Type=check, Size=small, Style=primary" x="312" y="124" width="16" height="16" />
+      <symbol id="24250:19798" name="Type=word, Size=xxlarge, Style=black" x="20" y="196" width="48" height="48" />
+      <symbol id="30864:1642" name="Type=word, Size=xlarge, Style=black" x="108" y="200" width="40" height="40" />
+      <symbol id="30864:1678" name="Type=word, Size=large, Style=black" x="188" y="208" width="24" height="24" />
+      <symbol id="30864:1714" name="Type=word, Size=medium, Style=black" x="252" y="210" width="20" height="20" />
+      <symbol id="30864:1750" name="Type=word, Size=small, Style=black" x="312" y="212" width="16" height="16" />
+      <symbol id="24250:19871" name="Type=check, Size=xxlarge, Style=black" x="20" y="284" width="48" height="48" />
+      <symbol id="30864:2979" name="Type=check, Size=xlarge, Style=black" x="108" y="288" width="40" height="40" />
+      <symbol id="30864:3013" name="Type=check, Size=large, Style=black" x="188" y="296" width="24" height="24" />
+      <symbol id="30864:3047" name="Type=check, Size=medium, Style=black" x="252" y="298" width="20" height="20" />
+      <symbol id="30864:3081" name="Type=check, Size=small, Style=black" x="312" y="300" width="16" height="16" />
+      <symbol id="41239:1685" name="Type=word, Size=xxlarge, Style=riff" x="20" y="372" width="48" height="48" />
+      <symbol id="41239:1690" name="Type=word, Size=xlarge, Style=riff" x="108" y="376" width="40" height="40" />
+      <symbol id="41239:1695" name="Type=word, Size=large, Style=riff" x="188" y="384" width="24" height="24" />
+      <symbol id="41239:1700" name="Type=word, Size=medium, Style=riff" x="252" y="386" width="20" height="20" />
+      <symbol id="41239:1705" name="Type=word, Size=small, Style=riff" x="312" y="388" width="16" height="16" />
+      <symbol id="41239:1710" name="Type=check, Size=xxlarge, Style=riff" x="20" y="460" width="48" height="48" />
+      <symbol id="41239:1715" name="Type=check, Size=xlarge, Style=riff" x="108" y="464" width="40" height="40" />
+      <symbol id="41239:1720" name="Type=check, Size=large, Style=riff" x="188" y="472" width="24" height="24" />
+      <symbol id="41239:1725" name="Type=check, Size=medium, Style=riff" x="252" y="474" width="20" height="20" />
+      <symbol id="41239:1730" name="Type=check, Size=small, Style=riff" x="312" y="476" width="16" height="16" />
+    </frame>
+    <frame id="32747:387" name="ai-avatar-dark" x="1556" y="56" width="348" height="528">
+      <instance id="32747:1504" name="ai-status-indicator" x="20" y="20" width="48" height="48" />
+      <instance id="41239:1735" name="ai-status-indicator" x="20" y="372" width="48" height="48" />
+      <instance id="41065:1860" name="ai-status-indicator" x="20" y="196" width="48" height="48" />
+      <instance id="32747:1505" name="ai-status-indicator" x="108" y="24" width="40" height="40" />
+      <instance id="41239:1736" name="ai-status-indicator" x="108" y="376" width="40" height="40" />
+      <instance id="41065:1861" name="ai-status-indicator" x="108" y="200" width="40" height="40" />
+      <instance id="32747:1506" name="ai-status-indicator" x="188" y="32" width="24" height="24" />
+      <instance id="41239:1737" name="ai-status-indicator" x="188" y="384" width="24" height="24" />
+      <instance id="41065:1862" name="ai-status-indicator" x="188" y="208" width="24" height="24" />
+      <instance id="32747:1507" name="ai-status-indicator" x="252" y="34" width="20" height="20" />
+      <instance id="41239:1738" name="ai-status-indicator" x="252" y="386" width="20" height="20" />
+      <instance id="41065:1863" name="ai-status-indicator" x="252" y="210" width="20" height="20" />
+      <instance id="32747:1508" name="ai-status-indicator" x="312" y="36" width="16" height="16" />
+      <instance id="41239:1739" name="ai-status-indicator" x="312" y="388" width="16" height="16" />
+      <instance id="41065:1864" name="ai-status-indicator" x="312" y="212" width="16" height="16" />
+      <instance id="32747:1514" name="ai-status-indicator" x="20" y="108" width="48" height="48" />
+      <instance id="41239:1740" name="ai-status-indicator" x="20" y="460" width="48" height="48" />
+      <instance id="41065:1870" name="ai-status-indicator" x="20" y="284" width="48" height="48" />
+      <instance id="32747:1515" name="ai-status-indicator" x="108" y="112" width="40" height="40" />
+      <instance id="41239:1741" name="ai-status-indicator" x="108" y="464" width="40" height="40" />
+      <instance id="41065:1871" name="ai-status-indicator" x="108" y="288" width="40" height="40" />
+      <instance id="32747:1516" name="ai-status-indicator" x="188" y="120" width="24" height="24" />
+      <instance id="41239:1742" name="ai-status-indicator" x="188" y="472" width="24" height="24" />
+      <instance id="41065:1872" name="ai-status-indicator" x="188" y="296" width="24" height="24" />
+      <instance id="32747:1517" name="ai-status-indicator" x="252" y="122" width="20" height="20" />
+      <instance id="41239:1743" name="ai-status-indicator" x="252" y="474" width="20" height="20" />
+      <instance id="41065:1873" name="ai-status-indicator" x="252" y="298" width="20" height="20" />
+      <instance id="32747:1518" name="ai-status-indicator" x="312" y="124" width="16" height="16" />
+      <instance id="41239:1744" name="ai-status-indicator" x="312" y="476" width="16" height="16" />
+      <instance id="41065:1874" name="ai-status-indicator" x="312" y="300" width="16" height="16" />
+    </frame>
+    <frame id="24259:638" name="ai-agent-icons" x="80" y="698" width="1640" height="376">
+      <frame id="15823:19543" name="ai-analysis" x="0" y="0" width="128" height="64">
+        <symbol id="31633:4817" name="Color=gradient" x="20" y="20" width="24" height="24" />
+        <symbol id="15823:19544" name="Color=primary" x="84" y="20" width="24" height="24" />
+      </frame>
+      <frame id="24248:14557" name="ai-check" x="168" y="0" width="128" height="64">
+        <symbol id="24248:11636" name="Color=gradient" x="20" y="20" width="24" height="24" />
+        <symbol id="24248:14561" name="Color=primary" x="84" y="20" width="24" height="24" />
+      </frame>
+      <frame id="24248:14588" name="ai-search" x="336" y="0" width="128" height="64">
+        <symbol id="24248:14589" name="Color=gradient" x="20" y="20" width="24" height="24" />
+        <symbol id="24248:14595" name="Color=primary" x="84" y="20" width="24" height="24" />
+      </frame>
+      <frame id="24248:18738" name="ai-news" x="504" y="0" width="128" height="64">
+        <symbol id="24248:18739" name="Color=gradient" x="20" y="20" width="24" height="24" />
+        <symbol id="24248:18747" name="Color=primary" x="84" y="20" width="24" height="24" />
+      </frame>
+      <frame id="24259:38" name="ai-messenger" x="672" y="0" width="128" height="64">
+        <symbol id="24259:39" name="Color=gradient" x="20" y="20" width="24" height="24" />
+        <symbol id="24259:47" name="Color=primary" x="84" y="20" width="24" height="24" />
+      </frame>
+      <frame id="24259:82" name="ai-shopping" x="840" y="0" width="128" height="64">
+        <symbol id="24259:83" name="Color=gradient" x="20" y="20" width="24" height="24" />
+        <symbol id="24259:91" name="Color=primary" x="84" y="20" width="24" height="24" />
+      </frame>
+      <frame id="24259:143" name="ai-map" x="1008" y="0" width="128" height="64">
+        <symbol id="24259:144" name="Color=gradient" x="20" y="20" width="24" height="24" />
+        <symbol id="24259:152" name="Color=primary" x="84" y="20" width="24" height="24" />
+      </frame>
+      <frame id="24259:187" name="ai-bookmark" x="1176" y="0" width="128" height="64">
+        <symbol id="24259:188" name="Color=gradient" x="20" y="20" width="24" height="24" />
+        <symbol id="24259:196" name="Color=primary" x="84" y="20" width="24" height="24" />
+      </frame>
+      <frame id="24259:252" name="ai-travel" x="1344" y="0" width="128" height="64">
+        <symbol id="24259:253" name="Color=gradient" x="20" y="20" width="24" height="24" />
+        <symbol id="24259:261" name="Color=primary" x="84" y="20" width="24" height="24" />
+      </frame>
+      <frame id="24259:326" name="ai-calendar" x="1512" y="0" width="128" height="64">
+        <symbol id="24259:327" name="Color=gradient" x="20" y="20" width="24" height="24" />
+        <symbol id="24259:335" name="Color=primary" x="84" y="20" width="24" height="24" />
+      </frame>
+      <frame id="24259:375" name="ai-mic" x="0" y="104" width="128" height="64">
+        <symbol id="24259:376" name="Color=gradient" x="20" y="20" width="24" height="24" />
+        <symbol id="24259:384" name="Color=primary" x="84" y="20" width="24" height="24" />
+      </frame>
+      <frame id="24259:454" name="ai-weather" x="168" y="104" width="128" height="64">
+        <symbol id="24259:455" name="Color=ai gradient" x="20" y="20" width="24" height="24" />
+        <symbol id="24259:463" name="Color=primary" x="84" y="20" width="24" height="24" />
+      </frame>
+      <frame id="24259:517" name="ai-voice" x="336" y="104" width="128" height="64">
+        <symbol id="24259:518" name="Color=gradient" x="20" y="20" width="24" height="24" />
+        <symbol id="24259:526" name="Color=primary" x="84" y="20" width="24" height="24" />
+      </frame>
+      <frame id="24259:566" name="ai-edit" x="504" y="104" width="128" height="64">
+        <symbol id="24259:567" name="Color=gradient" x="20" y="20" width="24" height="24" />
+        <symbol id="24259:575" name="Color=primary" x="84" y="20" width="24" height="24" />
+      </frame>
+      <frame id="29764:15134" name="ai-scan" x="672" y="104" width="128" height="64">
+        <symbol id="29764:15135" name="Color=gradient" x="20" y="20" width="24" height="24" />
+        <symbol id="31633:4819" name="Color=primary" x="84" y="20" width="24" height="24" />
+      </frame>
+      <frame id="29764:15109" name="ai-home" x="840" y="104" width="128" height="64">
+        <symbol id="29764:15110" name="Color=gradient" x="20" y="20" width="24" height="24" />
+        <symbol id="29951:22915" name="Color=primary" x="84" y="20" width="24" height="24" />
+      </frame>
+      <frame id="29951:22920" name="ai-fortune" x="1008" y="104" width="128" height="64">
+        <symbol id="29951:22921" name="Color=gradient" x="20" y="20" width="24" height="24" />
+        <symbol id="31633:4824" name="Color=primary" x="84" y="20" width="24" height="24" />
+      </frame>
+      <frame id="39151:5691" name="ai-recipe" x="1176" y="104" width="128" height="64">
+        <symbol id="39151:5692" name="Color=gradient" x="20" y="20" width="24" height="24" />
+        <symbol id="39151:5723" name="Color=primary" x="84" y="20" width="24" height="24" />
+      </frame>
+      <frame id="39153:5747" name="ai-car" x="1344" y="104" width="128" height="64">
+        <symbol id="39153:5748" name="Color=gradient" x="20" y="20" width="24" height="24" />
+        <symbol id="39153:5758" name="Color=primary" x="84" y="20" width="24" height="24" />
+      </frame>
+      <frame id="39153:5762" name="ai-real-estate" x="1512" y="104" width="128" height="64">
+        <symbol id="39153:5763" name="Color=gradient" x="20" y="20" width="24" height="24" />
+        <symbol id="39153:5796" name="Color=primary" x="84" y="20" width="24" height="24" />
+      </frame>
+      <frame id="39153:5820" name="ai-counseling" x="0" y="208" width="128" height="64">
+        <symbol id="39153:5821" name="Color=gradient" x="20" y="20" width="24" height="24" />
+        <symbol id="39153:5844" name="Color=primary" x="84" y="20" width="24" height="24" />
+      </frame>
+      <frame id="39153:5847" name="ai-stock" x="168" y="208" width="128" height="64">
+        <symbol id="39153:5848" name="Color=gradient" x="20" y="20" width="24" height="24" />
+        <symbol id="39153:5857" name="Color=primary" x="84" y="20" width="24" height="24" />
+      </frame>
+      <frame id="45988:3080" name="ai-career" x="336" y="208" width="128" height="64">
+        <symbol id="45988:3081" name="Color=gradient" x="20" y="20" width="24" height="24" />
+        <symbol id="45988:3169" name="Color=primary" x="84" y="20" width="24" height="24" />
+      </frame>
+      <frame id="32747:3225" name="ai-icons-dark" x="0" y="312" width="1472" height="64">
+        <instance id="32747:3226" name="ai-analysis" x="20" y="20" width="24" height="24" />
+        <instance id="32747:3227" name="ai-check" x="84" y="20" width="24" height="24" />
+        <instance id="32747:3228" name="ai-search" x="148" y="20" width="24" height="24" />
+        <instance id="32747:3229" name="ai-news" x="212" y="20" width="24" height="24" />
+        <instance id="32747:3230" name="ai-messenger" x="276" y="20" width="24" height="24" />
+        <instance id="32747:3231" name="ai-shopping" x="340" y="20" width="24" height="24" />
+        <instance id="32747:3232" name="ai-map" x="404" y="20" width="24" height="24" />
+        <instance id="32747:3233" name="ai-bookmark" x="468" y="20" width="24" height="24" />
+        <instance id="32747:3234" name="ai-travel" x="532" y="20" width="24" height="24" />
+        <instance id="32747:3235" name="ai-calendar" x="596" y="20" width="24" height="24" />
+        <instance id="32747:3236" name="ai-mic" x="660" y="20" width="24" height="24" />
+        <instance id="32747:3237" name="ai-weather" x="724" y="20" width="24" height="24" />
+        <instance id="32747:3238" name="ai-voice" x="788" y="20" width="24" height="24" />
+        <instance id="32747:3239" name="ai-edit" x="852" y="20" width="24" height="24" />
+        <instance id="32747:3240" name="ai-scan" x="916" y="20" width="24" height="24" />
+        <instance id="32747:3241" name="ai-home" x="980" y="20" width="24" height="24" />
+        <instance id="32747:3242" name="ai-fortune" x="1044" y="20" width="24" height="24" />
+        <instance id="40577:11808" name="ai-recipe" x="1108" y="20" width="24" height="24" />
+        <instance id="40577:11812" name="ai-car" x="1172" y="20" width="24" height="24" />
+        <instance id="40577:11817" name="ai-real-estate" x="1236" y="20" width="24" height="24" />
+        <instance id="40577:11821" name="ai-counseling" x="1300" y="20" width="24" height="24" />
+        <instance id="40577:11825" name="ai-stock" x="1364" y="20" width="24" height="24" />
+        <instance id="46306:419" name="ai-career" x="1428" y="20" width="24" height="24" />
+      </frame>
+    </frame>
+    <frame id="41024:806" name="ai-quick-menu" x="80" y="1188" width="1971" height="168">
+      <frame id="41008:647" name="ai-quick-menu-users" x="0" y="0" width="64" height="64">
+        <symbol id="41008:648" name="Type=solid" x="20" y="20" width="24" height="24" />
+      </frame>
+      <frame id="41008:686" name="ai-quick-menu-calendar-check" x="104" y="0" width="64" height="64">
+        <symbol id="41008:687" name="Type=solid" x="20" y="20" width="24" height="24" />
+      </frame>
+      <frame id="41008:749" name="ai-quick-menu-business-bag" x="208" y="0" width="64" height="64">
+        <symbol id="41008:750" name="Type=solid" x="20" y="20" width="24" height="24" />
+      </frame>
+      <frame id="41024:645" name="ai-quick-menu-medal" x="312" y="0" width="64" height="64">
+        <symbol id="41024:646" name="Type=solid" x="20" y="20" width="24" height="24" />
+      </frame>
+      <frame id="41024:667" name="ai-quick-menu-graduation-cap" x="416" y="0" width="64" height="64">
+        <symbol id="41024:668" name="Type=solid" x="20" y="20" width="24" height="24" />
+      </frame>
+      <frame id="41024:741" name="ai-quick-menu-balance-scale" x="520" y="0" width="64" height="64">
+        <symbol id="41024:742" name="Type=solid" x="20" y="20" width="24" height="24" />
+      </frame>
+      <frame id="43828:3231" name="ai-quick-menu-car" x="624" y="0" width="64" height="64">
+        <symbol id="43828:3232" name="Type=solid" x="20" y="20" width="24" height="24" />
+      </frame>
+      <frame id="43828:3248" name="ai-quick-menu-car-key" x="728" y="0" width="64" height="64">
+        <symbol id="43828:3249" name="Type=solid" x="20" y="20" width="24" height="24" />
+      </frame>
+      <frame id="43828:3267" name="ai-quick-menu-coin-yen" x="832" y="0" width="64" height="64">
+        <symbol id="43828:3268" name="Type=solid" x="20" y="20" width="24" height="24" />
+      </frame>
+      <frame id="43828:3286" name="ai-quick-menu-car-wheel" x="936" y="0" width="64" height="64">
+        <symbol id="43828:3287" name="Type=solid" x="20" y="20" width="24" height="24" />
+      </frame>
+      <frame id="43828:3303" name="ai-quick-menu-repair-tools" x="1040" y="0" width="64" height="64">
+        <symbol id="43828:3304" name="Type=solid" x="20" y="20" width="24" height="24" />
+      </frame>
+      <frame id="44417:883" name="ai-quick-menu-house" x="1144" y="0" width="64" height="64">
+        <symbol id="44417:884" name="Type=solid" x="20" y="20" width="24" height="24" />
+      </frame>
+      <frame id="44417:892" name="ai-quick-menu-heart" x="1248" y="0" width="64" height="64">
+        <symbol id="44417:893" name="Type=solid" x="20" y="20" width="24" height="24" />
+      </frame>
+      <frame id="44417:899" name="ai-quick-menu-globe" x="1352" y="0" width="64" height="64">
+        <symbol id="44417:900" name="Type=solid" x="20" y="20" width="24" height="24" />
+      </frame>
+      <frame id="44417:907" name="ai-quick-menu-briefcase" x="1456" y="0" width="64" height="64">
+        <symbol id="44417:908" name="Type=solid" x="20" y="20" width="24" height="24" />
+      </frame>
+      <frame id="44417:916" name="ai-quick-menu-ellipsis" x="1560" y="0" width="64" height="64">
+        <symbol id="44417:917" name="Type=solid" x="20" y="20" width="24" height="24" />
+      </frame>
+      <frame id="44521:4277" name="ai-quick-menu-bread-slice" x="1664" y="0" width="64" height="64">
+        <symbol id="44521:4278" name="Type=solid" x="20" y="20" width="24" height="24" />
+      </frame>
+      <frame id="44521:4290" name="ai-quick-menu-stopwatch" x="1768" y="0" width="64" height="64">
+        <symbol id="44521:4291" name="Type=solid" x="20" y="20" width="24" height="24" />
+      </frame>
+      <frame id="44521:4305" name="ai-quick-menu-cloche" x="1872" y="0" width="64" height="64">
+        <symbol id="44521:4306" name="Type=solid" x="20" y="20" width="24" height="24" />
+      </frame>
+      <frame id="44521:4318" name="ai-quick-menu-dango" x="0" y="104" width="64" height="64">
+        <symbol id="44521:4319" name="Type=solid" x="20" y="20" width="24" height="24" />
+      </frame>
+      <frame id="44521:4331" name="ai-quick-menu-lunchbox" x="104" y="104" width="64" height="64">
+        <symbol id="44521:4332" name="Type=solid" x="20" y="20" width="24" height="24" />
+      </frame>
+      <frame id="44521:4343" name="ai-quick-menu-apple" x="208" y="104" width="64" height="64">
+        <symbol id="44521:4344" name="Type=solid" x="20" y="20" width="24" height="24" />
+      </frame>
+      <frame id="44521:4355" name="ai-quick-menu-bowl-chopsticks" x="312" y="104" width="64" height="64">
+        <symbol id="44521:4356" name="Type=solid" x="20" y="20" width="24" height="24" />
+      </frame>
+      <frame id="44521:4373" name="ai-quick-menu-burger" x="416" y="104" width="64" height="64">
+        <symbol id="44521:4374" name="Type=solid" x="20" y="20" width="24" height="24" />
+      </frame>
+    </frame>
+    <frame id="29764:15084" name="property-icons" x="80" y="1470" width="504" height="72">
+      <symbol id="29764:15085" name="Type=apartment" x="20" y="20" width="32" height="32" />
+      <symbol id="29764:15087" name="Type=tower" x="92" y="20" width="32" height="32" />
+      <symbol id="29764:15089" name="Type=house" x="164" y="20" width="32" height="32" />
+      <symbol id="29764:15091" name="Type=office" x="236" y="20" width="32" height="32" />
+      <symbol id="29764:15093" name="Type=land-area" x="308" y="20" width="32" height="32" />
+      <symbol id="29764:15095" name="Type=metro" x="380" y="20" width="32" height="32" />
+      <symbol id="29764:15097" name="Type=rent" x="452" y="20" width="32" height="32" />
+    </frame>
+  </frame>
+</frame>
+IMPORTANT: The design was too large to fit into context with get_design_context. Instead you have received a sparse metadata response, you MUST call get_design_context on the IDs of the sublayers to get the full code. Split up the calls to ensure the sublayers do not also exceed the context limit.

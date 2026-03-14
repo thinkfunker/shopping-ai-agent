@@ -1,0 +1,46 @@
+/* AISuggestionCard - Atomic Variant (Figma Node 21151:70743) */
+@import "../../../design_system.css";
+
+.ai-suggestion-card {
+    width: 136px !important;
+    height: 124px !important;
+    background: var(--background-primary, #ffffff) !important;
+    border: var(--border-width-100, 1px) solid var(--border-tertiary, rgba(0, 0, 0, 0.08)) !important;
+    border-radius: var(--border-radius-400, 16px) !important;
+    padding: var(--spacing-400, 16px) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    gap: var(--spacing-200, 8px) !important;
+    box-sizing: border-box !important;
+    flex-shrink: 0 !important;
+    cursor: pointer !important;
+    transition: background-color 0.2s ease !important;
+}
+
+.ai-suggestion-card:hover {
+    background-color: var(--background-secondary, #f0f2f7) !important;
+}
+
+.card-icon {
+    width: 20px !important;
+    height: 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+}
+
+.card-title {
+    font-family: var(--family-primary, "Noto Sans JP") !important;
+    font-size: var(--size-0875, 14px) !important;
+    line-height: var(--line-height-body-medium, 22px) !important;
+    color: var(--content-primary, #17181a) !important;
+    font-weight: 400 !important;
+    margin: 0 !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+}

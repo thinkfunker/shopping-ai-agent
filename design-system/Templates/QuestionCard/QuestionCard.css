@@ -1,0 +1,48 @@
+/**
+ * Question Card - Atomic Orchestrator
+ */
+@import "./Atoms/QuestionHeader.css";
+@import "./Atoms/SelectionChip.css";
+@import "./Atoms/SelectionCard.css";
+
+.question-card-template {
+    width: 390px !important;
+    max-width: 390px !important;
+    background: var(--background-primary, #ffffff) !important;
+    border-radius: var(--border-radius-400, 16px) !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    box-shadow: var(--shadow-small) !important;
+    box-sizing: border-box !important;
+}
+
+.selection-area-template {
+    padding: var(--spacing-400, 16px) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: var(--spacing-300, 12px) !important;
+    box-sizing: border-box !important;
+}
+
+/* horizontal carousel */
+.selection-area-template.horizontal {
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    padding-bottom: var(--spacing-400, 16px) !important;
+    scrollbar-width: none !important;
+    /* Hide scrollbar Firefox */
+}
+
+.selection-area-template.horizontal::-webkit-scrollbar {
+    display: none !important;
+    /* Hide scrollbar Chrome/Safari */
+}
+
+/* grid for chips */
+.selection-area-template.grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)) !important;
+    gap: 8px !important;
+}

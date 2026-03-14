@@ -12,18 +12,19 @@
     font-weight: var(--font-weight-regular);
     gap: var(--spacing-100);
     border: 1px solid transparent;
+    line-height: 1;
 }
 
 /* Variants */
 .chip-solid-rounded-rect {
     border-radius: var(--radius-200, 8px);
-    background: var(--background-secondary, #f0f2f7);
+    background: var(--bg-secondary, #f0f2f7);
     border: none;
 }
 
 .chip-solid-rounded {
     border-radius: var(--radius-full, 100px);
-    background: var(--background-secondary, #f0f2f7);
+    background: var(--bg-secondary, #f0f2f7);
     border: none;
 }
 
@@ -34,7 +35,7 @@
     /* Fallback */
     border-image: linear-gradient(135deg, var(--gradient-border-stop-1), var(--gradient-border-stop-2)) 1;
     /* Approximate if border-image used, but usually it's just a solid color from the stop */
-    border: 1px solid rgba(168, 61, 235, 0.16);
+    border: var(--border-width-100) solid var(--border-secondary);
 }
 
 /* Graphic Container (AI Gradient) */
@@ -74,8 +75,8 @@
     text-align: left;
     align-items: flex-start;
     justify-content: center;
-    font-size: 14px;
-    line-height: var(--line-height-body-medium, 22px);
+    font-size: var(--font-size-0875);
+    line-height: var(--line-height-body-medium);
 }
 
 /* State Layer - absolute overlay for precise states */
@@ -89,7 +90,7 @@
 
 /* Selected State */
 .chip.selected {
-    background: var(--background-selection-secondary, rgba(15, 98, 254, 0.06));
+    background: var(--bg-selection-secondary, rgba(15, 98, 254, 0.06));
     border-color: var(--gradient-border-stop-1, #a83deb);
     color: var(--content-key, #0f62fe);
 }
@@ -118,7 +119,7 @@
 .chip:disabled,
 .chip.disabled {
     cursor: not-allowed;
-    background-color: var(--background-disabled-accent, rgba(0, 0, 0, 0.04)) !important;
+    background-color: var(--bg-disabled-accent, rgba(0, 0, 0, 0.04)) !important;
     border-color: var(--border-disabled, rgba(0, 0, 0, 0.16)) !important;
     color: var(--content-disabled, rgba(0, 0, 0, 0.28)) !important;
 }
@@ -167,4 +168,5 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    /* .chip-icon width and height are now controlled by the content (renderIcon) or specific size classes if needed */
 }

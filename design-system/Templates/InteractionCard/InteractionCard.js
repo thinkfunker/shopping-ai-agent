@@ -80,42 +80,85 @@ window.renderResultPattern = function ({
 window.renderChoiceResultCard = function ({
     display = 'choice',
     questions = [],
-    result = { count: 0, items: [], type: 'carousel', mediaSize: 'medium' }
+    result = { count: 0, items: [], type: 'carousel', mediaSize: 'medium', unit: '건', suffix: '의 결과' }
 } = {}) {
     const card = document.createElement('div');
     card.className = `interaction-card choice-result-card ${display === 'both' ? 'display-both' : ''}`;
+
+    // Background Gradient Overlay (Figma specific)
+    const gradientOverlay = document.createElement('div');
+    gradientOverlay.className = 'interaction-card-gradient-overlay';
+    card.appendChild(gradientOverlay);
 
     // Add Questions
     if (display !== 'result') {
         questions.forEach((q, idx) => {
             const section = document.createElement('div');
             section.className = 'interaction-section';
-            section.innerHTML = `
-                <div class="interaction-header">
-                    <div class="interaction-icon-container" style="display: flex; align-items: center; justify-content: center; width: 24px; height: 24px;"></div>
-                    <h4 class="interaction-title">${q.text}</h4>
-                </div>
-                <div class="interaction-chip-group" id="choice-q-chips-${idx}">
-                </div>
-            `;
-            card.appendChild(section);
 
-            const iconCont = section.querySelector('.interaction-icon-container');
+            // Question Header
+            const header = document.createElement('div');
+            header.className = 'interaction-header';
+
+            const iconCont = document.createElement('div');
+            iconCont.className = 'interaction-icon-container';
             if (window.renderIcon) {
-                iconCont.appendChild(renderIcon({ name: 'bulb', size: 18, variant: 'outline' }));
+                iconCont.appendChild(renderIcon({
+                    name: `question-text-circle-${q.iconVariant || 'solid'}`,
+                    size: 24
+                }));
             }
 
-            const chipGroup = section.querySelector(`#choice-q-chips-${idx}`);
+            const titleEl = document.createElement('h4');
+            titleEl.className = 'interaction-title';
+            titleEl.textContent = q.text;
+
+            header.appendChild(iconCont);
+            header.appendChild(titleEl);
+            section.appendChild(header);
+
+            // Chip Group
+            const chipGroup = document.createElement('div');
+            chipGroup.className = 'interaction-chip-group';
             q.choices.forEach(c => {
                 if (window.renderChip) {
                     chipGroup.appendChild(renderChip({
                         label: c.label,
                         size: 'large',
                         selected: c.selected,
-                        variant: 'solid-rounded-rect'
+                        variant: 'outline-gradient'
                     }));
                 }
             });
+            section.appendChild(chipGroup);
+
+            // 2depth Sub-section
+            if (q.subQuestion) {
+                const subSection = document.createElement('div');
+                subSection.className = 'interaction-sub-section';
+
+                const subLabel = document.createElement('div');
+                subLabel.className = 'interaction-sub-label';
+                subLabel.textContent = q.subQuestion.text;
+                subSection.appendChild(subLabel);
+
+                const subChipGroup = document.createElement('div');
+                subChipGroup.className = 'interaction-chip-group-mini';
+                q.subQuestion.choices.forEach(sc => {
+                    if (window.renderChip) {
+                        subChipGroup.appendChild(renderChip({
+                            label: sc.label,
+                            size: 'medium',
+                            selected: sc.selected,
+                            variant: sc.selected ? 'outline-gradient' : 'solid-rounded-rect'
+                        }));
+                    }
+                });
+                subSection.appendChild(subChipGroup);
+                section.appendChild(subSection);
+            }
+
+            card.appendChild(section);
         });
     }
 
@@ -123,22 +166,35 @@ window.renderChoiceResultCard = function ({
     if (display !== 'choice') {
         const resultSection = document.createElement('div');
         resultSection.className = 'interaction-result-section';
-        resultSection.innerHTML = `
-            <div class="interaction-result-header">
-                <div class="interaction-result-icon-container" style="display: flex; align-items: center; justify-content: center; width: 24px; height: 24px;"></div>
-                <div class="interaction-result-text">
-                    <span class="interaction-result-count">${result.count}</span>
-                    <span class="interaction-result-unit">건</span>
-                    <span class="interaction-sub-label">의 결과</span>
-                </div>
-            </div>
-        `;
-        const resIconCont = resultSection.querySelector('.interaction-result-icon-container');
+
+        const resultHeader = document.createElement('div');
+        resultHeader.className = 'interaction-result-header';
+
         if (window.renderIcon) {
-            const icon = renderIcon({ name: 'check-circle', size: 24, variant: 'solid' });
-            icon.style.color = 'var(--green-8, #00804c)';
-            resIconCont.appendChild(icon);
+            resultHeader.appendChild(renderIcon({ name: 'ai-check', size: 24 }));
         }
+
+        const textWrapper = document.createElement('div');
+        textWrapper.className = 'interaction-result-text-wrapper';
+
+        const countEl = document.createElement('span');
+        countEl.className = 'interaction-result-count';
+        countEl.textContent = result.count.toString().padStart(2, '0');
+
+        const unitEl = document.createElement('span');
+        unitEl.className = 'interaction-result-unit';
+        unitEl.textContent = result.unit || '件';
+
+        const suffixEl = document.createElement('span');
+        suffixEl.className = 'interaction-result-suffix';
+        suffixEl.textContent = result.suffix || 'のレシピが見つかりました。';
+
+        textWrapper.appendChild(countEl);
+        textWrapper.appendChild(unitEl);
+        textWrapper.appendChild(suffixEl);
+        resultHeader.appendChild(textWrapper);
+
+        resultSection.appendChild(resultHeader);
         resultSection.appendChild(window.renderResultPattern(result));
         card.appendChild(resultSection);
     }
@@ -147,9 +203,9 @@ window.renderChoiceResultCard = function ({
 }
 
 /**
- * Render Question Card Template
+ * Render Question Card Template (LEGACY - Replaced by Atomic QuestionCard)
  */
-window.renderQuestionCard = function ({
+window.renderQuestionCardLegacy = function ({
     expanded = true,
     completion = 'incomplete',
     question = '',

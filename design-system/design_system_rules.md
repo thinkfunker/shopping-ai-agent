@@ -5,6 +5,26 @@ This document is based on the Figma design system guidelines and serves as a set
 
 ---
 
+## 0. Development & Implementation Standards (Project-Wide)
+
+To ensure a 100% pixel-perfect match with Figma designs, all component implementation MUST follow these mandatory standards:
+
+### 1. Atomic Component Separation
+*   **1 Node = 1 File**: Every distinct Figma variant (e.g., Carousel vs. List) must be implemented as a separate "Atomic" component file.
+*   **Modular Architecture**: Complex templates must be composed of these atomic sub-components rather than using complex conditional styling in a single large file.
+*   **Encapsulation**: Atom styles must be self-contained to prevent cross-variant design contamination.
+
+### 2. Data-First Implementation (Zero-Guessing)
+*   **API Dominance**: All CSS values (padding, gap, radius, hex colors) must be extracted directly from the Figma API.
+*   **No Subjective Interpretation**: 에이전트의 주관적인 디자인 판단(예: "더 예쁜 곡률")은 배제하며, 오직 피그마의 실측 데이터만 반영합니다.
+*   **Token Alignment**: Possible token fallbacks must always match the exact hex codes found in the Figma variables.
+
+### 3. Systematic Verification
+*   **Visual Audit**: Before completion, rendered components must be screenshotted and compared side-by-side with Figma screenshots using the `browser_subagent`.
+*   **Pixel-Level Match**: A 100% visual match at 390px (mobile) width is the only acceptable criteria for completion.
+
+---
+
 ## 1. Button
 
 ### Purpose

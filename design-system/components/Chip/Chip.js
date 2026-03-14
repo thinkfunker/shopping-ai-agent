@@ -64,7 +64,14 @@ window.renderChip = function ({
     stateLayer.className = 'chip-state-layer';
     chip.appendChild(stateLayer);
 
-    const iconSize = (activeSize === 'xlarge' || activeSize === 'large') ? 20 : 16;
+    const iconSizeMap = {
+        'small': 12,
+        'medium': 16,
+        'large': 16,
+        'xlarge': 24
+    };
+    const currentIconSize = iconSizeMap[activeSize] || 24;
+    const graphicIconSize = activeSize === 'xlarge' ? 24 : (activeSize === 'small' ? 12 : 16);
 
     // Graphic (AI Gradient Icon Container)
     if (activeGraphic) {
@@ -80,7 +87,7 @@ window.renderChip = function ({
                 category: activeLeftIcon === leftIcon ? leftIconCategory : 'ai',
                 name: activeLeftIcon,
                 variant: 'gradient', // Force gradient for graphic containers
-                size: (activeSize === 'xlarge' || activeSize === 'large') ? 20 : 14
+                size: graphicIconSize
             }));
         }
         chip.appendChild(graphicContainer);
@@ -94,7 +101,7 @@ window.renderChip = function ({
                 category: leftIconCategory,
                 name: activeLeftIcon,
                 variant: leftIconVariant,
-                size: iconSize
+                size: currentIconSize
             }));
         }
         chip.appendChild(span);
@@ -113,7 +120,7 @@ window.renderChip = function ({
                 category: rightIconCategory,
                 name: rightIcon,
                 variant: rightIconVariant,
-                size: iconSize
+                size: currentIconSize
             }));
         }
         chip.appendChild(span);

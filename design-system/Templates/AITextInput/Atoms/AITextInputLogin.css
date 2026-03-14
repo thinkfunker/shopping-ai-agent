@@ -1,0 +1,26 @@
+/* AITextInputLogin - Atomic Variant (Figma Node 22428:37815) */
+@import "../../../design_system.css";
+
+.ai-text-input-login {
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.login-action-btn {
+    height: 32px !important;
+    padding: 0 var(--spacing-400, 16px) !important;
+    background: linear-gradient(26.07deg, #A83DEB 5.1%, #3083FD 92.36%) !important;
+    border-radius: var(--border-radius-400, 16px) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+}
+
+.login-btn-text {
+    font-family: var(--family-primary, "Noto Sans JP") !important;
+    font-size: var(--size-0875, 14px) !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    margin: 0 !important;
+}

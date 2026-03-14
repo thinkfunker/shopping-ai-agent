@@ -1,0 +1,9 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="sidebar_solid">
+<g id="Subtract">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3.4999 20.15H8.3499L8.3499 3.84998H3.4999C2.86478 3.84998 2.3499 4.36485 2.3499 4.99998L2.3499 19C2.3499 19.6351 2.86477 20.15 3.4999 20.15Z" fill="var(--fill-0, #17181A)"/>
+<path d="M21.6499 10.65V19C21.6499 19.6351 21.135 20.15 20.4999 20.15L9.6499 20.15V10.65H21.6499Z" fill="var(--fill-0, #17181A)"/>
+<path d="M9.6499 3.84998L20.4999 3.84998C21.135 3.84998 21.6499 4.36485 21.6499 4.99998L21.6499 11.35H9.6499L9.6499 3.84998Z" fill="var(--fill-0, #17181A)"/>
+</g>
+</g>
+</svg>

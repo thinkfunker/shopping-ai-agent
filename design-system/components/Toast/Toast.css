@@ -7,7 +7,7 @@
     width: 360px;
     min-width: 256px;
     padding: var(--spacing-300, 12px) var(--spacing-400, 16px);
-    background-color: var(--background-floating-1, white);
+    background-color: var(--bg-floating-1, white);
     border: 1px solid var(--border-tertiary, rgba(0, 0, 0, 0.08));
     border-radius: var(--radius-200, 8px);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);

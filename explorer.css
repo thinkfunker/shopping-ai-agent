@@ -3,22 +3,28 @@
 }
 
 :root {
-    --sidebar-width: 240px;
+    --sidebar-width: 260px;
     --header-height: 60px;
     --explorer-bg: #ffffff;
     --border-color: #eeeeee;
     --accent-color: #000000;
     --sidebar-bg: #ffffff;
     --bg-secondary: #fafafa;
+    --sidebar-item-active: #eeeeee;
+    --sidebar-text-primary: #111111;
+    --sidebar-text-secondary: #939393;
 }
 
 /* Explorer Dark Mode Overrides */
 html.dark-mode {
-    --sidebar-bg: #121212;
+    --sidebar-bg: #17181a;
     --explorer-bg: #000000;
     --border-color: #2c2c2e;
     --bg-secondary: #1c1c1e;
     --accent-color: #ffffff;
+    --sidebar-item-active: #2c2c2e;
+    --sidebar-text-primary: #ffffff;
+    --sidebar-text-secondary: #86868b;
 }
 
 html.dark-mode body,
@@ -56,10 +62,6 @@ html.dark-mode .menu-item.active {
 html.dark-mode .sidebar-header h1,
 html.dark-mode #active-item-title {
     color: #fff;
-}
-
-html.dark-mode .sidebar-header h1::before {
-    background: #fff;
 }
 
 html.dark-mode .control-input,
@@ -112,7 +114,7 @@ html {
 
 .sidebar-header h1 {
     margin: 0;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 800;
     letter-spacing: 1.2px;
     text-transform: uppercase;
@@ -122,14 +124,6 @@ html {
     gap: 8px;
 }
 
-.sidebar-header h1::before {
-    content: '';
-    display: block;
-    width: 4px;
-    height: 12px;
-    background: #000;
-}
-
 .sidebar-menu {
     flex: 1;
     overflow-y: auto;
@@ -137,36 +131,40 @@ html {
 }
 
 .menu-section {
-    margin-bottom: 32px;
+    margin-bottom: 24px;
 }
 
 .menu-title {
-    padding: 0 12px 10px;
-    font-size: 9px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: #bbb;
-    font-weight: 700;
+    padding: 0 12px 8px;
+    font-size: 13px;
+    color: var(--sidebar-text-primary);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .menu-item {
-    padding: 8px 12px;
+    padding: 6px 12px;
     margin: 1px 0;
     cursor: pointer;
     font-size: 13px;
-    color: #666;
-    border-radius: 6px;
+    color: var(--sidebar-text-secondary);
+    border-radius: 4px;
     transition: all 0.15s ease;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
 .menu-item:hover {
-    color: #000;
-    background: #f5f5f5;
+    color: var(--sidebar-text-primary);
+    background: var(--bg-secondary);
 }
 
 .menu-item.active {
-    color: #000;
-    background: #eeeeee;
+    color: var(--sidebar-text-primary);
+    background: var(--sidebar-item-active);
     font-weight: 600;
 }
 
@@ -316,7 +314,7 @@ input:checked+.theme-slider:before {
 }
 
 .sandbox.mobile-view {
-    width: 375px;
+    width: 390px;
     min-height: calc(100vh - var(--header-height) - 300px - 120px);
     margin: 0 auto 100px;
     /* Added 100px bottom margin for safe scroll */
@@ -512,8 +510,8 @@ input:checked+.theme-slider:before {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 64px;
-    width: 64px;
+    height: 48px;
+    width: 48px;
     flex-shrink: 0;
 }
 
@@ -533,21 +531,19 @@ input:checked+.theme-slider:before {
 }
 
 .figma-icon-wrapper {
+    width: 24px;
+    height: 24px;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    width: 100% !important;
-    height: 100% !important;
 }
 
-.figma-icon-wrapper img {
+.figma-icon-wrapper img,
+.figma-icon-wrapper svg {
     max-width: 100%;
     max-height: 100%;
-    width: 60% !important;
-    /* Scale slightly to ensure it feels centered within the preview slot */
-    height: 60% !important;
     display: block;
-    object-fit: contain;
+    margin: auto;
 }
 
 .explorer-card-desc {

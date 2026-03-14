@@ -12,7 +12,7 @@
     align-items: center;
     gap: var(--spacing-050, 4px);
     padding: var(--spacing-100) var(--spacing-300);
-    background-color: var(--background-elevated-1, white);
+    background-color: var(--bg-elevated-1, white);
     border: 1px solid var(--border-tertiary, rgba(0, 0, 0, 0.08));
     border-radius: var(--radius-full, 100px);
     box-shadow: var(--shadow-small);

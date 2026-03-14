@@ -6,7 +6,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--background-scrim, rgba(0, 0, 0, 0.48));
+    background-color: var(--bg-scrim, rgba(0, 0, 0, 0.48));
     z-index: var(--z-index-scrim, 1000);
     display: flex;
     align-items: center;

@@ -49,7 +49,7 @@
 
 /* Selection State */
 .toggle-btn.selected {
-    background: var(--background-selection-secondary, rgba(15, 98, 254, 0.06));
+    background: var(--bg-selection-secondary, rgba(15, 98, 254, 0.06));
 }
 
 /* Interactions via state layers (simulated with overlays or opacity) */

@@ -21,9 +21,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--background-tertiary, #e4e7ed);
+    background-color: var(--bg-tertiary);
     transition: background-color 0.2s ease;
-    border-radius: var(--radius-full, 100px);
+    border-radius: var(--radius-full);
 }
 
 .switch-thumb {
@@ -32,31 +32,40 @@
     width: 16px;
     left: 2px;
     bottom: 2px;
-    background-color: var(--content-inverted, white);
+    background-color: var(--content-inverted);
     transition: transform 0.2s ease;
     border-radius: 50%;
 }
 
 /* Selected/On State */
-.switch input:checked+.switch-track {
-    background-color: var(--background-key, #0f62fe);
+.switch.switch-on .switch-track {
+    background-color: var(--bg-key);
 }
 
-.switch input:checked+.switch-track .switch-thumb {
+.switch.switch-on .switch-thumb {
     transform: translateX(16px);
 }
 
-/* State Layers (Hover, Focus, Press) */
+/* Unselected/Off State */
+.switch.switch-off .switch-track {
+    background-color: var(--bg-tertiary);
+}
+
+.switch.switch-off .switch-thumb {
+    transform: translateX(0);
+}
+
+/* State Layers */
 .switch:hover .switch-track::after {
     content: '';
     position: absolute;
     inset: 0;
     border-radius: inherit;
-    background-color: var(--state-hover-primary, rgba(0, 0, 0, 0.04));
+    background-color: var(--state-hover-primary);
 }
 
-.switch input:checked:hover+.switch-track::after {
-    background-color: var(--state-hover-secondary, rgba(15, 98, 254, 0.04));
+.switch.switch-on:hover .switch-track::after {
+    background-color: var(--state-hover-secondary);
 }
 
 .switch input:focus-visible+.switch-track {
@@ -65,25 +74,22 @@
 }
 
 .switch:active .switch-track::after {
-    background-color: var(--state-pressed-primary, rgba(0, 0, 0, 0.12));
+    background-color: var(--state-pressed-primary);
 }
 
-.switch input:checked:active+.switch-track::after {
-    background-color: var(--state-pressed-secondary, rgba(15, 98, 254, 0.12));
+.switch.switch-on:active .switch-track::after {
+    background-color: var(--state-pressed-secondary);
 }
 
 /* Disabled State */
 .switch.disabled {
     cursor: not-allowed;
-    opacity: 1;
-    /* Keeping it opaque but with disabled colors */
 }
 
 .switch.disabled .switch-track {
-    background-color: var(--background-disabled, #e4e7ed);
+    background-color: var(--bg-disabled);
 }
 
 .switch.disabled .switch-thumb {
-    background-color: var(--content-inverted, white);
-    /* In case dot color changes when disabled and ON, but Figma shows thumb white */
+    background-color: var(--content-inverted);
 }

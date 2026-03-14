@@ -1,0 +1,51 @@
+/* SelectionCard - Atomic Variant (Figma Node 45438:4434) */
+@import "../../../design_system.css";
+
+.selection-card-atom {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 358px !important;
+    background: var(--background-primary, #ffffff) !important;
+    border: 1px solid var(--border-tertiary, rgba(0, 0, 0, 0.08)) !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    box-sizing: border-box !important;
+}
+
+.selection-card-atom.selected {
+    border-color: var(--border-accent, #0f62fe) !important;
+    box-shadow: 0 0 0 1px var(--border-accent, #0f62fe) !important;
+}
+
+.selection-card-media {
+    width: 100% !important;
+    height: 120px !important;
+    background: var(--background-elevated-2, #f1f3f5) !important;
+    object-cover: cover !important;
+}
+
+.selection-card-content {
+    padding: var(--spacing-400, 16px) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: var(--spacing-100, 4px) !important;
+}
+
+.selection-card-title {
+    font-family: var(--family-primary, "Noto Sans JP") !important;
+    font-weight: 700 !important;
+    font-size: var(--size-0875, 14px) !important;
+    line-height: var(--line-height-label-medium, 17px) !important;
+    color: var(--content-primary, #17181a) !important;
+    margin: 0 !important;
+}
+
+.selection-card-desc {
+    font-family: var(--family-primary, "Noto Sans JP") !important;
+    font-size: 12px !important;
+    line-height: 19px !important;
+    color: var(--content-tertiary, rgba(0, 0, 0, 0.56)) !important;
+    margin: 0 !important;
+}

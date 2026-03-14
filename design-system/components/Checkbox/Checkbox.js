@@ -16,7 +16,7 @@ window.renderCheckbox = function ({
     className = ''
 } = {}) {
     const labelElement = document.createElement('label');
-    labelElement.className = `checkbox-container ${checked ? 'selected' : ''} ${disabled ? 'disabled' : ''} ${className}`.trim();
+    labelElement.className = `checkbox-container ${checked ? 'checkbox-selected' : ''} ${disabled ? 'disabled' : ''} ${className}`.trim();
 
     const input = document.createElement('input');
     input.type = 'checkbox';
@@ -50,9 +50,9 @@ window.renderCheckbox = function ({
         if (!disabled) {
             const isChecked = e.target.checked;
             if (isChecked) {
-                labelElement.classList.add('selected');
+                labelElement.classList.add('checkbox-selected');
             } else {
-                labelElement.classList.remove('selected');
+                labelElement.classList.remove('checkbox-selected');
             }
             if (onChange) {
                 onChange(isChecked);

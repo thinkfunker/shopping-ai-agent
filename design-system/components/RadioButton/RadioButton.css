@@ -65,7 +65,7 @@
 }
 
 .radio-button.disabled .radio-circle {
-    background-color: var(--background-disabled, #e4e7ed);
+    background-color: var(--bg-disabled, #e4e7ed);
     border-color: var(--border-disabled, rgba(0, 0, 0, 0.16));
 }
 

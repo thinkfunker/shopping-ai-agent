@@ -1,0 +1,174 @@
+import Button from "components/ui/button.tsx"
+
+import { imgCap, imgWifi, imgCellularConnection, imgArrowUpSolid, imgArrowUpSolid1, imgPlusOutline, imgBulb } from "./svg-18ai8";
+type SystemProps = {
+  className?: string;
+  mode?: "light" | "dark";
+  style?: "false" | "alphabetic" | "ja" | "numeric" | "default";
+  type?: "status bar" | "keyboard" | "home indicator";
+};
+
+function System({ className, mode = "light", style = "default", type = "status bar" }: SystemProps) {
+  const isHomeIndicatorAndDefaultAndLight = type === "home indicator" && style === "default" && mode === "light";
+  const isStatusBarAndDefaultAndLight = type === "status bar" && style === "default" && mode === "light";
+  return (
+    <div className={className || `relative w-[390px] ${isHomeIndicatorAndDefaultAndLight ? "h-[21px]" : String.raw`bg-[var(--background\/primary,white)] h-[54px]`}`} id={isHomeIndicatorAndDefaultAndLight ? "node-4217_3719" : "node-4217_3744"}>
+      {isStatusBarAndDefaultAndLight && (
+        <>
+          <div className="-translate-y-1/2 absolute h-[54px] left-0 right-[64.25%] top-1/2" data-name="Time" data-node-id="4217:3745">
+            <p className="absolute font-['SF_Pro:Semibold',sans-serif] font-[590] leading-[22px] left-[36.96%] right-[36.71%] text-[17px] text-[color:var(--content\/primary,#17181a)] text-center top-[calc(50%-9px)]" data-node-id="4217:3746" style={{ fontVariationSettings: "'wdth' 100" }}>
+              9:41
+            </p>
+          </div>
+          <div className="-translate-y-1/2 absolute h-[54px] left-[64.25%] right-0 top-1/2" data-name="Levels" data-node-id="4217:3747">
+            <div className="-translate-x-1/2 absolute bottom-[33.33%] contents left-[calc(50%+24.95px)] top-[42.59%]" data-name="Battery" data-node-id="4217:3748">
+              <div className="-translate-x-1/2 absolute border border-[var(--content\/primary,#17181a)] border-solid bottom-[33.33%] left-[calc(50%+23.79px)] opacity-35 rounded-[4.3px] top-[42.59%] w-[25px]" data-name="Border" data-node-id="4217:3749" />
+              <div className="-translate-x-1/2 absolute bottom-[41.01%] left-[calc(50%+37.95px)] top-[51.45%] w-[1.328px]" data-name="Cap" data-node-id="4217:3750">
+                <img alt="" className="absolute block max-w-none size-full" src={imgCap} />
+              </div>
+              <div className="-translate-x-1/2 absolute bg-[var(--content\/primary,#17181a)] bottom-[37.04%] left-[calc(50%+23.79px)] rounded-[2.5px] top-[46.3%] w-[21px]" data-name="Capacity" data-node-id="4217:3751" />
+            </div>
+            <div className="-translate-x-1/2 absolute bottom-[33.4%] left-[calc(50%-4.44px)] top-[43.77%] w-[17.142px]" data-name="Wifi" data-node-id="4217:3752">
+              <img alt="" className="absolute block max-w-none size-full" src={imgWifi} />
+            </div>
+            <div className="-translate-x-1/2 absolute bottom-[33.77%] left-[calc(50%-30.11px)] top-[43.58%] w-[19.2px]" data-name="Cellular Connection" data-node-id="4217:3753">
+              <img alt="" className="absolute block max-w-none size-full" src={imgCellularConnection} />
+            </div>
+          </div>
+        </>
+      )}
+      {isHomeIndicatorAndDefaultAndLight && (
+        <div className="-translate-x-1/2 absolute bottom-[8px] flex h-[5px] items-center justify-center left-[calc(50%-0.5px)] w-[139px]">
+          <div className="-scale-y-100 flex-none rotate-180">
+            <div className="bg-[var(--content\/primary,#17181a)] h-[5px] rounded-[100px] w-[139px]" data-name="Home Indicator" data-node-id="4217:3720" />
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+type AiTextInputButtonProps = {
+  className?: string;
+  state?: boolean;
+  type?: "voice" | "send" | "login" | "analysis";
+};
+
+function AiTextInputButton({ className, state = true, type = "send" }: AiTextInputButtonProps) {
+  const isSendAndNotState = type === "send" && !state;
+  return (
+    <div className={className || `content-stretch flex items-center relative ${isSendAndNotState ? "" : "gap-[12px] justify-end"}`} id={isSendAndNotState ? "node-22163_45918" : "node-22163_45623"}>
+      <div className={`${String.raw`content-stretch flex items-center justify-center overflow-clip relative rounded-[var(--border-radius\/full,100px)] shrink-0 size-[32px] `}${isSendAndNotState ? String.raw`bg-[var(--background\/disabled,#e4e7ed)]` : ""}`} data-name="send" id={isSendAndNotState ? "node-22163_45920" : "node-22163_45625"} style={type === "send" && state ? { backgroundImage: "linear-gradient(46.93774804163824deg, var(--gradient\\/background\\/stop-1,rgb(168, 61, 235)) 5.1006%, var(--gradient\\/background\\/stop-2,rgb(48, 131, 253)) 92.358%)" } : undefined}>
+        <div className="overflow-clip relative shrink-0 size-[20px]" data-name="icon" id={isSendAndNotState ? "node-I22163_45920-3904_3480" : "node-I22163_45625-570_37820"}>
+          <div className="absolute inset-[15.1%_16.3%]" data-name="arrow-up_solid" id={isSendAndNotState ? "node-I22163_45920-3904_3480-2628_7308" : "node-I22163_45625-570_37820-2628_7308"}>
+            <img alt="" className="absolute block max-w-none size-full" src={isSendAndNotState ? imgArrowUpSolid1 : imgArrowUpSolid} />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+type TemplateAiTextInputProps = {
+  className?: string;
+  background?: boolean;
+  showFooter?: boolean;
+  showLeftButton?: boolean;
+  showSystem?: boolean;
+  type?: "default" | "login button" | "multiline";
+};
+
+function TemplateAiTextInput({ className, background = true, showFooter = false, showLeftButton = true, showSystem = true, type = "login button" }: TemplateAiTextInputProps) {
+  const isDefaultAndNotBackground = type === "default" && !background;
+  const isLoginButtonAndBackground = type === "login button" && background;
+  return (
+    <div className={className || `content-stretch flex flex-col items-start justify-center relative w-[390px] ${isDefaultAndNotBackground ? "" : String.raw`bg-[var(--background\/primary,white)]`}`} id={isDefaultAndNotBackground ? "node-22428_38206" : "node-22428_37815"}>
+      <div className={`${String.raw`content-stretch flex items-center pb-[var(--spacing\/400,16px)] pt-[var(--spacing\/300,12px)] px-[var(--spacing\/400,16px)] relative shrink-0 w-full `}${isDefaultAndNotBackground ? String.raw`gap-[var(--spacing\/300,12px)]` : String.raw`bg-[var(--background\/primary,white)] gap-[var(--spacing\/300,0px)]`}`} data-name="Container" id={isDefaultAndNotBackground ? "node-22428_38207" : "node-22428_37816"}>
+        {isLoginButtonAndBackground && (
+          <div className="bg-[var(--background\/elevated-1,white)] border border-[var(--border\/accent,rgba(0,0,0,0.28))] border-solid content-stretch flex flex-[1_0_0] gap-[var(--spacing\/300,12px)] h-[48px] items-center min-h-px min-w-px pl-[var(--spacing\/300,12px)] pr-[var(--spacing\/200,8px)] py-[var(--spacing\/300,12px)] relative rounded-[var(--border-radius\/full,100px)]" data-name="AI Text input" data-node-id="22428:37818">
+            <div className="content-stretch flex items-center justify-center overflow-clip relative rounded-[var(--border-radius\/full,100px)] shrink-0 size-[32px]" data-name="left button" data-node-id="I22428:37818;29705:14864">
+              <div className="overflow-clip relative shrink-0 size-[20px]" data-name="icon" data-node-id="I22428:37818;29705:14864;3904:3480">
+                <div className="absolute inset-[16.67%]" data-name="plus_outline" data-node-id="I22428:37818;29705:14864;3904:3480;2312:30131">
+                  <img alt="" className="absolute block max-w-none size-full" src={imgPlusOutline} />
+                </div>
+              </div>
+            </div>
+            <p className="flex-[1_0_0] font-[family-name:var(--famaily\/primary,'Hiragino_kaku_gothic_pro:w3',sans-serif)] font-[var(--weight\/regular,normal)] h-[24px] leading-[var(--line-height\/body-large,24px)] min-h-px min-w-px relative text-[color:var(--content\/placeholder,rgba(0,0,0,0.56))] text-[length:var(--size\/100,16px)]" data-node-id="I22428:37818;22106:37669">
+              なんでも聞いてください
+            </p>
+            <div className="content-stretch flex gap-[var(--spacing\/200,8px)] items-center relative shrink-0" data-name="input controls" data-node-id="I22428:37818;22163:45678">
+              <div className="content-stretch flex items-center justify-end relative shrink-0" data-name="right button 2" data-node-id="I22428:37818;22163:46032">
+                <div className="content-stretch flex h-[32px] items-center justify-center overflow-clip px-[var(--spacing\/400,16px)] relative rounded-[var(--border-radius\/400,16px)] shrink-0" data-name="login" data-node-id="I22428:37818;22163:46032;22163:45636" style={{ backgroundImage: "linear-gradient(26.065988225222092deg, var(--gradient\\/background\\/stop-1,rgb(168, 61, 235)) 5.1006%, var(--gradient\\/background\\/stop-2,rgb(48, 131, 253)) 92.358%)" }}>
+                  <div className="flex flex-col font-[family-name:var(--family\/primary,'Noto_Sans_JP:bold',sans-serif)] font-[var(--weight\/bold,normal)] justify-center leading-[0] relative shrink-0 text-[color:var(--content\/white,white)] text-[length:var(--size\/0875,14px)] text-center whitespace-nowrap" data-node-id="I22428:37818;22163:46032;22163:45636;21231:28261">
+                    <p className="leading-[var(--line-height\/label-medium,17px)]">Label</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+        {isDefaultAndNotBackground && (
+          <>
+            <CodeConnectSnippet data-node-id="22428:38208" data-name="option">
+              <Button showRightIcon={false} buttonLabel="Label" showLeftIcon={false} swapIcon="2313:30229" priority="outline-tertiary" size="xlarge" state="enabled" iconOnly="true" />
+            </CodeConnectSnippet>
+            <div className="bg-[var(--background\/elevated-1,white)] border border-[var(--border\/accent,rgba(0,0,0,0.28))] border-solid content-stretch flex flex-[1_0_0] gap-[var(--spacing\/300,12px)] h-[48px] items-center min-h-px min-w-px pl-[var(--spacing\/300,12px)] pr-[var(--spacing\/200,8px)] py-[var(--spacing\/300,12px)] relative rounded-[var(--border-radius\/full,100px)]" data-name="AI Text input" data-node-id="22428:38209">
+              <p className="flex-[1_0_0] font-[family-name:var(--famaily\/primary,'Hiragino_kaku_gothic_pro:w3',sans-serif)] font-[var(--weight\/regular,normal)] h-[24px] leading-[var(--line-height\/body-large,24px)] min-h-px min-w-px relative text-[color:var(--content\/placeholder,rgba(0,0,0,0.56))] text-[length:var(--size\/100,16px)]" data-node-id="I22428:38209;22106:37669">
+                なんでも聞いてください
+              </p>
+              <div className="content-stretch flex gap-[var(--spacing\/200,8px)] items-center relative shrink-0" data-name="input controls" data-node-id="I22428:38209;22163:45678">
+                <AiTextInputButton className="content-stretch flex items-center relative shrink-0" state={false} />
+              </div>
+            </div>
+          </>
+        )}
+      </div>
+      {showFooter && (
+        <div className="content-stretch flex flex-col gap-[var(--spacing\/100,4px)] items-start pb-[var(--spacing\/400,16px)] px-[var(--spacing\/400,16px)] relative shrink-0 w-full" data-name="footer" data-node-id="22428:37819">
+          <p className="font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] leading-[0] relative shrink-0 text-[0px] text-[12px] text-[color:var(--content\/tertiary,rgba(0,0,0,0.56))] w-full" data-node-id="22428:37820">
+            <span className="leading-[var(--line-height\/body-small,19px)]">AIの回答は不正確な可能性があります。 AIが生成した回答の注意点は</span>
+            <span className="font-['Noto_Sans_JP:Regular',sans-serif] leading-[19px] not-italic text-[#0f62fe]">ガイドライン</span>
+            <span className="leading-[var(--line-height\/body-small,19px)]">をご確認ください</span>
+          </p>
+          <div className="content-stretch flex gap-[4px] items-start relative shrink-0 w-full" data-name="Text group" data-node-id="22428:37821">
+            <p className="flex-[1_0_0] font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] leading-[0] min-h-px min-w-px relative text-[0px] text-[12px] text-[color:var(--content\/tertiary,rgba(0,0,0,0.56))]" data-node-id="22428:37822">
+              <span className="leading-[var(--line-height\/body-small,19px)]">{`参考 : `}</span>
+              <span className="font-['Noto_Sans_JP:Regular',sans-serif] leading-[19px] not-italic text-[#0f62fe]">mybest</span>
+              <span className="leading-[var(--line-height\/body-small,19px)]">（YYYY/MM/DD更新）</span>
+            </p>
+            <div className="content-stretch flex gap-[4px] items-center relative shrink-0" data-name="Icon+Label" data-node-id="22428:37823">
+              <div className="relative shrink-0 size-[16px]" data-name="bulb" data-node-id="22428:37824">
+                <div className="absolute inset-[11.87%_20.21%_10.21%_20.63%]" data-name="bulb_outline" data-node-id="I22428:37824;21297:10154">
+                  <img alt="" className="absolute block max-w-none size-full" src={imgBulb} />
+                </div>
+              </div>
+              <p className="font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] leading-[var(--line-height\/body-small,19px)] relative shrink-0 text-[color:var(--content\/tertiary,rgba(0,0,0,0.56))] text-[length:var(--size\/075,12px)] whitespace-nowrap" data-node-id="22428:37825">
+                商品情報の注意事項
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+      {isLoginButtonAndBackground && showSystem && (
+        <div className="h-[21px] relative shrink-0 w-[390px]" data-name="System" data-node-id="22428:37826">
+          <div className="-translate-x-1/2 absolute bottom-[8px] flex h-[5px] items-center justify-center left-[calc(50%-0.5px)] w-[139px]">
+            <div className="-scale-y-100 flex-none rotate-180">
+              <div className="bg-[var(--content\/primary,#17181a)] h-[5px] rounded-[100px] w-[139px]" data-name="Home Indicator" data-node-id="I22428:37826;4217:3720" />
+            </div>
+          </div>
+        </div>
+      )}
+      {isDefaultAndNotBackground && showSystem && <System className="h-[21px] relative shrink-0 w-[390px]" type="home indicator" />}
+    </div>
+  );
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+These styles are contained in the design: body/large: Font(family: "famaily/primary", style: weight/regular, size: size/100, weight: 300, lineHeight: line-height/body-large, letterSpacing: 0).
+If the node is connected to a code component in the users codebase via Code Connect, the connected component will be included in the final markup wrapped in a CodeConnectSnippet element, with relevant imports at the top of the file. There are two formats: 1. Single snippet: <CodeConnectSnippet data-snippet-language="React"><TitleComponent>Hello World</TitleComponent></CodeConnectSnippet> 2. Multiple options: <CodeConnectSnippet data-snippet-language="React" options={[<Button variant="primary" />, <Button variant="secondary" />]} /> IMPORTANT: the CodeConnectSnippet wrapper element should not be part of the final code. For the options format, choose the single most appropriate option to use in your implementation. The source of the code component will be in the import path, e.g. import {ComponentName } from 'path/to/component'; IMPORTANT: the import path may not be relative/may point to a URL, so you should search for the component in the codebase and MUST use it if possible.
+Image assets should be read from disk. Images and SVGs will be stored as constants, e.g. const image = '/Users/jeongkwon.yoon/Documents/MY Work/shopping-ai-agent/design-system/Templates/AITextInput/assets/10c13ac1a228a365cb98a0064b1d5afbc84887b2.png' These constants will be used in the code as the source for the image, e.g. <img src={image} /> This is true for both images and SVGs, so you can use the same approach for both types of assets.
+IMPORTANT: After you call this tool, you MUST call get_screenshot to get a screenshot of the node for context.

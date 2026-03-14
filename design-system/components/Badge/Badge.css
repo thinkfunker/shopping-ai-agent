@@ -10,53 +10,49 @@
 }
 
 /* Sizes for Number type */
-.badge.number.small {
+.badge-number.badge-small {
     min-width: 16px;
     height: 16px;
     font-size: var(--font-size-0687);
     line-height: 1;
-    /* Reset line-height for flex centering */
-    padding: 0 4px;
+    padding: 0 var(--spacing-100);
 }
 
-.badge.number.medium {
+.badge-number.badge-medium {
     min-width: 32px;
     height: 32px;
     font-size: var(--font-size-100);
     line-height: 1;
-    /* Reset line-height for flex centering */
-    padding: 0 4px;
+    padding: 0 var(--spacing-100);
 }
 
 /* Sizes for Dot type */
-.badge.dot.small {
+.badge-dot.badge-small {
     width: 8px;
     height: 8px;
     padding: 0;
 }
 
-.badge.dot.medium {
+.badge-dot.badge-medium {
     width: 12px;
     height: 12px;
     padding: 0;
 }
 
 /* Priority - Primary (Gradient or Red) */
-.badge.primary.number {
+.badge-primary.badge-number {
     background: var(--gradient-primary);
     color: var(--content-white);
 }
 
-.badge.primary.dot {
+.badge-primary.badge-dot {
     background: var(--bg-alert);
-    /* #db3d42 in the design context */
     border: 1px solid var(--bg-primary);
 }
 
 /* Priority - Secondary (White with border) */
-.badge.secondary.number {
+.badge-secondary.badge-number {
     background: var(--bg-primary);
-    border: 1px solid var(--red-7);
-    /* Using red-7 as border-key equivalent for secondary */
+    border: 1px solid var(--content-key);
     color: var(--content-key);
 }

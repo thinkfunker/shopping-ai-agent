@@ -5,11 +5,11 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: var(--spacing-100, 4px);
+    gap: var(--spacing-100);
     border: none;
-    border-radius: var(--radius-200, 8px);
+    border-radius: var(--radius-200);
     font-family: var(--font-family-primary);
-    font-weight: var(--font-weight-bold, 700);
+    font-weight: var(--font-weight-bold);
     cursor: pointer;
     transition: all 0.2s ease;
     white-space: nowrap;
@@ -29,26 +29,26 @@
 /* Sizes */
 .btn-medium {
     height: 32px;
-    padding: 0 var(--spacing-300, 12px);
-    font-size: var(--font-size-0875, 14px);
+    padding: 0 var(--spacing-300);
+    font-size: var(--font-size-0875);
 }
 
 .btn-large {
     height: 40px;
-    padding: 0 var(--spacing-400, 16px);
-    font-size: var(--font-size-100, 16px);
+    padding: 0 var(--spacing-400);
+    font-size: var(--font-size-100);
 }
 
 .btn-xlarge {
     height: 48px;
-    padding: 0 var(--spacing-500, 20px);
-    font-size: var(--font-size-112, 18px);
+    padding: 0 var(--spacing-500);
+    font-size: var(--font-size-112);
 }
 
 .btn-xxlarge {
     height: 56px;
-    padding: 0 var(--spacing-600, 24px);
-    font-size: var(--font-size-125, 20px);
+    padding: 0 var(--spacing-600);
+    font-size: var(--font-size-125);
 }
 
 /* Priorities */
@@ -56,33 +56,33 @@
 /* Solid Primary */
 .btn-solid-primary {
     background: var(--gradient-primary);
-    color: var(--content-white, white);
+    color: var(--content-white);
 }
 
 .btn-solid-primary:hover:not(:disabled) .btn-state-layer {
-    background-color: var(--state-hover-on-interaction, rgba(255, 255, 255, 0.08));
+    background-color: var(--state-hover-secondary);
 }
 
 .btn-solid-primary:active:not(:disabled) .btn-state-layer {
-    background-color: var(--state-pressed-on-interaction, rgba(0, 0, 0, 0.12));
+    background-color: var(--state-pressed-secondary);
 }
 
 /* Outline Primary */
 .btn-outline-primary {
-    background: var(--background-primary, white);
+    background: var(--bg-primary);
     border: 1.5px solid transparent;
-    background-image: linear-gradient(white, white), var(--gradient-primary);
+    background-image: linear-gradient(var(--bg-primary), var(--bg-primary)), var(--gradient-primary);
     background-origin: border-box;
     background-clip: padding-box, border-box;
-    color: var(--content-key, #0f62fe);
+    color: var(--content-key);
 }
 
 .btn-outline-primary:hover:not(:disabled) .btn-state-layer {
-    background-color: var(--state-hover-secondary, rgba(15, 98, 254, 0.04));
+    background-color: var(--state-hover-secondary);
 }
 
 .btn-outline-primary:active:not(:disabled) .btn-state-layer {
-    background-color: var(--state-pressed-secondary, rgba(15, 98, 254, 0.12));
+    background-color: var(--state-pressed-secondary);
 }
 
 /* Outline Secondary */
@@ -93,7 +93,7 @@
 }
 
 .btn-outline-secondary:hover:not(:disabled) .btn-state-layer {
-    background-color: rgba(0, 0, 0, 0.04);
+    background-color: var(--state-hover-primary);
 }
 
 /* Tertiary */
@@ -103,7 +103,7 @@
 }
 
 .btn-outline-tertiary:hover:not(:disabled) .btn-state-layer {
-    background-color: rgba(0, 0, 0, 0.04);
+    background-color: var(--state-hover-primary);
 }
 
 /* Danger */
@@ -114,27 +114,25 @@
 }
 
 .btn-outline-danger:hover:not(:disabled) .btn-state-layer {
-    background-color: rgba(214, 34, 40, 0.08);
-    /* alert color with opacity */
+    background-color: var(--state-hover-primary);
 }
 
 /* States */
 .btn:disabled {
     cursor: not-allowed;
-    background: var(--background-disabled, #f0f0f0) !important;
-    color: var(--content-disabled, rgba(0, 0, 0, 0.28)) !important;
+    background: var(--bg-disabled) !important;
+    color: var(--content-disabled) !important;
     border: none !important;
 }
 
 .btn:focus-visible .btn-state-layer {
-    background-color: var(--state-focused-secondary, rgba(15, 98, 254, 0.08));
+    background-color: var(--state-focused-secondary);
 }
 
 .btn-label {
     position: relative;
     z-index: 1;
     line-height: normal;
-    /* Match flex centering */
 }
 
 .btn-icon {

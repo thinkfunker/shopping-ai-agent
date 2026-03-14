@@ -54,12 +54,33 @@
     <link rel="stylesheet" href="./design-system/components/Message/Message.css">
     <link rel="stylesheet" href="./design-system/components/Message/MessageActionBar.css">
     <link rel="stylesheet" href="./design-system/components/Message/MessageList.css">
-    <link rel="stylesheet" href="./design-system/components/Carousel/AiSuggestionList.css">
 
+    <link rel="stylesheet" href="./design-system/Templates/Card/Card.css">
+    <link rel="stylesheet" href="./design-system/Templates/Card/Card.css">
+    <link rel="stylesheet" href="./design-system/Templates/Card/ReviewCard.css">
+    <link rel="stylesheet" href="./design-system/Templates/Card/ListCard.css">
+    <link rel="stylesheet" href="./design-system/Templates/AISuggestionChips/AISuggestionChips.css">
+    <link rel="stylesheet" href="./design-system/Templates/InteractionCard/InteractionCard.css">
+    <link rel="stylesheet" href="./design-system/Templates/BottomButton/BottomButton.css">
+    <link rel="stylesheet" href="./design-system/components/AITextInput/Atoms/AITextInputDefault.css">
+    <link rel="stylesheet" href="./design-system/components/AITextInput/Atoms/AITextInputMultiline.css">
+    <link rel="stylesheet" href="./design-system/components/AITextInput/Atoms/AITextInputLogin.css">
+    <link rel="stylesheet" href="./design-system/components/AITextInput/Atoms/AITextInputFooter.css">
+    <link rel="stylesheet" href="./design-system/Templates/BottomSheet/BottomSheet.css">
     <link rel="stylesheet" href="./design-system/Templates/AITextInput/AITextInput.css">
+    <link rel="stylesheet" href="./design-system/components/QuestionCard/Atoms/QuestionHeader.css">
+    <link rel="stylesheet" href="./design-system/components/QuestionCard/Atoms/SelectionChip.css">
+    <link rel="stylesheet" href="./design-system/components/QuestionCard/Atoms/SelectionCard.css">
+    <link rel="stylesheet" href="./design-system/components/QuestionCard/QuestionCard.css">
 
     <!-- Explorer Specific Styles -->
     <link rel="stylesheet" href="./explorer.css">
+
+    <!-- Component Logic -->
+    <script src="./design-system/Templates/AISuggestionChips/AISuggestionChips.js"></script>
+    <script src="./design-system/Templates/BottomButton/BottomButton.js"></script>
+    <script src="./design-system/Templates/BottomSheet/BottomSheet.js"></script>
+    <script src="./design-system/Templates/AITextInput/AITextInput.js"></script>
 
     <!-- Explorer Components & Logic -->
     <script src="./explorer-components.js"></script>
@@ -195,7 +216,6 @@
     <script src="./design-system/components/Icon.js"></script>
     <script src="./design-system/components/Avatar/Avatar.js"></script>
     <script src="./design-system/components/TopNavigation/TopNavigation.js"></script>
-    <script src="./design-system/components/AITextInput/AITextInput.js"></script>
     <script src="./design-system/components/Chip/Chip.js"></script>
     <script src="./design-system/components/Button/Button.js"></script>
     <script src="./design-system/components/Badge/Badge.js"></script>
@@ -227,20 +247,26 @@
     <script src="./design-system/components/ImagePreview/ImagePreview.js"></script>
     <script src="./design-system/components/Menu/Menu.js"></script>
     <script src="./design-system/components/Menu/MenuItem.js"></script>
-    <script src="./design-system/components/Message/Message.js"></script>
-    <script src="./design-system/components/Message/MessageActionBar.js"></script>
-    <script src="./design-system/components/Message/MessageList.js"></script>
+    <script src="./design-system/components/AITextInput/Atoms/AITextInputDefault.js"></script>
+    <script src="./design-system/components/AITextInput/Atoms/AITextInputMultiline.js"></script>
+    <script src="./design-system/components/AITextInput/Atoms/AITextInputLogin.js"></script>
+    <script src="./design-system/components/AITextInput/Atoms/AITextInputFooter.js"></script>
+    <script src="./design-system/components/AITextInput/AITextInput.js"></script>
+    <script src="./design-system/components/Carousel/AiSuggestionList.js"></script>
+    <script src="./design-system/Templates/InteractionCard/InteractionCard.js"></script>
+    <script src="./design-system/components/QuestionCard/Atoms/QuestionHeader.js"></script>
+    <script src="./design-system/components/QuestionCard/Atoms/SelectionChip.js"></script>
+    <script src="./design-system/components/QuestionCard/Atoms/SelectionCard.js"></script>
+    <script src="./design-system/components/QuestionCard/QuestionCard.js"></script>
     <script src="./design-system/components/Carousel/AiSuggestionList.js"></script>
 
-    <!-- Templates -->
+    <!-- Synchronized Components -->
+    <script src="./design-system/Templates/Card/Card.js"></script>
+    <script src="./design-system/Templates/Card/ReviewCard.js"></script>
+    <script src="./design-system/Templates/Card/ListCard.js"></script>
     <script src="./design-system/Templates/AISuggestionChips/AISuggestionChips.js"></script>
     <script src="./design-system/Templates/BottomButton/BottomButton.js"></script>
     <script src="./design-system/Templates/BottomSheet/BottomSheet.js"></script>
-    <script src="./design-system/Templates/MediaCard/MediaCard.js"></script>
-    <script src="./design-system/Templates/InteractionCard/InteractionCard.js"></script>
-    <script src="./design-system/Templates/Card/ListCard.js"></script>
-    <script src="./design-system/Templates/Card/ReviewCard.js"></script>
-    <script src="./design-system/Templates/Card/Card.js"></script>
     <script src="./design-system/Templates/AITextInput/AITextInput.js"></script>
 
     <!-- Explorer Logic -->
@@ -317,21 +343,27 @@
                 ]
             },
             {
-                section: 'AI Templates',
+                section: 'Template',
                 items: [
-                    { id: 'ai-input-template', name: 'AI Input Template' },
-                    { id: 'ai-suggestion', name: 'AI Suggestion List' },
                     { id: 'ai-suggestion-chips', name: 'AI Suggestion Chips' },
-                    { id: 'base-card', name: 'Base Card' },
-                    { id: 'bottom-button', name: 'Bottom Button Bar' },
-                    { id: 'bottom-sheet', name: 'Bottom Sheet' },
-                    { id: 'interaction-card', name: 'Interaction Card' },
+                    { id: 'ai-input-template', name: 'AI Text Input' },
+                    { id: 'bottom-button', name: 'Bottom button' },
+                    { id: 'bottom-sheet', name: 'Bottom sheet' },
+                    { id: 'base-card', name: 'Card' },
+                    { id: 'review-card', name: 'Review Card' },
                     { id: 'list-card', name: 'List Card' },
-                    { id: 'media-card', name: 'Media Card' },
-                    { id: 'message', name: 'Message' },
-                    { id: 'message-action-bar', name: 'Message Action Bar' },
-                    { id: 'message-list', name: 'Message List' },
-                    { id: 'review-card', name: 'Review Card' }
+                    { id: 'card-expand', name: 'Card Expand' },
+                    { id: 'carousel', name: 'Carousel' },
+                    { id: 'menu', name: 'Menu' },
+                    { id: 'modal', name: 'Modal' },
+                    { id: 'top-nav', name: 'Top Navigation' },
+                    { id: 'message', name: 'Chat UI' },
+                    { id: 'image-preview', name: 'Image preview' },
+                    { id: 'interaction-card', name: 'Interaction Card' },
+                    { id: 'question-card', name: 'Question Card' },
+                    { id: 'selection-card', name: 'Selection Card' },
+                    { id: 'choice-result-card', name: 'Choice Result Card' },
+                    { id: 'result-pattern', name: 'Result Pattern' }
                 ]
             }
         ];
@@ -413,7 +445,7 @@
 
             // Global width limitation for components (except foundations)
             if (!foundations.includes(item.id)) {
-                canvas.style.maxWidth = '600px';
+                canvas.style.maxWidth = '390px';
                 canvas.style.margin = '0 auto';
                 canvas.style.width = '100%';
             } else {
@@ -478,16 +510,21 @@
                 case 'message': setupMessageStory(canvas, controls); break;
                 case 'message-action-bar': setupMessageActionBarStory(canvas, controls); break;
                 case 'message-list': setupMessageListStory(canvas, controls); break;
-                case 'ai-suggestion': setupAiSuggestionListStory(canvas, controls); break;
                 case 'ai-suggestion-chips': setupAISuggestionChipsStory(canvas, controls); break;
-                case 'base-card': setupBaseCardStory(canvas, controls); break;
-                case 'media-card': setupMediaCardStory(canvas, controls); break;
-                case 'list-card': setupListCardStory(canvas, controls); break;
+                case 'base-card': setupInfoCardStory(canvas, controls); break;
                 case 'review-card': setupReviewCardStory(canvas, controls); break;
-                case 'interaction-card': setupInteractionCardStory(canvas, controls); break;
+                case 'list-card': setupListCardStory(canvas, controls); break;
                 case 'bottom-button': setupBottomButtonStory(canvas, controls); break;
                 case 'bottom-sheet': setupBottomSheetStory(canvas, controls); break;
                 case 'ai-input-template': setupAIInputTemplateStory(canvas, controls); break;
+                case 'question-card': setupQuestionCardStory(canvas, controls); break;
+                case 'interaction-card': setupQuestionCardStory(canvas, controls); break;
+                case 'selection-card': setupSelectionCardStory(canvas, controls); break;
+                case 'choice-result-card': setupChoiceResultCardStory(canvas, controls); break;
+                case 'result-pattern': setupResultPatternStory(canvas, controls); break;
+                case 'image-preview': setupImagePreviewStory(canvas, controls); break;
+                case 'carousel': setupCarouselStory(canvas, controls); break;
+                case 'card-expand': setupCardExpandStory(canvas, controls); break;
             }
         }
 
@@ -750,8 +787,10 @@
 
             const catLabels = {
                 'ai': 'AI Icons (Gradient & Solid)',
+                'ai_quick': 'AI Quick Menu Icons',
                 'common': 'Common UI Icons (Outline & Solid)',
                 'map': 'Map Pins & Location Icons',
+                'search': 'Search & Category Icons',
                 'service': 'Service & Product Icons'
             };
 
@@ -795,7 +834,7 @@
                 Object.keys(iconMap).forEach(name => {
                     const preview = document.getElementById(`icon-preview-${name}`);
                     if (preview && window.renderIcon) {
-                        preview.appendChild(renderIcon({ name, size: 32 }));
+                        preview.appendChild(renderIcon({ name, size: 24 }));
                     }
                 });
             });
@@ -844,9 +883,12 @@
             });
             html += '</div></div>';
 
-            // Glassmorphism
+            // Glassmorphism - Show version based on theme
+            const isDarkMode = document.documentElement.classList.contains('dark-mode');
+            const targetGlass = glass.filter(g => isDarkMode ? g.isDark : !g.isDark);
+
             html += '<div><h4 style="margin-bottom:16px">Glassmorphism & Blur</h4><div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap:24px;">';
-            glass.forEach(g => {
+            targetGlass.forEach(g => {
                 html += `
                     <div style="position:relative; height:200px; background:${g.bg}; border-radius:24px; overflow:hidden; display:flex; align-items:center; justify-content:center;">
                         <div style="position:absolute; width:100px; height:100px; background:var(--blue-8); filter:blur(40px); opacity:0.3; top:20%; left:20%;"></div>
@@ -997,32 +1039,54 @@
             update();
         }
 
-        function setupAIInputStory(canvas, controls) {
+        function setupAIInputTemplateStory(canvas, controls) {
             const params = {
-                placeholder: '무엇이든 물어보세요',
                 type: 'default',
                 background: true,
                 showFooter: true,
-                showLeftButton: true,
-                showSystem: true
+                placeholder: '무엇이든 물어보세요'
             };
 
             const update = () => {
                 canvas.innerHTML = '';
-                if (window.renderAITextInputTemplate) {
-                    const input = renderAITextInputTemplate(params);
+                if (window.renderAITextInput) {
+                    const input = renderAITextInput(params);
                     setCanvasContent(canvas, input);
-                    updateCode('renderAITextInputTemplate', params);
+                    updateCode('renderAITextInput', params);
                 }
             };
 
-            createControl(controls, 'text', 'Placeholder', (v) => { params.placeholder = v; update(); }, params.placeholder);
-            createControl(controls, 'select', 'Type', (v) => { params.type = v; update(); }, params.type, ['default', 'login button', 'multiline']);
+            createControl(controls, 'select', 'Type', (v) => { params.type = v; update(); }, params.type, ['default', 'multiline', 'login']);
             createControl(controls, 'select', 'Background', (v) => { params.background = v === 'true'; update(); }, params.background.toString(), ['true', 'false']);
             createControl(controls, 'select', 'Show Footer', (v) => { params.showFooter = v === 'true'; update(); }, params.showFooter.toString(), ['true', 'false']);
-            createControl(controls, 'select', 'Left Button', (v) => { params.showLeftButton = v === 'true'; update(); }, params.showLeftButton.toString(), ['true', 'false']);
-            createControl(controls, 'select', 'Home Indicator', (v) => { params.showSystem = v === 'true'; update(); }, params.showSystem.toString(), ['true', 'false']);
+            createControl(controls, 'text', 'Placeholder', (v) => { params.placeholder = v; update(); }, params.placeholder);
 
+            update();
+        }
+
+        function setupQuestionCardStory(canvas, controls) {
+            const params = {
+                question: 'Which category are you looking for?',
+                completion: 'incomplete',
+                selectionType: 'chip grid',
+                expanded: true,
+                options: [
+                    { text: 'Electronics', image: 'https://via.placeholder.com/40', title: 'Electronics', description: 'Gagdets and more' },
+                    { text: 'Fashion', image: 'https://via.placeholder.com/40', title: 'Fashion', description: 'Trendy styles' },
+                    { text: 'Home', image: 'https://via.placeholder.com/40', title: 'Home', description: 'For your living space' }
+                ]
+            };
+            const update = () => {
+                if (window.renderQuestionCard) {
+                    const card = renderQuestionCard(params);
+                    setCanvasContent(canvas, card, true);
+                    updateCode('renderQuestionCard', params);
+                }
+            };
+            createControl(controls, 'text', 'Question', (v) => { params.question = v; update(); }, params.question);
+            createControl(controls, 'select', 'Completion', (v) => { params.completion = v; update(); }, params.completion, ['incomplete', 'completed']);
+            createControl(controls, 'select', 'Selection Type', (v) => { params.selectionType = v; update(); }, params.selectionType, ['none', 'chip grid', 'chip horizontal', 'list default']);
+            createControl(controls, 'select', 'Expanded', (v) => { params.expanded = v === 'true'; update(); }, params.expanded.toString(), ['true', 'false']);
             update();
         }
 
@@ -1688,7 +1752,13 @@
         }
 
         function setupMenuStory(canvas, controls) {
-            const params = {};
+            const params = {
+                items: [
+                    { label: '設定', icon: 'question-circle-outline', hasConnector: true },
+                    { label: 'プロフィール', icon: 'bell-solid', hasConnector: true, divider: true },
+                    { label: 'ログアウト', icon: null, hasConnector: true }
+                ]
+            };
             const update = () => {
                 canvas.innerHTML = '';
                 if (window.renderMenu) {
@@ -1768,44 +1838,28 @@
 
         function setupAISuggestionChipsStory(canvas, controls) {
             const params = {
-                context: 'agent home',
                 layout: 'carousel',
+                context: 'agent home',
                 items: [
-                    { title: 'Find coffee shops nearby', subtext: 'Based on your location', icon: 'map', tag: 'Recommended' },
-                    { title: 'Best selling laptops', subtext: 'In the last 30 days', icon: 'shopping', tag: 'New' },
-                    { title: 'How to make a cake', subtext: 'Easy recipes', icon: 'cook', tag: 'Popular' }
-                ],
-                showTitleText: true
+                    { title: '근처 카페 찾아줘', icon: 'map-marker-outline', tag: '추천', subText: '사용자님의 평소 선호도를 분석하여 오늘 어울리는 상품들을 골라봤어요.' },
+                    { title: '인기 있는 노트북 추천', icon: 'shopping-cart-outline', tag: '신규', subText: '최근 30일 데이터와 실시간 트렌드를 반영한 추천 리스트입니다.' },
+                    { title: '케이크 만드는 법', icon: 'browser-outline', tag: '인기', subText: '초보자도 쉽게 따라 할 수 있는 5분 레시피 영상 포함' }
+                ]
             };
 
             const update = () => {
                 canvas.innerHTML = '';
                 if (window.renderAISuggestionChips) {
-                    const el = renderAISuggestionChips(params);
-                    setCanvasContent(canvas, el);
+                    const chips = window.renderAISuggestionChips(params);
+                    setCanvasContent(canvas, chips, true);
                     updateCode('renderAISuggestionChips', params);
                 }
             };
 
             createControl(controls, 'select', 'Layout', (v) => { params.layout = v; update(); }, params.layout,
-                ['carousel', 'grid', 'card compact', 'card description', 'list', 'list icon', 'list tag', 'list title', 'group icon']);
-            createControl(controls, 'select', 'Items Type', (v) => {
-                if (v === 'Home Categories') {
-                    params.items = [
-                        { title: '天気', icon: 'ai-weather' },
-                        { title: 'レシピ', icon: 'ai-recipe' },
-                        { title: 'お買い物', icon: 'ai-shopping' },
-                        { title: 'おでかけ', icon: 'ai-map' }
-                    ];
-                } else {
-                    params.items = [
-                        { title: 'Find coffee shops nearby', icon: 'map' },
-                        { title: 'Best selling laptops', icon: 'shopping' }
-                    ];
-                }
-                update();
-            }, 'Suggestions', ['Suggestions', 'Home Categories']);
-            createControl(controls, 'select', 'Show Title', (v) => { params.showTitleText = v === 'true'; update(); }, params.showTitleText.toString(), ['true', 'false']);
+                ['carousel', 'list', 'card-description', 'list-tag', 'group-icon', 'list-title']);
+
+            createControl(controls, 'select', 'Context', (v) => { params.context = v; update(); }, params.context, ['agent home', 'chat']);
 
             update();
         }
@@ -1813,14 +1867,9 @@
         function setupMediaCardStory(canvas, controls) {
             const params = {
                 title: 'High-Performance Wireless Headphones',
-                subtitle: 'Active noise cancellation, 40-hour battery life.',
-                metaText: ['Sony', 'Electronics', 'Prime'],
-                rating: 4.8,
-                reviewCount: 2450,
-                score: 85,
-                features: [{ label: 'Battery', icon: 'battery' }, { label: 'Bluetooth', icon: 'bluetooth' }],
-                imageUrl: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=300&q=80',
-                selected: false
+                description: 'Experience crystal clear sound with adaptive noise cancellation and 40-hour battery life.',
+                imageUrl: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=400&q=80',
+                meta: 'Sony • Electronics • Prime'
             };
 
             const update = () => {
@@ -1833,20 +1882,25 @@
             };
 
             createControl(controls, 'text', 'Title', (v) => { params.title = v; update(); }, params.title);
-            createControl(controls, 'number', 'Score', (v) => { params.score = parseInt(v); update(); }, params.score);
-            createControl(controls, 'select', 'Selected', (v) => { params.selected = v === 'true'; update(); }, params.selected.toString(), ['true', 'false']);
+            createControl(controls, 'text', 'Description', (v) => { params.description = v; update(); }, params.description);
+            createControl(controls, 'text', 'Meta', (v) => { params.meta = v; update(); }, params.meta);
 
             update();
         }
 
-        function setupBaseCardStory(canvas, controls) {
+        function setupInfoCardStory(canvas, controls) {
             const params = {
-                title: 'Data Summary',
-                date: '2024-03-20',
-                value: '1,234',
-                unit: 'items',
-                detail: 'medium',
-                indicator: 12
+                title: 'Spring Collection Highlight',
+                date: 'March 20, 2024',
+                description: 'Discover the latest trends in spring fashion with our curated collection of vibrant styles.',
+                imageUrl: 'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=400&q=80',
+                value: '129.00',
+                unit: '$',
+                indicator: 15,
+                metrics: [
+                    { label: 'Popularity', value: 'High' }
+                ],
+                listItems: ['Eco-friendly', 'Limited Edition']
             };
             const update = () => {
                 canvas.innerHTML = '';
@@ -1857,21 +1911,33 @@
                 }
             };
 
+            createControl(controls, 'select', 'Detail', (v) => { params.detail = v; update(); }, params.detail, ['low', 'medium', 'high']);
             createControl(controls, 'text', 'Title', (v) => { params.title = v; update(); }, params.title);
             createControl(controls, 'text', 'Value', (v) => { params.value = v; update(); }, params.value);
-            createControl(controls, 'select', 'Detail', (v) => { params.detail = v; update(); }, params.detail, ['low', 'medium', 'high']);
             update();
         }
 
         function setupListCardStory(canvas, controls) {
             const params = {
-                header: { title: 'Shopping List', badge: '3 Items', actionIcon: true },
-                items: [
-                    { title: 'Organic Milk', subtext: '1 Gallon', imageSrc: 'https://images.unsplash.com/photo-1550583724-12558142c4b3?auto=format&fit=crop&w=100&q=80' },
-                    { title: 'Whole Wheat Bread', subtext: 'Fresh baked', imageSrc: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=100&q=80' }
+                header: {
+                    title: 'Shopping List',
+                    badge: 'AI Suggested',
+                    subTitle: 'Created Mar 20, 2024',
+                    actionIcon: true
+                },
+                images: [
+                    'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=100&h=100&fit=crop',
+                    'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=100&h=100&fit=crop',
+                    'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=100&h=100&fit=crop'
                 ],
-                images: [],
-                actions: [{ label: 'View All', type: 'secondary' }]
+                items: [
+                    { title: 'Item 1', subtitle: 'Detail 1' },
+                    { title: 'Item 2', subtitle: 'Detail 2' }
+                ],
+                actions: [
+                    { label: 'View All', type: 'secondary' },
+                    { label: 'Check Out', type: 'primary' }
+                ]
             };
 
             const update = () => {
@@ -1883,16 +1949,23 @@
                 }
             };
 
+            createControl(controls, 'text', 'Title', (v) => { params.header.title = v; update(); }, params.header.title);
             update();
         }
 
         function setupReviewCardStory(canvas, controls) {
             const params = {
-                user: { name: 'Alex Johnson', avatar: 'https://i.pravatar.cc/150?u=alex' },
-                rating: 5,
-                date: '2024.03.12',
+                headerType: 'store',
+                storeName: 'Premium Gadget Shop',
+                storeLogo: 'https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=48&h=48&fit=crop',
+                reviewerName: 'Alex Johnson',
+                date: '2024.03.20',
+                rating: 4.8,
                 content: 'This product exceeded my expectations! The quality is top-notch and it arrived earlier than expected.',
-                images: ['https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=200&q=80']
+                images: [
+                    'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=200&h=200&fit=crop'
+                ],
+                tags: ['Reliable', 'Top Quality', 'Fast Shipping']
             };
 
             const update = () => {
@@ -1904,55 +1977,87 @@
                 }
             };
 
+            createControl(controls, 'select', 'Header Type', (v) => { params.headerType = v; update(); }, params.headerType, ['store', 'score']);
+            createControl(controls, 'text', 'Reviewer', (v) => { params.reviewerName = v; update(); }, params.reviewerName);
+            createControl(controls, 'text', 'Rating (1-5)', (v) => { params.rating = parseFloat(v); update(); }, params.rating.toString());
+
             update();
         }
 
-        function setupInteractionCardStory(canvas, controls) {
+        function setupQuestionCardStory(canvas, controls) {
             const params = {
-                type: 'question',
-                question: 'What kind of coffee do you prefer?',
-                choices: [{ label: 'Espresso', selected: true }, { label: 'Latte', selected: false }, { label: 'Americano', selected: false }],
-                interactionType: 'carousel'
+                expanded: true,
+                completion: 'incomplete',
+                question: '어떤 커피를 선호하시나요?',
+                choices: [
+                    { label: '에스프레소', selected: true },
+                    { label: '라떼', selected: false },
+                    { label: '아메리카노', selected: false },
+                    { label: '카푸치노', selected: false }
+                ]
             };
 
             const update = () => {
                 canvas.innerHTML = '';
-                let el;
-                if (params.type === 'question') {
-                    if (window.renderQuestionCard) el = renderQuestionCard({ question: params.question, choices: params.choices });
-                } else if (params.type === 'selection') {
-                    if (window.renderSelectionCard) el = renderSelectionCard({
-                        title: 'Premium Espresso',
-                        subtitle: 'Rich and intense',
-                        image: 'https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&w=200&q=80',
-                        selected: true,
-                        tags: ['Organic', 'Medium Roast']
-                    });
-                } else if (params.type === 'choice-result') {
-                    if (window.renderChoiceResultCard) el = renderChoiceResultCard({
-                        display: 'both',
-                        questions: [{
-                            text: 'Temperature?',
-                            choices: [{ label: 'Hot', selected: true }, { label: 'Iced', selected: false }]
-                        }],
-                        result: {
-                            count: 12,
-                            items: [
-                                { title: 'Product A', brand: 'Brand X', image: 'https://picsum.photos/200/201' },
-                                { title: 'Product B', brand: 'Brand Y', image: 'https://picsum.photos/200/202' }
-                            ],
-                            type: params.interactionType,
-                            mediaSize: 'medium'
-                        }
-                    });
+                if (window.renderQuestionCard) {
+                    const el = renderQuestionCard(params);
+                    setCanvasContent(canvas, el);
+                    updateCode('renderQuestionCard', params);
                 }
-                if (el) setCanvasContent(canvas, el);
-                updateCode('renderInteractionCard', params);
             };
 
-            createControl(controls, 'select', 'Card Type', (v) => { params.type = v; update(); }, params.type, ['question', 'selection', 'choice-result']);
-            createControl(controls, 'select', 'Result Layout', (v) => { params.interactionType = v; update(); }, params.interactionType, ['carousel', 'list']);
+            createControl(controls, 'select', 'Expanded', (v) => { params.expanded = v === 'true'; update(); }, params.expanded.toString(), ['true', 'false']);
+            createControl(controls, 'select', 'Completion', (v) => { params.completion = v; update(); }, params.completion, ['incomplete', 'completed']);
+            createControl(controls, 'text', 'Question', (v) => { params.question = v; update(); }, params.question);
 
+            update();
+        }
+
+        function setupSelectionCardStory(canvas, controls) {
+            const params = {
+                selected: true,
+                title: 'High-Performance Wireless Headphones',
+                subtitle: 'Sony • Electronics',
+                image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=200&h=200&fit=crop',
+                tags: ['Prime', 'Best Seller']
+            };
+
+            const update = () => {
+                canvas.innerHTML = '';
+                if (window.renderSelectionCard) {
+                    const el = renderSelectionCard(params);
+                    setCanvasContent(canvas, el);
+                    updateCode('renderSelectionCard', params);
+                }
+            };
+
+            createControl(controls, 'select', 'Selected', (v) => { params.selected = v === 'true'; update(); }, params.selected.toString(), ['true', 'false']);
+            createControl(controls, 'text', 'Title', (v) => { params.title = v; update(); }, params.title);
+            update();
+        }
+
+        function setupResultPatternStory(canvas, controls) {
+            const params = {
+                type: 'carousel',
+                mediaSize: 'medium',
+                items: [
+                    { title: 'Item 1', subtitle: 'Brand A', image: 'https://picsum.photos/seed/1/200', score: 4.5 },
+                    { title: 'Item 2', subtitle: 'Brand B', image: 'https://picsum.photos/seed/2/200', score: 4.0 },
+                    { title: 'Item 3', subtitle: 'Brand C', image: 'https://picsum.photos/seed/3/200', score: 5.0 }
+                ]
+            };
+
+            const update = () => {
+                canvas.innerHTML = '';
+                if (window.renderResultPattern) {
+                    const el = renderResultPattern(params);
+                    setCanvasContent(canvas, el);
+                    updateCode('renderResultPattern', params);
+                }
+            };
+
+            createControl(controls, 'select', 'Type', (v) => { params.type = v; update(); }, params.type, ['list', 'carousel']);
+            createControl(controls, 'select', 'Media Size', (v) => { params.mediaSize = v; update(); }, params.mediaSize, ['none', 'small', 'medium', 'large']);
             update();
         }
 
@@ -1977,19 +2082,94 @@
 
         function setupBottomSheetStory(canvas, controls) {
             const params = {
-                title: 'Bottom Sheet Header',
-                showHandle: true
+                type: 'header only',
+                headerTitle: 'Title',
+                showLeftIcon: false,
+                showLeftButton: true,
+                leftButtonLabel: 'Label',
+                showRightIcon: false,
+                showRightButton: true,
+                rightButtonLabel: 'Label',
+                showTitleText: true,
+                showBottomButton: true,
+                bottomButtonLabel: 'Label'
             };
 
             const update = () => {
                 canvas.innerHTML = '';
                 if (window.renderBottomSheet) {
-                    const el = renderBottomSheet(params);
+                    const el = renderBottomSheet({
+                        ...params,
+                        onClose: () => console.log('Closed')
+                    });
                     setCanvasContent(canvas, el);
                     updateCode('renderBottomSheet', params);
                 }
             };
 
+            controls.innerHTML = '';
+            createSelectControl(controls, 'Type', ['default', 'header only'], params.type, (v) => { params.type = v; update(); });
+            createInputControl(controls, 'Header Title', params.headerTitle, (v) => { params.headerTitle = v; update(); });
+            createToggleControl(controls, 'Show Left Icon', params.showLeftIcon, (v) => { params.showLeftIcon = v; update(); });
+            createToggleControl(controls, 'Show Left Button', params.showLeftButton, (v) => { params.showLeftButton = v; update(); });
+            createInputControl(controls, 'Left Label', params.leftButtonLabel, (v) => { params.leftButtonLabel = v; update(); });
+            createToggleControl(controls, 'Show Right Icon', params.showRightIcon, (v) => { params.showRightIcon = v; update(); });
+            createToggleControl(controls, 'Show Right Button', params.showRightButton, (v) => { params.showRightButton = v; update(); });
+            createInputControl(controls, 'Right Label', params.rightButtonLabel, (v) => { params.rightButtonLabel = v; update(); });
+            createToggleControl(controls, 'Show Title Text', params.showTitleText, (v) => { params.showTitleText = v; update(); });
+            createToggleControl(controls, 'Show Bottom Button', params.showBottomButton, (v) => { params.showBottomButton = v; update(); });
+            createInputControl(controls, 'Bottom Label', params.bottomButtonLabel, (v) => { params.bottomButtonLabel = v; update(); });
+
+            update();
+        }
+
+        function setupChoiceResultCardStory(canvas, controls) {
+            const params = {
+                display: 'both',
+                questions: [
+                    {
+                        text: '어떤 커피를 선호하시나요?',
+                        iconVariant: 'solid',
+                        choices: [
+                            { label: '에스프레소', selected: true },
+                            { label: '라떼', selected: false },
+                            { label: '아메리카노', selected: false },
+                            { label: '카푸치노', selected: false }
+                        ],
+                        subQuestion: {
+                            text: '취향에 따라 선택해 보세요.',
+                            choices: [
+                                { label: '산미 있는', selected: false },
+                                { label: '고소한', selected: true },
+                                { label: '묵직한', selected: false }
+                            ]
+                        }
+                    }
+                ],
+                result: {
+                    count: 12,
+                    unit: '件',
+                    suffix: 'のレシピが見つかりました。',
+                    type: 'carousel',
+                    mediaSize: 'medium',
+                    items: [
+                        { title: 'エスプレッソ', subtitle: 'Premium Roast', image: 'https://picsum.photos/seed/coffee1/200', score: 4.8 },
+                        { title: 'ラテ・アート', subtitle: 'Creamy Milk', image: 'https://picsum.photos/seed/coffee2/200', score: 4.5 },
+                        { title: 'ブラックコーヒー', subtitle: 'Strong Aroma', image: 'https://picsum.photos/seed/coffee3/200', score: 5.0 }
+                    ]
+                }
+            };
+
+            const update = () => {
+                canvas.innerHTML = '';
+                if (window.renderChoiceResultCard) {
+                    const el = renderChoiceResultCard(params);
+                    setCanvasContent(canvas, el);
+                    updateCode('renderChoiceResultCard', params);
+                }
+            };
+
+            createControl(controls, 'select', 'Display', (v) => { params.display = v; update(); }, params.display, ['choice', 'result', 'both']);
             update();
         }
 
@@ -2067,6 +2247,12 @@
             } else {
                 document.documentElement.classList.remove('dark-mode');
                 document.getElementById('preview-sandbox')?.classList.remove('dark-mode');
+            }
+
+            // Sync certain foundations that depend on theme state
+            if (currentItem && currentItem.id === 'gradients-effects') {
+                const canvas = document.getElementById('preview-canvas');
+                renderGradientsEffects(canvas);
             }
         }
 

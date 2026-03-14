@@ -20,7 +20,7 @@
     width: 40px;
     height: 40px;
     border-radius: var(--radius-full, 100px);
-    background-color: var(--background-primary, white);
+    background-color: var(--bg-primary, white);
     border: var(--border-width-100, 1px) solid var(--border-secondary, rgba(0, 0, 0, 0.16));
     box-shadow: var(--shadow-100);
     transition: all 0.2s ease;
@@ -28,13 +28,13 @@
 }
 
 .more-button-container:hover .more-button {
-    background-color: var(--background-secondary, #f0f2f7);
+    background-color: var(--bg-secondary, #f0f2f7);
     border-color: var(--border-primary, rgba(0, 0, 0, 0.24));
     transform: scale(1.05);
 }
 
 .more-button-container:active .more-button {
-    background-color: var(--background-tertiary, #e4e7ed);
+    background-color: var(--bg-tertiary, #e4e7ed);
     transform: scale(0.95);
 }
 
@@ -44,7 +44,7 @@
 }
 
 .more-button-container.disabled .more-button {
-    background-color: var(--background-disabled, #f0f0f0);
+    background-color: var(--bg-disabled, #f0f0f0);
     border-color: var(--border-disabled, rgba(0, 0, 0, 0.08));
     color: var(--content-disabled, rgba(0, 0, 0, 0.28));
 }

@@ -3,8 +3,8 @@
 .menu-item {
     display: flex;
     align-items: center;
-    padding: var(--spacing-200, 8px) var(--spacing-400, 16px);
-    gap: var(--spacing-100, 4px);
+    padding: var(--spacing-300, 12px) var(--spacing-400, 16px);
+    gap: var(--spacing-300, 12px);
     cursor: pointer;
     transition: background-color 0.2s ease;
     background-color: transparent;
@@ -20,7 +20,6 @@
     font-family: var(--font-family-primary);
     font-size: var(--font-size-0875, 14px);
     line-height: normal;
-    /* Better for flex centering */
     color: var(--content-primary, #17181a);
 }
 
@@ -47,7 +46,22 @@
     opacity: 0.5;
 }
 
+.menu-item-connector {
+    font-family: monospace;
+    font-size: 18px;
+    color: var(--content-tertiary, #999);
+    margin-right: -4px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+}
+
 .menu-item-divider-container {
-    padding: var(--spacing-100, 4px) 0;
+    padding: 0;
     width: 100%;
+}
+
+.menu-item-divider-container hr {
+    border-top: 1px solid var(--border-secondary, #f0f0f0);
+    margin: 0;
 }

@@ -1,0 +1,45 @@
+.review-card {
+    background-color: var(--bg-surface);
+    border: var(--border-width-100) solid var(--border-tertiary);
+    border-radius: var(--radius-300);
+    padding: var(--spacing-400);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-300);
+    /* 12px layout gap */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.review-card-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-300);
+}
+
+.review-card-title {
+    font-size: var(--font-size-200);
+    font-weight: var(--font-weight-bold);
+    color: var(--content-primary);
+}
+
+.review-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-200);
+}
+
+.review-card-content {
+    font-size: var(--font-size-100);
+    color: var(--content-secondary);
+    line-height: var(--line-height-normal);
+}
+
+.review-card-footer {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-200);
+    font-size: var(--font-size-75);
+    color: var(--content-tertiary);
+    margin-top: var(--spacing-200);
+}

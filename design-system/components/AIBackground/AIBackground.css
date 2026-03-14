@@ -20,10 +20,10 @@
 
 /* Light Mode specific background color if image fails to load */
 .ai-background-light {
-    background-color: var(--background-primary, white);
+    background-color: var(--bg-primary, white);
 }
 
 /* Dark Mode specific background color */
 .ai-background-dark {
-    background-color: var(--background-primary, #17181a);
+    background-color: var(--bg-primary, #17181a);
 }

@@ -1,0 +1,769 @@
+import { imgOval, imgOval1, imgOval2, imgOutline, imgColorGradient, imgVector, imgEllipse4120, imgChevronDownSolid, imgUtensils, imgChevronRightSolid, imgStarFullSolid } from "./svg-efuaa";
+const imgPortrait = "/Users/jeongkwon.yoon/Documents/MY Work/shopping-ai-agent/design-system/Templates/QuestionCard/assets/6cf779209837fe69c1fd4ccbb5d0abc91833f717.png";
+const imgThumbnail = "/Users/jeongkwon.yoon/Documents/MY Work/shopping-ai-agent/design-system/Templates/QuestionCard/assets/59224d67f19c4f5fcd6b77ee7af7b16b4c134502.png";
+const imgThumbnail = "/Users/jeongkwon.yoon/Documents/MY Work/shopping-ai-agent/design-system/Templates/QuestionCard/assets/59224d67f19c4f5fcd6b77ee7af7b16b4c134502.png";
+type PaginationProps = {
+  className?: string;
+  pages?: "default" | "over 6 pages";
+  type?: "numbers" | "dot";
+};
+
+function Pagination({ className, pages = "default", type = "dot" }: PaginationProps) {
+  return (
+    <div className={className || "content-stretch flex gap-[var(--spacing\\/100,4px)] items-center justify-center relative"} data-node-id="29705:14256">
+      <div className="relative shrink-0 size-[5px]" data-name="Oval" data-node-id="29705:14257">
+        <img alt="" className="absolute block max-w-none size-full" src={imgOval} />
+      </div>
+      <div className="opacity-[var(--opacity\/900,1)] relative shrink-0 size-[5px]" data-name="Oval" data-node-id="29705:14258">
+        <img alt="" className="absolute block max-w-none size-full" src={imgOval1} />
+      </div>
+      <div className="opacity-[var(--opacity\/900,1)] relative shrink-0 size-[5px]" data-name="Oval" data-node-id="29705:14259">
+        <img alt="" className="absolute block max-w-none size-full" src={imgOval1} />
+      </div>
+      <div className="opacity-[var(--opacity\/900,1)] relative shrink-0 size-[5px]" data-name="Oval" data-node-id="29705:14260">
+        <img alt="" className="absolute block max-w-none size-full" src={imgOval2} />
+      </div>
+      <div className="opacity-[var(--opacity\/900,1)] relative shrink-0 size-[5px]" data-name="Oval" data-node-id="29705:14261">
+        <img alt="" className="absolute block max-w-none size-full" src={imgOval1} />
+      </div>
+    </div>
+  );
+}
+type AvatarProps = {
+  className?: string;
+  size?: "medium" | "small" | "xsmall";
+  type?: "AI" | "user";
+};
+
+function Avatar({ className, size = "xsmall", type = "user" }: AvatarProps) {
+  return (
+    <div className={className || "h-[var(--sizing\\/400,16px)] overflow-clip relative rounded-[var(--border-radius\\/400,16px)] w-[16px]"} data-node-id="31728:2839">
+      <div className="absolute inset-[0_-1.04%_0_1.04%]" data-name="portrait" data-node-id="31728:2840">
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgPortrait} />
+      </div>
+      <div className="-translate-x-1/2 absolute aspect-[16/16] bottom-0 left-1/2 top-0" data-name="outline" data-node-id="31728:2842">
+        <img alt="" className="absolute block max-w-none size-full" src={imgOutline} />
+      </div>
+    </div>
+  );
+}
+type AiTravelProps = {
+  className?: string;
+  color?: "gradient" | "primary";
+};
+
+function AiTravel({ className, color = "gradient" }: AiTravelProps) {
+  return (
+    <div className={className || "relative size-[24px]"} data-node-id="24259:253">
+      <img alt="" className="absolute block max-w-none size-full" src={imgColorGradient} />
+    </div>
+  );
+}
+type BusProps = {
+  className?: string;
+  type?: "solid" | "outline";
+};
+
+function Bus({ className, type = "solid" }: BusProps) {
+  return (
+    <div className={className || "relative"} data-node-id="21453:1835">
+      <div className="absolute inset-[12.5%_10.42%_10.42%_10.42%]" data-name="Vector" data-node-id="33029:571">
+        <img alt="" className="absolute block max-w-none size-full" src={imgVector} />
+      </div>
+    </div>
+  );
+}
+type ListCardProps = {
+  className?: string;
+  action?: "button" | "buttons" | "icon" | "none";
+  cardCount?: "Multiple" | "single";
+  content?: "basic" | "meta";
+  header?: "badgeTitle" | "label" | "title" | "titleButton";
+  media?: "gallery" | "none" | "thumbnail";
+  showThumbnail?: boolean;
+  tags?: "multiple" | "none";
+};
+
+function ListCard({ className, action = "none", cardCount = "single", content = "basic", header = "label", media = "none", showThumbnail = true, tags = "none" }: ListCardProps) {
+  const isLabelAndThumbnailAndBasicAndNoneAndNoneAndSingle = header === "label" && media === "thumbnail" && content === "basic" && action === "none" && tags === "none" && cardCount === "single";
+  return (
+    <div className={className || `${String.raw`bg-[var(--background\/elevated-1,white)] border border-[var(--border\/elevated-1,rgba(0,0,0,0.08))] border-solid content-stretch flex p-[var(--spacing\/400,16px)] relative rounded-[var(--border-radius\/300,12px)] `}${isLabelAndThumbnailAndBasicAndNoneAndNoneAndSingle ? String.raw`gap-[var(--spacing\/300,12px)] items-center w-[358px]` : String.raw`gap-[var(--spacing\/200,8px)] items-start w-[326px]`}`} id={isLabelAndThumbnailAndBasicAndNoneAndNoneAndSingle ? "node-31728_3360" : "node-31773_1763"}>
+      <div className={`content-stretch flex flex-[1_0_0] flex-col items-start min-h-px min-w-px relative ${isLabelAndThumbnailAndBasicAndNoneAndNoneAndSingle ? String.raw`gap-[var(--spacing\/100,4px)]` : String.raw`gap-[var(--spacing\/200,8px)]`}`} data-name="title" id={isLabelAndThumbnailAndBasicAndNoneAndNoneAndSingle ? "node-31728_3361" : "node-31773_1757"}>
+        <div className="flex flex-col font-[family-name:var(--family\/primary,'Noto_Sans_JP:bold',sans-serif)] font-[var(--weight\/bold,normal)] justify-center leading-[0] overflow-hidden relative shrink-0 text-[color:var(--content\/primary,#17181a)] text-[length:var(--size\/0875,14px)] text-ellipsis w-full" id={isLabelAndThumbnailAndBasicAndNoneAndNoneAndSingle ? "node-31728_3362" : "node-31773_1758"}>
+          <p className="leading-[var(--line-height\/label-medium,17px)] text-[14px]">Text</p>
+        </div>
+        <p className="font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] leading-[var(--line-height\/label-medium,17px)] relative shrink-0 text-[color:var(--content\/primary,#17181a)] text-[length:var(--size\/0875,14px)] w-full" id={isLabelAndThumbnailAndBasicAndNoneAndNoneAndSingle ? "node-31728_3363" : "node-31773_1759"}>
+          Text
+        </p>
+        <p className={`${String.raw`font-[family-name:var(--family\/primary,"Noto_Sans_JP:regular",sans-serif)] font-[var(--weight\/regular,normal)] relative shrink-0 text-[color:var(--content\/tertiary,rgba(0,0,0,0.56))] w-full `}${isLabelAndThumbnailAndBasicAndNoneAndNoneAndSingle ? String.raw`leading-[var(--line-height\/body-medium,22px)] overflow-hidden text-[14px] text-ellipsis` : String.raw`leading-[var(--line-height\/body-small,19px)] text-[length:var(--size\/075,12px)]`}`} id={isLabelAndThumbnailAndBasicAndNoneAndNoneAndSingle ? "node-31728_3364" : "node-31773_1760"}>
+          {isLabelAndThumbnailAndBasicAndNoneAndNoneAndSingle ? "Text" : "Text Text Text "}
+        </p>
+      </div>
+      {isLabelAndThumbnailAndBasicAndNoneAndNoneAndSingle && showThumbnail && (
+        <div className="overflow-clip relative rounded-[var(--border-radius\/200,8px)] shrink-0 size-[60px]" data-name="Thumbnail" data-node-id="31728:3365">
+          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgThumbnail} />
+          <div className="absolute border border-[var(--border\/tertiary,rgba(0,0,0,0.08))] border-solid inset-0 rounded-[var(--border-radius\/200,8px)]" data-name="Outline" data-node-id="I31728:3365;36906:3399" />
+        </div>
+      )}
+    </div>
+  );
+}
+type QuestionCardChoiceResultCardResultPatternProps = {
+  className?: string;
+  media?: "none" | "thumbnail";
+  mediaSize?: "none" | "large" | "medium" | "small";
+  type?: "list" | "carousel";
+};
+
+export default function QuestionCardChoiceResultCardResultPattern({ className, media = "none", mediaSize = "none", type = "list" }: QuestionCardChoiceResultCardResultPatternProps) {
+  const isCarouselAndIsNoneAndNoneOrThumbnailAndSmall = type === "carousel" && ((media === "none" && mediaSize === "none") || (media === "thumbnail" && mediaSize === "small"));
+  const isCarouselAndIsNoneAndNoneOrThumbnailAndSmallOrThumbnailAnd = type === "carousel" && ((media === "none" && mediaSize === "none") || (media === "thumbnail" && mediaSize === "small") || (media === "thumbnail" && mediaSize === "medium") || (media === "thumbnail" && mediaSize === "large"));
+  const isCarouselAndNoneAndNone = type === "carousel" && media === "none" && mediaSize === "none";
+  const isCarouselAndThumbnailAndIsMediumOrLarge = type === "carousel" && media === "thumbnail" && ["medium", "large"].includes(mediaSize);
+  const isCarouselAndThumbnailAndLarge = type === "carousel" && media === "thumbnail" && mediaSize === "large";
+  const isCarouselAndThumbnailAndMedium = type === "carousel" && media === "thumbnail" && mediaSize === "medium";
+  const isCarouselAndThumbnailAndSmall = type === "carousel" && media === "thumbnail" && mediaSize === "small";
+  const isListAndNoneAndNone = type === "list" && media === "none" && mediaSize === "none";
+  const isListAndThumbnailAndSmall = type === "list" && media === "thumbnail" && mediaSize === "small";
+  return (
+    <div className={className || `content-stretch flex flex-col items-start justify-center relative ${isCarouselAndIsNoneAndNoneOrThumbnailAndSmallOrThumbnailAnd ? String.raw`gap-[var(--spacing\/400,16px)]` : isListAndThumbnailAndSmall ? String.raw`gap-[var(--spacing\/200,8px)] w-[204px]` : String.raw`gap-[var(--spacing\/200,8px)] w-[326px]`}`} id={isCarouselAndThumbnailAndLarge ? "node-32789_4178" : isCarouselAndThumbnailAndMedium ? "node-32789_4232" : isCarouselAndThumbnailAndSmall ? "node-32797_3957" : isCarouselAndNoneAndNone ? "node-32789_4939" : isListAndThumbnailAndSmall ? "node-35548_20963" : "node-32797_3836"}>
+      {isCarouselAndIsNoneAndNoneOrThumbnailAndSmallOrThumbnailAnd && (
+        <>
+          <div className={`content-stretch flex items-center relative shrink-0 ${isCarouselAndThumbnailAndIsMediumOrLarge ? "gap-[8px]" : "justify-between w-[600px]"}`} data-name="Card Container" id={isCarouselAndThumbnailAndLarge ? "node-32797_5552" : isCarouselAndThumbnailAndMedium ? "node-32797_5543" : isCarouselAndThumbnailAndSmall ? "node-32797_5526" : "node-32797_5471"}>
+            {isCarouselAndIsNoneAndNoneOrThumbnailAndSmall && (
+              <>
+                <div className="content-stretch flex flex-col gap-[var(--spacing\/200,8px)] items-start justify-center relative shrink-0 w-[296px]" data-name="Card List" id={isCarouselAndThumbnailAndSmall ? "node-32797_3958" : "node-32789_5647"}>
+                  {isCarouselAndNoneAndNone && (
+                    <>
+                      <ListCard className="bg-[var(--background\/elevated-1,white)] border border-[var(--border\/elevated-1,rgba(0,0,0,0.08))] border-solid content-stretch flex gap-[var(--spacing\/300,12px)] h-[93px] items-center p-[var(--spacing\/400,16px)] relative rounded-[var(--border-radius\/300,12px)] shrink-0 w-full" media="thumbnail" showThumbnail={false} />
+                      <ListCard className="bg-[var(--background\/elevated-1,white)] border border-[var(--border\/elevated-1,rgba(0,0,0,0.08))] border-solid content-stretch flex gap-[var(--spacing\/300,12px)] h-[93px] items-center p-[var(--spacing\/400,16px)] relative rounded-[var(--border-radius\/300,12px)] shrink-0 w-full" media="thumbnail" showThumbnail={false} />
+                      <ListCard className="bg-[var(--background\/elevated-1,white)] border border-[var(--border\/elevated-1,rgba(0,0,0,0.08))] border-solid content-stretch flex gap-[var(--spacing\/300,12px)] h-[93px] items-center p-[var(--spacing\/400,16px)] relative rounded-[var(--border-radius\/300,12px)] shrink-0 w-full" media="thumbnail" showThumbnail={false} />
+                    </>
+                  )}
+                  {isCarouselAndThumbnailAndSmall && (
+                    <>
+                      <div className="bg-[var(--background\/elevated-1,white)] border border-[var(--border\/elevated-1,rgba(0,0,0,0.08))] border-solid content-stretch flex gap-[var(--spacing\/300,12px)] items-center p-[var(--spacing\/400,16px)] relative rounded-[var(--border-radius\/300,12px)] shrink-0 w-full" data-name="List Card" data-node-id="32797:3959">
+                        <div className="content-stretch flex flex-[1_0_0] flex-col gap-[var(--spacing\/100,4px)] items-start min-h-px min-w-px relative text-ellipsis" data-name="title" data-node-id="I32797:3959;31728:3361">
+                          <div className="flex flex-col font-[family-name:var(--family\/primary,'Noto_Sans_JP:bold',sans-serif)] font-[var(--weight\/bold,normal)] justify-center leading-[0] overflow-hidden relative shrink-0 text-[color:var(--content\/primary,#17181a)] text-[length:var(--size\/0875,14px)] w-full" data-node-id="I32797:3959;31728:3362">
+                            <p className="leading-[var(--line-height\/label-medium,17px)] text-[14px]">Text</p>
+                          </div>
+                          <p className="font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] leading-[var(--line-height\/body-medium,22px)] overflow-hidden relative shrink-0 text-[14px] text-[color:var(--content\/tertiary,rgba(0,0,0,0.56))] w-full" data-node-id="I32797:3959;31728:3364">
+                            Text
+                          </p>
+                        </div>
+                        <div className="overflow-clip relative rounded-[var(--border-radius\/200,8px)] shrink-0 size-[60px]" data-name="Thumbnail" data-node-id="I32797:3959;31728:3365">
+                          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgThumbnail} />
+                          <div className="absolute border border-[var(--border\/tertiary,rgba(0,0,0,0.08))] border-solid inset-0 rounded-[var(--border-radius\/200,8px)]" data-name="Outline" data-node-id="I32797:3959;31728:3365;36906:3399" />
+                        </div>
+                      </div>
+                      <div className="bg-[var(--background\/elevated-1,white)] border border-[var(--border\/elevated-1,rgba(0,0,0,0.08))] border-solid content-stretch flex gap-[var(--spacing\/300,12px)] items-center p-[var(--spacing\/400,16px)] relative rounded-[var(--border-radius\/300,12px)] shrink-0 w-full" data-name="List Card" data-node-id="32797:3960">
+                        <div className="content-stretch flex flex-[1_0_0] flex-col gap-[var(--spacing\/100,4px)] items-start min-h-px min-w-px relative text-ellipsis" data-name="title" data-node-id="I32797:3960;31728:3361">
+                          <div className="flex flex-col font-[family-name:var(--family\/primary,'Noto_Sans_JP:bold',sans-serif)] font-[var(--weight\/bold,normal)] justify-center leading-[0] overflow-hidden relative shrink-0 text-[color:var(--content\/primary,#17181a)] text-[length:var(--size\/0875,14px)] w-full" data-node-id="I32797:3960;31728:3362">
+                            <p className="leading-[var(--line-height\/label-medium,17px)] text-[14px]">Text</p>
+                          </div>
+                          <p className="font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] leading-[var(--line-height\/body-medium,22px)] overflow-hidden relative shrink-0 text-[14px] text-[color:var(--content\/tertiary,rgba(0,0,0,0.56))] w-full" data-node-id="I32797:3960;31728:3364">
+                            Text
+                          </p>
+                        </div>
+                        <div className="overflow-clip relative rounded-[var(--border-radius\/200,8px)] shrink-0 size-[60px]" data-name="Thumbnail" data-node-id="I32797:3960;31728:3365">
+                          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgThumbnail} />
+                          <div className="absolute border border-[var(--border\/tertiary,rgba(0,0,0,0.08))] border-solid inset-0 rounded-[var(--border-radius\/200,8px)]" data-name="Outline" data-node-id="I32797:3960;31728:3365;36906:3399" />
+                        </div>
+                      </div>
+                      <div className="bg-[var(--background\/elevated-1,white)] border border-[var(--border\/elevated-1,rgba(0,0,0,0.08))] border-solid content-stretch flex gap-[var(--spacing\/300,12px)] items-center p-[var(--spacing\/400,16px)] relative rounded-[var(--border-radius\/300,12px)] shrink-0 w-full" data-name="List Card" data-node-id="32797:3961">
+                        <div className="content-stretch flex flex-[1_0_0] flex-col gap-[var(--spacing\/100,4px)] items-start min-h-px min-w-px relative text-ellipsis" data-name="title" data-node-id="I32797:3961;31728:3361">
+                          <div className="flex flex-col font-[family-name:var(--family\/primary,'Noto_Sans_JP:bold',sans-serif)] font-[var(--weight\/bold,normal)] justify-center leading-[0] overflow-hidden relative shrink-0 text-[color:var(--content\/primary,#17181a)] text-[length:var(--size\/0875,14px)] w-full" data-node-id="I32797:3961;31728:3362">
+                            <p className="leading-[var(--line-height\/label-medium,17px)] text-[14px]">Text</p>
+                          </div>
+                          <p className="font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] leading-[var(--line-height\/body-medium,22px)] overflow-hidden relative shrink-0 text-[14px] text-[color:var(--content\/tertiary,rgba(0,0,0,0.56))] w-full" data-node-id="I32797:3961;31728:3364">
+                            Text
+                          </p>
+                        </div>
+                        <div className="overflow-clip relative rounded-[var(--border-radius\/200,8px)] shrink-0 size-[60px]" data-name="Thumbnail" data-node-id="I32797:3961;31728:3365">
+                          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgThumbnail} />
+                          <div className="absolute border border-[var(--border\/tertiary,rgba(0,0,0,0.08))] border-solid inset-0 rounded-[var(--border-radius\/200,8px)]" data-name="Outline" data-node-id="I32797:3961;31728:3365;36906:3399" />
+                        </div>
+                      </div>
+                    </>
+                  )}
+                </div>
+                <div className="content-stretch flex flex-col gap-[var(--spacing\/200,8px)] items-start justify-center relative shrink-0 w-[296px]" data-name="Card List" id={isCarouselAndThumbnailAndSmall ? "node-32797_3962" : "node-32789_5670"}>
+                  {isCarouselAndNoneAndNone && (
+                    <>
+                      <ListCard className="bg-[var(--background\/elevated-1,white)] border border-[var(--border\/elevated-1,rgba(0,0,0,0.08))] border-solid content-stretch flex gap-[var(--spacing\/300,12px)] h-[93px] items-center p-[var(--spacing\/400,16px)] relative rounded-[var(--border-radius\/300,12px)] shrink-0 w-full" media="thumbnail" showThumbnail={false} />
+                      <ListCard className="bg-[var(--background\/elevated-1,white)] border border-[var(--border\/elevated-1,rgba(0,0,0,0.08))] border-solid content-stretch flex gap-[var(--spacing\/300,12px)] h-[93px] items-center p-[var(--spacing\/400,16px)] relative rounded-[var(--border-radius\/300,12px)] shrink-0 w-full" media="thumbnail" showThumbnail={false} />
+                      <ListCard className="bg-[var(--background\/elevated-1,white)] border border-[var(--border\/elevated-1,rgba(0,0,0,0.08))] border-solid content-stretch flex gap-[var(--spacing\/300,12px)] h-[93px] items-center p-[var(--spacing\/400,16px)] relative rounded-[var(--border-radius\/300,12px)] shrink-0 w-full" media="thumbnail" showThumbnail={false} />
+                    </>
+                  )}
+                  {isCarouselAndThumbnailAndSmall && (
+                    <>
+                      <div className="bg-[var(--background\/elevated-1,white)] border border-[var(--border\/elevated-1,rgba(0,0,0,0.08))] border-solid content-stretch flex gap-[var(--spacing\/300,12px)] items-center p-[var(--spacing\/400,16px)] relative rounded-[var(--border-radius\/300,12px)] shrink-0 w-full" data-name="List Card" data-node-id="32797:3963">
+                        <div className="content-stretch flex flex-[1_0_0] flex-col gap-[var(--spacing\/100,4px)] items-start min-h-px min-w-px relative text-ellipsis" data-name="title" data-node-id="I32797:3963;31728:3361">
+                          <div className="flex flex-col font-[family-name:var(--family\/primary,'Noto_Sans_JP:bold',sans-serif)] font-[var(--weight\/bold,normal)] justify-center leading-[0] overflow-hidden relative shrink-0 text-[color:var(--content\/primary,#17181a)] text-[length:var(--size\/0875,14px)] w-full" data-node-id="I32797:3963;31728:3362">
+                            <p className="leading-[var(--line-height\/label-medium,17px)] text-[14px]">Text</p>
+                          </div>
+                          <p className="font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] leading-[var(--line-height\/body-medium,22px)] overflow-hidden relative shrink-0 text-[14px] text-[color:var(--content\/tertiary,rgba(0,0,0,0.56))] w-full" data-node-id="I32797:3963;31728:3364">
+                            Text
+                          </p>
+                        </div>
+                        <div className="overflow-clip relative rounded-[var(--border-radius\/200,8px)] shrink-0 size-[60px]" data-name="Thumbnail" data-node-id="I32797:3963;31728:3365">
+                          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgThumbnail} />
+                          <div className="absolute border border-[var(--border\/tertiary,rgba(0,0,0,0.08))] border-solid inset-0 rounded-[var(--border-radius\/200,8px)]" data-name="Outline" data-node-id="I32797:3963;31728:3365;36906:3399" />
+                        </div>
+                      </div>
+                      <div className="bg-[var(--background\/elevated-1,white)] border border-[var(--border\/elevated-1,rgba(0,0,0,0.08))] border-solid content-stretch flex gap-[var(--spacing\/300,12px)] items-center p-[var(--spacing\/400,16px)] relative rounded-[var(--border-radius\/300,12px)] shrink-0 w-full" data-name="List Card" data-node-id="32797:3964">
+                        <div className="content-stretch flex flex-[1_0_0] flex-col gap-[var(--spacing\/100,4px)] items-start min-h-px min-w-px relative text-ellipsis" data-name="title" data-node-id="I32797:3964;31728:3361">
+                          <div className="flex flex-col font-[family-name:var(--family\/primary,'Noto_Sans_JP:bold',sans-serif)] font-[var(--weight\/bold,normal)] justify-center leading-[0] overflow-hidden relative shrink-0 text-[color:var(--content\/primary,#17181a)] text-[length:var(--size\/0875,14px)] w-full" data-node-id="I32797:3964;31728:3362">
+                            <p className="leading-[var(--line-height\/label-medium,17px)] text-[14px]">Text</p>
+                          </div>
+                          <p className="font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] leading-[var(--line-height\/body-medium,22px)] overflow-hidden relative shrink-0 text-[14px] text-[color:var(--content\/tertiary,rgba(0,0,0,0.56))] w-full" data-node-id="I32797:3964;31728:3364">
+                            Text
+                          </p>
+                        </div>
+                        <div className="overflow-clip relative rounded-[var(--border-radius\/200,8px)] shrink-0 size-[60px]" data-name="Thumbnail" data-node-id="I32797:3964;31728:3365">
+                          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgThumbnail} />
+                          <div className="absolute border border-[var(--border\/tertiary,rgba(0,0,0,0.08))] border-solid inset-0 rounded-[var(--border-radius\/200,8px)]" data-name="Outline" data-node-id="I32797:3964;31728:3365;36906:3399" />
+                        </div>
+                      </div>
+                      <div className="bg-[var(--background\/elevated-1,white)] border border-[var(--border\/elevated-1,rgba(0,0,0,0.08))] border-solid content-stretch flex gap-[var(--spacing\/300,12px)] items-center p-[var(--spacing\/400,16px)] relative rounded-[var(--border-radius\/300,12px)] shrink-0 w-full" data-name="List Card" data-node-id="32797:3965">
+                        <div className="content-stretch flex flex-[1_0_0] flex-col gap-[var(--spacing\/100,4px)] items-start min-h-px min-w-px relative text-ellipsis" data-name="title" data-node-id="I32797:3965;31728:3361">
+                          <div className="flex flex-col font-[family-name:var(--family\/primary,'Noto_Sans_JP:bold',sans-serif)] font-[var(--weight\/bold,normal)] justify-center leading-[0] overflow-hidden relative shrink-0 text-[color:var(--content\/primary,#17181a)] text-[length:var(--size\/0875,14px)] w-full" data-node-id="I32797:3965;31728:3362">
+                            <p className="leading-[var(--line-height\/label-medium,17px)] text-[14px]">Text</p>
+                          </div>
+                          <p className="font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] leading-[var(--line-height\/body-medium,22px)] overflow-hidden relative shrink-0 text-[14px] text-[color:var(--content\/tertiary,rgba(0,0,0,0.56))] w-full" data-node-id="I32797:3965;31728:3364">
+                            Text
+                          </p>
+                        </div>
+                        <div className="overflow-clip relative rounded-[var(--border-radius\/200,8px)] shrink-0 size-[60px]" data-name="Thumbnail" data-node-id="I32797:3965;31728:3365">
+                          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgThumbnail} />
+                          <div className="absolute border border-[var(--border\/tertiary,rgba(0,0,0,0.08))] border-solid inset-0 rounded-[var(--border-radius\/200,8px)]" data-name="Outline" data-node-id="I32797:3965;31728:3365;36906:3399" />
+                        </div>
+                      </div>
+                    </>
+                  )}
+                </div>
+              </>
+            )}
+            {isCarouselAndThumbnailAndIsMediumOrLarge && (
+              <>
+                <div className={`${String.raw`border border-[var(--border\/elevated-1,rgba(0,0,0,0.08))] border-solid content-stretch flex flex-col items-start overflow-clip relative rounded-[var(--border-radius\/400,16px)] shrink-0 `}${isCarouselAndThumbnailAndLarge ? String.raw`bg-[var(--background\/elevated-1,white)] w-[198px]` : ""}`} data-name="Media Card" id={isCarouselAndThumbnailAndLarge ? "node-32789_4108" : "node-32789_4743"}>
+                  <div className={`overflow-clip relative shrink-0 ${isCarouselAndThumbnailAndLarge ? "h-[132px] w-[198px]" : "h-[117px] w-[141px]"}`} data-name="Thumbnail" id={isCarouselAndThumbnailAndLarge ? "node-I32789_4108-29809_19921" : "node-I32789_4743-31728_3276"}>
+                    <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgThumbnail} />
+                    <div className="absolute border border-[var(--border\/tertiary,rgba(0,0,0,0.08))] border-solid inset-0 rounded-tl-[var(--border-radius\/400,16px)] rounded-tr-[var(--border-radius\/400,16px)]" data-name="Outline" id={isCarouselAndThumbnailAndLarge ? "node-I32789_4108-29809_19921-36906_3399" : "node-I32789_4743-31728_3276-36906_3399"} />
+                  </div>
+                  <div className={`${String.raw`bg-[var(--background\/elevated-1,white)] content-stretch flex flex-col items-start relative shrink-0 `}${isCarouselAndThumbnailAndLarge ? String.raw`gap-[var(--spacing\/300,12px)] pb-[var(--spacing\/400,16px)] pt-[var(--spacing\/300,12px)] px-[var(--spacing\/400,16px)] w-[198px]` : String.raw`gap-[var(--spacing\/400,16px)] h-[117px] p-[var(--spacing\/400,16px)] w-[141px]`}`} data-name="con" id={isCarouselAndThumbnailAndLarge ? "node-I32789_4108-29809_19922" : "node-I32789_4743-31728_3277"}>
+                    <div className="content-stretch flex flex-col gap-[var(--spacing\/200,8px)] items-start relative shrink-0 w-full" data-name="title" id={isCarouselAndThumbnailAndLarge ? "node-I32789_4108-29809_19960" : "node-I32789_4743-31728_3278"}>
+                      {isCarouselAndThumbnailAndMedium && (
+                        <>
+                          <div className="flex flex-col font-[family-name:var(--family\/primary,'Noto_Sans_JP:bold',sans-serif)] font-[var(--weight\/bold,normal)] justify-center leading-[0] overflow-hidden relative shrink-0 text-[color:var(--content\/primary,#17181a)] text-[length:var(--size\/0875,14px)] text-ellipsis w-full" data-node-id="I32789:4743;31728:3279">
+                            <p className="leading-[var(--line-height\/label-medium,17px)] text-[14px]">Text</p>
+                          </div>
+                          <div className="content-stretch flex gap-[var(--spacing\/100,4px)] items-start relative shrink-0 w-full" data-name="info" data-node-id="I32789:4743;31728:3280">
+                            <div className="content-stretch flex gap-[var(--spacing\/050,2px)] items-center relative shrink-0" data-name="Text" data-node-id="I32789:4743;31728:3281">
+                              <p className="font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] leading-[var(--line-height\/label-xsmall,13px)] relative shrink-0 text-[color:var(--content\/tertiary,rgba(0,0,0,0.56))] text-[length:var(--size\/0687,11px)] whitespace-nowrap" data-node-id="I32789:4743;31728:3283">
+                                Text
+                              </p>
+                            </div>
+                            <div className="content-stretch flex gap-[var(--spacing\/050,2px)] items-center relative shrink-0" data-name="Text" data-node-id="I32789:4743;31728:3284">
+                              <div className="relative shrink-0 size-[12px]" data-name="utensils" data-node-id="I32789:4743;31728:3285">
+                                <img alt="" className="absolute block max-w-none size-full" src={imgUtensils} />
+                              </div>
+                              <p className="font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] leading-[var(--line-height\/label-xsmall,13px)] relative shrink-0 text-[color:var(--content\/tertiary,rgba(0,0,0,0.56))] text-[length:var(--size\/0687,11px)] whitespace-nowrap" data-node-id="I32789:4743;31728:3288">
+                                Text
+                              </p>
+                            </div>
+                          </div>
+                        </>
+                      )}
+                      {isCarouselAndThumbnailAndLarge && (
+                        <>
+                          <div className="content-stretch flex gap-[var(--spacing\/050,2px)] items-center relative shrink-0 w-full" data-name="brand+ic" data-node-id="I32789:4108;29809:19961">
+                            <p className="font-['Noto_Sans_JP:Bold',sans-serif] leading-[14px] not-italic relative shrink-0 text-[#17181a] text-[12px] whitespace-nowrap" data-node-id="I32789:4108;29809:19962">
+                              Text
+                            </p>
+                            <div className="overflow-clip relative shrink-0 size-[14px]" data-name="chevron-right" data-node-id="I32789:4108;29809:19963">
+                              <div className="absolute flex inset-[15.11%_25.44%_15.11%_33.78%] items-center justify-center">
+                                <div className="-rotate-90 flex-none h-[9.788px] w-[16.746px]">
+                                  <div className="relative size-full" data-name="chevron-right_solid" data-node-id="I32789:4108;29809:19963;2628:7292">
+                                    <img alt="" className="absolute block max-w-none size-full" src={imgChevronRightSolid} />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="flex flex-col font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] justify-center leading-[0] overflow-hidden relative shrink-0 text-[color:var(--content\/primary,#17181a)] text-[length:var(--size\/0875,14px)] text-ellipsis w-full" data-node-id="I32789:4108;29809:19964">
+                            <p className="leading-[var(--line-height\/label-medium,17px)] text-[14px]">{`Text Text Text Text Text Text Text Text Text Text Text `}</p>
+                          </div>
+                        </>
+                      )}
+                    </div>
+                    {isCarouselAndThumbnailAndMedium && (
+                      <div className="content-stretch flex gap-[var(--spacing\/100,4px)] items-center relative shrink-0 w-full" data-name="User Info" data-node-id="I32789:4743;31728:3289">
+                        <Avatar className="overflow-clip relative rounded-[var(--border-radius\/400,16px)] shrink-0 size-[16px]" />
+                        <p className="flex-[1_0_0] font-['Noto_Sans_JP:Regular',sans-serif] leading-[13px] min-h-px min-w-px not-italic relative text-[11px] text-[rgba(0,0,0,0.56)]" data-node-id="I32789:4743;31728:3291">
+                          Text
+                        </p>
+                      </div>
+                    )}
+                    {isCarouselAndThumbnailAndLarge && (
+                      <div className="content-stretch flex flex-col gap-[var(--spacing\/200,8px)] items-start relative shrink-0 w-full" data-name="info" data-node-id="I32789:4108;29809:19967">
+                        <div className="content-stretch flex font-[family-name:var(--family\/primary,'Noto_Sans_JP:bold',sans-serif)] font-[var(--weight\/bold,normal)] gap-[var(--spacing\/100,4px)] items-start leading-[var(--line-height\/title-xsmall,23px)] relative shrink-0 text-[length:var(--size\/112,18px)] w-full whitespace-nowrap" data-name="price" data-node-id="I32789:4108;29809:19968">
+                          <p className="relative shrink-0 text-[color:var(--content\/alert,#d62228)]" data-node-id="I32789:4108;29809:19970">
+                            Text
+                          </p>
+                          <p className="relative shrink-0 text-[color:var(--content\/primary,#17181a)]" data-node-id="I32789:4108;29809:19971">
+                            Text
+                          </p>
+                        </div>
+                        <div className="content-stretch flex gap-[var(--spacing\/100,4px)] items-center relative shrink-0 w-full" data-name="review" data-node-id="I32789:4108;29809:19972">
+                          <div className="content-stretch flex gap-[2px] items-center relative shrink-0" data-name="grade" data-node-id="I32789:4108;29809:19973">
+                            <div className="relative shrink-0 size-[16px]" data-name="star" data-node-id="I32789:4108;29809:19974">
+                              <div className="absolute inset-[12.5%]" data-name="star-full_solid" data-node-id="I32789:4108;29809:19974;21206:60461">
+                                <img alt="" className="absolute block max-w-none size-full" src={imgStarFullSolid} />
+                              </div>
+                            </div>
+                            <p className="font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] leading-[var(--line-height\/label-medium,17px)] relative shrink-0 text-[color:var(--content\/primary,#17181a)] text-[length:var(--size\/0875,14px)] whitespace-nowrap" data-node-id="I32789:4108;29809:19975">
+                              Text
+                            </p>
+                          </div>
+                          <p className="font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] leading-[var(--line-height\/label-medium,17px)] relative shrink-0 text-[color:var(--content\/tertiary,rgba(0,0,0,0.56))] text-[length:var(--size\/0875,14px)] whitespace-nowrap" data-node-id="I32789:4108;29809:19976">
+                            Text
+                          </p>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                  {isCarouselAndThumbnailAndLarge && (
+                    <div className="absolute bg-[var(--background\/key,#0f62fe)] content-stretch flex gap-[var(--spacing\/050,2px)] h-[var(--sizing\/600,24px)] items-center justify-center left-[11px] px-[var(--spacing\/200,8px)] py-[var(--spacing\/100,4px)] rounded-[var(--border-radius\/100,4px)] top-[11px]" data-name="Tag" data-node-id="I32789:4108;29809:19939">
+                      <div className="flex flex-col font-[family-name:var(--family\/primary,'Noto_Sans_JP:bold',sans-serif)] font-[var(--weight\/bold,normal)] justify-center leading-[0] relative shrink-0 text-[color:var(--content\/inverted,white)] text-[length:var(--size\/075,12px)] text-center whitespace-nowrap" data-node-id="I32789:4108;29809:19939;24246:80">
+                        <p className="leading-[var(--line-height\/label-small,14px)]">Label</p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+                <div className={`${String.raw`border border-[var(--border\/elevated-1,rgba(0,0,0,0.08))] border-solid content-stretch flex flex-col items-start overflow-clip relative rounded-[var(--border-radius\/400,16px)] shrink-0 `}${isCarouselAndThumbnailAndLarge ? String.raw`bg-[var(--background\/elevated-1,white)] w-[198px]` : ""}`} data-name="Media Card" id={isCarouselAndThumbnailAndLarge ? "node-32789_4109" : "node-32789_4807"}>
+                  <div className={`overflow-clip relative shrink-0 ${isCarouselAndThumbnailAndLarge ? "h-[132px] w-[198px]" : "h-[117px] w-[141px]"}`} data-name="Thumbnail" id={isCarouselAndThumbnailAndLarge ? "node-I32789_4109-29809_19921" : "node-I32789_4807-31728_3276"}>
+                    <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgThumbnail} />
+                    <div className="absolute border border-[var(--border\/tertiary,rgba(0,0,0,0.08))] border-solid inset-0 rounded-tl-[var(--border-radius\/400,16px)] rounded-tr-[var(--border-radius\/400,16px)]" data-name="Outline" id={isCarouselAndThumbnailAndLarge ? "node-I32789_4109-29809_19921-36906_3399" : "node-I32789_4807-31728_3276-36906_3399"} />
+                  </div>
+                  <div className={`${String.raw`bg-[var(--background\/elevated-1,white)] content-stretch flex flex-col items-start relative shrink-0 `}${isCarouselAndThumbnailAndLarge ? String.raw`gap-[var(--spacing\/300,12px)] pb-[var(--spacing\/400,16px)] pt-[var(--spacing\/300,12px)] px-[var(--spacing\/400,16px)] w-[198px]` : String.raw`gap-[var(--spacing\/400,16px)] h-[117px] p-[var(--spacing\/400,16px)] w-[141px]`}`} data-name="con" id={isCarouselAndThumbnailAndLarge ? "node-I32789_4109-29809_19922" : "node-I32789_4807-31728_3277"}>
+                    <div className="content-stretch flex flex-col gap-[var(--spacing\/200,8px)] items-start relative shrink-0 w-full" data-name="title" id={isCarouselAndThumbnailAndLarge ? "node-I32789_4109-29809_19960" : "node-I32789_4807-31728_3278"}>
+                      {isCarouselAndThumbnailAndMedium && (
+                        <>
+                          <div className="flex flex-col font-[family-name:var(--family\/primary,'Noto_Sans_JP:bold',sans-serif)] font-[var(--weight\/bold,normal)] justify-center leading-[0] overflow-hidden relative shrink-0 text-[color:var(--content\/primary,#17181a)] text-[length:var(--size\/0875,14px)] text-ellipsis w-full" data-node-id="I32789:4807;31728:3279">
+                            <p className="leading-[var(--line-height\/label-medium,17px)] text-[14px]">Text</p>
+                          </div>
+                          <div className="content-stretch flex gap-[var(--spacing\/100,4px)] items-start relative shrink-0 w-full" data-name="info" data-node-id="I32789:4807;31728:3280">
+                            <div className="content-stretch flex gap-[var(--spacing\/050,2px)] items-center relative shrink-0" data-name="Text" data-node-id="I32789:4807;31728:3281">
+                              <p className="font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] leading-[var(--line-height\/label-xsmall,13px)] relative shrink-0 text-[color:var(--content\/tertiary,rgba(0,0,0,0.56))] text-[length:var(--size\/0687,11px)] whitespace-nowrap" data-node-id="I32789:4807;31728:3283">
+                                Text
+                              </p>
+                            </div>
+                            <div className="content-stretch flex gap-[var(--spacing\/050,2px)] items-center relative shrink-0" data-name="Text" data-node-id="I32789:4807;31728:3284">
+                              <div className="relative shrink-0 size-[12px]" data-name="utensils" data-node-id="I32789:4807;31728:3285">
+                                <img alt="" className="absolute block max-w-none size-full" src={imgUtensils} />
+                              </div>
+                              <p className="font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] leading-[var(--line-height\/label-xsmall,13px)] relative shrink-0 text-[color:var(--content\/tertiary,rgba(0,0,0,0.56))] text-[length:var(--size\/0687,11px)] whitespace-nowrap" data-node-id="I32789:4807;31728:3288">
+                                Text
+                              </p>
+                            </div>
+                          </div>
+                        </>
+                      )}
+                      {isCarouselAndThumbnailAndLarge && (
+                        <>
+                          <div className="content-stretch flex gap-[var(--spacing\/050,2px)] items-center relative shrink-0 w-full" data-name="brand+ic" data-node-id="I32789:4109;29809:19961">
+                            <p className="font-['Noto_Sans_JP:Bold',sans-serif] leading-[14px] not-italic relative shrink-0 text-[#17181a] text-[12px] whitespace-nowrap" data-node-id="I32789:4109;29809:19962">
+                              Text
+                            </p>
+                            <div className="overflow-clip relative shrink-0 size-[14px]" data-name="chevron-right" data-node-id="I32789:4109;29809:19963">
+                              <div className="absolute flex inset-[15.11%_25.44%_15.11%_33.78%] items-center justify-center">
+                                <div className="-rotate-90 flex-none h-[9.788px] w-[16.746px]">
+                                  <div className="relative size-full" data-name="chevron-right_solid" data-node-id="I32789:4109;29809:19963;2628:7292">
+                                    <img alt="" className="absolute block max-w-none size-full" src={imgChevronRightSolid} />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="flex flex-col font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] justify-center leading-[0] overflow-hidden relative shrink-0 text-[color:var(--content\/primary,#17181a)] text-[length:var(--size\/0875,14px)] text-ellipsis w-full" data-node-id="I32789:4109;29809:19964">
+                            <p className="leading-[var(--line-height\/label-medium,17px)] text-[14px]">{`Text Text Text Text Text Text Text Text Text Text Text `}</p>
+                          </div>
+                        </>
+                      )}
+                    </div>
+                    {isCarouselAndThumbnailAndMedium && (
+                      <div className="content-stretch flex gap-[var(--spacing\/100,4px)] items-center relative shrink-0 w-full" data-name="User Info" data-node-id="I32789:4807;31728:3289">
+                        <Avatar className="overflow-clip relative rounded-[var(--border-radius\/400,16px)] shrink-0 size-[16px]" />
+                        <p className="flex-[1_0_0] font-['Noto_Sans_JP:Regular',sans-serif] leading-[13px] min-h-px min-w-px not-italic relative text-[11px] text-[rgba(0,0,0,0.56)]" data-node-id="I32789:4807;31728:3291">
+                          Text
+                        </p>
+                      </div>
+                    )}
+                    {isCarouselAndThumbnailAndLarge && (
+                      <div className="content-stretch flex flex-col gap-[var(--spacing\/200,8px)] items-start relative shrink-0 w-full" data-name="info" data-node-id="I32789:4109;29809:19967">
+                        <div className="content-stretch flex font-[family-name:var(--family\/primary,'Noto_Sans_JP:bold',sans-serif)] font-[var(--weight\/bold,normal)] gap-[var(--spacing\/100,4px)] items-start leading-[var(--line-height\/title-xsmall,23px)] relative shrink-0 text-[length:var(--size\/112,18px)] w-full whitespace-nowrap" data-name="price" data-node-id="I32789:4109;29809:19968">
+                          <p className="relative shrink-0 text-[color:var(--content\/alert,#d62228)]" data-node-id="I32789:4109;29809:19970">
+                            Text
+                          </p>
+                          <p className="relative shrink-0 text-[color:var(--content\/primary,#17181a)]" data-node-id="I32789:4109;29809:19971">
+                            Text
+                          </p>
+                        </div>
+                        <div className="content-stretch flex gap-[var(--spacing\/100,4px)] items-center relative shrink-0 w-full" data-name="review" data-node-id="I32789:4109;29809:19972">
+                          <div className="content-stretch flex gap-[2px] items-center relative shrink-0" data-name="grade" data-node-id="I32789:4109;29809:19973">
+                            <div className="relative shrink-0 size-[16px]" data-name="star" data-node-id="I32789:4109;29809:19974">
+                              <div className="absolute inset-[12.5%]" data-name="star-full_solid" data-node-id="I32789:4109;29809:19974;21206:60461">
+                                <img alt="" className="absolute block max-w-none size-full" src={imgStarFullSolid} />
+                              </div>
+                            </div>
+                            <p className="font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] leading-[var(--line-height\/label-medium,17px)] relative shrink-0 text-[color:var(--content\/primary,#17181a)] text-[length:var(--size\/0875,14px)] whitespace-nowrap" data-node-id="I32789:4109;29809:19975">
+                              Text
+                            </p>
+                          </div>
+                          <p className="font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] leading-[var(--line-height\/label-medium,17px)] relative shrink-0 text-[color:var(--content\/tertiary,rgba(0,0,0,0.56))] text-[length:var(--size\/0875,14px)] whitespace-nowrap" data-node-id="I32789:4109;29809:19976">
+                            Text
+                          </p>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                  {isCarouselAndThumbnailAndLarge && (
+                    <div className="absolute bg-[var(--background\/key,#0f62fe)] content-stretch flex gap-[var(--spacing\/050,2px)] h-[var(--sizing\/600,24px)] items-center justify-center left-[11px] px-[var(--spacing\/200,8px)] py-[var(--spacing\/100,4px)] rounded-[var(--border-radius\/100,4px)] top-[11px]" data-name="Tag" data-node-id="I32789:4109;29809:19939">
+                      <div className="flex flex-col font-[family-name:var(--family\/primary,'Noto_Sans_JP:bold',sans-serif)] font-[var(--weight\/bold,normal)] justify-center leading-[0] relative shrink-0 text-[color:var(--content\/inverted,white)] text-[length:var(--size\/075,12px)] text-center whitespace-nowrap" data-node-id="I32789:4109;29809:19939;24246:80">
+                        <p className="leading-[var(--line-height\/label-small,14px)]">Label</p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+                <div className={`${String.raw`border border-[var(--border\/elevated-1,rgba(0,0,0,0.08))] border-solid content-stretch flex flex-col items-start overflow-clip relative rounded-[var(--border-radius\/400,16px)] shrink-0 `}${isCarouselAndThumbnailAndLarge ? String.raw`bg-[var(--background\/elevated-1,white)] w-[198px]` : ""}`} data-name="Media Card" id={isCarouselAndThumbnailAndLarge ? "node-32789_4110" : "node-32789_4851"}>
+                  <div className={`overflow-clip relative shrink-0 ${isCarouselAndThumbnailAndLarge ? "h-[132px] w-[198px]" : "h-[117px] w-[141px]"}`} data-name="Thumbnail" id={isCarouselAndThumbnailAndLarge ? "node-I32789_4110-29809_19921" : "node-I32789_4851-31728_3276"}>
+                    <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgThumbnail} />
+                    <div className="absolute border border-[var(--border\/tertiary,rgba(0,0,0,0.08))] border-solid inset-0 rounded-tl-[var(--border-radius\/400,16px)] rounded-tr-[var(--border-radius\/400,16px)]" data-name="Outline" id={isCarouselAndThumbnailAndLarge ? "node-I32789_4110-29809_19921-36906_3399" : "node-I32789_4851-31728_3276-36906_3399"} />
+                  </div>
+                  <div className={`${String.raw`bg-[var(--background\/elevated-1,white)] content-stretch flex flex-col items-start relative shrink-0 `}${isCarouselAndThumbnailAndLarge ? String.raw`gap-[var(--spacing\/300,12px)] pb-[var(--spacing\/400,16px)] pt-[var(--spacing\/300,12px)] px-[var(--spacing\/400,16px)] w-[198px]` : String.raw`gap-[var(--spacing\/400,16px)] h-[117px] p-[var(--spacing\/400,16px)] w-[141px]`}`} data-name="con" id={isCarouselAndThumbnailAndLarge ? "node-I32789_4110-29809_19922" : "node-I32789_4851-31728_3277"}>
+                    <div className="content-stretch flex flex-col gap-[var(--spacing\/200,8px)] items-start relative shrink-0 w-full" data-name="title" id={isCarouselAndThumbnailAndLarge ? "node-I32789_4110-29809_19960" : "node-I32789_4851-31728_3278"}>
+                      {isCarouselAndThumbnailAndMedium && (
+                        <>
+                          <div className="flex flex-col font-[family-name:var(--family\/primary,'Noto_Sans_JP:bold',sans-serif)] font-[var(--weight\/bold,normal)] justify-center leading-[0] overflow-hidden relative shrink-0 text-[color:var(--content\/primary,#17181a)] text-[length:var(--size\/0875,14px)] text-ellipsis w-full" data-node-id="I32789:4851;31728:3279">
+                            <p className="leading-[var(--line-height\/label-medium,17px)] text-[14px]">Text</p>
+                          </div>
+                          <div className="content-stretch flex gap-[var(--spacing\/100,4px)] items-start relative shrink-0 w-full" data-name="info" data-node-id="I32789:4851;31728:3280">
+                            <div className="content-stretch flex gap-[var(--spacing\/050,2px)] items-center relative shrink-0" data-name="Text" data-node-id="I32789:4851;31728:3281">
+                              <p className="font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] leading-[var(--line-height\/label-xsmall,13px)] relative shrink-0 text-[color:var(--content\/tertiary,rgba(0,0,0,0.56))] text-[length:var(--size\/0687,11px)] whitespace-nowrap" data-node-id="I32789:4851;31728:3283">
+                                Text
+                              </p>
+                            </div>
+                            <div className="content-stretch flex gap-[var(--spacing\/050,2px)] items-center relative shrink-0" data-name="Text" data-node-id="I32789:4851;31728:3284">
+                              <div className="relative shrink-0 size-[12px]" data-name="utensils" data-node-id="I32789:4851;31728:3285">
+                                <img alt="" className="absolute block max-w-none size-full" src={imgUtensils} />
+                              </div>
+                              <p className="font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] leading-[var(--line-height\/label-xsmall,13px)] relative shrink-0 text-[color:var(--content\/tertiary,rgba(0,0,0,0.56))] text-[length:var(--size\/0687,11px)] whitespace-nowrap" data-node-id="I32789:4851;31728:3288">
+                                Text
+                              </p>
+                            </div>
+                          </div>
+                        </>
+                      )}
+                      {isCarouselAndThumbnailAndLarge && (
+                        <>
+                          <div className="content-stretch flex gap-[var(--spacing\/050,2px)] items-center relative shrink-0 w-full" data-name="brand+ic" data-node-id="I32789:4110;29809:19961">
+                            <p className="font-['Noto_Sans_JP:Bold',sans-serif] leading-[14px] not-italic relative shrink-0 text-[#17181a] text-[12px] whitespace-nowrap" data-node-id="I32789:4110;29809:19962">
+                              Text
+                            </p>
+                            <div className="overflow-clip relative shrink-0 size-[14px]" data-name="chevron-right" data-node-id="I32789:4110;29809:19963">
+                              <div className="absolute flex inset-[15.11%_25.44%_15.11%_33.78%] items-center justify-center">
+                                <div className="-rotate-90 flex-none h-[9.788px] w-[16.746px]">
+                                  <div className="relative size-full" data-name="chevron-right_solid" data-node-id="I32789:4110;29809:19963;2628:7292">
+                                    <img alt="" className="absolute block max-w-none size-full" src={imgChevronRightSolid} />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="flex flex-col font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] justify-center leading-[0] overflow-hidden relative shrink-0 text-[color:var(--content\/primary,#17181a)] text-[length:var(--size\/0875,14px)] text-ellipsis w-full" data-node-id="I32789:4110;29809:19964">
+                            <p className="leading-[var(--line-height\/label-medium,17px)] text-[14px]">{`Text Text Text Text Text Text Text Text Text Text Text `}</p>
+                          </div>
+                        </>
+                      )}
+                    </div>
+                    {isCarouselAndThumbnailAndMedium && (
+                      <div className="content-stretch flex gap-[var(--spacing\/100,4px)] items-center relative shrink-0 w-full" data-name="User Info" data-node-id="I32789:4851;31728:3289">
+                        <Avatar className="overflow-clip relative rounded-[var(--border-radius\/400,16px)] shrink-0 size-[16px]" />
+                        <p className="flex-[1_0_0] font-['Noto_Sans_JP:Regular',sans-serif] leading-[13px] min-h-px min-w-px not-italic relative text-[11px] text-[rgba(0,0,0,0.56)]" data-node-id="I32789:4851;31728:3291">
+                          Text
+                        </p>
+                      </div>
+                    )}
+                    {isCarouselAndThumbnailAndLarge && (
+                      <div className="content-stretch flex flex-col gap-[var(--spacing\/200,8px)] items-start relative shrink-0 w-full" data-name="info" data-node-id="I32789:4110;29809:19967">
+                        <div className="content-stretch flex font-[family-name:var(--family\/primary,'Noto_Sans_JP:bold',sans-serif)] font-[var(--weight\/bold,normal)] gap-[var(--spacing\/100,4px)] items-start leading-[var(--line-height\/title-xsmall,23px)] relative shrink-0 text-[length:var(--size\/112,18px)] w-full whitespace-nowrap" data-name="price" data-node-id="I32789:4110;29809:19968">
+                          <p className="relative shrink-0 text-[color:var(--content\/alert,#d62228)]" data-node-id="I32789:4110;29809:19970">
+                            Text
+                          </p>
+                          <p className="relative shrink-0 text-[color:var(--content\/primary,#17181a)]" data-node-id="I32789:4110;29809:19971">
+                            Text
+                          </p>
+                        </div>
+                        <div className="content-stretch flex gap-[var(--spacing\/100,4px)] items-center relative shrink-0 w-full" data-name="review" data-node-id="I32789:4110;29809:19972">
+                          <div className="content-stretch flex gap-[2px] items-center relative shrink-0" data-name="grade" data-node-id="I32789:4110;29809:19973">
+                            <div className="relative shrink-0 size-[16px]" data-name="star" data-node-id="I32789:4110;29809:19974">
+                              <div className="absolute inset-[12.5%]" data-name="star-full_solid" data-node-id="I32789:4110;29809:19974;21206:60461">
+                                <img alt="" className="absolute block max-w-none size-full" src={imgStarFullSolid} />
+                              </div>
+                            </div>
+                            <p className="font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] leading-[var(--line-height\/label-medium,17px)] relative shrink-0 text-[color:var(--content\/primary,#17181a)] text-[length:var(--size\/0875,14px)] whitespace-nowrap" data-node-id="I32789:4110;29809:19975">
+                              Text
+                            </p>
+                          </div>
+                          <p className="font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] leading-[var(--line-height\/label-medium,17px)] relative shrink-0 text-[color:var(--content\/tertiary,rgba(0,0,0,0.56))] text-[length:var(--size\/0875,14px)] whitespace-nowrap" data-node-id="I32789:4110;29809:19976">
+                            Text
+                          </p>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                  {isCarouselAndThumbnailAndLarge && (
+                    <div className="absolute bg-[var(--background\/key,#0f62fe)] content-stretch flex gap-[var(--spacing\/050,2px)] h-[var(--sizing\/600,24px)] items-center justify-center left-[11px] px-[var(--spacing\/200,8px)] py-[var(--spacing\/100,4px)] rounded-[var(--border-radius\/100,4px)] top-[11px]" data-name="Tag" data-node-id="I32789:4110;29809:19939">
+                      <div className="flex flex-col font-[family-name:var(--family\/primary,'Noto_Sans_JP:bold',sans-serif)] font-[var(--weight\/bold,normal)] justify-center leading-[0] relative shrink-0 text-[color:var(--content\/inverted,white)] text-[length:var(--size\/075,12px)] text-center whitespace-nowrap" data-node-id="I32789:4110;29809:19939;24246:80">
+                        <p className="leading-[var(--line-height\/label-small,14px)]">Label</p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </>
+            )}
+            {isCarouselAndThumbnailAndMedium && (
+              <div className="border border-[var(--border\/elevated-1,rgba(0,0,0,0.08))] border-solid content-stretch flex flex-col items-start overflow-clip relative rounded-[var(--border-radius\/400,16px)] shrink-0" data-name="Media Card" data-node-id="32789:4895">
+                <div className="h-[117px] overflow-clip relative shrink-0 w-[141px]" data-name="Thumbnail" data-node-id="I32789:4895;31728:3276">
+                  <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgThumbnail} />
+                  <div className="absolute border border-[var(--border\/tertiary,rgba(0,0,0,0.08))] border-solid inset-0 rounded-tl-[var(--border-radius\/400,16px)] rounded-tr-[var(--border-radius\/400,16px)]" data-name="Outline" data-node-id="I32789:4895;31728:3276;36906:3399" />
+                </div>
+                <div className="bg-[var(--background\/elevated-1,white)] content-stretch flex flex-col gap-[var(--spacing\/400,16px)] h-[117px] items-start p-[var(--spacing\/400,16px)] relative shrink-0 w-[141px]" data-name="con" data-node-id="I32789:4895;31728:3277">
+                  <div className="content-stretch flex flex-col gap-[var(--spacing\/200,8px)] items-start relative shrink-0 w-full" data-name="title" data-node-id="I32789:4895;31728:3278">
+                    <div className="flex flex-col font-[family-name:var(--family\/primary,'Noto_Sans_JP:bold',sans-serif)] font-[var(--weight\/bold,normal)] justify-center leading-[0] overflow-hidden relative shrink-0 text-[color:var(--content\/primary,#17181a)] text-[length:var(--size\/0875,14px)] text-ellipsis w-full" data-node-id="I32789:4895;31728:3279">
+                      <p className="leading-[var(--line-height\/label-medium,17px)] text-[14px]">Text</p>
+                    </div>
+                    <div className="content-stretch flex gap-[var(--spacing\/100,4px)] items-start relative shrink-0 w-full" data-name="info" data-node-id="I32789:4895;31728:3280">
+                      <div className="content-stretch flex gap-[var(--spacing\/050,2px)] items-center relative shrink-0" data-name="Text" data-node-id="I32789:4895;31728:3281">
+                        <p className="font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] leading-[var(--line-height\/label-xsmall,13px)] relative shrink-0 text-[color:var(--content\/tertiary,rgba(0,0,0,0.56))] text-[length:var(--size\/0687,11px)] whitespace-nowrap" data-node-id="I32789:4895;31728:3283">
+                          Text
+                        </p>
+                      </div>
+                      <div className="content-stretch flex gap-[var(--spacing\/050,2px)] items-center relative shrink-0" data-name="Text" data-node-id="I32789:4895;31728:3284">
+                        <div className="relative shrink-0 size-[12px]" data-name="utensils" data-node-id="I32789:4895;31728:3285">
+                          <img alt="" className="absolute block max-w-none size-full" src={imgUtensils} />
+                        </div>
+                        <p className="font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] leading-[var(--line-height\/label-xsmall,13px)] relative shrink-0 text-[color:var(--content\/tertiary,rgba(0,0,0,0.56))] text-[length:var(--size\/0687,11px)] whitespace-nowrap" data-node-id="I32789:4895;31728:3288">
+                          Text
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="content-stretch flex gap-[var(--spacing\/100,4px)] items-center relative shrink-0 w-full" data-name="User Info" data-node-id="I32789:4895;31728:3289">
+                    <Avatar className="overflow-clip relative rounded-[var(--border-radius\/400,16px)] shrink-0 size-[16px]" />
+                    <p className="flex-[1_0_0] font-['Noto_Sans_JP:Regular',sans-serif] leading-[13px] min-h-px min-w-px not-italic relative text-[11px] text-[rgba(0,0,0,0.56)]" data-node-id="I32789:4895;31728:3291">
+                      Text
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+          <div className="content-stretch flex flex-col items-center justify-center relative shrink-0 w-[326px]" data-name="Pagination Indicator" id={isCarouselAndThumbnailAndLarge ? "node-32797_5623" : isCarouselAndThumbnailAndMedium ? "node-32797_5544" : isCarouselAndThumbnailAndSmall ? "node-32797_5535" : "node-32797_5511"}>
+            <Pagination className="content-stretch flex gap-[var(--spacing\/100,4px)] items-center justify-center relative shrink-0" />
+          </div>
+        </>
+      )}
+      {isListAndNoneAndNone && (
+        <>
+          <ListCard className="bg-[var(--background\/elevated-1,white)] border border-[var(--border\/elevated-1,rgba(0,0,0,0.08))] border-solid content-stretch flex gap-[var(--spacing\/300,12px)] items-center p-[var(--spacing\/400,16px)] relative rounded-[var(--border-radius\/300,12px)] shrink-0 w-[326px]" media="thumbnail" showThumbnail={false} />
+          <ListCard className="bg-[var(--background\/elevated-1,white)] border border-[var(--border\/elevated-1,rgba(0,0,0,0.08))] border-solid content-stretch flex gap-[var(--spacing\/300,12px)] items-center p-[var(--spacing\/400,16px)] relative rounded-[var(--border-radius\/300,12px)] shrink-0 w-[326px]" media="thumbnail" showThumbnail={false} />
+          <ListCard className="bg-[var(--background\/elevated-1,white)] border border-[var(--border\/elevated-1,rgba(0,0,0,0.08))] border-solid content-stretch flex gap-[var(--spacing\/300,12px)] items-center p-[var(--spacing\/400,16px)] relative rounded-[var(--border-radius\/300,12px)] shrink-0 w-[326px]" media="thumbnail" showThumbnail={false} />
+          <ListCard className="bg-[var(--background\/elevated-1,white)] border border-[var(--border\/elevated-1,rgba(0,0,0,0.08))] border-solid content-stretch flex gap-[var(--spacing\/300,12px)] items-center p-[var(--spacing\/400,16px)] relative rounded-[var(--border-radius\/300,12px)] shrink-0 w-[326px]" media="thumbnail" showThumbnail={false} />
+        </>
+      )}
+      {isListAndThumbnailAndSmall && (
+        <>
+          <div className="bg-[var(--background\/elevated-1,white)] border border-[var(--border\/elevated-1,rgba(0,0,0,0.08))] border-solid content-stretch flex gap-[var(--spacing\/300,12px)] items-center p-[var(--spacing\/400,16px)] relative rounded-[var(--border-radius\/300,12px)] shrink-0 w-full" data-name="List Card" data-node-id="35548:20988">
+            <div className="content-stretch flex flex-[1_0_0] flex-col gap-[var(--spacing\/100,4px)] items-start min-h-px min-w-px relative" data-name="title" data-node-id="I35548:20988;31728:3310">
+              <div className="content-stretch flex flex-col gap-[var(--spacing\/100,4px)] items-start leading-[0] relative shrink-0 w-full" data-name="top" data-node-id="I35548:20988;31728:3369">
+                <div className="flex flex-col font-[family-name:var(--family\/primary,'Noto_Sans_JP:bold',sans-serif)] font-[var(--weight\/bold,normal)] justify-center overflow-hidden relative shrink-0 text-[color:var(--content\/primary,#17181a)] text-[length:var(--size\/0875,14px)] text-ellipsis w-full" data-node-id="I35548:20988;31728:3311">
+                  <p className="leading-[var(--line-height\/label-medium,17px)] text-[14px]">Text</p>
+                </div>
+                <div className="flex flex-col font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] justify-center relative shrink-0 text-[color:var(--content\/tertiary,rgba(0,0,0,0.56))] text-[length:var(--size\/075,12px)] w-full" data-node-id="I35548:20988;31728:3367">
+                  <p className="leading-[var(--line-height\/label-small,14px)]">Text</p>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col gap-[var(--spacing\/200,8px)] items-start relative shrink-0 w-full" data-name="top" data-node-id="I35548:20988;31728:3370">
+                <div className="content-stretch flex gap-[var(--spacing\/100,4px)] items-center relative shrink-0 w-full" data-name="address" data-node-id="I35548:20988;31728:3373">
+                  <div className="flex flex-col font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] justify-center leading-[0] relative shrink-0 text-[color:var(--content\/tertiary,rgba(0,0,0,0.56))] text-[length:var(--size\/075,12px)] whitespace-nowrap" data-node-id="I35548:20988;31728:3374">
+                    <p className="leading-[var(--line-height\/label-small,14px)]">Text</p>
+                  </div>
+                  <div className="relative shrink-0 size-[3px]" data-node-id="I35548:20988;31728:3375">
+                    <img alt="" className="absolute block max-w-none size-full" src={imgEllipse4120} />
+                  </div>
+                  <div className="flex flex-col font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] justify-center leading-[0] relative shrink-0 text-[color:var(--content\/tertiary,rgba(0,0,0,0.56))] text-[length:var(--size\/075,12px)] whitespace-nowrap" data-node-id="I35548:20988;31728:3376">
+                    <p className="leading-[var(--line-height\/label-small,14px)]">Text</p>
+                  </div>
+                  <div className="overflow-clip relative shrink-0 size-[14px]" data-name="chevron-down" data-node-id="I35548:20988;31728:3377">
+                    <div className="absolute inset-[33.78%_15.11%_25.44%_15.11%]" data-name="chevron-down_solid" data-node-id="I35548:20988;31728:3377;2628:7290">
+                      <img alt="" className="absolute block max-w-none size-full" src={imgChevronDownSolid} />
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] justify-center leading-[0] relative shrink-0 text-[color:var(--content\/tertiary,rgba(0,0,0,0.56))] text-[length:var(--size\/0875,14px)] w-full" data-node-id="I35548:20988;31728:3372">
+                  <p className="leading-[var(--line-height\/label-medium,17px)]">Text</p>
+                </div>
+              </div>
+            </div>
+            <div className="overflow-clip relative rounded-[var(--border-radius\/200,8px)] shrink-0 size-[84px]" data-name="Thumbnail" data-node-id="I35548:20988;31728:3313">
+              <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgThumbnail} />
+              <div className="absolute border border-[var(--border\/tertiary,rgba(0,0,0,0.08))] border-solid inset-0 rounded-[var(--border-radius\/200,8px)]" data-name="Outline" data-node-id="I35548:20988;31728:3313;36906:3399" />
+            </div>
+          </div>
+          <div className="bg-[var(--background\/elevated-1,white)] border border-[var(--border\/elevated-1,rgba(0,0,0,0.08))] border-solid content-stretch flex gap-[var(--spacing\/300,12px)] items-center p-[var(--spacing\/400,16px)] relative rounded-[var(--border-radius\/300,12px)] shrink-0 w-full" data-name="List Card" data-node-id="35548:21004">
+            <div className="content-stretch flex flex-[1_0_0] flex-col gap-[var(--spacing\/100,4px)] items-start min-h-px min-w-px relative" data-name="title" data-node-id="I35548:21004;31728:3310">
+              <div className="content-stretch flex flex-col gap-[var(--spacing\/100,4px)] items-start leading-[0] relative shrink-0 w-full" data-name="top" data-node-id="I35548:21004;31728:3369">
+                <div className="flex flex-col font-[family-name:var(--family\/primary,'Noto_Sans_JP:bold',sans-serif)] font-[var(--weight\/bold,normal)] justify-center overflow-hidden relative shrink-0 text-[color:var(--content\/primary,#17181a)] text-[length:var(--size\/0875,14px)] text-ellipsis w-full" data-node-id="I35548:21004;31728:3311">
+                  <p className="leading-[var(--line-height\/label-medium,17px)] text-[14px]">Text</p>
+                </div>
+                <div className="flex flex-col font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] justify-center relative shrink-0 text-[color:var(--content\/tertiary,rgba(0,0,0,0.56))] text-[length:var(--size\/075,12px)] w-full" data-node-id="I35548:21004;31728:3367">
+                  <p className="leading-[var(--line-height\/label-small,14px)]">Text</p>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col gap-[var(--spacing\/200,8px)] items-start relative shrink-0 w-full" data-name="top" data-node-id="I35548:21004;31728:3370">
+                <div className="content-stretch flex gap-[var(--spacing\/100,4px)] items-center relative shrink-0 w-full" data-name="address" data-node-id="I35548:21004;31728:3373">
+                  <div className="flex flex-col font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] justify-center leading-[0] relative shrink-0 text-[color:var(--content\/tertiary,rgba(0,0,0,0.56))] text-[length:var(--size\/075,12px)] whitespace-nowrap" data-node-id="I35548:21004;31728:3374">
+                    <p className="leading-[var(--line-height\/label-small,14px)]">Text</p>
+                  </div>
+                  <div className="relative shrink-0 size-[3px]" data-node-id="I35548:21004;31728:3375">
+                    <img alt="" className="absolute block max-w-none size-full" src={imgEllipse4120} />
+                  </div>
+                  <div className="flex flex-col font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] justify-center leading-[0] relative shrink-0 text-[color:var(--content\/tertiary,rgba(0,0,0,0.56))] text-[length:var(--size\/075,12px)] whitespace-nowrap" data-node-id="I35548:21004;31728:3376">
+                    <p className="leading-[var(--line-height\/label-small,14px)]">Text</p>
+                  </div>
+                  <div className="overflow-clip relative shrink-0 size-[14px]" data-name="chevron-down" data-node-id="I35548:21004;31728:3377">
+                    <div className="absolute inset-[33.78%_15.11%_25.44%_15.11%]" data-name="chevron-down_solid" data-node-id="I35548:21004;31728:3377;2628:7290">
+                      <img alt="" className="absolute block max-w-none size-full" src={imgChevronDownSolid} />
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] justify-center leading-[0] relative shrink-0 text-[color:var(--content\/tertiary,rgba(0,0,0,0.56))] text-[length:var(--size\/0875,14px)] w-full" data-node-id="I35548:21004;31728:3372">
+                  <p className="leading-[var(--line-height\/label-medium,17px)]">Text</p>
+                </div>
+              </div>
+            </div>
+            <div className="overflow-clip relative rounded-[var(--border-radius\/200,8px)] shrink-0 size-[84px]" data-name="Thumbnail" data-node-id="I35548:21004;31728:3313">
+              <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgThumbnail} />
+              <div className="absolute border border-[var(--border\/tertiary,rgba(0,0,0,0.08))] border-solid inset-0 rounded-[var(--border-radius\/200,8px)]" data-name="Outline" data-node-id="I35548:21004;31728:3313;36906:3399" />
+            </div>
+          </div>
+          <div className="bg-[var(--background\/elevated-1,white)] border border-[var(--border\/elevated-1,rgba(0,0,0,0.08))] border-solid content-stretch flex gap-[var(--spacing\/300,12px)] items-center p-[var(--spacing\/400,16px)] relative rounded-[var(--border-radius\/300,12px)] shrink-0 w-full" data-name="List Card" data-node-id="35548:21020">
+            <div className="content-stretch flex flex-[1_0_0] flex-col gap-[var(--spacing\/100,4px)] items-start min-h-px min-w-px relative" data-name="title" data-node-id="I35548:21020;31728:3310">
+              <div className="content-stretch flex flex-col gap-[var(--spacing\/100,4px)] items-start leading-[0] relative shrink-0 w-full" data-name="top" data-node-id="I35548:21020;31728:3369">
+                <div className="flex flex-col font-[family-name:var(--family\/primary,'Noto_Sans_JP:bold',sans-serif)] font-[var(--weight\/bold,normal)] justify-center overflow-hidden relative shrink-0 text-[color:var(--content\/primary,#17181a)] text-[length:var(--size\/0875,14px)] text-ellipsis w-full" data-node-id="I35548:21020;31728:3311">
+                  <p className="leading-[var(--line-height\/label-medium,17px)] text-[14px]">Text</p>
+                </div>
+                <div className="flex flex-col font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] justify-center relative shrink-0 text-[color:var(--content\/tertiary,rgba(0,0,0,0.56))] text-[length:var(--size\/075,12px)] w-full" data-node-id="I35548:21020;31728:3367">
+                  <p className="leading-[var(--line-height\/label-small,14px)]">Text</p>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col gap-[var(--spacing\/200,8px)] items-start relative shrink-0 w-full" data-name="top" data-node-id="I35548:21020;31728:3370">
+                <div className="content-stretch flex gap-[var(--spacing\/100,4px)] items-center relative shrink-0 w-full" data-name="address" data-node-id="I35548:21020;31728:3373">
+                  <div className="flex flex-col font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] justify-center leading-[0] relative shrink-0 text-[color:var(--content\/tertiary,rgba(0,0,0,0.56))] text-[length:var(--size\/075,12px)] whitespace-nowrap" data-node-id="I35548:21020;31728:3374">
+                    <p className="leading-[var(--line-height\/label-small,14px)]">Text</p>
+                  </div>
+                  <div className="relative shrink-0 size-[3px]" data-node-id="I35548:21020;31728:3375">
+                    <img alt="" className="absolute block max-w-none size-full" src={imgEllipse4120} />
+                  </div>
+                  <div className="flex flex-col font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] justify-center leading-[0] relative shrink-0 text-[color:var(--content\/tertiary,rgba(0,0,0,0.56))] text-[length:var(--size\/075,12px)] whitespace-nowrap" data-node-id="I35548:21020;31728:3376">
+                    <p className="leading-[var(--line-height\/label-small,14px)]">Text</p>
+                  </div>
+                  <div className="overflow-clip relative shrink-0 size-[14px]" data-name="chevron-down" data-node-id="I35548:21020;31728:3377">
+                    <div className="absolute inset-[33.78%_15.11%_25.44%_15.11%]" data-name="chevron-down_solid" data-node-id="I35548:21020;31728:3377;2628:7290">
+                      <img alt="" className="absolute block max-w-none size-full" src={imgChevronDownSolid} />
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] justify-center leading-[0] relative shrink-0 text-[color:var(--content\/tertiary,rgba(0,0,0,0.56))] text-[length:var(--size\/0875,14px)] w-full" data-node-id="I35548:21020;31728:3372">
+                  <p className="leading-[var(--line-height\/label-medium,17px)]">Text</p>
+                </div>
+              </div>
+            </div>
+            <div className="overflow-clip relative rounded-[var(--border-radius\/200,8px)] shrink-0 size-[84px]" data-name="Thumbnail" data-node-id="I35548:21020;31728:3313">
+              <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgThumbnail} />
+              <div className="absolute border border-[var(--border\/tertiary,rgba(0,0,0,0.08))] border-solid inset-0 rounded-[var(--border-radius\/200,8px)]" data-name="Outline" data-node-id="I35548:21020;31728:3313;36906:3399" />
+            </div>
+          </div>
+          <div className="bg-[var(--background\/elevated-1,white)] border border-[var(--border\/elevated-1,rgba(0,0,0,0.08))] border-solid content-stretch flex gap-[var(--spacing\/300,12px)] items-center p-[var(--spacing\/400,16px)] relative rounded-[var(--border-radius\/300,12px)] shrink-0 w-full" data-name="List Card" data-node-id="35548:21036">
+            <div className="content-stretch flex flex-[1_0_0] flex-col gap-[var(--spacing\/100,4px)] items-start min-h-px min-w-px relative" data-name="title" data-node-id="I35548:21036;31728:3310">
+              <div className="content-stretch flex flex-col gap-[var(--spacing\/100,4px)] items-start leading-[0] relative shrink-0 w-full" data-name="top" data-node-id="I35548:21036;31728:3369">
+                <div className="flex flex-col font-[family-name:var(--family\/primary,'Noto_Sans_JP:bold',sans-serif)] font-[var(--weight\/bold,normal)] justify-center overflow-hidden relative shrink-0 text-[color:var(--content\/primary,#17181a)] text-[length:var(--size\/0875,14px)] text-ellipsis w-full" data-node-id="I35548:21036;31728:3311">
+                  <p className="leading-[var(--line-height\/label-medium,17px)] text-[14px]">Text</p>
+                </div>
+                <div className="flex flex-col font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] justify-center relative shrink-0 text-[color:var(--content\/tertiary,rgba(0,0,0,0.56))] text-[length:var(--size\/075,12px)] w-full" data-node-id="I35548:21036;31728:3367">
+                  <p className="leading-[var(--line-height\/label-small,14px)]">Text</p>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col gap-[var(--spacing\/200,8px)] items-start relative shrink-0 w-full" data-name="top" data-node-id="I35548:21036;31728:3370">
+                <div className="content-stretch flex gap-[var(--spacing\/100,4px)] items-center relative shrink-0 w-full" data-name="address" data-node-id="I35548:21036;31728:3373">
+                  <div className="flex flex-col font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] justify-center leading-[0] relative shrink-0 text-[color:var(--content\/tertiary,rgba(0,0,0,0.56))] text-[length:var(--size\/075,12px)] whitespace-nowrap" data-node-id="I35548:21036;31728:3374">
+                    <p className="leading-[var(--line-height\/label-small,14px)]">Text</p>
+                  </div>
+                  <div className="relative shrink-0 size-[3px]" data-node-id="I35548:21036;31728:3375">
+                    <img alt="" className="absolute block max-w-none size-full" src={imgEllipse4120} />
+                  </div>
+                  <div className="flex flex-col font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] justify-center leading-[0] relative shrink-0 text-[color:var(--content\/tertiary,rgba(0,0,0,0.56))] text-[length:var(--size\/075,12px)] whitespace-nowrap" data-node-id="I35548:21036;31728:3376">
+                    <p className="leading-[var(--line-height\/label-small,14px)]">Text</p>
+                  </div>
+                  <div className="overflow-clip relative shrink-0 size-[14px]" data-name="chevron-down" data-node-id="I35548:21036;31728:3377">
+                    <div className="absolute inset-[33.78%_15.11%_25.44%_15.11%]" data-name="chevron-down_solid" data-node-id="I35548:21036;31728:3377;2628:7290">
+                      <img alt="" className="absolute block max-w-none size-full" src={imgChevronDownSolid} />
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col font-[family-name:var(--family\/primary,'Noto_Sans_JP:regular',sans-serif)] font-[var(--weight\/regular,normal)] justify-center leading-[0] relative shrink-0 text-[color:var(--content\/tertiary,rgba(0,0,0,0.56))] text-[length:var(--size\/0875,14px)] w-full" data-node-id="I35548:21036;31728:3372">
+                  <p className="leading-[var(--line-height\/label-medium,17px)]">Text</p>
+                </div>
+              </div>
+            </div>
+            <div className="overflow-clip relative rounded-[var(--border-radius\/200,8px)] shrink-0 size-[84px]" data-name="Thumbnail" data-node-id="I35548:21036;31728:3313">
+              <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgThumbnail} />
+              <div className="absolute border border-[var(--border\/tertiary,rgba(0,0,0,0.08))] border-solid inset-0 rounded-[var(--border-radius\/200,8px)]" data-name="Outline" data-node-id="I35548:21036;31728:3313;36906:3399" />
+            </div>
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+These styles are contained in the design: label-bold/medium: Font(family: "family/primary", style: weight/bold, size: size/0875, weight: 700, lineHeight: line-height/label-medium, letterSpacing: 0), label/medium: Font(family: "family/primary", style: weight/regular, size: size/0875, weight: 400, lineHeight: line-height/label-medium, letterSpacing: 0), body/medium: Font(family: "family/primary", style: weight/regular, size: size/0875, weight: 400, lineHeight: line-height/body-medium, letterSpacing: 0), label/small: Font(family: "family/primary", style: weight/regular, size: size/075, weight: 400, lineHeight: line-height/label-small, letterSpacing: 0), gradient/content/primary: , label/xsmall: Font(family: "family/primary", style: weight/regular, size: size/0687, weight: 400, lineHeight: line-height/label-xsmall, letterSpacing: 0), label-bold/small: Font(family: "family/primary", style: weight/bold, size: size/075, weight: 700, lineHeight: line-height/label-small, letterSpacing: 0), title-bold/xsmall: Font(family: "family/primary", style: weight/bold, size: size/112, weight: 700, lineHeight: line-height/title-xsmall, letterSpacing: 0).
+If the node is connected to a code component in the users codebase via Code Connect, the connected component will be included in the final markup wrapped in a CodeConnectSnippet element, with relevant imports at the top of the file. There are two formats: 1. Single snippet: <CodeConnectSnippet data-snippet-language="React"><TitleComponent>Hello World</TitleComponent></CodeConnectSnippet> 2. Multiple options: <CodeConnectSnippet data-snippet-language="React" options={[<Button variant="primary" />, <Button variant="secondary" />]} /> IMPORTANT: the CodeConnectSnippet wrapper element should not be part of the final code. For the options format, choose the single most appropriate option to use in your implementation. The source of the code component will be in the import path, e.g. import {ComponentName } from 'path/to/component'; IMPORTANT: the import path may not be relative/may point to a URL, so you should search for the component in the codebase and MUST use it if possible.
+Component descriptions: The following components have usage descriptions or documentation links defined in Figma. These descriptions provide important context about the intended usage, best practices, and any constraints for each component. Follow these guidelines when implementing or using these components.
+
+## Pagination
+**Node ID:** 29705:14245
+
+本コンポーネントは実質的に Page Indicator として設計されています。今後は Page Indicator を使用してください。  
+次回 Major バージョンで削除予定です。
+
+## Type=Solid
+**Node ID:** 31728:1651
+
+<i class="la-wp las la-clock"></i>
+
+## clock
+**Node ID:** 31728:1644
+
+time, 時計, タイム
+Image assets should be read from disk. Images and SVGs will be stored as constants, e.g. const image = '/Users/jeongkwon.yoon/Documents/MY Work/shopping-ai-agent/design-system/Templates/QuestionCard/assets/10c13ac1a228a365cb98a0064b1d5afbc84887b2.png' These constants will be used in the code as the source for the image, e.g. <img src={image} /> This is true for both images and SVGs, so you can use the same approach for both types of assets.
+IMPORTANT: After you call this tool, you MUST call get_screenshot to get a screenshot of the node for context.

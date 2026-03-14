@@ -11,7 +11,7 @@
 }
 
 .tooltip-container {
-    background-color: var(--background-floating-1, white);
+    background-color: var(--bg-floating-1, white);
     border: 1px solid #a83deb;
     /* Using a fixed color as gradient border is tricky in CSS without extra wrappers or border-image */
     border-radius: var(--radius-100, 4px);

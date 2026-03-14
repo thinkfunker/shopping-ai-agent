@@ -33,16 +33,24 @@
 }
 
 .message-role-user.message-background-on .message-bubble {
-    background-color: var(--background-neutral, rgba(48, 131, 253, 0.16));
+    background-color: var(--bg-neutral, rgba(48, 131, 253, 0.16));
     border-bottom-right-radius: 0;
     /* Match Figma node-21164_64727 */
     max-width: 80%;
 }
 
 .message-role-ai.message-background-on .message-bubble {
-    background-color: var(--background-primary, white);
-    border: 1px solid var(--border-tertiary);
+    background: var(--glass-background);
+    backdrop-filter: blur(var(--blur-medium));
+    border: 1px solid var(--glass-border);
     width: 100%;
+    box-shadow: var(--elevation-ai-glow);
+    transition: transform var(--animation-duration-normal) var(--animation-easing-standard);
+}
+
+.message-role-ai.message-background-on .message-bubble:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--elevation-premium-medium);
 }
 
 /* User Message Content Layout */
@@ -102,20 +110,22 @@
 }
 
 /* Animations */
-@keyframes fadeInUp {
+@keyframes premiumFadeInUp {
     from {
         opacity: 0;
-        transform: translateY(10px);
+        transform: translateY(20px) scale(0.98);
+        filter: blur(4px);
     }
 
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0) scale(1);
+        filter: blur(0);
     }
 }
 
 .message {
-    animation: fadeInUp 0.4s ease-out forwards;
+    animation: premiumFadeInUp var(--animation-duration-slow) var(--animation-easing-decelerate) forwards;
 }
 
 .message-ai-title {

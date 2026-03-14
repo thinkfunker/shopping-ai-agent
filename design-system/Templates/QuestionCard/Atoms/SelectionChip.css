@@ -1,0 +1,39 @@
+/* SelectionChip - Atomic Variant (Figma Node 35672:29647) */
+@import "../../../design_system.css";
+
+.selection-chip {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: var(--border-radius-full, 100px) !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    box-sizing: border-box !important;
+    border: 1px solid var(--border-tertiary, rgba(0, 0, 0, 0.08)) !important;
+    background: var(--background-primary, #ffffff) !important;
+    white-space: nowrap !important;
+}
+
+/* Medium Size */
+.selection-chip.medium {
+    height: 32px !important;
+    padding: 0 var(--spacing-400, 16px) !important;
+    font-size: var(--size-0875, 14px) !important;
+}
+
+/* Large Size */
+.selection-chip.large {
+    height: 40px !important;
+    padding: 0 var(--spacing-400, 20px) !important;
+    font-size: var(--size-100, 16px) !important;
+}
+
+.selection-chip.selected {
+    background: var(--background-inverse, #17181a) !important;
+    border-color: var(--background-inverse, #17181a) !important;
+    color: var(--content-inverted, #ffffff) !important;
+}
+
+.selection-chip:hover:not(.selected) {
+    background: var(--background-elevated-1, #f8f9fa) !important;
+}

@@ -1,12 +1,13 @@
 @import "../../design_system.css";
 
+@import "../../design_system.css";
+
 .checkbox-container {
     display: inline-flex;
     align-items: center;
     cursor: pointer;
     user-select: none;
     gap: var(--spacing-200);
-    /* Spacing 8px as per guide */
     padding: var(--spacing-100) 0;
     transition: all 0.2s ease;
 }
@@ -26,14 +27,11 @@
 
 .checkbox-box {
     position: relative;
-    width: var(--sizing-500);
-    /* 20px */
-    height: var(--sizing-500);
-    /* 20px */
+    width: 20px;
+    height: 20px;
     background-color: var(--bg-primary);
     border: 1px solid var(--border-primary);
     border-radius: var(--radius-100);
-    /* 4px */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,13 +41,13 @@
 }
 
 /* Selected State */
-.checkbox-container.selected .checkbox-box {
-    background: linear-gradient(46.94deg, var(--gradient-background-stop-1) 5.1%, var(--gradient-background-stop-2) 92.36%);
+.checkbox-container.checkbox-selected .checkbox-box {
+    background: var(--gradient-primary);
     border-color: transparent;
 }
 
 /* Unselected State */
-.checkbox-container:not(.selected) .checkbox-box {
+.checkbox-container:not(.checkbox-selected) .checkbox-box {
     background-color: var(--bg-primary);
     border-color: var(--border-primary);
 }
@@ -59,16 +57,12 @@
     border-color: var(--border-key);
 }
 
-.checkbox-container.selected:hover:not(.disabled) .checkbox-box {
-    opacity: 0.9;
-}
-
-/* State Layers (matching Figma) */
+/* State Layers */
 .checkbox-container:hover:not(.disabled) .checkbox-box::after {
     content: '';
     position: absolute;
     inset: -1px;
-    background: var(--state-hover-primary, rgba(0, 0, 0, 0.04));
+    background: var(--state-hover-primary);
     border-radius: inherit;
 }
 
@@ -76,7 +70,7 @@
     content: '';
     position: absolute;
     inset: -1px;
-    background: var(--state-pressed-primary, rgba(0, 0, 0, 0.12));
+    background: var(--state-pressed-primary);
     border-radius: inherit;
 }
 
@@ -89,7 +83,7 @@
     justify-content: center;
 }
 
-.checkbox-container.selected .checkbox-icon {
+.checkbox-container.checkbox-selected .checkbox-icon {
     display: flex;
 }
 
@@ -105,7 +99,7 @@
     border-color: var(--border-disabled);
 }
 
-.checkbox-container.disabled.selected .checkbox-box {
+.checkbox-container.disabled.checkbox-selected .checkbox-box {
     background: var(--bg-disabled);
     border-color: var(--border-disabled);
 }
@@ -120,6 +114,5 @@
     font-family: var(--font-family-primary);
     font-size: var(--font-size-100);
     line-height: 1;
-    /* Match flex centering */
     color: var(--content-primary);
 }

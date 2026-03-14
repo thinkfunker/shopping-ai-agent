@@ -70,7 +70,7 @@
     width: 32px;
     height: 32px;
     border-radius: 100px;
-    background-color: var(--background-secondary, #f0f2f7);
+    background-color: var(--bg-secondary, #f0f2f7);
     color: var(--content-primary, #17181a);
     flex-shrink: 0;
     margin-left: var(--spacing-200, 8px);

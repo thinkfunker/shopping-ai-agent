@@ -17,7 +17,7 @@
 }
 
 .modal-container {
-    background-color: var(--background-floating-1, white);
+    background-color: var(--bg-floating-1, white);
     border-radius: var(--radius-400, 12px);
     box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.16);
     display: flex;

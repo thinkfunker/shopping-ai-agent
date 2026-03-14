@@ -1,160 +1,42 @@
-@import "../../design_system.css";
+/**
+ * AI Suggestion Chips - Atomic Orchestrator
+ * This core file now only handles switching between atomic sub-components.
+ */
+@import "./Atoms/AISuggestionCard.css";
+@import "./Atoms/AISuggestionList.css";
+@import "./Atoms/AISuggestionPill.css";
 
-.ai-suggestion-chips {
-    display: flex;
-    flex-direction: column;
-    width: 390px;
-    box-sizing: border-box;
+.ai-suggestion-chips-container {
+    width: 390px !important;
+    max-width: 390px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
 }
 
-/* Layout Variations */
-.ai-suggestion-chips.layout-carousel {
-    padding: 0 var(--spacing-400, 16px);
-    gap: var(--spacing-200, 8px);
+.layout-carousel {
+    flex-direction: row !important;
+    padding: 0 var(--spacing-400, 16px) !important;
+    gap: var(--spacing-200, 8px) !important;
+    overflow-x: auto !important;
 }
 
-.ai-suggestion-chips.layout-card-compact,
-.ai-suggestion-chips.layout-card-description {
-    padding: 0 var(--spacing-400, 16px);
-    gap: var(--spacing-200, 8px);
+.layout-list-title {
+    display: inline-grid !important;
+    padding: 0 var(--spacing-400, 16px) !important;
+    grid-template-rows: repeat(6, fit-content(100%)) !important;
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+    gap: 0 !important;
 }
 
-.ai-suggestion-chips.layout-list,
-.ai-suggestion-chips.layout-list-tag,
-.ai-suggestion-chips.layout-list-icon {
-    padding: 0 var(--spacing-400, 16px);
+.layout-list-tag {
+    padding: 0 var(--spacing-400, 16px) !important;
+    gap: var(--spacing-200, 8px) !important;
 }
 
-.ai-suggestion-chips.layout-list-title {
-    padding: 0 var(--spacing-400, 16px);
-}
-
-.ai-suggestion-chips.layout-group-icon {
-    flex-direction: row;
-    padding: 0 var(--spacing-500, 20px);
-    gap: var(--spacing-200, 8px);
-}
-
-/* Common Chip Styles */
-.suggestion-chip {
-    display: flex;
-    background-color: var(--background-primary, white);
-    border: 1px solid var(--border-tertiary, rgba(0, 0, 0, 0.08));
-    border-radius: var(--radius-600, 24px);
-    padding: var(--spacing-300, 12px) var(--spacing-400, 16px);
-    cursor: pointer;
-    transition: background-color 0.2s;
-    box-sizing: border-box;
-    align-items: center;
-}
-
-.suggestion-chip:hover {
-    background-color: var(--state-hover-primary, rgba(0, 0, 0, 0.04));
-}
-
-/* Layout Specific Chip Adjustments */
-.layout-carousel .suggestion-chip {
-    flex-shrink: 0;
-    width: 136px;
-    height: auto;
-    border-radius: var(--radius-400, 16px);
-    flex-direction: column;
-    justify-content: center;
-    gap: var(--spacing-200, 8px);
-}
-
-.layout-card-compact .suggestion-chip,
-.layout-card-description .suggestion-chip {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--spacing-200, 8px);
-    border-radius: var(--radius-400, 16px);
-    width: 100%;
-}
-
-.layout-group-icon .suggestion-chip {
-    flex: 1;
-    border-radius: 100px;
-    height: 48px;
-    gap: var(--spacing-100, 4px);
-    padding: var(--spacing-300, 12px) var(--spacing-300, 12px) var(--spacing-300, 12px) var(--spacing-400, 16px);
-}
-
-.layout-list-title .list-item {
-    border-bottom: 1px solid var(--border-tertiary, rgba(0, 0, 0, 0.08));
-    padding: var(--spacing-200, 8px) 0;
-    display: flex;
-    align-items: center;
-    height: 44px;
-}
-
-.layout-list-title .list-header {
-    height: 44px;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid var(--border-tertiary, rgba(0, 0, 0, 0.08));
-}
-
-.layout-list-tag-item,
-.layout-list-icon-item {
-    background: transparent !important;
-    border: none !important;
-    border-bottom: 1px solid var(--border-tertiary, rgba(0, 0, 0, 0.08)) !important;
-    border-radius: 0 !important;
-    padding: var(--spacing-300, 12px) 0 !important;
-    gap: var(--spacing-300, 12px) !important;
-    width: 100%;
-}
-
-.layout-list-tag-item:hover,
-.layout-list-icon-item:hover {
-    background-color: var(--state-hover-secondary, rgba(0, 0, 0, 0.04)) !important;
-}
-
-/* Inner Parts */
-.chip-icon {
-    width: 20px;
-    height: 20px;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.chip-title {
-    font-family: var(--font-family-primary);
-    font-weight: var(--font-weight-bold);
-    font-size: var(--font-size-0875, 14px);
-    line-height: var(--line-height-label-medium, 17px);
-    color: var(--content-primary, #17181a);
-    margin: 0;
-}
-
-.card-title {
-    font-size: var(--font-size-100, 16px);
-    line-height: var(--line-height-label-large, 19px);
-}
-
-.chip-subtext {
-    font-family: var(--font-family-primary);
-    font-weight: var(--font-weight-regular);
-    font-size: var(--font-size-0875, 14px);
-    line-height: var(--line-height-body-medium, 22px);
-    color: var(--content-primary, #17181a);
-    margin: 0;
-}
-
-/* Container for Carousel */
-.suggestion-carousel-container {
-    display: flex;
-    gap: var(--spacing-200, 8px);
-    width: 100%;
-    overflow-x: auto;
-    scrollbar-width: none;
-    /* Hide scrollbar Firefox */
-}
-
-.suggestion-carousel-container::-webkit-scrollbar {
-    display: none;
-    /* Hide scrollbar Chrome/Safari */
+.layout-group-icon {
+    padding: 0 var(--spacing-400, 16px) !important;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    gap: var(--spacing-200, 8px) !important;
 }

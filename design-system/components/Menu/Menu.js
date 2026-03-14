@@ -15,9 +15,9 @@ window.renderMenu = function renderMenu({
 
     if (items.length === 0) {
         items = [
-            { label: '設定', icon: 'menu' },
-            { label: 'プロフィール', icon: 'bell', divider: true },
-            { label: 'ログアウト', label: 'ログアウト' }
+            { label: '設定', icon: 'question-circle-outline', hasConnector: true },
+            { label: 'プロフィール', icon: 'bell-solid', hasConnector: true, divider: true },
+            { label: 'ログアウト', icon: null, hasConnector: true }
         ];
     }
 

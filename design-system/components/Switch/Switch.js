@@ -14,15 +14,23 @@ window.renderSwitch = function ({
     className = ''
 } = {}) {
     const label = document.createElement('label');
-    label.className = `switch ${disabled ? 'disabled' : ''} ${className}`.trim();
+    label.className = `switch ${checked ? 'switch-on' : 'switch-off'} ${disabled ? 'disabled' : ''} ${className}`.trim();
 
     const input = document.createElement('input');
     input.type = 'checkbox';
     input.checked = checked;
     input.disabled = disabled;
-    if (onChange) {
-        input.addEventListener('change', onChange);
-    }
+    input.addEventListener('change', (e) => {
+        const isChecked = e.target.checked;
+        if (isChecked) {
+            label.classList.add('switch-on');
+            label.classList.remove('switch-off');
+        } else {
+            label.classList.add('switch-off');
+            label.classList.remove('switch-on');
+        }
+        if (onChange) onChange(e);
+    });
 
     const track = document.createElement('span');
     track.className = 'switch-track';

@@ -1,9 +1,10 @@
 @import "../../design_system.css";
 
 .card {
-    background-color: var(--background-elevated-1, white);
-    border: 1px solid var(--border-elevated-1, rgba(0, 0, 0, 0.08));
-    border-radius: var(--radius-400, 16px);
+    background: var(--bg-primary);
+    border: 1px solid var(--border-secondary);
+    box-shadow: var(--elevation-premium-low);
+    border-radius: var(--radius-400);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -15,8 +16,9 @@
 }
 
 .card:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-small, 0 4px 12px rgba(0, 0, 0, 0.08));
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: var(--elevation-premium-medium);
+    border-color: var(--border-key);
 }
 
 /* Detail Variations */
@@ -31,31 +33,47 @@
 /* Header/Title */
 .card-header {
     display: flex;
-    align-items: center;
-    gap: var(--spacing-100, 4px);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-050, 2px);
     width: 100%;
+}
+
+.card-date {
+    font-size: var(--font-size-100, 16px);
+    color: var(--content-tertiary, rgba(0, 0, 0, 0.56));
+    font-weight: var(--font-weight-regular);
 }
 
 .card-title {
     font-family: var(--font-family-primary);
     font-weight: var(--font-weight-bold);
-    font-size: var(--font-size-100, 16px);
-    line-height: var(--line-height-label-large, 19px);
+    font-size: var(--font-size-150, 24px);
+    line-height: var(--line-height-label-large, 28px);
     color: var(--content-primary, #17181a);
     margin: 0;
-}
-
-.card-date {
-    font-size: var(--font-size-0875, 14px);
-    color: var(--content-tertiary, rgba(0, 0, 0, 0.56));
 }
 
 /* Data Sections */
 .card-data-row {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    gap: var(--spacing-400, 16px);
+    align-items: flex-start;
     width: 100%;
+}
+
+.card-right-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-200, 8px);
+}
+
+.card-description {
+    font-size: var(--font-size-1125, 18px);
+    line-height: var(--line-height-body-large, 26px);
+    color: var(--content-secondary, rgba(0, 0, 0, 0.76));
+    margin: 0;
 }
 
 .card-value-group {
@@ -65,11 +83,11 @@
 }
 
 .card-value {
-    font-size: 56px;
+    font-size: var(--font-size-150);
     font-weight: var(--font-weight-bold);
     letter-spacing: -2px;
-    line-height: 1;
-    color: var(--content-primary, #17181a);
+    line-height: var(--line-height-none);
+    color: var(--content-primary);
 }
 
 .card-unit {
@@ -115,8 +133,8 @@
 
 /* Thumbnail */
 .card-thumbnail {
-    width: 96px;
-    height: 96px;
+    width: 80px;
+    height: 80px;
     border-radius: var(--radius-200, 8px);
     overflow: hidden;
     flex-shrink: 0;
